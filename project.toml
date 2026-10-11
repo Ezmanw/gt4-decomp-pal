@@ -2,13 +2,13 @@
 # (plus a loader in tools/loaders/ and a knowledge file); the tools themselves stay the same.
 
 [game]
-name = "Gran Turismo 4 (NTSC-U, SCUS-97328 v1.01)"
-serial = "SCUS-97328"
+name = "Gran Turismo 4 (PAL, SCES-51719 v1.00)"
+serial = "SCES-51719"
 # Short name: the WSL working directories and the linked image (tools/project.py BASENAME).
 basename = "gt4"
-executable = "orig/SCUS-97328/files/CORE.GT4"
+executable = "orig/SCES-51719/files/CORE.GT4"
 # The executable as an ELF (tools/core2elf.py): what splat splits and the build compares with.
-elf = "orig/SCUS-97328/CORE.GT4.elf"
+elf = "orig/SCES-51719/CORE.GT4.elf"
 splat_config = "config/gt4.yaml"
 # tools/loaders/<loader>.py must define load(path) -> (entry, [(address, bytes), ...])
 loader = "gt4_core"
