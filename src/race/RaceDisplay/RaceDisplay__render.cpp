@@ -1,11 +1,11 @@
-struct func_0039F498_Car {
+struct func_0039F790_Car {
     char pad0[0xDC];
     int finished;
 };
 
-struct func_0039F498_Obj {
+struct func_0039F790_Obj {
     int pad0;
-    func_0039F498_Car *car;
+    func_0039F790_Car *car;
     char pad8[0x20 - 0x8];
     unsigned int layout;
     char pad24[0x41 - 0x24];
@@ -34,29 +34,29 @@ struct func_0039F498_Obj {
 extern int D_006184F0;
 extern char D_00623838[];
 
-extern "C" void func_001056A0(void *buf);
+extern "C" void func_001056C0(void *buf);
 extern "C" void func_004A4550(int a, int b);
 extern "C" void func_004AB040(int n);
 extern "C" void func_004A0670(void);
-extern "C" void func_003AECE0(void);
+extern "C" void func_003AEFD8(void);
 extern "C" void RaceEntryCar__update(int n);
 extern "C" void func_004A74B4(void *p);
 extern "C" void func_004A7454(void);
-extern "C" void func_0044E390(void *p, float x, float y);
-extern "C" void func_0044DBC0(void *p, float x, float y);
-extern "C" void func_0044E3B0(void *p, int x, int y);
-extern "C" void func_0044D988(void *p);
+extern "C" void func_0044E768(void *p, float x, float y);
+extern "C" void func_0044DF38(void *p, float x, float y);
+extern "C" void func_0044E788(void *p, int x, int y);
+extern "C" void func_0044DD00(void *p);
 extern "C" void func_00576788(void *mutex);
 extern "C" void func_005767C0(void *mutex);
-extern "C" void func_0039F718(func_0039F498_Obj *self, void *buf);
-extern "C" void func_0039F878(func_0039F498_Obj *self, void *buf);
-extern "C" void func_0039FA10(func_0039F498_Obj *self, void *buf);
-extern "C" void func_0039FAD0(func_0039F498_Obj *self, void *buf);
+extern "C" void func_0039FA10(func_0039F790_Obj *self, void *buf);
+extern "C" void func_0039FB70(func_0039F790_Obj *self, void *buf);
+extern "C" void func_0039FD08(func_0039F790_Obj *self, void *buf);
+extern "C" void func_0039FDC8(func_0039F790_Obj *self, void *buf);
 
-extern "C" void RaceDisplay__render(func_0039F498_Obj *self, void *buf) {
+extern "C" void RaceDisplay__render(func_0039F790_Obj *self, void *buf) {
     if (!self->always && self->car->finished) return;
     if (self->hidden) return;
-    func_001056A0(buf);
+    func_001056C0(buf);
     func_004A4550(0, 1);
     func_004AB040(100);
     func_004AB040(15);
@@ -64,16 +64,16 @@ extern "C" void RaceDisplay__render(func_0039F498_Obj *self, void *buf) {
     func_004AB040(13);
     func_004AB040(14);
     func_004A0670();
-    func_003AECE0();
+    func_003AEFD8();
     RaceEntryCar__update(1);
     func_004A74B4(self->x70);
     RaceEntryCar__update(0);
     func_004A7454();
     float scale = 0.75f;
     if (D_006184F0 == 0) scale = 1.0f;
-    func_0044E390(D_00623838, scale, 1.0f);
-    func_0044DBC0(D_00623838, 1.0f, 1.0f);
-    func_0044E3B0(D_00623838, self->originX, self->originY);
+    func_0044E768(D_00623838, scale, 1.0f);
+    func_0044DF38(D_00623838, 1.0f, 1.0f);
+    func_0044E788(D_00623838, self->originX, self->originY);
     float alpha = self->alpha;
     self->alpha13A4 = alpha;
     self->alpha1114 = alpha;
@@ -83,20 +83,20 @@ extern "C" void RaceDisplay__render(func_0039F498_Obj *self, void *buf) {
     func_00576788(&self->mutex);
     switch (self->layout) {
     case 0:
-        func_0039F718(self, buf);
+        func_0039FA10(self, buf);
         break;
     case 2:
     case 3:
-        func_0039F878(self, buf);
+        func_0039FB70(self, buf);
         break;
     case 4:
-        func_0039FA10(self, buf);
+        func_0039FD08(self, buf);
         break;
     case 1:
-        func_0039FAD0(self, buf);
+        func_0039FDC8(self, buf);
         break;
     }
     func_005767C0(&self->mutex);
-    func_0044E390(D_00623838, 1.0f, 1.0f);
-    func_0044D988(D_00623838);
+    func_0044E768(D_00623838, 1.0f, 1.0f);
+    func_0044DD00(D_00623838);
 }

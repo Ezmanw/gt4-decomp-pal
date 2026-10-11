@@ -1,5 +1,5 @@
-extern void func_00357830(void);
+extern void func_003579A0(void);
 void DynamicsConductorFreeRun__CurrentLapTime(void)
 {
-    func_00357830();
+    func_003579A0();
 }

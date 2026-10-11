@@ -18,13 +18,13 @@ struct Obj {
     int ifc;
 };
 
-extern "C" void func_00370548(Obj *self, void *mat, int arg);
+extern "C" void func_003707F8(Obj *self, void *mat, int arg);
 extern "C" void func_005F5040(void *mat, void *vec);
 
 extern "C" void func_00370BE0(Obj *self)
 {
     self->mode.set(0, 0x18);
-    func_00370548(self, self->mat, self->arg80);
+    func_003707F8(self, self->mat, self->arg80);
     func_005F5040(self->mat, self->vec);
     self->ff8 = self->fe4;
     self->ifc = self->ie8;

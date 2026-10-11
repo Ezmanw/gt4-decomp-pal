@@ -21,7 +21,7 @@ struct Obj {
 
 extern "C" void func_00576788(Mutex *m);
 extern "C" void func_005767C0(Mutex *m);
-extern "C" void func_0010AB68(Obj *o);
+extern "C" void func_0010AB70(Obj *o);
 
 extern "C" void func_00102960(Obj *o) {
     Mutex *m = &o->mutex;
@@ -30,5 +30,5 @@ extern "C" void func_00102960(Obj *o) {
     o->mAC = 0;
     o->listener->v1(o);
     func_005767C0(m);
-    func_0010AB68(o);
+    func_0010AB70(o);
 }

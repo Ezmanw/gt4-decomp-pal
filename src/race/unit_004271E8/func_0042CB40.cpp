@@ -1,28 +1,27 @@
-struct Mat44 {
-    float m[4][4];
+extern "C" {
+#include "types.h"
+#define NULL 0
+void *memcpy(void *, const void *, unsigned int);
+
+void func_004A5400(...) throw();
+
+struct func_0042CB40_arg0 {
+    s32 unk0;
+    char pad4[0x4];
+    s32 unk8;
 };
 
-struct Rot {
-    float v[4];
-    Rot() __asm__("func_0048AE00");
-    void toMatrix(Mat44 *out, float x, float y, float z) __asm__("func_0048A8B0");
-};
+void func_0042CB40(char *arg0) {
+    s32 temp_v0;
 
-struct Elem {
-    char data[0x40];
-    void set(Mat44 *m) __asm__("func_00489BA0");
-};
+    if (((struct func_0042CB40_arg0 *)arg0)->unk8 > 0) {
+        do {
+            func_004A5400();
+            temp_v0 = ((struct func_0042CB40_arg0 *)arg0)->unk8 - 1;
+            ((struct func_0042CB40_arg0 *)arg0)->unk8 = temp_v0;
+        } while (temp_v0 > 0);
+    }
+    ((struct func_0042CB40_arg0 *)arg0)->unk0 = 1;
+}
 
-struct Obj {
-    int m0;
-    int m4;
-    int cur;
-    Elem elems[1];
-};
-
-extern "C" void func_0042CB40(Obj *o) {
-    Rot r;
-    Mat44 m;
-    r.toMatrix(&m, 0.0f, 0.0f, 0.0f);
-    o->elems[o->cur].set(&m);
 }

@@ -1,0 +1,10 @@
+extern "C" void func_002551E0(void *arg0, void *arg1);
+extern "C" void func_00291A78(void *arg0, void *arg1);
+
+extern "C" void func_00291A30(void *arg0, void *arg1) {
+    void *s0 = arg0;
+    void *s1 = arg1;
+    int local = 0;
+    func_002551E0(s0, &local);
+    func_00291A78(s0, s1);
+}

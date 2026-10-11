@@ -5,7 +5,7 @@ struct Tag {
 
 struct Str {
     int h;
-    Str(const Str &o) __asm__("func_0013BD50");
+    Str(const Str &o) __asm__("func_0013BD58");
     ~Str();
 };
 

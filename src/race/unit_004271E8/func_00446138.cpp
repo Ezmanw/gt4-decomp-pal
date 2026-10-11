@@ -1,16 +1,31 @@
 typedef int s32;
+typedef short s16;
 typedef long long s64;
+typedef signed char s8;
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef float f32;
 
-struct Info { s32 pad[1]; s32 m14; s32 padx[4]; s32 pad2[0x1A]; };
-struct Mgr { char pad[0x1E0]; s32 m1E0; };
-struct Self { char pad[0x38]; s64 id; };
-extern Mgr D_006235A8;
-extern "C" void SPEC_DATABASE__DatabaseStorage__getRow(Mgr *, s64, Info *);
-extern "C" void func_00449CD8(s32, s32);
+/* the record SPEC_DATABASE__DatabaseStorage__getRow fills for an id */
+struct Info {
+    char pad0[0x2];
+    u16 f2;
+    char pad4[0x2C];
+};
 
-extern "C" void func_00446138(Self *self) {
+struct Global;
+
+struct Obj {
+    char pad0[0x30];
+    s64 id;
+};
+
+extern Global D_006235A8;
+
+extern "C" void SPEC_DATABASE__DatabaseStorage__getRow(Global *g, s64 id, Info *info);
+
+extern "C" s32 func_00446138(Obj *self) {
     Info info;
-    Mgr *m = &D_006235A8;
-    SPEC_DATABASE__DatabaseStorage__getRow(m, self->id, &info);
-    func_00449CD8(m->m1E0, info.m14);
+    SPEC_DATABASE__DatabaseStorage__getRow(&D_006235A8, self->id, &info);
+    return info.f2;
 }

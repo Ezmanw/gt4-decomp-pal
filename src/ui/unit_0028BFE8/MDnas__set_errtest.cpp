@@ -1,8 +1,8 @@
-extern "C" void func_0028BDA8(void *);
-extern "C" void func_0028BD50(void *, int);
-extern "C" void func_002FC8C8(void *, void *);
-extern "C" void func_002FC870(void *, int);
-extern "C" int func_002FE250(int);
+extern "C" void func_0028BF00(void *);
+extern "C" void func_0028BEA8(void *, int);
+extern "C" void func_002FCA20(void *, void *);
+extern "C" void func_002FC9C8(void *, int);
+extern "C" int func_002FE3A8(int);
 
 struct Target {
     char pad0[0x34];
@@ -24,10 +24,10 @@ extern "C" void MDnas__set_errtest(void *arg0, void *arg1, int count, void *name
 {
     A a;
     B b;
-    func_0028BDA8(&a);
+    func_0028BF00(&a);
     Target *t = a.p;
-    func_002FC8C8(&b, name);
-    t->value = func_002FE250(get(&b));
-    func_002FC870(&b, 2);
-    func_0028BD50(&a, 2);
+    func_002FCA20(&b, name);
+    t->value = func_002FE3A8(get(&b));
+    func_002FC9C8(&b, 2);
+    func_0028BEA8(&a, 2);
 }

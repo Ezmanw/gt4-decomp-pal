@@ -1,21 +1,15 @@
-/* compiler: ee-gcc2.96-no-strict-aliasing */
-struct Blob {
-    long long id;
-    void *data;
-    int size;
+typedef int s32;
+
+extern char D_00688320;
+
+struct Obj {
+    s32 unk0;
+    s32 unk4;
+    void *unk8;
 };
 
-extern "C" void func_0044A2A8(Blob *b);
-extern "C" void *malloc(int size);
-extern "C" void *memcpy(void *dst, const void *src, int n);
-
-extern "C" void func_00449EF0(Blob *b, const Blob *o)
-{
-    func_0044A2A8(b);
-    b->id = o->id;
-    if (o->data) {
-        b->data = malloc(o->size);
-        memcpy(b->data, o->data, o->size);
-        b->size = o->size;
-    }
+extern "C" void func_00449EF0(Obj *arg0) {
+    arg0->unk4 = -1;
+    arg0->unk8 = &D_00688320;
+    arg0->unk0 = 0;
 }

@@ -28,15 +28,15 @@ static inline s32 vcall_58(char *o) {
     VEntry_58 *e = (VEntry_58 *)((char *)((VObj_58 *)o)->vtbl + 0x58);
     return e->fn(o + e->delta);
 }
-extern "C" void func_002FC8C8(void *);
-extern "C" void func_002FE258(s32, s32);
-extern "C" void func_002FC870(void *, s32);
+extern "C" void func_002FCA20(void *);
+extern "C" void func_002FE3B0(s32, s32);
+extern "C" void func_002FC9C8(void *, s32);
 
 extern "C" void int__set_value(s32 *arg0, void *arg1, s32 arg2, char **arg3) {
     s32 buf0[4];
     s32 v_s1;
-    func_002FC8C8(buf0);
+    func_002FCA20(buf0);
     v_s1 = buf0[0];
-    func_002FE258(v_s1, vcall_58((char *)(*(s32 *)(char *)arg3)));
-    func_002FC870(buf0, 0x2);
+    func_002FE3B0(v_s1, vcall_58((char *)(*(s32 *)(char *)arg3)));
+    func_002FC9C8(buf0, 0x2);
 }

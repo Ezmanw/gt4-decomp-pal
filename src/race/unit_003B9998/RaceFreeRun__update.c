@@ -5,8 +5,8 @@ void *memcpy(void *, const void *, unsigned int);
 
 s32 RacePS2Base__update();                            /* extern */
 s32 RaceCarSound__setNarration(s32);                     /* extern */
-f32 func_003C0FB0(s32);                             /* extern */
-s32 func_00460600(f32);                         /* extern */
+f32 func_003C12B8(s32);                             /* extern */
+s32 func_004609D8(f32);                         /* extern */
 s32 BGM__narrationEnable();                                /* extern */
 
 s32 RaceFreeRun__update(struct RaceFreeRun *arg0) {
@@ -19,9 +19,9 @@ s32 RaceFreeRun__update(struct RaceFreeRun *arg0) {
         } else {
             RaceCarSound__setNarration(0);
         }
-        temp_f0 = func_003C0FB0(arg0->unk6C);
+        temp_f0 = func_003C12B8(arg0->unk6C);
         if (temp_f0 < 1.0f) {
-            func_00460600(temp_f0);
+            func_004609D8(temp_f0);
         }
     }
 }

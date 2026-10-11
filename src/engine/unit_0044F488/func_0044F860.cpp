@@ -1,7 +1,7 @@
-typedef float f32;
+extern void func_0044F978(void *str);
+extern char DRIVERSUPPORT_NAME__parameter_[];
 
-struct Obj { char pad[0x4]; f32 unk4; };
-
-extern "C" f32 func_0044F860(Obj *arg0) {
-    return arg0->unk4;
+void func_0044F860(void)
+{
+    func_0044F978(DRIVERSUPPORT_NAME__parameter_);
 }

@@ -1,24 +1,24 @@
 typedef int s32;
 
-extern "C" void func_002DD988(void *buf);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
-extern "C" void func_002DD640(void *buf, s32 arg1);
+extern "C" void func_002DDAE0(void *buf);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
+extern "C" void func_002DD798(void *buf, s32 arg1);
 
 extern "C" void MSliderBar__global_0083B070(s32 *arg0) {
     s32 buf[4];
 
-    func_002DD988(buf);
+    func_002DDAE0(buf);
     if (arg0 != buf) {
         s32 s0 = buf[0];
         if (s0 != 0) {
-            func_003285A8(s0);
+            func_00328700(s0);
         }
         s32 temp_v0 = *arg0;
         if (temp_v0 != 0) {
-            func_003285F8(temp_v0);
+            func_00328750(temp_v0);
         }
         *arg0 = s0;
     }
-    func_002DD640(buf, 2);
+    func_002DD798(buf, 2);
 }

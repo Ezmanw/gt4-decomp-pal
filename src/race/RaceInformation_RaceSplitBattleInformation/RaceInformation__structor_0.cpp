@@ -26,9 +26,9 @@ extern char RaceInformation__vtable[];
 extern char D_006A2718[];
 extern char D_006A2728[];
 extern char D_006A2738[];
-extern "C" void func_00446F90(void);
-extern "C" void func_003BFB10(void *);
-extern "C" void * func_00329858(void *, void *);
+extern "C" void func_00447308(void);
+extern "C" void func_003BFE08(void *);
+extern "C" void * func_003299B0(void *, void *);
 
 struct RaceInformation__structor_0_arg0 {
     char pad0[0x110];
@@ -46,16 +46,16 @@ extern "C" void RaceInformation__structor_0(s32 *arg0) {
     char *v_s1;
     v_s1 = (char *)arg0 + 0xb0;
     ((struct RaceInformation__structor_0_arg0 *)arg0)->unk12C = (s32)&RaceInformation__vtable;
-    func_00446F90();
-    func_003BFB10(v_s1);
+    func_00447308();
+    func_003BFE08(v_s1);
     ((struct RaceInformation__structor_0_arg0 *)arg0)->unk110 = (s64)0;
     ((struct RaceInformation__structor_0_arg0 *)arg0)->unk118 = 0;
     ((struct RaceInformation__structor_0_arg0 *)arg0)->unk128 = -0x1;
     ((struct RaceInformation__structor_0_arg0 *)arg0)->unk11C = 0;
     ((struct RaceInformation__structor_0_arg0 *)arg0)->unk120 = 0;
     ((struct RaceInformation__structor_0_arg0 *)arg0)->unk124 = 0;
-    func_00329858(buf0, &D_006A2718);
-    func_00329858((char *)arg0 + 0x120, &D_006A2728);
-    func_00329858((char *)arg0 + 0x124, &D_006A2738);
+    func_003299B0(buf0, &D_006A2718);
+    func_003299B0((char *)arg0 + 0x120, &D_006A2728);
+    func_003299B0((char *)arg0 + 0x124, &D_006A2738);
     *(s32 *)(char *)v_s1 = buf0[0];
 }

@@ -1,8 +1,8 @@
 #define GT4_DECLS
 #include "gt4/hObject.h"
 /* Script module registration: creates the module object from its name, adds every class
-   (func_003066F8 with each class getter), the three sub-modules (built by func_0030E100,
-   func_00302110, HSystemModule__Get), three named functions and one method, then a global object. */
+   (func_00306850 with each class getter), the three sub-modules (built by func_0030E258,
+   func_00302268, HSystemModule__Get), three named functions and one method, then a global object. */
 typedef int s32;
 
 struct Rep {
@@ -25,19 +25,19 @@ extern Rep D_00659FA8;
 extern "C" char *func_005C2560(Rep *);
 extern "C" s32 func_0057F260(void *);
 extern "C" void *func_005C2630(void *, s32, s32, void *, s32);
-extern "C" void *func_00306E00(void *, void *);
+extern "C" void *func_00306F58(void *, void *);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *, s32, s32, const char *);
-extern "C" void func_003066F8(s32, s32);
-extern "C" void func_00306638(void *, s32, void *);
-extern "C" void func_00323B60(void *, s32);
-extern "C" void func_003041B8(void *, s32);
-extern "C" void func_003041A0(void *, void *);
-extern "C" void func_00306980(s32, void *, s32, void *);
-extern "C" void func_003068A8(s32, void *, void *);
+extern "C" void func_003268F0(void *, s32, s32, const char *);
+extern "C" void func_00306850(s32, s32);
+extern "C" void func_00306790(void *, s32, void *);
+extern "C" void func_00323CB8(void *, s32);
+extern "C" void func_00304310(void *, s32);
+extern "C" void func_003042F8(void *, void *);
+extern "C" void func_00306AD8(s32, void *, s32, void *);
+extern "C" void func_00306A00(s32, void *, void *);
 extern "C" void HModule__dynamicAssign(void *, void *);
-extern "C" void *func_0030E100(void *);
-extern "C" void *func_00302110(void *);
+extern "C" void *func_0030E258(void *);
+extern "C" void *func_00302268(void *);
 extern "C" void *HSystemModule__Get(void *);
 extern "C" s32 hArray__GetClassID(void);
 extern "C" s32 hArrayElement__GetClassID(void);
@@ -65,9 +65,9 @@ extern char D_0069D6B8[];
 extern char D_0069D6D0[];
 extern char D_0069D6E8[];
 extern char D_0069D700[];
-extern char func_002F1C98[];
-extern char func_002F1CA0[];
-extern char func_002F1CA8[];
+extern char func_002F1DF0[];
+extern char func_002F1DF8[];
+extern char func_002F1E00[];
 extern char adhoc__nilp[];
 extern char D_0083CC90[];
 
@@ -89,20 +89,20 @@ static inline void str_release(Str *s) {
     Rep *q = (Rep *)(s->p - 0x10);
     if (--q->ref == 0) {
         s32 size = q->cap + 0x10;
-        func_00326798(q, size, 4, func_005C11A8()->name);
+        func_003268F0(q, size, 4, func_005C11A8()->name);
     }
 }
 
-#define ADD_CLASS(getter) { s32 h = buf0[0]; func_003066F8(h, getter()); }
+#define ADD_CLASS(getter) { s32 h = buf0[0]; func_00306850(h, getter()); }
 
 #define ADD_MODULE(t, make)                             \
     {                                                   \
         s32 h = buf0[0];                                \
         Str *v = &s;                                    \
         make(t);                                        \
-        func_00306638(v, h, t);                         \
-        func_00323B60(v, 2);                            \
-        func_003041B8(t, 2);                            \
+        func_00306790(v, h, t);                         \
+        func_00323CB8(v, 2);                            \
+        func_00304310(t, 2);                            \
     }
 
 #define ADD_FUNCTION(name, fn)                          \
@@ -111,7 +111,7 @@ static inline void str_release(Str *s) {
         s32 h = buf0[0];                                \
         Str *p = &s;                                    \
         STR_INIT(p, v)                                  \
-        func_00306980(h, p, 0, fn);                     \
+        func_00306AD8(h, p, 0, fn);                     \
         str_release(p);                                 \
     }
 
@@ -127,7 +127,7 @@ extern "C" s32 *HBuiltinModule__Get(s32 *arg0) {
         Str *p = &name;
         char *v = D_0069D6A8;
         STR_INIT(p, v)
-        func_00306E00(buf0, p);
+        func_00306F58(buf0, p);
         str_release(p);
     }
     ADD_CLASS(hArray__GetClassID)
@@ -151,25 +151,25 @@ extern "C" s32 *HBuiltinModule__Get(s32 *arg0) {
     ADD_CLASS(hThread__GetClassID)
     ADD_CLASS(hThreadGroup__GetClassID)
     ADD_CLASS(hVariable__GetClassID)
-    ADD_MODULE(t1, func_0030E100)
-    ADD_MODULE(t2, func_00302110)
+    ADD_MODULE(t1, func_0030E258)
+    ADD_MODULE(t2, func_00302268)
     ADD_MODULE(t3, HSystemModule__Get)
-    ADD_FUNCTION(D_0069D6B8, func_002F1C98)
-    ADD_FUNCTION(D_0069D6D0, func_002F1CA0)
-    ADD_FUNCTION(D_0069D6E8, func_002F1CA8)
+    ADD_FUNCTION(D_0069D6B8, func_002F1DF0)
+    ADD_FUNCTION(D_0069D6D0, func_002F1DF8)
+    ADD_FUNCTION(D_0069D6E8, func_002F1E00)
     {
         char *v = D_0069D700;
         s32 h = buf0[0];
         Str *p = &s;
         STR_INIT(p, v)
-        func_003068A8(h, p, adhoc__nilp);
+        func_00306A00(h, p, adhoc__nilp);
         str_release(p);
     }
     HModule__dynamicAssign(&s, D_0083CC90);
-    func_00306638(t4, buf0[0], &s);
-    func_00323B60(t4, 2);
-    func_003041A0(arg0, buf0);
-    func_003041B8(&s, 2);
-    func_003041B8(buf0, 2);
+    func_00306790(t4, buf0[0], &s);
+    func_00323CB8(t4, 2);
+    func_003042F8(arg0, buf0);
+    func_00304310(&s, 2);
+    func_00304310(buf0, 2);
     return arg0;
 }

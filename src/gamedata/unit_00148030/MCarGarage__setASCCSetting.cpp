@@ -16,11 +16,11 @@ public:
     virtual s32 getInt();
 };
 
-extern "C" void func_0013BDC0(void *);
-extern "C" s32 func_00147D80(s32);
-extern "C" void func_0013BD68(void *, s32);
-extern "C" void func_0043EA58(s32, s32);
-extern "C" void func_0043EAA0(s32, s32);
+extern "C" void func_0013BDC8(void *);
+extern "C" s32 func_00147D88(s32);
+extern "C" void func_0013BD70(void *, s32);
+extern "C" void func_0043EDD0(s32, s32);
+extern "C" void func_0043EE18(s32, s32);
 
 extern "C" void MCarGarage__setASCCSetting(s32 *arg0, void *arg1, s32 arg2, hObject **arg3) {
     s32 buf[4];
@@ -28,17 +28,17 @@ extern "C" void MCarGarage__setASCCSetting(s32 *arg0, void *arg1, s32 arg2, hObj
     s32 value;
     s32 kind;
 
-    func_0013BDC0(buf);
-    garage = func_00147D80(buf[0]);
-    func_0013BD68(buf, 2);
+    func_0013BDC8(buf);
+    garage = func_00147D88(buf[0]);
+    func_0013BD70(buf, 2);
     value = arg3[1]->getInt();
     kind = arg3[0]->getInt();
     switch (kind) {
     case 0:
-        func_0043EA58(garage, value);
+        func_0043EDD0(garage, value);
         break;
     case 1:
-        func_0043EAA0(garage, value);
+        func_0043EE18(garage, value);
         break;
     }
 }

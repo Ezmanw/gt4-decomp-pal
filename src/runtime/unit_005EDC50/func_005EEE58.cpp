@@ -3,7 +3,7 @@
    _Rb_tree<Str, pair<const Str, Val_003041A0>, _Select1st, less<Str>, GameAlloc>::erase(key) */
 #include <stl_tree.h>
 
-extern "C" void *func_00326750(int size, int align, const char *name);
+extern "C" void *func_003268A8(int size, int align, const char *name);
 
 extern "C" void *func_005EC198(void);
 
@@ -21,7 +21,7 @@ struct HeapName {
 extern "C" int func_005C2A50(const void *self, const void *other, unsigned int pos, unsigned int n);
 extern "C" char *func_005C2560(Rep *rep);
 extern "C" HeapName *func_005C11A8(void);
-extern "C" void func_00326798(void *p, int size, int align, const char *name);
+extern "C" void func_003268F0(void *p, int size, int align, const char *name);
 
 /* the game's reference-counted string (knowledge/runtime-types.md): the pointer is read and
    written as an int so the representation's counters can alias it */
@@ -42,18 +42,18 @@ struct Str {
         Rep *r = (Rep *)(*(int *)&p - 0x10);
         if (--r->ref == 0) {
             int size = r->cap + 0x10;
-            func_00326798(r, size, 4, func_005C11A8()->name);
+            func_003268F0(r, size, 4, func_005C11A8()->name);
         }
     }
     bool operator<(const Str &o) const { return func_005C2A50(this, &o, 0, (unsigned int)-1) < 0; }
 };
 
-extern "C" void func_003041A0(void *self, const void *other);
+extern "C" void func_003042F8(void *self, const void *other);
 extern "C" void stl_unknown_dtor(void *self, int in_charge);
 
 struct Val_003041A0 {
     int w[1];
-    Val_003041A0(const Val_003041A0 &o) { func_003041A0(this, &o); }
+    Val_003041A0(const Val_003041A0 &o) { func_003042F8(this, &o); }
     ~Val_003041A0() { stl_unknown_dtor(this, 2); }
 };
 
@@ -82,10 +82,10 @@ public:
     template <class U> GameAlloc(const GameAlloc<U> &) throw() {}
     ~GameAlloc() throw() {}
     T *allocate(size_type n, const void * = 0) {
-        return (T *)func_00326750(n * sizeof(T), 4, ((TypeInfo *)TypeTag<T>::tf())->name);
+        return (T *)func_003268A8(n * sizeof(T), 4, ((TypeInfo *)TypeTag<T>::tf())->name);
     }
     void deallocate(T *p, size_type n) {
-        func_00326798(p, n * sizeof(T), 4, ((TypeInfo *)TypeTag<T>::tf())->name);
+        func_003268F0(p, n * sizeof(T), 4, ((TypeInfo *)TypeTag<T>::tf())->name);
     }
     size_type max_size() const throw() { return size_t(-1) / sizeof(T); }
     void construct(T *p, const T &v) { new (p) T(v); }

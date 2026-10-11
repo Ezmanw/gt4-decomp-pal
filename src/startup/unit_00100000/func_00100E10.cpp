@@ -1,4 +1,4 @@
-extern "C" void *func_00109448(void *arg0);
+extern "C" void *func_00109450(void *arg0);
 extern "C" char D_00659B70[];
 
 struct func_00100E10_arg0 {
@@ -8,6 +8,6 @@ struct func_00100E10_arg0 {
 
 extern "C" void func_00100E10(struct func_00100E10_arg0 *arg0)
 {
-    func_00109448(arg0);
+    func_00109450(arg0);
     arg0->unk8 = D_00659B70;
 }

@@ -34,11 +34,11 @@ extern "C" char *func_005C2560(Rep *r);
 extern "C" s32 func_0057F260(const char *s);
 extern "C" void *func_005C2630(Str *s, s32 pos, s32 n, const char *src, s32 len);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
-extern "C" void func_002F3A30(Obj *arg0, s32 arg1);
-extern "C" void func_002F3818(Obj *arg0, Str *arg1, void (*arg2)(void));
-extern "C" void func_002F3860(Obj *arg0, Str *arg1, void (*arg2)(void), void (*arg3)(void));
-extern "C" void func_00306780(Obj *arg0, void *arg1, void (*arg2)(void));
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_002F3B88(Obj *arg0, s32 arg1);
+extern "C" void func_002F3970(Obj *arg0, Str *arg1, void (*arg2)(void));
+extern "C" void func_002F39B8(Obj *arg0, Str *arg1, void (*arg2)(void), void (*arg3)(void));
+extern "C" void func_003068D8(Obj *arg0, void *arg1, void (*arg2)(void));
 extern char D_0068FBD0[];
 extern char D_0068FBE0[];
 extern char D_0068FBE8[];
@@ -119,12 +119,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
-    func_002F3A30(arg0, hObject__GetClassID());
-    func_00306780(arg0, D_00822BC0, MCarModel__global_00822BC0);
+    func_002F3B88(arg0, hObject__GetClassID());
+    func_003068D8(arg0, D_00822BC0, MCarModel__global_00822BC0);
     {
         Str *ps = &s;
         const char *src = D_0068FBE0;
@@ -138,12 +138,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarModel__get_motion, MCarModel__set_motion);
+        func_002F39B8(arg0, &s, MCarModel__get_motion, MCarModel__set_motion);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -160,12 +160,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarModel__get_tx, MCarModel__set_tx);
+        func_002F39B8(arg0, &s, MCarModel__get_tx, MCarModel__set_tx);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -182,12 +182,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarModel__get_ty, MCarModel__set_ty);
+        func_002F39B8(arg0, &s, MCarModel__get_ty, MCarModel__set_ty);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -204,12 +204,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarModel__get_tz, MCarModel__set_tz);
+        func_002F39B8(arg0, &s, MCarModel__get_tz, MCarModel__set_tz);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -226,12 +226,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarModel__get_rx, MCarModel__set_rx);
+        func_002F39B8(arg0, &s, MCarModel__get_rx, MCarModel__set_rx);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -248,12 +248,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarModel__get_ry, MCarModel__set_ry);
+        func_002F39B8(arg0, &s, MCarModel__get_ry, MCarModel__set_ry);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -270,12 +270,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarModel__get_rz, MCarModel__set_rz);
+        func_002F39B8(arg0, &s, MCarModel__get_rz, MCarModel__set_rz);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -292,12 +292,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3818(arg0, &s, MCarModel__warp);
+        func_002F3970(arg0, &s, MCarModel__warp);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -314,12 +314,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarModel__get_posInterpolateSpeed, MCarModel__set_posInterpolateSpeed);
+        func_002F39B8(arg0, &s, MCarModel__get_posInterpolateSpeed, MCarModel__set_posInterpolateSpeed);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -336,12 +336,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarModel__get_rotInterpolateSpeed, MCarModel__set_rotInterpolateSpeed);
+        func_002F39B8(arg0, &s, MCarModel__get_rotInterpolateSpeed, MCarModel__set_rotInterpolateSpeed);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -358,12 +358,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, 0, MCarModel__set_fadein);
+        func_002F39B8(arg0, &s, 0, MCarModel__set_fadein);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -380,12 +380,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarModel__get_alpha, MCarModel__set_alpha);
+        func_002F39B8(arg0, &s, MCarModel__get_alpha, MCarModel__set_alpha);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -402,12 +402,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarModel__get_alphaInterpolateSpeed, MCarModel__set_alphaInterpolateSpeed);
+        func_002F39B8(arg0, &s, MCarModel__get_alphaInterpolateSpeed, MCarModel__set_alphaInterpolateSpeed);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -424,12 +424,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, 0, MCarModel__set_transparentRatio);
+        func_002F39B8(arg0, &s, 0, MCarModel__set_transparentRatio);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -446,12 +446,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3818(arg0, &s, MCarModel__playModelMotion);
+        func_002F3970(arg0, &s, MCarModel__playModelMotion);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -468,12 +468,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3818(arg0, &s, MCarModel__stopModelMotion);
+        func_002F3970(arg0, &s, MCarModel__stopModelMotion);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -490,12 +490,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3818(arg0, &s, MCarModel__setModelMotionLoop);
+        func_002F3970(arg0, &s, MCarModel__setModelMotionLoop);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -512,12 +512,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3818(arg0, &s, MCarModel__isPlayingModelMotion);
+        func_002F3970(arg0, &s, MCarModel__isPlayingModelMotion);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -534,12 +534,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarModel__get_additionalModelScale, MCarModel__set_additionalModelScale);
+        func_002F39B8(arg0, &s, MCarModel__get_additionalModelScale, MCarModel__set_additionalModelScale);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -556,12 +556,12 @@ extern "C" void mCarModel__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarModel__get_independent, MCarModel__set_independent);
+        func_002F39B8(arg0, &s, MCarModel__get_independent, MCarModel__set_independent);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }

@@ -1,0 +1,17 @@
+typedef int s32;
+
+struct Obj {
+    char pad[0x10];
+    s32 unk10;
+    s32 unk14;
+    s32 unk18;
+};
+
+extern "C" void free(s32 arg0);
+
+extern "C" void func_001C20C8(Obj *arg0) {
+    free(arg0->unk10);
+    arg0->unk10 = 0;
+    arg0->unk14 = 0;
+    arg0->unk18 = 0;
+}

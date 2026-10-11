@@ -7,8 +7,8 @@
 #include <stl_pair.h>
 #include <stl_list.h>
 
-extern "C" void *func_00326750(int size, int align, const char *name);
-extern "C" void func_00326798(void *p, int size, int align, const char *name);
+extern "C" void *func_003268A8(int size, int align, const char *name);
+extern "C" void func_003268F0(void *p, int size, int align, const char *name);
 extern "C" void *func_00575E60(int heap, int size);
 extern "C" void free(void *p);
 

@@ -24,11 +24,11 @@ void func_005F0390(struct func_005F0390_arg0 *arg0, s32 *arg1) {
     if (temp_s1 != arg1) {
         temp_s0 = *arg1;
         if (temp_s0 != 0) {
-            func_003285A8(temp_s0);
+            func_00328700(temp_s0);
         }
         temp_v0 = *temp_s1;
         if (temp_v0 != 0) {
-            func_003285F8(temp_v0);
+            func_00328750(temp_v0);
         }
         *temp_s1 = temp_s0;
     }

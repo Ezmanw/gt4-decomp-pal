@@ -1,3 +1,7 @@
-extern "C" float func_00385AA8(void *arg0) {
-    return *(float *) ((char *) *(void **) arg0 + 0xE0);
+typedef int s32;
+
+extern s32 func_00385A88(s32 a);
+
+s32 func_00385AA8(s32 *arg0) {
+    return func_00385A88(*arg0);
 }

@@ -23,9 +23,9 @@ struct Widget {
 extern s32 D_00619374;
 
 extern "C" void mWidget__getWindowSize(void *arg0, f32 *arg1, f32 *arg2);
-extern "C" void func_0025BA38(void *arg0, f32 *arg1, f32 *arg2);
-extern "C" u32 func_002662A0(struct Widget *arg0);
-extern "C" s32 func_00267698(struct Widget *arg0);
+extern "C" void func_0025BB90(void *arg0, f32 *arg1, f32 *arg2);
+extern "C" u32 func_002663F8(struct Widget *arg0);
+extern "C" s32 func_002677F0(struct Widget *arg0);
 
 extern "C" void mWidget__setWindowGeometry(struct Widget *self, struct Rect *r, f32 *px, f32 *py, f32 *pw, f32 *ph) {
     f32 sx;
@@ -33,7 +33,7 @@ extern "C" void mWidget__setWindowGeometry(struct Widget *self, struct Rect *r, 
     f32 w = r->w;
     f32 h = r->h;
 
-    switch (func_00267698(self)) {
+    switch (func_002677F0(self)) {
     case 1:
         mWidget__getWindowSize(self->parent, &sx, &sy);
         if (px != 0) r->x = *px / sx;
@@ -50,7 +50,7 @@ extern "C" void mWidget__setWindowGeometry(struct Widget *self, struct Rect *r, 
     case 3:
         sy = 0.0f;
         sx = 0.0f;
-        if (self->parent != 0) func_0025BA38(self->parent, &sy, &sx);
+        if (self->parent != 0) func_0025BB90(self->parent, &sy, &sx);
         if (px != 0) r->x = *px + sy;
         if (py != 0) r->y = *py + sx;
         if (pw != 0) w = *pw;
@@ -69,7 +69,7 @@ extern "C" void mWidget__setWindowGeometry(struct Widget *self, struct Rect *r, 
     if (r->w < 0.0f) r->w = 0.0f;
     if (r->h < 0.0f) r->h = 0.0f;
 
-    if (D_00619374 != 0 && func_002662A0(self) != 0) {
+    if (D_00619374 != 0 && func_002663F8(self) != 0) {
         self->f44 = r->w;
         self->f48 = r->h;
     }

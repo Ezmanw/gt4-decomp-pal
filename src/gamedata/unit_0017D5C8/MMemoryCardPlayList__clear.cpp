@@ -10,16 +10,16 @@ struct Buf00109C40 {
     char pad4[0xC];
 };
 
-extern "C" s32 func_0017D2C0(struct Buf00109C40 *arg0);
-extern "C" void func_001D1438(s32 arg0);
-extern "C" void func_0017D268(struct Buf00109C40 *arg0, s32 arg1);
+extern "C" s32 func_0017D2E8(struct Buf00109C40 *arg0);
+extern "C" void func_001D1460(s32 arg0);
+extern "C" void func_0017D290(struct Buf00109C40 *arg0, s32 arg1);
 
 extern "C" void MMemoryCardPlayList__clear(void) {
     struct Buf00109C40 buf;
     struct Inner *p;
 
-    func_0017D2C0(&buf);
+    func_0017D2E8(&buf);
     p = buf.ptr;
-    func_001D1438(p->unk10);
-    func_0017D268(&buf, 2);
+    func_001D1460(p->unk10);
+    func_0017D290(&buf, 2);
 }

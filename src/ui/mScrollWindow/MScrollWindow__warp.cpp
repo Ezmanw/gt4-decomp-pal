@@ -1,8 +1,8 @@
-extern "C" void func_002D2598(void *);
-extern "C" void func_002D2540(void *, int);
-extern "C" void func_00255110(void *, void *);
-extern "C" void func_002550B8(void *, int);
-extern "C" void func_002D2CB8(void *obj, int value);
+extern "C" void func_002D26F0(void *);
+extern "C" void func_002D2698(void *, int);
+extern "C" void func_00255268(void *, void *);
+extern "C" void func_00255210(void *, int);
+extern "C" void func_002D2E10(void *obj, int value);
 
 struct A {
     void *p;
@@ -20,11 +20,11 @@ extern "C" void MScrollWindow__warp(void *arg0, void *arg1, int count, void *nam
     if (count > 0) {
         A a;
         B b;
-        func_002D2598(&a);
+        func_002D26F0(&a);
         void *obj = a.p;
-        func_00255110(&b, name);
-        func_002D2CB8(obj, get(&b));
-        func_002550B8(&b, 2);
-        func_002D2540(&a, 2);
+        func_00255268(&b, name);
+        func_002D2E10(obj, get(&b));
+        func_00255210(&b, 2);
+        func_002D2698(&a, 2);
     }
 }

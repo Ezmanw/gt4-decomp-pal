@@ -1,8 +1,8 @@
-extern "C" void func_002D8B08(void *);
-extern "C" void func_002D8AB0(void *, int);
-extern "C" void func_00232C78(void *, void *);
-extern "C" void func_00232C20(void *, int);
-extern "C" void func_002DB300(void *obj, int value);
+extern "C" void func_002D8C60(void *);
+extern "C" void func_002D8C08(void *, int);
+extern "C" void func_00232DD0(void *, void *);
+extern "C" void func_00232D78(void *, int);
+extern "C" void func_002DB458(void *obj, int value);
 
 struct A {
     void *p;
@@ -20,11 +20,11 @@ extern "C" void MSelectBox__callFocus(void *arg0, void *arg1, int count, void *n
     if (count > 0) {
         A a;
         B b;
-        func_002D8B08(&a);
+        func_002D8C60(&a);
         void *obj = a.p;
-        func_00232C78(&b, name);
-        func_002DB300(obj, get(&b));
-        func_00232C20(&b, 2);
-        func_002D8AB0(&a, 2);
+        func_00232DD0(&b, name);
+        func_002DB458(obj, get(&b));
+        func_00232D78(&b, 2);
+        func_002D8C08(&a, 2);
     }
 }

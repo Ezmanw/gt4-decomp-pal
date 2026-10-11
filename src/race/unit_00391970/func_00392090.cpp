@@ -1,0 +1,11 @@
+typedef int s32;
+typedef float f32;
+
+extern s32 D_0088F2D0;
+
+extern "C" void RaceCarSound__fadeMasterVolume(f32 fparg0, f32 fparg1);
+
+extern "C" void func_00392090(f32 fparg0) {
+    D_0088F2D0 = 0;
+    RaceCarSound__fadeMasterVolume(1.0f, fparg0);
+}

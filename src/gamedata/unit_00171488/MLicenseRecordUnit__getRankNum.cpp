@@ -5,13 +5,13 @@ struct H {
     s32 p10;
 };
 
-extern "C" void func_001711F0(void *arg0, int arg1);
-extern "C" void *func_00171248(void *arg0);
-extern "C" void func_002FC870(void *arg0, int arg1);
-extern "C" void func_002FE278(void *arg0, s32 arg1);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
-extern "C" s32 func_004321B8(s32 arg0);
+extern "C" void func_001711F8(void *arg0, int arg1);
+extern "C" void *func_00171250(void *arg0);
+extern "C" void func_002FC9C8(void *arg0, int arg1);
+extern "C" void func_002FE3D0(void *arg0, s32 arg1);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
+extern "C" s32 func_00432530(s32 arg0);
 
 static inline H *get(H **p) {
     return *p;
@@ -24,21 +24,21 @@ extern "C" void MLicenseRecordUnit__getRankNum(s32 *arg0) {
     s32 v;
     s32 newVal;
     s32 oldVal;
-    func_00171248(tmp);
-    v = func_004321B8(get(tmp)->p10);
+    func_00171250(tmp);
+    v = func_00432530(get(tmp)->p10);
     pb = buf0;
-    func_002FE278(pb, v);
+    func_002FE3D0(pb, v);
     if (arg0 != pb) {
         newVal = *pb;
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *arg0;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *arg0 = newVal;
     }
-    func_002FC870(pb, 2);
-    func_001711F0(tmp, 2);
+    func_002FC9C8(pb, 2);
+    func_001711F8(tmp, 2);
 }

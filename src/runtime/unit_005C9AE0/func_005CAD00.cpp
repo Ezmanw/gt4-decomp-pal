@@ -3,8 +3,8 @@
    set<int>: _Rb_tree<int, int, _Identity, less<int>, GameAlloc>::_M_insert, the map source edited into a set by hand */
 #include <stl_tree.h>
 
-extern "C" void *func_00326750(int size, int align, const char *name);
-extern "C" void func_00326798(void *p, int size, int align, const char *name);
+extern "C" void *func_003268A8(int size, int align, const char *name);
+extern "C" void func_003268F0(void *p, int size, int align, const char *name);
 extern "C" void *func_005CB0E0(void);
 
 
@@ -34,10 +34,10 @@ public:
     template <class U> GameAlloc(const GameAlloc<U> &) throw() {}
     ~GameAlloc() throw() {}
     T *allocate(size_type n, const void * = 0) {
-        return (T *)func_00326750(n * sizeof(T), 4, ((TypeInfo *)TypeTag<T>::tf())->name);
+        return (T *)func_003268A8(n * sizeof(T), 4, ((TypeInfo *)TypeTag<T>::tf())->name);
     }
     void deallocate(T *p, size_type n) {
-        func_00326798(p, n * sizeof(T), 4, ((TypeInfo *)TypeTag<T>::tf())->name);
+        func_003268F0(p, n * sizeof(T), 4, ((TypeInfo *)TypeTag<T>::tf())->name);
     }
     size_type max_size() const throw() { return size_t(-1) / sizeof(T); }
     void construct(T *p, const T &v) { new (p) T(v); }

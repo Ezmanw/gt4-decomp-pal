@@ -1,7 +1,8 @@
 typedef int s32;
 
-struct S { char pad[0x20]; s32 unk20; };
+extern char D_006A7658[];
 
-extern "C" s32 func_00449188(S *arg0) {
-    return arg0->unk20;
+extern "C" s32 func_00449188(s32 *arg0) {
+    *arg0 = 0x60;
+    return (s32)D_006A7658;
 }

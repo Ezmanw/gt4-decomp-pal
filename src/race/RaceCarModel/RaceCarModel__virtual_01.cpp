@@ -22,10 +22,10 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" s32 func_00450AD0(void *);
-extern "C" void func_003EDA10(s32);
-extern "C" void func_003EDA90(s32);
-extern "C" void func_0044F4B0(void);
+extern "C" s32 func_00450EA8(void *);
+extern "C" void func_003EDD20(s32);
+extern "C" void func_003EDDA0(s32);
+extern "C" void func_0044F888(void);
 extern "C" void free(s32);
 extern "C" void HumanModel__virtual_03(void *);
 
@@ -40,14 +40,14 @@ struct RaceCarModel__virtual_01_arg0 {
 };
 
 extern "C" void RaceCarModel__virtual_01(s32 *arg0) {
-    func_003EDA10(func_00450AD0((char *)arg0 + 0x18));
+    func_003EDD20(func_00450EA8((char *)arg0 + 0x18));
     if (((struct RaceCarModel__virtual_01_arg0 *)arg0)->unk10 != 0) {
-        func_003EDA90(((struct RaceCarModel__virtual_01_arg0 *)arg0)->unk10);
+        func_003EDDA0(((struct RaceCarModel__virtual_01_arg0 *)arg0)->unk10);
         ((struct RaceCarModel__virtual_01_arg0 *)arg0)->unk10 = 0;
     }
     if (((struct RaceCarModel__virtual_01_arg0 *)arg0)->unkC != 0) {
-        func_0044F4B0();
-        func_003EDA90(((struct RaceCarModel__virtual_01_arg0 *)arg0)->unkC);
+        func_0044F888();
+        func_003EDDA0(((struct RaceCarModel__virtual_01_arg0 *)arg0)->unkC);
         ((struct RaceCarModel__virtual_01_arg0 *)arg0)->unkC = 0;
     }
     if (((struct RaceCarModel__virtual_01_arg0 *)arg0)->unk14 != 0) {

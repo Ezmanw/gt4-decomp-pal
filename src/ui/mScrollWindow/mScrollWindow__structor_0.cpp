@@ -3,7 +3,7 @@ typedef int s32;
 
 extern void *mScrollWindow__vtable;
 extern "C" void *mComposite__structor_0(void *);
-extern "C" void *func_002D1B38(void *, s32, void *);
+extern "C" void *func_002D1C90(void *, s32, void *);
 
 extern "C" void mScrollWindow__structor_0(void *arg0) {
     mComposite__structor_0(arg0);
@@ -13,6 +13,6 @@ extern "C" void mScrollWindow__structor_0(void *arg0) {
     ((struct mScrollWindow *)arg0)->unkB8 = 0x0;
     ((struct mScrollWindow *)arg0)->unkBC = 0x0;
     ((struct mScrollWindow *)arg0)->unkC0 = 0x0;
-    func_002D1B38((char *)arg0 + 0xc4, 0x1, (char *)arg0 + 0xfc);
-    func_002D1B38((char *)arg0 + 0xfc, 0x0, (char *)arg0 + 0xc4); return;
+    func_002D1C90((char *)arg0 + 0xc4, 0x1, (char *)arg0 + 0xfc);
+    func_002D1C90((char *)arg0 + 0xfc, 0x0, (char *)arg0 + 0xc4); return;
 }

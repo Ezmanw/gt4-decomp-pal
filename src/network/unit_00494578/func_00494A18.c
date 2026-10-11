@@ -1,0 +1,16 @@
+#include "types.h"
+void *memcpy(void *, const void *, unsigned int);
+
+s32 func_00494E00();                            /* extern */
+
+struct func_00494A18_arg0 {
+    char pad0[0x964];
+    s32 unk964;
+};
+
+void func_00494A18(struct func_00494A18_arg0 *arg0, s32 arg1) {
+    if (arg0->unk964 != arg1) {
+        func_00494E00();
+        arg0->unk964 = arg1;
+    }
+}

@@ -1,6 +1,6 @@
-extern void func_00462808(void);
+extern void func_00462BE0(void);
 
 void func_00101AB0(void)
 {
-    func_00462808();
+    func_00462BE0();
 }

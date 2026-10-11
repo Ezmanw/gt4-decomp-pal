@@ -1,9 +1,14 @@
 typedef int s32;
-typedef short s16;
 
-struct Obj { char pad[0x9A]; s16 unk9A; };
+struct S00265DA8 {
+    char pad0[0x98];
+    s32 unk98;
+};
 
-extern "C" s32 func_00265F00(Obj *arg0) {
-    s32 v = arg0->unk9A;
-    return v & 1;
+extern "C" void func_00265F00(struct S00265DA8 *arg0, s32 arg1) {
+    s32 temp = (s32)(arg1 != 0);
+    s32 v = arg0->unk98;
+    v = v & ~0x2000;
+    v = v | (temp << 13);
+    arg0->unk98 = v;
 }

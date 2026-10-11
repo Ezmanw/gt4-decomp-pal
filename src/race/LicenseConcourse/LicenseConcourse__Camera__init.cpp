@@ -3,7 +3,7 @@ struct Vec3 {
     float x, y, z;
     void set(float v) { x = v; y = v; z = v; }
 };
-extern "C" int func_00429870(void *, void *);
+extern "C" int func_00429BE8(void *, void *);
 namespace LicenseConcourse {
 struct Camera {
     int valid;
@@ -18,7 +18,7 @@ struct Camera {
 
 void LicenseConcourse::Camera::init(void *p, void *name)
 {
-    if (name && (id = func_00429870(p, name)) >= 0) {
+    if (name && (id = func_00429BE8(p, name)) >= 0) {
         valid = 1;
     } else {
         valid = 0;

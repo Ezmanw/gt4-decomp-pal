@@ -1,43 +1,15 @@
-typedef int s32;
-typedef short s16;
-typedef unsigned short u16;
-typedef signed char s8;
-typedef unsigned char u8;
-typedef long s64;
-typedef float f32;
+#include "types.h"
+#define NULL 0
+void *memcpy(void *, const void *, unsigned int);
 
-struct Rep {
-    s32 len;
-    s32 cap;
-    s32 ref;
-    s32 sel;
-};
+s32 func_0046F750(s32, s32);                    /* extern */
+s32 func_0046F7D8(s32, s32, s32);               /* extern */
 
-struct Str {
-    char *p;
-    char pad[0xC];
-};
+void func_0046CB18(s32 arg0, s32 arg1, s32 arg2) {
+    s32 temp_s0;
 
-struct S00659988 {
-    const char *name;
-};
-
-extern "C" void func_0046F378(void *, s32);
-extern "C" void func_0046F300(void *, s32);
-
-extern "C" void func_0046CB18(s32 *arg0) {
-    char *v_s0;
-    v_s0 = (char *)arg0 + 0x85c;
-    func_0046F378(v_s0, (0 | 0xffda));
-    func_0046F378(v_s0, 0xc);
-    func_0046F300(v_s0, 0x3);
-    func_0046F300(v_s0, 0);
-    func_0046F300(v_s0, 0);
-    func_0046F300(v_s0, 0x1);
-    func_0046F300(v_s0, 0x11);
-    func_0046F300(v_s0, 0x2);
-    func_0046F300(v_s0, 0x11);
-    func_0046F300(v_s0, 0);
-    func_0046F300(v_s0, 0x3f);
-    func_0046F300(v_s0, 0);
+    temp_s0 = arg0 + 0x85C;
+    func_0046F750(temp_s0, 0xFFFE);
+    func_0046F750(temp_s0, arg2 + 2);
+    func_0046F7D8(temp_s0, arg1, arg2);
 }

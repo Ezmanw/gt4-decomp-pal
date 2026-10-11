@@ -1,11 +1,17 @@
-typedef int s32;
-typedef signed char s8;
+#include "types.h"
+#define NULL 0
+void *memcpy(void *, const void *, unsigned int);
+#define M2C_MEMCPY_ALIGNED memcpy
+#define M2C_MEMCPY_UNALIGNED memcpy
+#define M2C_STRUCT_COPY memcpy
+#include "m2c_macros.h"
 
-struct Obj {
-    char pad[0x490];
+struct func_0043E8C8_arg0 {
+    char pad0[0x490];
     s32 unk490;
 };
 
-extern "C" void func_0043E8C8(struct Obj *arg0, s8 arg1) {
-    *(s8 *)((char *)arg0 + arg0->unk490 * 0x178 + 0x14B) = arg1;
+void func_0043E8C8(s32 arg0, s32 arg1) {
+    M2C_FIELD(((((struct func_0043E8C8_arg0 *)arg0)->unk490 * 0x178) + arg0), s8 *, 0x14E) = (s8) arg1;
+    M2C_FIELD(((((struct func_0043E8C8_arg0 *)arg0)->unk490 * 0x178) + arg0), s8 *, 0x14F) = (s8) arg1;
 }

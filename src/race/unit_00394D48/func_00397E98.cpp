@@ -1,14 +1,12 @@
-typedef float f32;
-
-struct Vec3 {
-    f32 x, y, z;
+struct Item { char d[0x20]; };
+struct List {
+    int count;
+    Item items[1];
 };
+extern "C" void func_003B7E68(void *ctx, Item *item);
 
-extern Vec3 D_00621500;
-extern f32 D_0062150C;
-extern "C" void func_004A3F98(f32, f32, f32);
-
-extern "C" void func_00397E98(void) {
-    f32 s = D_0062150C;
-    func_004A3F98(D_00621500.x * s, D_00621500.y * s, D_00621500.z * s);
+extern "C" void func_00397E98(List *l, void *ctx)
+{
+    for (int i = 0; i < l->count; i++)
+        func_003B7E68(ctx, &l->items[i]);
 }

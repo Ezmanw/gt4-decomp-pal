@@ -1,5 +1,7 @@
-struct S { char pad[0x14]; int unk14; };
+typedef int s32;
 
-extern "C" int func_00147D80(S *arg0) {
+struct S { char pad[0x14]; s32 unk14; };
+
+extern "C" s32 func_00147D80(S *arg0) {
     return arg0->unk14;
 }

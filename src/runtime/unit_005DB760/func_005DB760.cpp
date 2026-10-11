@@ -9,7 +9,7 @@ struct Obj
   char pad0[4];
   struct Node *unk4;
 };
-extern void func_00326798(void *, int, int, int);
+extern void func_003268F0(void *, int, int, int);
 extern int *func_005DBBC0(void);
 void func_005DB760(struct Obj *arg0)
 {
@@ -21,7 +21,7 @@ void func_005DB760(struct Obj *arg0)
     {
       struct Node *s0 = s1;
       s1 = s1->unk0;
-      func_00326798(s0, 0xC, 4, *func_005DBBC0());
+      func_003268F0(s0, 0xC, 4, *func_005DBBC0());
       v0 = arg0->unk4;
       s0 = s1;
     }

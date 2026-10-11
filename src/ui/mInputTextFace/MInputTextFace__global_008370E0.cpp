@@ -23,12 +23,12 @@ struct S00659988 {
 };
 
 extern char D_0069BA00[];
-extern "C" s32 func_00326750(s32, s32, void *);
+extern "C" s32 func_003268A8(s32, s32, void *);
 extern "C" void mInputTextFace__structor_0(s32);
-extern "C" void func_00255088(void *, void *);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002A5DC0(void *, s32);
+extern "C" void func_002551E0(void *, void *);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002A5F18(void *, s32);
 
 extern "C" void MInputTextFace__global_008370E0(s32 *arg0) {
     s32 buf0[4];
@@ -38,20 +38,20 @@ extern "C" void MInputTextFace__global_008370E0(s32 *arg0) {
     s32 newVal;
     s32 oldVal;
     p_s1 = buf1;
-    v_s0 = func_00326750(0xdf0, 0x4, &D_0069BA00);
+    v_s0 = func_003268A8(0xdf0, 0x4, &D_0069BA00);
     mInputTextFace__structor_0(v_s0);
     buf1[0] = v_s0;
-    func_00255088(buf0, p_s1);
+    func_002551E0(buf0, p_s1);
     if (arg0 != buf0) {
         newVal = buf0[0];
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *arg0;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *arg0 = newVal;
     }
-    func_002A5DC0(buf0, 0x2);
+    func_002A5F18(buf0, 0x2);
 }

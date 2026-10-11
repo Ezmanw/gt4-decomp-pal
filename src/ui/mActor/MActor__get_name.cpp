@@ -22,12 +22,12 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void func_001FEFA8(void *);
-extern "C" void func_00314B20(void *, s32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_00312318(void *, s32);
-extern "C" void func_001FEF50(void *, s32);
+extern "C" void func_001FEFE8(void *);
+extern "C" void func_00314C78(void *, s32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_00312470(void *, s32);
+extern "C" void func_001FEF90(void *, s32);
 
 extern "C" void MActor__get_name(s32 *arg0) {
     s32 buf0[4];
@@ -36,19 +36,19 @@ extern "C" void MActor__get_name(s32 *arg0) {
     s32 newVal;
     s32 oldVal;
     p_s2 = buf1;
-    func_001FEFA8(p_s2);
-    func_00314B20(buf0, *p_s2 + 0x10);
+    func_001FEFE8(p_s2);
+    func_00314C78(buf0, *p_s2 + 0x10);
     if (arg0 != buf0) {
         newVal = buf0[0];
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *arg0;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *arg0 = newVal;
     }
-    func_00312318(buf0, 0x2);
-    func_001FEF50(p_s2, 0x2);
+    func_00312470(buf0, 0x2);
+    func_001FEF90(p_s2, 0x2);
 }

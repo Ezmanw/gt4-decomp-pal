@@ -89,5 +89,5 @@ typedef s64 M2C_UNK64;
 #endif
 
 void func_005F6B98(void *arg0) {
-    func_0038BA90(arg0, M2C_FIELD(arg0, s32 *, 0xE410));
+    func_0038BD88(arg0, M2C_FIELD(arg0, s32 *, 0xE410));
 }

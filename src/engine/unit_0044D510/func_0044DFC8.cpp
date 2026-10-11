@@ -1,7 +1,12 @@
-extern int PDISTD__global_font_manager;
-extern int func_00490A98(int);
+typedef float f32;
 
-int func_0044DFC8(void)
-{
-    return func_00490A98(PDISTD__global_font_manager);
+struct S_00624980 {
+    char pad[0x24];
+    f32 unk24;
+};
+
+extern S_00624980 *PDISTD__global_font_manager;
+
+extern "C" f32 func_0044DFC8(void) {
+    return PDISTD__global_font_manager->unk24;
 }

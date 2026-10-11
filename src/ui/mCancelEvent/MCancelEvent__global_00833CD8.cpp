@@ -22,14 +22,14 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void func_002829C0(void *);
-extern "C" void func_0022AD20(void *, void *);
-extern "C" void func_00255110(void *, void *);
-extern "C" void func_0028EA10(s32, s32);
-extern "C" void func_0028EA70(s32, s32);
-extern "C" void func_002550B8(void *, s32);
-extern "C" void func_0022ACC8(void *, s32);
-extern "C" void func_00282968(void *, s32);
+extern "C" void func_00282B18(void *);
+extern "C" void func_0022AE78(void *, void *);
+extern "C" void func_00255268(void *, void *);
+extern "C" void func_0028EB68(s32, s32);
+extern "C" void func_0028EBC8(s32, s32);
+extern "C" void func_00255210(void *, s32);
+extern "C" void func_0022AE20(void *, s32);
+extern "C" void func_00282AC0(void *, s32);
 
 extern "C" void MCancelEvent__global_00833CD8(s32 *arg0, void *arg1, s32 arg2, char **arg3) {
     s32 buf0[4];
@@ -38,15 +38,15 @@ extern "C" void MCancelEvent__global_00833CD8(s32 *arg0, void *arg1, s32 arg2, c
     s32 *p_s1;
     s32 *p_s0;
     if (arg2 == 0x2) {
-        func_002829C0(buf0);
+        func_00282B18(buf0);
         p_s1 = buf1;
-        func_0022AD20(p_s1, arg3);
+        func_0022AE78(p_s1, arg3);
         p_s0 = buf2;
-        func_00255110(p_s0, (char *)arg3 + 0x4);
-        func_0028EA10(buf0[0], *p_s1);
-        func_0028EA70(buf0[0], *p_s0);
-        func_002550B8(p_s0, 0x2);
-        func_0022ACC8(p_s1, 0x2);
-        func_00282968(buf0, 0x2);
+        func_00255268(p_s0, (char *)arg3 + 0x4);
+        func_0028EB68(buf0[0], *p_s1);
+        func_0028EBC8(buf0[0], *p_s0);
+        func_00255210(p_s0, 0x2);
+        func_0022AE20(p_s1, 0x2);
+        func_00282AC0(buf0, 0x2);
     }
 }

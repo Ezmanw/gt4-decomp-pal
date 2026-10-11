@@ -1,22 +1,18 @@
-struct Limits;
-
-extern Limits D_00620320;
-
-extern "C" float func_003507A8(Limits *l);
-
 struct Obj {
-    char pad0[4];
-    float value;
-    char pad[12];
+    char pad[0x14];
     unsigned char locked;
 };
 
-extern "C" void func_00343578(Obj *o, float v) {
-    if (o->locked)
-        return;
-    Limits *l = &D_00620320;
-    if (func_003507A8(l) < v)
-        o->value = func_003507A8(l);
-    else
-        o->value = v;
+extern "C" void func_003436D0(Obj *o, float v);
+extern "C" void func_003437F0(Obj *o, float v);
+extern "C" void func_00343AD0(Obj *o, float v);
+
+extern "C" void func_00343578(Obj *o, int locked)
+{
+    if (!o->locked && locked) {
+        func_003436D0(o, 0.0f);
+        func_003437F0(o, 0.0f);
+        func_00343AD0(o, 0.0f);
+    }
+    o->locked = locked;
 }

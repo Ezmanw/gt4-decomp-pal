@@ -33,7 +33,7 @@ struct RaceSplitBattleBase {
 
 extern "C" void RaceBase__initializeCamera(RaceSplitBattleBase *self);               /* RaceBase::initializeCamera() */
 extern "C" void CameraSys__CameraManager__initWindowMax(CameraManager *cm, int count);            /* CameraManager::initWindowMax(int) */
-extern "C" void func_00372080(CameraManager *cm, int window);
+extern "C" void func_00372350(CameraManager *cm, int window);
 extern "C" void CameraSys__CameraManager__setTargetCar(CameraManager *cm, int car);              /* CameraManager::setTargetCar(int) */
 
 /* RaceSplitBattleBase::initializeCamera() */
@@ -42,7 +42,7 @@ extern "C" void RaceSplitBattleBase__initializeCamera(RaceSplitBattleBase *self)
     CameraManager *cm = self->getGT4CameraManager(0);
     CameraSys__CameraManager__initWindowMax(cm, 2);
     for (int i = 1; i >= 0; i--) {
-        func_00372080(cm, i);
+        func_00372350(cm, i);
         CameraSys__CameraManager__setTargetCar(cm, i);
     }
 }

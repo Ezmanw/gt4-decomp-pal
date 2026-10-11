@@ -1,0 +1,7 @@
+typedef int s32;
+
+struct Obj { char pad[0x9C]; s32 unk9C; };
+
+extern "C" s32 func_002664F0(Obj *arg0) {
+    return (arg0->unk9C >> 4) & 1;
+}

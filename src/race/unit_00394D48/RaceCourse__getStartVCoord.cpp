@@ -7,7 +7,7 @@ void *memcpy(void *, const void *, unsigned int);
 
 void *CourseData__getRunway(s32);                           /* extern */
 
-struct func_00395528_arg0 {
+struct func_00395820_arg0 {
     char pad0[0x4];
     s32 unk4;
     char pad8[0xA8];
@@ -15,8 +15,8 @@ struct func_00395528_arg0 {
 };
 
 f32 RaceCourse__getStartVCoord(void *arg0) {
-    if (((struct func_00395528_arg0 *)arg0)->unkB0 < 0) {
-        return M2C_FIELD(CourseData__getRunway(((struct func_00395528_arg0 *)arg0)->unk4), f32 *, 0x18);
+    if (((struct func_00395820_arg0 *)arg0)->unkB0 < 0) {
+        return M2C_FIELD(CourseData__getRunway(((struct func_00395820_arg0 *)arg0)->unk4), f32 *, 0x18);
     }
-    return M2C_FIELD((M2C_FIELD(CourseData__getRunway(((struct func_00395528_arg0 *)arg0)->unk4), s32 *, 0x9C) + (((struct func_00395528_arg0 *)arg0)->unkB0 << 5)), f32 *, 0x0);
+    return M2C_FIELD((M2C_FIELD(CourseData__getRunway(((struct func_00395820_arg0 *)arg0)->unk4), s32 *, 0x9C) + (((struct func_00395820_arg0 *)arg0)->unkB0 << 5)), f32 *, 0x0);
 }

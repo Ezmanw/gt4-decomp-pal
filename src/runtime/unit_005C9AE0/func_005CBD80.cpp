@@ -5,9 +5,9 @@ struct Obj {
     s32 unk10;
 };
 
-extern "C" s32 func_00436D20(s32 arg0);
+extern "C" s32 func_00437098(s32 arg0);
 
 extern "C" s32 func_005CBD80(Obj *arg0)
 {
-    return func_00436D20(arg0->unk10);
+    return func_00437098(arg0->unk10);
 }

@@ -11,12 +11,12 @@ struct Handle {
     char pad[0xC];
 };
 
-extern "C" void func_00129870(void *arg0, int arg1);
-extern "C" void func_001298C8(void *arg0, void *arg1);
-extern "C" void func_002FC870(void *arg0, int arg1);
-extern "C" void func_002FE278(void *arg0, void *arg1);
-extern "C" void func_003285A8(void *p);
-extern "C" void func_003285F8(void *p);
+extern "C" void func_00129878(void *arg0, int arg1);
+extern "C" void func_001298D0(void *arg0, void *arg1);
+extern "C" void func_002FC9C8(void *arg0, int arg1);
+extern "C" void func_002FE3D0(void *arg0, void *arg1);
+extern "C" void func_00328700(void *p);
+extern "C" void func_00328750(void *p);
 
 static inline Obj *hget(Handle *h) { return h->p; }
 
@@ -25,22 +25,22 @@ extern "C" void func_005C4A40(void **arg0, void *arg1, s32 arg2, s32 arg3, PM pm
     Handle o;
     Handle *po = &o;
 
-    func_001298C8(po, arg1);
+    func_001298D0(po, arg1);
     {
         void *r = (hget(po)->*pmf)();
         Handle *ph = &h;
-        func_002FE278(ph, r);
+        func_002FE3D0(ph, r);
         if ((void *)arg0 != (void *)ph) {
             void *p = ph->p;
             if (p != 0) {
-                func_003285A8(p);
+                func_00328700(p);
             }
             if (*arg0 != 0) {
-                func_003285F8(*arg0);
+                func_00328750(*arg0);
             }
             *arg0 = p;
         }
-        func_002FC870(ph, 2);
+        func_002FC9C8(ph, 2);
     }
-    func_00129870(po, 2);
+    func_00129878(po, 2);
 }

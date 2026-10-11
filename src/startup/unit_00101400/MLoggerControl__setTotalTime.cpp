@@ -22,11 +22,11 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void func_00123838(void *);
-extern "C" void func_002FC8C8(void *, void *);
-extern "C" s32 func_002FE250(s32);
-extern "C" void func_002FC870(void *, s32);
-extern "C" void func_001237E0(void *, s32);
+extern "C" void func_00123840(void *);
+extern "C" void func_002FCA20(void *, void *);
+extern "C" s32 func_002FE3A8(s32);
+extern "C" void func_002FC9C8(void *, s32);
+extern "C" void func_001237E8(void *, s32);
 
 struct MLoggerControl__setTotalTime_v_s1 {
     char pad0[0x8C];
@@ -43,14 +43,14 @@ extern "C" void MLoggerControl__setTotalTime(s32 *arg0, void *arg1, s32 arg2, ch
     s32 *p_s0;
     s32 v_s1;
     if (arg2 >= 0x2) {
-        func_00123838(buf0);
+        func_00123840(buf0);
         p_s0 = buf1;
-        func_002FC8C8(p_s0, arg3);
-        v_s1 = func_002FE250(*p_s0);
-        func_002FC870(p_s0, 0x2);
+        func_002FCA20(p_s0, arg3);
+        v_s1 = func_002FE3A8(*p_s0);
+        func_002FC9C8(p_s0, 0x2);
         v_s1 = (v_s1 << 2);
         v_s1 = (v_s1 + buf0[0]);
         ((struct MLoggerControl__setTotalTime_v_s1 *)v_s1)->unk8C = ((struct MLoggerControl__setTotalTime_arg3 *)arg3)->unk4;
-        func_001237E0(buf0, 0x2);
+        func_001237E8(buf0, 0x2);
     }
 }

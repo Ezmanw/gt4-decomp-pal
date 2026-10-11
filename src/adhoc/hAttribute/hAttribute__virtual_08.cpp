@@ -28,8 +28,8 @@ static inline s32 vcall_50(char *o) {
     VEntry_50 *e = (VEntry_50 *)((char *)((VObj_50 *)o)->vtbl + 0x50);
     return e->fn(o + e->delta);
 }
-extern "C" void func_002F3508(s32);
-extern "C" void func_0030B590(s32, void *, s32);
+extern "C" void func_002F3660(s32);
+extern "C" void func_0030B6E8(s32, void *, s32);
 
 struct hAttribute__virtual_08_arg0 {
     u8 pad0[0xC];
@@ -38,7 +38,7 @@ struct hAttribute__virtual_08_arg0 {
 
 extern "C" void hAttribute__virtual_08(s32 *arg0, void *arg1, s32 arg2) {
     if (((struct hAttribute__virtual_08_arg0 *)arg0)->unkC == -0x1) {
-        func_002F3508(vcall_50((char *)(*(s32 *)(char *)arg2)));
+        func_002F3660(vcall_50((char *)(*(s32 *)(char *)arg2)));
     }
-    func_0030B590(*(s32 *)(char *)arg2, arg1, ((struct hAttribute__virtual_08_arg0 *)arg0)->unkC);
+    func_0030B6E8(*(s32 *)(char *)arg2, arg1, ((struct hAttribute__virtual_08_arg0 *)arg0)->unkC);
 }

@@ -1,4 +1,4 @@
-extern "C" void func_001CC060(void *arg0, void *arg1);
+extern "C" void func_001CC088(void *arg0, void *arg1);
 extern "C" void func_005C1628(void *arg0);
 
 extern void *D_006615F8;
@@ -10,7 +10,7 @@ struct func_005D1408_arg0 {
 
 extern "C" void func_005D1408(struct func_005D1408_arg0 *arg0, int arg1) {
     arg0->unk4C = &D_006615F8;
-    func_001CC060(arg0, 0);
+    func_001CC088(arg0, 0);
     if (arg1 & 1) {
         return func_005C1628(arg0);
     }

@@ -5,9 +5,9 @@ struct RaceDisplayObjectBase {
 };
 
 /* Named after its constructor so that the call resolves. */
-struct func_003AA268 {
+struct func_003AA560 {
     char data[0x24];
-    func_003AA268();
+    func_003AA560();
 };
 
 struct RacePriusHybridDisplay : RaceDisplayObjectBase {
@@ -15,7 +15,7 @@ struct RacePriusHybridDisplay : RaceDisplayObjectBase {
     int m1C;
     int m20;
     unsigned int m24;
-    func_003AA268 parts[5];
+    func_003AA560 parts[5];
     RacePriusHybridDisplay() __asm__("RacePriusHybridDisplay__structor_1");
     virtual ~RacePriusHybridDisplay();
 };

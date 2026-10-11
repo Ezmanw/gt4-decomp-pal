@@ -1,5 +1,5 @@
 // gcc 2.96 mangled names of the STL instantiations tools/stl.py matched (read by tools/symbols.py)
-__t6vector2Z10T_005DBC00Zt9GameAlloc1Z10T_005DBC00RCt6vector2Z10T_005DBC00Zt9GameAlloc1Z10T_005DBC00 = 0x0030F740; // type:func
+__t6vector2Z10T_005DBC00Zt9GameAlloc1Z10T_005DBC00RCt6vector2Z10T_005DBC00Zt9GameAlloc1Z10T_005DBC00 = 0x0030F898; // type:func
 memmove__FPvPCvUi = 0x005A47D4; // type:func
 memset = 0x005A48D8; // type:func
 __builtin_new = 0x005C1498; // type:func

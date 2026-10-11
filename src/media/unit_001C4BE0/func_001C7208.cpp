@@ -1,14 +1,16 @@
 typedef int s32;
 
-struct Obj001C7208 {
-    char pad[0xB0];
-    void *unkB0;
+struct Obj001C71E0 {
+    char pad[0xBC8];
+    s32 unkBC8;
 };
 
-extern char D_00660D80[];
-extern "C" s32 func_001C7260(Obj001C7208 *arg0);
+extern "C" void *func_001C7208(char *arg0) {
+    s32 temp_v1 = ((struct Obj001C71E0 *)arg0)->unkBC8;
+    void *var_v0 = 0;
 
-extern "C" s32 func_001C7208(Obj001C7208 *arg0) {
-    arg0->unkB0 = D_00660D80;
-    return func_001C7260(arg0);
+    if (temp_v1 >= 0) {
+        var_v0 = arg0 + temp_v1 * 0x2B8 + 0x64C;
+    }
+    return var_v0;
 }

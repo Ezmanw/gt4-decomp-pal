@@ -9,7 +9,7 @@ struct Obj {
     void *buf154;
 };
 
-void func_001CC060(struct Obj *, s32);
+void func_001CC088(struct Obj *, s32);
 void free(void *);
 void func_005C1628(void *);
 
@@ -27,7 +27,7 @@ void func_005D1D08(struct Obj *self, s32 flags) {
         free(self->buf54);
     }
     self->vtbl = D_006614F8;
-    func_001CC060(self, 0);
+    func_001CC088(self, 0);
     if (flags & 1) {
         func_005C1628(self);
     }

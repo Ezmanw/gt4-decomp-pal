@@ -8,7 +8,7 @@ struct Heap { const char *name; };
 struct StringRep { u32 len; u32 cap; u32 refs; u32 spare; };
 
 extern struct Heap *func_005C11A8(void);
-extern void *func_00326750(int size, int align, const char *name);
+extern void *func_003268A8(int size, int align, const char *name);
 extern void *memcpy(void *dst, const void *src, u32 n);
 
 static inline u32 frob_size(u32 s) {
@@ -20,7 +20,7 @@ static inline u32 frob_size(u32 s) {
 
 /* Rep::operator new: the size is a parameter, evaluated before the current heap is looked up */
 static inline void *rep_new(u32 n) {
-    return func_00326750(n, 4, func_005C11A8()->name);
+    return func_003268A8(n, 4, func_005C11A8()->name);
 }
 
 static inline struct StringRep *create(u32 extra) {

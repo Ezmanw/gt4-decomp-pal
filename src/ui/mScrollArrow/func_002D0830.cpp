@@ -1,0 +1,9 @@
+typedef int s32;
+
+extern s32 mScrollArrow__ClassID_;
+
+extern "C" void func_002D0A18(s32 arg0);
+
+extern "C" void func_002D0830(void) {
+    func_002D0A18(mScrollArrow__ClassID_);
+}

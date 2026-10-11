@@ -1,8 +1,8 @@
-extern "C" void func_0024E3D0(void *, void *);
-extern "C" void func_0024E378(void *, int);
-extern "C" void func_00312370(void *, void *);
-extern "C" void func_00312318(void *, int);
-extern "C" int func_00314920(int);
+extern "C" void func_0024E528(void *, void *);
+extern "C" void func_0024E4D0(void *, int);
+extern "C" void func_003124C8(void *, void *);
+extern "C" void func_00312470(void *, int);
+extern "C" int func_00314A78(int);
 
 struct VEntry { short delta; short index; void (*fn)(void *, int); };
 struct VObj { char pad0[4]; char *vtbl; };
@@ -21,15 +21,15 @@ extern "C" void MUpdateContext__loadGpbFromMC(void *arg0, void *arg1, int count,
     if (count > 0) {
         B b;
         A a;
-        func_00312370(&b, name);
+        func_003124C8(&b, name);
         A *pa = &a;
-        func_0024E3D0(pa, arg1);
+        func_0024E528(pa, arg1);
         VObj *o = pa->p;
         VEntry *e = (VEntry *)(o->vtbl + 0x1B8);
         char *self = (char *)o + e->delta;
-        int arg = func_00314920(get(&b));
+        int arg = func_00314A78(get(&b));
         e->fn(self, arg);
-        func_0024E378(pa, 2);
-        func_00312318(&b, 2);
+        func_0024E4D0(pa, 2);
+        func_00312470(&b, 2);
     }
 }

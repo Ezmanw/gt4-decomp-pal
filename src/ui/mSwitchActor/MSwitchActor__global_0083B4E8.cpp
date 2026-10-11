@@ -21,27 +21,27 @@ struct Handle {
     char pad[0xC];
 };
 
-extern "C" void func_00204D30(void *arg0, int arg1);
-extern "C" void func_00204D88(void *arg0, void *arg1);
-extern "C" void func_002E1FE0(void *arg0, int arg1);
-extern "C" void func_002E2038(void *arg0, void *arg1);
-extern "C" void func_002E2908(Obj *arg0, void *arg1);
+extern "C" void func_00204DF0(void *arg0, int arg1);
+extern "C" void func_00204E48(void *arg0, void *arg1);
+extern "C" void func_002E2138(void *arg0, int arg1);
+extern "C" void func_002E2190(void *arg0, void *arg1);
+extern "C" void func_002E2A60(Obj *arg0, void *arg1);
 
 extern "C" void MSwitchActor__global_0083B4E8(void *arg0, void *arg1, s32 n, void *arg3) {
     if (n > 0) {
         OHandle h0;
         Handle b;
         Handle *pb;
-        func_002E2038(&h0, arg1);
+        func_002E2190(&h0, arg1);
         pb = &b;
-        func_00204D88(pb, arg3);
+        func_00204E48(pb, arg3);
         {
             Obj *o = h0.p;
             VEntry *e = (VEntry *)(o->vtbl + 0x190);
             e->fn((char *)o + e->delta);
         }
-        func_002E2908(h0.p, pb->p);
-        func_00204D30(pb, 2);
-        func_002E1FE0(&h0, 2);
+        func_002E2A60(h0.p, pb->p);
+        func_00204DF0(pb, 2);
+        func_002E2138(&h0, 2);
     }
 }

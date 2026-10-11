@@ -28,12 +28,12 @@ static inline s32 vcall_58(char *o) {
     VEntry_58 *e = (VEntry_58 *)((char *)((VObj_58 *)o)->vtbl + 0x58);
     return e->fn(o + e->delta);
 }
-extern "C" void func_002FE278(void *, s32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002FC870(void *, s32);
+extern "C" void func_002FE3D0(void *, s32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002FC9C8(void *, s32);
 
-struct func_002FD6D0_arg0 {
+struct func_002FD828_arg0 {
     char pad0[0x10];
     s32 unk10;
 };
@@ -42,17 +42,17 @@ extern "C" void hInt__virtual_43(s32 *arg0, void *arg1, s32 arg2, char **arg3, s
     s32 buf0[4];
     s32 newVal;
     s32 oldVal;
-    func_002FE278(buf0, (((struct func_002FD6D0_arg0 *)arg0)->unk10 | vcall_58((char *)(*(s32 *)(char *)arg4))));
+    func_002FE3D0(buf0, (((struct func_002FD828_arg0 *)arg0)->unk10 | vcall_58((char *)(*(s32 *)(char *)arg4))));
     if (arg1 != buf0) {
         newVal = buf0[0];
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *(s32 *)arg1;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *(s32 *)arg1 = newVal;
     }
-    func_002FC870(buf0, 0x2);
+    func_002FC9C8(buf0, 0x2);
 }

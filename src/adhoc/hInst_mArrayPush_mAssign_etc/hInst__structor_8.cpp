@@ -1,8 +1,8 @@
 typedef int s32;
 
 extern "C" void RefCounter__structor_2(void *arg0, s32 arg1);
-extern "C" void func_00326798(void *arg0, s32 arg1, s32 arg2, const char *arg3);
-extern "C" void *func_0031B500(s32 arg0);
+extern "C" void func_003268F0(void *arg0, s32 arg1, s32 arg2, const char *arg3);
+extern "C" void *func_0031B658(s32 arg0);
 
 extern void *hInst__vtable;
 extern void *mEval__vtable;
@@ -14,10 +14,10 @@ struct hInst__structor_8_arg0 {
 
 extern "C" void hInst__structor_8(struct hInst__structor_8_arg0 *arg0, s32 arg1) {
     arg0->unk4 = &mEval__vtable;
-    func_0031B500(0);
+    func_0031B658(0);
     arg0->unk4 = &hInst__vtable;
     RefCounter__structor_2(arg0, 0);
     if (arg1 & 1) {
-        return func_00326798(arg0, 8, 4, "RefCounter");
+        return func_003268F0(arg0, 8, 4, "RefCounter");
     }
 }

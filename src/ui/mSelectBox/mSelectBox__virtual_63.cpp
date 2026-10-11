@@ -1,11 +1,11 @@
 /* compiler: ee-gcc2.96-no-strict-aliasing */
-/* mSelectBox virtual 63: refreshes the base (mSceneViewFace__virtual_63), copies two floats from the linked object (func_00206868) into +0xE4/+0xE8, then passes HSymID__GetID(basic_string<char>(D_0069CE08)) to func_003069F8(this, this + 0xF4, &v). bastring.h members inline (ctor = nilRep.grab() + assign(s, strlen(s)), dtor = rep()->release() -> Rep::operator delete -> deallocate(p, sizeof(Rep) + res)); needs -fno-strict-aliasing for the register choice of the grab. */
+/* mSelectBox virtual 63: refreshes the base (mSceneViewFace__virtual_63), copies two floats from the linked object (func_00206928) into +0xE4/+0xE8, then passes HSymID__GetID(basic_string<char>(D_0069CE08)) to func_00306B50(this, this + 0xF4, &v). bastring.h members inline (ctor = nilRep.grab() + assign(s, strlen(s)), dtor = rep()->release() -> Rep::operator delete -> deallocate(p, sizeof(Rep) + res)); needs -fno-strict-aliasing for the register choice of the grab. */
 typedef unsigned int u32;
 typedef int s32;
 typedef unsigned int size_t;
 struct Heap { const char *name; };
 extern "C" Heap *func_005C11A8(void);
-extern "C" void func_00326798(void *ptr, size_t size, size_t align, const char *name);
+extern "C" void func_003268F0(void *ptr, size_t size, size_t align, const char *name);
 extern "C" size_t func_0057F260(const char *s);
 struct Rep;
 extern "C" char *func_005C2560(Rep *r);
@@ -43,27 +43,27 @@ struct String {
     size_t length() const { return rep()->len; }
 };
 struct GameAlloc {
-    static void deallocate(void *p, size_t n) { func_00326798(p, n, 4, func_005C11A8()->name); }
+    static void deallocate(void *p, size_t n) { func_003268F0(p, n, 4, func_005C11A8()->name); }
 };
 inline void Rep::operator delete(void *ptr) {
     GameAlloc::deallocate(ptr, sizeof(Rep) + reinterpret_cast<Rep *>(ptr)->res);
 }
 extern char D_0069CE08[];
 extern "C" void mSceneViewFace__virtual_63(void *a);
-extern "C" void *func_00206868(void *a);
+extern "C" void *func_00206928(void *a);
 extern "C" float mWidget__getWindowW(void *a);
 extern "C" float mWidget__getWindowH(void *a);
 extern "C" s32 HSymID__GetID(String *s);
-extern "C" void func_003069F8(void *obj, void *h, s32 *val);
+extern "C" void func_00306B50(void *obj, void *h, s32 *val);
 extern "C" void mSelectBox__virtual_63(char *a0) {
     s32 v[8];
     mSceneViewFace__virtual_63(a0);
-    void *o = func_00206868(a0);
+    void *o = func_00206928(a0);
     if (o) {
         *(float *)(a0 + 0xE4) = mWidget__getWindowW(o);
         *(float *)(a0 + 0xE8) = mWidget__getWindowH(o);
     }
     String s(D_0069CE08);
     v[0] = HSymID__GetID(&s);
-    func_003069F8(a0, a0 + 0xF4, v);
+    func_00306B50(a0, a0 + 0xF4, v);
 }

@@ -10,18 +10,18 @@ struct Buf00109C40 {
     char pad4[0xC];
 };
 
-extern "C" s32 func_001792D8(struct Buf00109C40 *arg0);
-extern "C" void func_001D28A0(s32 arg0);
-extern "C" void func_001D2938(void);
-extern "C" void func_00179280(struct Buf00109C40 *arg0, s32 arg1);
+extern "C" s32 func_00179300(struct Buf00109C40 *arg0);
+extern "C" void func_001D28C8(s32 arg0);
+extern "C" void func_001D2960(void);
+extern "C" void func_001792A8(struct Buf00109C40 *arg0, s32 arg1);
 
 extern "C" void MMemoryCardManager__clearAutoSaveDisabled(void) {
     struct Buf00109C40 buf;
     struct Inner *p;
 
-    func_001792D8(&buf);
+    func_00179300(&buf);
     p = buf.ptr;
-    func_001D28A0(p->unk20);
-    func_001D2938();
-    func_00179280(&buf, 2);
+    func_001D28C8(p->unk20);
+    func_001D2960();
+    func_001792A8(&buf, 2);
 }

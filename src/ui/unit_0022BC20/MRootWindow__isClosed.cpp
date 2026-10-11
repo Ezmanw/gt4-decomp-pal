@@ -1,12 +1,12 @@
 typedef int s32;
 
-extern "C" void func_00232C20(void *arg0, s32 arg1);
-extern "C" void func_00232C78(void *arg0);
-extern "C" s32 func_00233D28(s32 arg0);
-extern "C" void func_002FC870(s32 *arg0, s32 arg1);
-extern "C" void func_002FE278(s32 *arg0, s32 arg1);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
+extern "C" void func_00232D78(void *arg0, s32 arg1);
+extern "C" void func_00232DD0(void *arg0);
+extern "C" s32 func_00233E80(s32 arg0);
+extern "C" void func_002FC9C8(s32 *arg0, s32 arg1);
+extern "C" void func_002FE3D0(s32 *arg0, s32 arg1);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
 
 extern "C" void MRootWindow__isClosed(s32 *arg0) {
     s32 sp[4];
@@ -15,23 +15,23 @@ extern "C" void MRootWindow__isClosed(s32 *arg0) {
     s32 temp_a0;
     s32 temp_s0;
 
-    func_00232C78(sp);
+    func_00232DD0(sp);
     {
-        s32 t = func_00233D28(sp[0]);
+        s32 t = func_00233E80(sp[0]);
         p1 = sp10;
-        func_002FE278(p1, t);
+        func_002FE3D0(p1, t);
     }
     if (arg0 != p1) {
         temp_s0 = *p1;
         if (temp_s0 != 0) {
-            func_003285A8(temp_s0);
+            func_00328700(temp_s0);
         }
         temp_a0 = *arg0;
         if (temp_a0 != 0) {
-            func_003285F8(temp_a0);
+            func_00328750(temp_a0);
         }
         *arg0 = temp_s0;
     }
-    func_002FC870(p1, 2);
-    func_00232C20(sp, 2);
+    func_002FC9C8(p1, 2);
+    func_00232D78(sp, 2);
 }

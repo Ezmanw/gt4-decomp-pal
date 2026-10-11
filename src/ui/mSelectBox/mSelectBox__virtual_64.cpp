@@ -5,11 +5,11 @@ struct Obj {
     s32 h;
 };
 
-extern "C" void func_002F9B08(void *arg0, s32 *arg1);
-extern "C" void func_002F9B38(void *arg0, int arg1);
+extern "C" void func_002F9C60(void *arg0, s32 *arg1);
+extern "C" void func_002F9C90(void *arg0, int arg1);
 extern "C" void IfWidget__structor_0(Obj *self);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
 
 extern "C" void mSelectBox__virtual_64(Obj *self) {
     s32 buf[4];
@@ -19,18 +19,18 @@ extern "C" void mSelectBox__virtual_64(Obj *self) {
     s32 oldVal;
     IfWidget__structor_0(self);
     zero = 0;
-    func_002F9B08(buf, &zero);
+    func_002F9C60(buf, &zero);
     dst = &self->h;
     if (dst != buf) {
         newVal = buf[0];
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *dst;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *dst = newVal;
     }
-    func_002F9B38(buf, 2);
+    func_002F9C90(buf, 2);
 }

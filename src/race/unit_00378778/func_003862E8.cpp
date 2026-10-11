@@ -1,3 +1,7 @@
-int func_003862E8(int *arg0) {
-    return *arg0 + 0x4C;
+typedef int s32;
+
+struct Obj { char pad[0xC]; s32 unkC; };
+
+extern "C" void func_003862E8(Obj **arg0, s32 arg1) {
+    (*arg0)->unkC = arg1;
 }

@@ -11,8 +11,8 @@ struct Handle {
     char pad[0xC];
 };
 
-extern "C" void func_001DC5F8(void *arg0, int arg1);
-extern "C" void func_001DC650(void *arg0, void *arg1);
+extern "C" void func_001DC638(void *arg0, int arg1);
+extern "C" void func_001DC690(void *arg0, void *arg1);
 
 static inline Obj *hget(Handle *h) { return h->p; }
 
@@ -20,7 +20,7 @@ extern "C" void func_005D3C50(void *arg0, void *arg1, s32 arg2, s32 arg3, PM pmf
     Handle o;
     Handle *po = &o;
 
-    func_001DC650(po, arg1);
+    func_001DC690(po, arg1);
     (hget(po)->*pmf)();
-    func_001DC5F8(po, 2);
+    func_001DC638(po, 2);
 }

@@ -4,7 +4,7 @@
 void *memcpy(void *, const void *, unsigned int);
 
 
-s32 func_003E73F0();                            /* extern */
+s32 func_003E7700();                            /* extern */
 
 extern char PitmenData__vtable[];
 void PitmenData__structor_0(void *arg0) {
@@ -13,7 +13,7 @@ void PitmenData__structor_0(void *arg0) {
     s32 var_v1;
     s8 *var_a0;
 
-    func_003E73F0();
+    func_003E7700();
     ((struct PitmenData *)arg0)->unk8 = 0;
     var_a0 = arg0 + 0xC;
     ((struct PitmenData *)arg0)->unk6C = (s32)PitmenData__vtable;

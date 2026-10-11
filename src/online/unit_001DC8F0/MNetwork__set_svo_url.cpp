@@ -29,11 +29,11 @@ struct Obj {
 
 extern char D_006959D8[];
 
-extern "C" void func_001DC5F8(void *arg0, int arg1);
-extern "C" void func_001DC650(void *arg0, void *arg1);
-extern "C" void func_001F15B0(s32 arg0, const char *arg1);
+extern "C" void func_001DC638(void *arg0, int arg1);
+extern "C" void func_001DC690(void *arg0, void *arg1);
+extern "C" void func_001F15F0(s32 arg0, const char *arg1);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
 
 static inline const char *c_str(Str *s) {
     s32 len = ((Rep *)s->p)[-1].len;
@@ -46,7 +46,7 @@ extern "C" void MNetwork__set_svo_url(void *arg0, void *arg1, s32 arg2, Obj **ar
     {
         s32 buf[8];
         Str s;
-        func_001DC650(buf, arg1);
+        func_001DC690(buf, arg1);
         Str *ps = &s;
         s32 h = buf[0];
         {
@@ -54,14 +54,14 @@ extern "C" void MNetwork__set_svo_url(void *arg0, void *arg1, s32 arg2, Obj **ar
             VEntry *e = (VEntry *)(o->vtbl + 0x18);
             e->fn(ps, (char *)o + e->delta);
         }
-        func_001F15B0(h, c_str(ps));
+        func_001F15F0(h, c_str(ps));
         {
             Rep *q = (Rep *)(ps->p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
-        func_001DC5F8(buf, 2);
+        func_001DC638(buf, 2);
     }
 }

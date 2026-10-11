@@ -5,14 +5,14 @@ struct Buf00109C40 {
     char pad4[0xC];
 };
 
-extern "C" void func_002A5E18(struct Buf00109C40 *arg0);
-extern "C" void func_002A7B48(s32 arg0);
-extern "C" void func_002A5DC0(struct Buf00109C40 *arg0, s32 arg1);
+extern "C" void func_002A5F70(struct Buf00109C40 *arg0);
+extern "C" void func_002A7CA0(s32 arg0);
+extern "C" void func_002A5F18(struct Buf00109C40 *arg0, s32 arg1);
 
 extern "C" void MInputTextFace__right(void) {
     struct Buf00109C40 buf;
 
-    func_002A5E18(&buf);
-    func_002A7B48(buf.unk0);
-    func_002A5DC0(&buf, 2);
+    func_002A5F70(&buf);
+    func_002A7CA0(buf.unk0);
+    func_002A5F18(&buf, 2);
 }

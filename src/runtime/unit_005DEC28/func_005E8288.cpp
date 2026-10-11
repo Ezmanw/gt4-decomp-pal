@@ -1,4 +1,4 @@
-extern "C" void func_002B5E58(int arg0, int arg1);
+extern "C" void func_002B5FB0(int arg0, int arg1);
 
 extern "C" int func_005E8288(int arg0, int arg1, int arg2) {
     int ptr = arg2;
@@ -8,7 +8,7 @@ extern "C" int func_005E8288(int arg0, int arg1, int arg2) {
     if (idx != limit) {
         do {
             if (ptr != 0) {
-                func_002B5E58(ptr, idx);
+                func_002B5FB0(ptr, idx);
             }
             idx += 4;
             ptr += 4;

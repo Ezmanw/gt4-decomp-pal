@@ -5,7 +5,7 @@ typedef int s32;
 typedef unsigned int size_t;
 struct Heap { const char *name; };
 extern "C" Heap *func_005C11A8(void);
-extern "C" void func_00326798(void *ptr, size_t size, size_t align, const char *name);
+extern "C" void func_003268F0(void *ptr, size_t size, size_t align, const char *name);
 extern "C" size_t func_0057F260(const char *s);
 struct Rep;
 extern "C" char *func_005C2560(Rep *r);
@@ -43,7 +43,7 @@ struct String {
     size_t length() const { return rep()->len; }
 };
 struct GameAlloc {
-    static void deallocate(void *p, size_t n) { func_00326798(p, n, 4, func_005C11A8()->name); }
+    static void deallocate(void *p, size_t n) { func_003268F0(p, n, 4, func_005C11A8()->name); }
 };
 inline void Rep::operator delete(void *ptr) {
     GameAlloc::deallocate(ptr, sizeof(Rep) + reinterpret_cast<Rep *>(ptr)->res);

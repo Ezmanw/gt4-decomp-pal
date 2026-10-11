@@ -10,16 +10,16 @@ struct Buf00109C40 {
     char pad4[0xC];
 };
 
-extern "C" s32 func_0015D898(struct Buf00109C40 *arg0);
-extern "C" void func_00434950(s32 arg0);
-extern "C" void func_0015D840(struct Buf00109C40 *arg0, s32 arg1);
+extern "C" s32 func_0015D8A0(struct Buf00109C40 *arg0);
+extern "C" void func_00434CC8(s32 arg0);
+extern "C" void func_0015D848(struct Buf00109C40 *arg0, s32 arg1);
 
 extern "C" void MDemonstration__resetPlayListCounter(void) {
     struct Buf00109C40 buf;
     struct Inner *p;
 
-    func_0015D898(&buf);
+    func_0015D8A0(&buf);
     p = buf.ptr;
-    func_00434950(p->unk10);
-    func_0015D840(&buf, 2);
+    func_00434CC8(p->unk10);
+    func_0015D848(&buf, 2);
 }

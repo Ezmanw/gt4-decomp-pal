@@ -3,7 +3,7 @@
 #define NULL 0
 void *memcpy(void *, const void *, unsigned int);
 
-s32 func_00437408(s32, s32, s32);           /* extern */
+s32 func_00437780(s32, s32, s32);           /* extern */
 
 struct func_005CCB70_arg0 {
     char pad0[0x10];
@@ -11,5 +11,5 @@ struct func_005CCB70_arg0 {
 };
 
 void func_005CCB70(struct func_005CCB70_arg0 *arg0, s32 arg1) {
-    func_00437408(arg0->unk10, 0x80, arg1);
+    func_00437780(arg0->unk10, 0x80, arg1);
 }

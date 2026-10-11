@@ -1,5 +1,8 @@
-extern int D_00649494;
+typedef int s32;
 
-int func_001F62B0(void) {
-    return D_00649494;
+extern "C" s32 func_004FFC90(char *arg0);
+extern char D_00645570[];
+
+extern "C" s32 func_001F62B0(void) {
+    return func_004FFC90(D_00645570);
 }

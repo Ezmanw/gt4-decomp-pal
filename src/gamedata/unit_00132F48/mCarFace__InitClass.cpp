@@ -35,11 +35,11 @@ extern "C" char *func_005C2560(Rep *r);
 extern "C" s32 func_0057F260(const char *s);
 extern "C" void *func_005C2630(Str *s, s32 pos, s32 n, const char *src, s32 len);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
-extern "C" void func_002F3A30(Obj *arg0, s32 arg1);
-extern "C" void func_002F3818(Obj *arg0, Str *arg1, void (*arg2)(void));
-extern "C" void func_002F3860(Obj *arg0, Str *arg1, void (*arg2)(void), void (*arg3)(void));
-extern "C" void func_00306780(Obj *arg0, void *arg1, void (*arg2)(void));
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_002F3B88(Obj *arg0, s32 arg1);
+extern "C" void func_002F3970(Obj *arg0, Str *arg1, void (*arg2)(void));
+extern "C" void func_002F39B8(Obj *arg0, Str *arg1, void (*arg2)(void), void (*arg3)(void));
+extern "C" void func_003068D8(Obj *arg0, void *arg1, void (*arg2)(void));
 extern char D_0068ECD0[];
 extern char D_0068ECE0[];
 extern char D_0068ECF0[];
@@ -115,12 +115,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
-    func_002F3A30(arg0, mWidget__GetClassID());
-    func_00306780(arg0, D_008224F8, MCarFace__global_008224F8);
+    func_002F3B88(arg0, mWidget__GetClassID());
+    func_003068D8(arg0, D_008224F8, MCarFace__global_008224F8);
     {
         Str *ps = &s;
         const char *src = D_0068ECE0;
@@ -134,12 +134,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3818(arg0, &s, MCarFace__getImagePath);
+        func_002F3970(arg0, &s, MCarFace__getImagePath);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -156,12 +156,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3818(arg0, &s, MCarFace__setImagePath);
+        func_002F3970(arg0, &s, MCarFace__setImagePath);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -178,12 +178,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3818(arg0, &s, MCarFace__setColorIndex);
+        func_002F3970(arg0, &s, MCarFace__setColorIndex);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -200,12 +200,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3818(arg0, &s, MCarFace__syncLoading);
+        func_002F3970(arg0, &s, MCarFace__syncLoading);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -222,12 +222,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3818(arg0, &s, MCarFace__loadModelSet);
+        func_002F3970(arg0, &s, MCarFace__loadModelSet);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -244,12 +244,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3818(arg0, &s, MCarFace__loadModelMotion);
+        func_002F3970(arg0, &s, MCarFace__loadModelMotion);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -266,12 +266,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3818(arg0, &s, MCarFace__loadModelOptionMotion);
+        func_002F3970(arg0, &s, MCarFace__loadModelOptionMotion);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -288,12 +288,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarFace__get_car_code, MCarFace__set_car_code);
+        func_002F39B8(arg0, &s, MCarFace__get_car_code, MCarFace__set_car_code);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -310,12 +310,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, 0, MCarFace__set_wheel);
+        func_002F39B8(arg0, &s, 0, MCarFace__set_wheel);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -332,12 +332,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, 0, MCarFace__set_wing);
+        func_002F39B8(arg0, &s, 0, MCarFace__set_wing);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -354,12 +354,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarFace__get_car_color, MCarFace__setColorIndex);
+        func_002F39B8(arg0, &s, MCarFace__get_car_color, MCarFace__setColorIndex);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -376,12 +376,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarFace__getImagePath, MCarFace__setImagePath);
+        func_002F39B8(arg0, &s, MCarFace__getImagePath, MCarFace__setImagePath);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -398,12 +398,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarFace__get_perfect_dark, MCarFace__set_perfect_dark);
+        func_002F39B8(arg0, &s, MCarFace__get_perfect_dark, MCarFace__set_perfect_dark);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -420,12 +420,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarFace__get_quality_level, MCarFace__set_quality_level);
+        func_002F39B8(arg0, &s, MCarFace__get_quality_level, MCarFace__set_quality_level);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -442,12 +442,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarFace__get_mirror, MCarFace__set_mirror);
+        func_002F39B8(arg0, &s, MCarFace__get_mirror, MCarFace__set_mirror);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -464,12 +464,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarFace__get_action_type, MCarFace__set_action_type);
+        func_002F39B8(arg0, &s, MCarFace__get_action_type, MCarFace__set_action_type);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -486,12 +486,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarFace__get_car_model, MCarFace__set_car_model);
+        func_002F39B8(arg0, &s, MCarFace__get_car_model, MCarFace__set_car_model);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -508,12 +508,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarFace__get_car_data, 0);
+        func_002F39B8(arg0, &s, MCarFace__get_car_data, 0);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -530,12 +530,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarFace__get_car_data, MCarFace__set_car_garage);
+        func_002F39B8(arg0, &s, MCarFace__get_car_data, MCarFace__set_car_garage);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -552,12 +552,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarFace__get_stream, 0);
+        func_002F39B8(arg0, &s, MCarFace__get_stream, 0);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -574,12 +574,12 @@ extern "C" void mCarFace__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MCarFace__get_debug_display, MCarFace__set_debug_display);
+        func_002F39B8(arg0, &s, MCarFace__get_debug_display, MCarFace__set_debug_display);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }

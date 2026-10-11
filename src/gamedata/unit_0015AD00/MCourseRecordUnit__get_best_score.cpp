@@ -22,12 +22,12 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void func_0015AAC0(void *);
-extern "C" void func_002FE278(void *, u8);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002FC870(void *, s32);
-extern "C" void func_0015AA68(void *, s32);
+extern "C" void func_0015AAC8(void *);
+extern "C" void func_002FE3D0(void *, u8);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002FC9C8(void *, s32);
+extern "C" void func_0015AA70(void *, s32);
 
 extern "C" void MCourseRecordUnit__get_best_score(s32 *arg0) {
     s32 buf0[4];
@@ -36,19 +36,19 @@ extern "C" void MCourseRecordUnit__get_best_score(s32 *arg0) {
     s32 newVal;
     s32 oldVal;
     p_s2 = buf1;
-    func_0015AAC0(p_s2);
-    func_002FE278(buf0, *(u8 *)((char *)*(s32 *)((char *)*p_s2 + 0x10) + 0x230));
+    func_0015AAC8(p_s2);
+    func_002FE3D0(buf0, *(u8 *)((char *)*(s32 *)((char *)*p_s2 + 0x10) + 0x230));
     if (arg0 != buf0) {
         newVal = buf0[0];
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *arg0;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *arg0 = newVal;
     }
-    func_002FC870(buf0, 0x2);
-    func_0015AA68(p_s2, 0x2);
+    func_002FC9C8(buf0, 0x2);
+    func_0015AA70(p_s2, 0x2);
 }

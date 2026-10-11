@@ -16,14 +16,14 @@ struct Obj {
     char pad0[4];
 };
 
-extern "C" void func_00236680(void *arg0, int arg1);
-extern "C" void func_002366D8(void *arg0, void *arg1);
-extern "C" f32 func_00238FA8(Obj *arg0);
-extern "C" void func_00238FB0(Obj *arg0, f32 v);
-extern "C" void func_002F7B68(void *arg0, int arg1);
-extern "C" void func_002F9360(void *arg0, float fparg0);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
+extern "C" void func_002367D8(void *arg0, int arg1);
+extern "C" void func_00236830(void *arg0, void *arg1);
+extern "C" f32 func_00239100(Obj *arg0);
+extern "C" void func_00239108(Obj *arg0, f32 v);
+extern "C" void func_002F7CC0(void *arg0, int arg1);
+extern "C" void func_002F94B8(void *arg0, float fparg0);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
 
 extern "C" void MScaleBar__get_step(s32 *arg0, void *arg1, s32 arg2, VObj **arg3) {
     Obj *h[4];
@@ -33,31 +33,31 @@ extern "C" void MScaleBar__get_step(s32 *arg0, void *arg1, s32 arg2, VObj **arg3
         s32 newVal;
         s32 oldVal;
         f32 f;
-        func_002366D8(h, arg1);
-        f = func_00238FA8(h[0]);
+        func_00236830(h, arg1);
+        f = func_00239100(h[0]);
         buf0 = buf;
-        func_002F9360(buf0, f);
+        func_002F94B8(buf0, f);
         if (arg0 != buf0) {
             newVal = buf0[0];
             if (newVal != 0) {
-                func_003285A8(newVal);
+                func_00328700(newVal);
             }
             oldVal = *arg0;
             if (oldVal != 0) {
-                func_003285F8(oldVal);
+                func_00328750(oldVal);
             }
             *arg0 = newVal;
         }
-        func_002F7B68(buf0, 2);
-        func_00236680(h, 2);
+        func_002F7CC0(buf0, 2);
+        func_002367D8(h, 2);
     } else if (arg2 == 1) {
-        func_002366D8(h, arg1);
+        func_00236830(h, arg1);
         {
             Obj *hv = h[0];
             VObj *o = *arg3;
             VEntry *e = (VEntry *)(o->vtbl + 0x60);
-            func_00238FB0(hv, e->fn((char *)o + e->delta));
+            func_00239108(hv, e->fn((char *)o + e->delta));
         }
-        func_00236680(h, 2);
+        func_002367D8(h, 2);
     }
 }

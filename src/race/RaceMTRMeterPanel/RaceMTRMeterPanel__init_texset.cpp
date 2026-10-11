@@ -6,9 +6,9 @@ struct Obj {
 };
 
 extern char D_006A1768[];
-extern "C" void *func_003A1E10(void *);
+extern "C" void *func_003A2108(void *);
 
 extern "C" void RaceMTRMeterPanel__init_texset(Obj *self) {
     if (self->p == 0)
-        self->p = func_003A1E10(D_006A1768);
+        self->p = func_003A2108(D_006A1768);
 }

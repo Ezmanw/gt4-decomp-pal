@@ -1,0 +1,20 @@
+#include "types.h"
+void *memcpy(void *, const void *, unsigned int);
+
+s32 func_00480A10(s32);                         /* extern */
+
+struct func_00475B10_arg0 {
+    s32 unk0;
+    char pad4[0x18];
+    f32 unk1C;
+};
+
+void func_00475B10(struct func_00475B10_arg0 *arg0) {
+    s32 temp_v0;
+
+    temp_v0 = arg0->unk0;
+    if (temp_v0 != 0) {
+        func_00480A10(temp_v0);
+        arg0->unk1C = 1.0f;
+    }
+}

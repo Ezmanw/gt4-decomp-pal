@@ -1,5 +1,9 @@
-extern int mPlayList__ClassID_;
+typedef int s32;
 
-void func_0019E438(void) {
-    mPlayList__ClassID_ = 0;
+extern s32 mPlayList__ClassID_;
+
+extern "C" void mPlayList__InitClass(s32 arg0);
+
+extern "C" void func_0019E438(void) {
+    mPlayList__InitClass(mPlayList__ClassID_);
 }

@@ -1,0 +1,30 @@
+#define GT4_DECLS
+#include "gt4/mWidget.h"
+#include "types.h"
+void *memcpy(void *, const void *, unsigned int);
+
+s32 func_00235D58(s32);                             /* extern */
+s32 func_002661E0(s32);                             /* extern */
+s32 func_002D3588(void *, s32, s32, s32);       /* extern */
+
+struct func_002D3768_arg0 {
+    char pad0[0xBC];
+    s32 unkBC;
+};
+
+s32 func_002D3768(struct func_002D3768_arg0 *arg0, s32 arg1, s32 arg2) {
+    s32 temp_v0;
+    s32 temp_v0_2;
+
+    if (func_002661E0(arg0->unkBC) != 0) {
+        temp_v0 = mWidget__getRootWindow(arg0);
+        if (temp_v0 != 0) {
+            temp_v0_2 = func_00235D58(temp_v0);
+            if (temp_v0_2 != 0) {
+                func_002D3588(arg0, temp_v0_2, arg1, arg2);
+                return 1;
+            }
+        }
+    }
+    return 0;
+}

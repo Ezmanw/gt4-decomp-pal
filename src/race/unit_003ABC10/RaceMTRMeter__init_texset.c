@@ -2,9 +2,9 @@
 #define NULL 0
 void *memcpy(void *, const void *, unsigned int);
 
-s32 func_003A1E10(s32);                             /* extern */
+s32 func_003A2108(s32);                             /* extern */
 
-struct func_003AC340_arg0 {
+struct func_003AC638_arg0 {
     char pad0[0x18];
     s32 unk18;
     s32 unk1C;
@@ -16,13 +16,13 @@ struct func_003AC340_arg0 {
     s32 unk6C;
 };
 
-void RaceMTRMeter__init_texset(struct func_003AC340_arg0 *arg0) {
+void RaceMTRMeter__init_texset(struct func_003AC638_arg0 *arg0) {
     if (arg0->unk18 == 0) {
-        arg0->unk18 = func_003A1E10(*(s32 *)(0x621520 + (arg0->unk6C * 4)));
-        arg0->unk1C = func_003A1E10((s32)"mtr_accel");
-        arg0->unk20 = func_003A1E10((s32)"mtr_brake");
-        arg0->unk24 = func_003A1E10((s32)"mtr_asm");
-        arg0->unk28 = func_003A1E10((s32)"mtr_tcs");
-        arg0->unk2C = func_003A1E10((s32)"mtr_grip");
+        arg0->unk18 = func_003A2108(*(s32 *)(0x621520 + (arg0->unk6C * 4)));
+        arg0->unk1C = func_003A2108((s32)"mtr_accel");
+        arg0->unk20 = func_003A2108((s32)"mtr_brake");
+        arg0->unk24 = func_003A2108((s32)"mtr_asm");
+        arg0->unk28 = func_003A2108((s32)"mtr_tcs");
+        arg0->unk2C = func_003A2108((s32)"mtr_grip");
     }
 }

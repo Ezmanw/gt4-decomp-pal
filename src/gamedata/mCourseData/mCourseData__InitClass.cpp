@@ -34,9 +34,9 @@ extern "C" char *func_005C2560(Rep *r);
 extern "C" s32 func_0057F260(const char *s);
 extern "C" void *func_005C2630(Str *s, s32 pos, s32 n, const char *src, s32 len);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
-extern "C" void func_002F3A30(Obj *arg0, s32 arg1);
-extern "C" void func_003068A8(Obj *arg0, Str *arg1, void (*arg2)(void));
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_002F3B88(Obj *arg0, s32 arg1);
+extern "C" void func_00306A00(Obj *arg0, Str *arg1, void (*arg2)(void));
 extern "C" void MCourseData__GetMaxCarNum(void);
 extern "C" void MCourseData__GetType(void);
 extern "C" void MCourseData__GetID(void);
@@ -65,11 +65,11 @@ extern "C" void mCourseData__InitClass(Obj *arg0) {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
-    func_002F3A30(arg0, hObject__GetClassID());
+    func_002F3B88(arg0, hObject__GetClassID());
     {
         Str *ps = &s;
         const char *src = "GetMaxCarNum";
@@ -83,12 +83,12 @@ extern "C" void mCourseData__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MCourseData__GetMaxCarNum);
+        func_00306A00(arg0, &s, MCourseData__GetMaxCarNum);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -105,12 +105,12 @@ extern "C" void mCourseData__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MCourseData__GetType);
+        func_00306A00(arg0, &s, MCourseData__GetType);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -127,12 +127,12 @@ extern "C" void mCourseData__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MCourseData__GetID);
+        func_00306A00(arg0, &s, MCourseData__GetID);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -149,12 +149,12 @@ extern "C" void mCourseData__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MCourseData__GetAttrString);
+        func_00306A00(arg0, &s, MCourseData__GetAttrString);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }

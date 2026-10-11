@@ -1,7 +1,6 @@
 #include "types.h"
-#define NULL 0
 void *memcpy(void *, const void *, unsigned int);
 
-f32 func_0044FC30(s32 arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5, s32 arg6) {
-    return 0x1.9cccca0000000p+4f;
+void func_0044FC30(f32 *arg0, f32 fparg0) {
+    *arg0 = fparg0;
 }

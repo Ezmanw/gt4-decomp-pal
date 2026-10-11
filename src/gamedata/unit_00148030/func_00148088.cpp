@@ -1,0 +1,14 @@
+typedef int s32;
+
+extern "C" s32 malloc(s32 arg0);
+extern "C" void mCarGarage__structor_1(s32 arg0, s32 arg1);
+extern "C" void func_003094A0(s32 arg0, s32 *arg1);
+
+extern "C" void func_00148088(s32 arg0, s32 arg1) {
+    s32 s0 = arg0;
+    s32 s1 = arg1;
+    s32 s2 = malloc(0x190);
+    mCarGarage__structor_1(s2, s1);
+    s32 local = s2;
+    func_003094A0(s0, &local);
+}

@@ -1,13 +1,20 @@
 #include "types.h"
 void *memcpy(void *, const void *, unsigned int);
 
-f32 MfloatReader__structor_5(s32);                             /* extern */
+s32 MboolReader__structor_8(void *);                          /* extern */
+s32 func_00265E68(s32, s32);                    /* extern */
 
-struct func_00262578_arg0 {
-    char pad0[0x44];
-    f32 unk44;
+struct func_00262578_arg1 {
+    char pad0[0x24];
+    s32 unk24;
 };
 
-void func_00262578(struct func_00262578_arg0 *arg0, s32 arg1) {
-    arg0->unk44 = MfloatReader__structor_5(arg1);
+void func_00262578(s32 arg0, struct func_00262578_arg1 *arg1) {
+    s32 temp_v0;
+
+    temp_v0 = MboolReader__structor_8(arg1);
+    func_00265E68(arg0, temp_v0);
+    if (temp_v0 != 0) {
+        arg1->unk24 = 1;
+    }
 }

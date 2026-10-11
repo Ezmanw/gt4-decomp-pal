@@ -1,15 +1,17 @@
 typedef float f32;
 
-struct Vec3 {
+struct Vec4_0021A768 {
     f32 x;
     f32 y;
     f32 z;
+    f32 w;
 };
 
-extern "C" void func_0021A828(char *arg0, Vec3 *arg1) {
-    Vec3 *p = (Vec3 *)(arg0 + 0x30);
-
-    p->x = arg1->x;
-    p->y = arg1->y;
-    p->z = arg1->z;
+extern "C" void func_0021A828(struct Vec4_0021A768 *arg0, struct Vec4_0021A768 *arg1) {
+    if (arg0 != arg1) {
+        arg0->x = arg1->x;
+        arg0->y = arg1->y;
+        arg0->z = arg1->z;
+        arg0->w = arg1->w;
+    }
 }

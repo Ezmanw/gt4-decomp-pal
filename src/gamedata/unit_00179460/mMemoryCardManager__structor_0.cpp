@@ -7,10 +7,10 @@ struct hObject__structor_0 {
     virtual ~hObject__structor_0();
 };
 
-/* A member object; its constructor is func_002286C0. */
-struct func_002286C0 {
+/* A member object; its constructor is func_00228818. */
+struct func_00228818 {
     s32 w[2];
-    func_002286C0();
+    func_00228818();
 };
 
 struct Pair {
@@ -22,7 +22,7 @@ struct Pair {
 /* Named after its vtable so the compiler-made vptr store _vt$10D_0065CE20 resolves. */
 struct mMemoryCardManager__vtable : hObject__structor_0 {
     char pad8[8];
-    func_002286C0 m10;
+    func_00228818 m10;
     s32 m18;
     s32 m1C;
     s32 m20;

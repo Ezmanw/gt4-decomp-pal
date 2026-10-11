@@ -1,14 +1,7 @@
-extern char D_00621328;
-extern char D_00621330;
+typedef int s32;
 
-extern "C" void func_00387B30(void *a0, void *a1);
+extern s32 D_00621320;
 
-extern "C" void func_0038BF80(int arg0, int arg1) {
-    if ((arg1 == 0xFFFF) && (arg0 == 1)) {
-        func_00387B30(&D_00621328, &D_00621330);
-    }
-}
-
-extern "C" void func_00330840(void) {
-    func_0038BF80(1, 0xFFFF);
+extern "C" void func_0038BF80(s32 arg0, s32 arg1) {
+    D_00621320 = arg1 ^ 1;
 }

@@ -1,3 +1,5 @@
-int func_00385F80(int *arg0) {
-    return *arg0 + 0x1C;
+typedef int s32;
+
+extern "C" s32 func_00385F80(s32 *arg0) {
+    return *arg0 + 0x68;
 }

@@ -7,7 +7,7 @@ struct func_004AFBF8 {
     func_004AFBF8();
 };
 
-extern "C" void func_0044D540();
+extern "C" void func_0044D8B8();
 
 struct Callback {
     void (*fn)();
@@ -23,5 +23,5 @@ struct FileInstrumentStream : func_004AFBF8 {
 };
 
 FileInstrumentStream::FileInstrumentStream() {
-    cb = Callback(func_0044D540, 0);
+    cb = Callback(func_0044D8B8, 0);
 }

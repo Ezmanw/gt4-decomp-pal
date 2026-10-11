@@ -21,9 +21,9 @@ struct Out {
     s32 unk10;
 };
 
-extern "C" void func_0019F9B0(void *arg0, int arg1);
-extern "C" void func_0019FA08(void *arg0, void *arg1);
-extern "C" void func_00439E18(s32 arg0, s32 arg1);
+extern "C" void func_0019F9D8(void *arg0, int arg1);
+extern "C" void func_0019FA30(void *arg0, void *arg1);
+extern "C" void func_0043A190(s32 arg0, s32 arg1);
 
 extern "C" void MPresent__setByTime(s32 arg0, void *arg1, s32 arg2, Arg3 *arg3) {
     s32 buf[4];
@@ -36,9 +36,9 @@ extern "C" void MPresent__setByTime(s32 arg0, void *arg1, s32 arg2, Arg3 *arg3) 
         obj = arg3->obj;
         entry = obj->vtbl + 11;
         result = entry->fn((char *)obj + entry->delta);
-        func_0019FA08(buf, arg1);
+        func_0019FA30(buf, arg1);
         outp = (Out *)buf[0];
-        func_00439E18(outp->unk10, result);
-        func_0019F9B0(buf, 2);
+        func_0043A190(outp->unk10, result);
+        func_0019F9D8(buf, 2);
     }
 }

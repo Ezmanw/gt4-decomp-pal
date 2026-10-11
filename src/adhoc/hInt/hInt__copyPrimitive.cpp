@@ -23,11 +23,11 @@ struct S00659988 {
 };
 
 extern char D_0069D9F8[];
-extern "C" s32 func_00326750(s32, s32, void *);
+extern "C" s32 func_003268A8(s32, s32, void *);
 extern "C" void hInt__structor_1(s32, void *);
-extern "C" void func_002FC840(void *, void *);
-extern "C" void func_00309360(void *, void *);
-extern "C" void func_002FC870(void *, s32);
+extern "C" void func_002FC998(void *, void *);
+extern "C" void func_003094B8(void *, void *);
+extern "C" void func_002FC9C8(void *, s32);
 
 extern "C" void * hInt__copyPrimitive(s32 *arg0, void *arg1) {
     s32 buf0[4];
@@ -35,11 +35,11 @@ extern "C" void * hInt__copyPrimitive(s32 *arg0, void *arg1) {
     s32 *p_s1;
     s32 v_s0;
     p_s1 = buf1;
-    v_s0 = func_00326750(0x14, 0x4, &D_0069D9F8);
+    v_s0 = func_003268A8(0x14, 0x4, &D_0069D9F8);
     hInt__structor_1(v_s0, arg1);
     buf1[0] = v_s0;
-    func_002FC840(buf0, p_s1);
-    func_00309360(arg0, buf0);
-    func_002FC870(buf0, 0x2);
+    func_002FC998(buf0, p_s1);
+    func_003094B8(arg0, buf0);
+    func_002FC9C8(buf0, 0x2);
     return arg0;
 }

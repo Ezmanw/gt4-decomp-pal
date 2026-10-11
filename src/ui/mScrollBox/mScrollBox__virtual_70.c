@@ -6,7 +6,7 @@
 void *memcpy(void *, const void *, unsigned int);
 
 void mWidget__virtual_70(void *, s32, s32);                     /* extern */
-s32 func_00265DC8(void *);                          /* extern */
+s32 func_00265F20(void *);                          /* extern */
 
 typedef struct VEntry { s16 delta; s16 index; void *fn; } VEntry;
 #define VENT(obj, off) ((VEntry *)(*(char **)((char *)(obj) + 4) + (off)))
@@ -46,7 +46,7 @@ void mScrollBox__virtual_70(struct mScrollBox *arg0, s32 arg1, s32 arg2) {
     if (arg2 == 0) {
         return;
     }
-    if (func_00265DC8(arg0) == 0) {
+    if (func_00265F20(arg0) == 0) {
         return;
     }
     temp_a1 = arg0->unkB0;

@@ -38,12 +38,12 @@ struct WTmp {
 
 extern Rep D_00659FA8;
 
-extern "C" void func_002FFA40(void *arg0, Str *s);
-extern "C" P8 func_0030B358(W *w);
+extern "C" void func_002FFB98(void *arg0, Str *s);
+extern "C" P8 func_0030B4B0(W *w);
 extern "C" s32 HSymID__GetID(Str *s);
 extern "C" char *func_005C2560(Rep *r);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
 
 extern "C" void mBinaryAssignOperator__read(Self *self, void *arg1) {
     Str s;
@@ -60,21 +60,21 @@ extern "C" void mBinaryAssignOperator__read(Self *self, void *arg1) {
         }
         s.p = d;
     }
-    func_002FFA40(arg1, &s);
+    func_002FFB98(arg1, &s);
     pt = &t.w;
     pt->v = HSymID__GetID(&s);
     if (dst != pt) {
         dst->v = pt->v;
     }
     {
-        P8 r = func_0030B358(dst);
+        P8 r = func_0030B4B0(dst);
         self->mC = r;
     }
     {
         Rep *q = (Rep *)(s.p - 0x10);
         if (--q->ref == 0) {
             s32 size = q->cap + 0x10;
-            func_00326798(q, size, 4, func_005C11A8()->name);
+            func_003268F0(q, size, 4, func_005C11A8()->name);
         }
     }
 }

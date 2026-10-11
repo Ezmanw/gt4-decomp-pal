@@ -22,12 +22,12 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void * func_002366D8(void *);
-extern "C" void * func_002FE278(void *, s32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002FC870(void *, s32);
-extern "C" void func_00236680(void *, s32);
+extern "C" void * func_00236830(void *);
+extern "C" void * func_002FE3D0(void *, s32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002FC9C8(void *, s32);
+extern "C" void func_002367D8(void *, s32);
 
 extern "C" void MScaleBar__get_cancel(s32 *arg0, void *arg1, s32 arg2) {
     s32 buf0[4];
@@ -36,21 +36,21 @@ extern "C" void MScaleBar__get_cancel(s32 *arg0, void *arg1, s32 arg2) {
     s32 newVal;
     s32 oldVal;
     if (arg2 == 0) {
-        func_002366D8(buf0);
+        func_00236830(buf0);
         p_s2 = buf1;
-        func_002FE278(p_s2, *(s32 *)((char *)buf0[0] + 0x104) != 0);
+        func_002FE3D0(p_s2, *(s32 *)((char *)buf0[0] + 0x104) != 0);
         if (arg0 != p_s2) {
             newVal = *p_s2;
             if (newVal != 0) {
-                func_003285A8(newVal);
+                func_00328700(newVal);
             }
             oldVal = *arg0;
             if (oldVal != 0) {
-                func_003285F8(oldVal);
+                func_00328750(oldVal);
             }
             *arg0 = newVal;
         }
-        func_002FC870(p_s2, 0x2);
-        func_00236680(buf0, 0x2);
+        func_002FC9C8(p_s2, 0x2);
+        func_002367D8(buf0, 0x2);
     }
 }

@@ -1,0 +1,195 @@
+#define GT4_DECLS
+#include "gt4/hObject.h"
+typedef int s32;
+
+struct Rep {
+    s32 len;
+    s32 cap;
+    s32 ref;
+    s32 sel;
+};
+
+struct S00659988 {
+    const char *name;
+};
+
+struct Str {
+    char *p;
+};
+
+struct VEntry {
+    short delta;
+    short index;
+    void (*fn)(void *, Str *);
+};
+
+struct Obj {
+    char pad0[4];
+    char *vtbl;
+};
+
+extern Rep D_00659FA8;
+
+extern "C" char *func_005C2560(Rep *r);
+extern "C" s32 func_0057F260(const char *s);
+extern "C" void *func_005C2630(Str *s, s32 pos, s32 n, const char *src, s32 len);
+extern "C" struct S00659988 *func_005C11A8(void);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_002F3B88(Obj *arg0, s32 arg1);
+extern "C" int mWindowEvent__GetClassID(void);
+extern "C" void func_002F3838(Obj *arg0, void *arg1, void (*arg2)(void));
+extern "C" void func_002F39B8(Obj *arg0, Str *arg1, void (*arg2)(void), void (*arg3)(void));
+extern char D_0069A930[];
+extern char D_0069A940[];
+extern char D_0069A948[];
+extern char D_0069A950[];
+extern char D_0069A958[];
+extern char D_0069A960[];
+extern char D_008333D8[];
+extern "C" void MButtonEvent__global_008333D8(void);
+extern "C" void MButtonEvent__get_x(void);
+extern "C" void MButtonEvent__get_y(void);
+extern "C" void MButtonEvent__get_button(void);
+extern "C" void MButtonEvent__get_state(void);
+extern "C" void MButtonEvent__get_port(void);
+
+extern "C" void func_0027F9D8(Obj *arg0) {
+    Str s;
+    {
+        Str *ps = &s;
+        const char *src = D_0069A930;
+        Rep *r = &D_00659FA8;
+        char *d;
+        if (r->sel != 0) {
+            d = func_005C2560(r);
+        } else {
+            d = (char *)(r + 1);
+            r->ref++;
+        }
+        ps->p = d;
+        func_005C2630(ps, 0, -1, src, func_0057F260(src));
+        {
+            VEntry *e = (VEntry *)(arg0->vtbl + 0x190);
+            e->fn((char *)arg0 + e->delta, &s);
+        }
+        {
+            Rep *q = (Rep *)(s.p - 0x10);
+            if (--q->ref == 0) {
+                s32 cap = q->cap + 0x10;
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
+            }
+        }
+    }
+    func_002F3B88(arg0, mWindowEvent__GetClassID());
+    func_002F3838(arg0, D_008333D8, MButtonEvent__global_008333D8);
+    {
+        Str *ps = &s;
+        const char *src = D_0069A940;
+        Rep *r = &D_00659FA8;
+        char *d;
+        if (r->sel != 0) {
+            d = func_005C2560(r);
+        } else {
+            d = (char *)(r + 1);
+            r->ref++;
+        }
+        ps->p = d;
+        func_005C2630(ps, 0, -1, src, func_0057F260(src));
+        func_002F39B8(arg0, &s, MButtonEvent__get_x, 0);
+        {
+            Rep *q = (Rep *)(s.p - 0x10);
+            if (--q->ref == 0) {
+                s32 cap = q->cap + 0x10;
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
+            }
+        }
+    }
+    {
+        Str *ps = &s;
+        const char *src = D_0069A948;
+        Rep *r = &D_00659FA8;
+        char *d;
+        if (r->sel != 0) {
+            d = func_005C2560(r);
+        } else {
+            d = (char *)(r + 1);
+            r->ref++;
+        }
+        ps->p = d;
+        func_005C2630(ps, 0, -1, src, func_0057F260(src));
+        func_002F39B8(arg0, &s, MButtonEvent__get_y, 0);
+        {
+            Rep *q = (Rep *)(s.p - 0x10);
+            if (--q->ref == 0) {
+                s32 cap = q->cap + 0x10;
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
+            }
+        }
+    }
+    {
+        Str *ps = &s;
+        const char *src = D_0069A950;
+        Rep *r = &D_00659FA8;
+        char *d;
+        if (r->sel != 0) {
+            d = func_005C2560(r);
+        } else {
+            d = (char *)(r + 1);
+            r->ref++;
+        }
+        ps->p = d;
+        func_005C2630(ps, 0, -1, src, func_0057F260(src));
+        func_002F39B8(arg0, &s, MButtonEvent__get_button, 0);
+        {
+            Rep *q = (Rep *)(s.p - 0x10);
+            if (--q->ref == 0) {
+                s32 cap = q->cap + 0x10;
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
+            }
+        }
+    }
+    {
+        Str *ps = &s;
+        const char *src = D_0069A958;
+        Rep *r = &D_00659FA8;
+        char *d;
+        if (r->sel != 0) {
+            d = func_005C2560(r);
+        } else {
+            d = (char *)(r + 1);
+            r->ref++;
+        }
+        ps->p = d;
+        func_005C2630(ps, 0, -1, src, func_0057F260(src));
+        func_002F39B8(arg0, &s, MButtonEvent__get_state, 0);
+        {
+            Rep *q = (Rep *)(s.p - 0x10);
+            if (--q->ref == 0) {
+                s32 cap = q->cap + 0x10;
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
+            }
+        }
+    }
+    {
+        Str *ps = &s;
+        const char *src = D_0069A960;
+        Rep *r = &D_00659FA8;
+        char *d;
+        if (r->sel != 0) {
+            d = func_005C2560(r);
+        } else {
+            d = (char *)(r + 1);
+            r->ref++;
+        }
+        ps->p = d;
+        func_005C2630(ps, 0, -1, src, func_0057F260(src));
+        func_002F39B8(arg0, &s, MButtonEvent__get_port, 0);
+        {
+            Rep *q = (Rep *)(s.p - 0x10);
+            if (--q->ref == 0) {
+                s32 cap = q->cap + 0x10;
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
+            }
+        }
+    }
+}

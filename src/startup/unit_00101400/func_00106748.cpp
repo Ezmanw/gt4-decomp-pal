@@ -24,9 +24,9 @@ struct S00659988 {
 
 extern "C" void func_004AA478(void);
 extern "C" s32 func_004AA570(s32, s32);
-extern "C" void func_001053F8(void *, s32);
-extern "C" void func_00105460(void *, s32, s32);
-extern "C" void func_001054A0(void *, s32);
+extern "C" void func_00105418(void *, s32);
+extern "C" void func_00105480(void *, s32, s32);
+extern "C" void func_001054C0(void *, s32);
 
 struct func_00106748_v_s0 {
     char pad0[0x2C];
@@ -72,32 +72,32 @@ extern "C" void func_00106748(s32 *arg0) {
     ((struct func_00106748_arg0 *)arg0)->unk170 = v_s3;
     v_s7 = 0x1c000;
     v_s7 = (v_s7 + v_s3);
-    func_001053F8((char *)v_s0 + (((((struct func_00106748_v_s0 *)v_s0)->unk78 << 4) - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 2), v_s3);
+    func_00105418((char *)v_s0 + (((((struct func_00106748_v_s0 *)v_s0)->unk78 << 4) - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 2), v_s3);
     *(s32 *)((char *)v_s0 + (((((struct func_00106748_v_s0 *)v_s0)->unk78 << 4) - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 2) + 0x4) = v_s2;
-    func_00105460((char *)v_s0 + (((((struct func_00106748_v_s0 *)v_s0)->unk78 << 4) - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 2), 0x200, 0xe0);
-    func_001054A0((char *)v_s0 + (((((struct func_00106748_v_s0 *)v_s0)->unk78 << 4) - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 2), 0x1);
+    func_00105480((char *)v_s0 + (((((struct func_00106748_v_s0 *)v_s0)->unk78 << 4) - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 2), 0x200, 0xe0);
+    func_001054C0((char *)v_s0 + (((((struct func_00106748_v_s0 *)v_s0)->unk78 << 4) - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 2), 0x1);
     *(s32 *)((char *)v_s0 + (((((struct func_00106748_v_s0 *)v_s0)->unk78 << 4) - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 2) + 0x2c) = 0;
-    func_001053F8((char *)v_s0 + ((((v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78)) << 2), (0x38000 + v_s3));
+    func_00105418((char *)v_s0 + ((((v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78)) << 2), (0x38000 + v_s3));
     *(s32 *)((char *)v_s0 + ((((v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78)) << 2) + 0x4) = v_s2;
-    func_00105460((char *)v_s0 + ((((v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78)) << 2), 0x200, 0xe0);
-    func_001054A0((char *)v_s0 + ((((v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78)) << 2), 0x1);
+    func_00105480((char *)v_s0 + ((((v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78)) << 2), 0x200, 0xe0);
+    func_001054C0((char *)v_s0 + ((((v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78)) << 2), 0x1);
     v_s0 = (char *)v_s0 + ((((v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s0 *)v_s0)->unk78)) << 2);
     ((struct func_00106748_v_s0 *)v_s0)->unk2C = 0;
-    func_001053F8((char *)v_s1 + (((((struct func_00106748_v_s1 *)v_s1)->unk78 << 4) - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 2), v_s3);
+    func_00105418((char *)v_s1 + (((((struct func_00106748_v_s1 *)v_s1)->unk78 << 4) - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 2), v_s3);
     *(s32 *)((char *)v_s1 + (((((struct func_00106748_v_s1 *)v_s1)->unk78 << 4) - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 2) + 0x4) = v_s6;
-    func_00105460((char *)v_s1 + (((((struct func_00106748_v_s1 *)v_s1)->unk78 << 4) - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 2), 0x200, 0x1c0);
-    func_001054A0((char *)v_s1 + (((((struct func_00106748_v_s1 *)v_s1)->unk78 << 4) - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 2), 0x9);
+    func_00105480((char *)v_s1 + (((((struct func_00106748_v_s1 *)v_s1)->unk78 << 4) - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 2), 0x200, 0x1c0);
+    func_001054C0((char *)v_s1 + (((((struct func_00106748_v_s1 *)v_s1)->unk78 << 4) - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 2), 0x9);
     *(s32 *)((char *)v_s1 + (((((struct func_00106748_v_s1 *)v_s1)->unk78 << 4) - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 2) + 0x2c) = 0;
-    func_001053F8((char *)v_s1 + ((((v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78)) << 2), v_s7);
+    func_00105418((char *)v_s1 + ((((v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78)) << 2), v_s7);
     *(s32 *)((char *)v_s1 + ((((v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78)) << 2) + 0x4) = v_s6;
-    func_00105460((char *)v_s1 + ((((v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78)) << 2), 0x200, 0x1c0);
-    func_001054A0((char *)v_s1 + ((((v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78)) << 2), 0x9);
+    func_00105480((char *)v_s1 + ((((v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78)) << 2), 0x200, 0x1c0);
+    func_001054C0((char *)v_s1 + ((((v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78)) << 2), 0x9);
     v_s1 = (char *)v_s1 + ((((v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78) << 4) - (v_s2 - ((struct func_00106748_v_s1 *)v_s1)->unk78)) << 2);
     ((struct func_00106748_v_s1 *)v_s1)->unk2C = 0;
-    func_001053F8(v_s4, v_s7);
+    func_00105418(v_s4, v_s7);
     ((struct func_00106748_v_s4 *)v_s4)->unk4 = v_s6;
-    func_00105460(v_s4, 0x200, 0xe0);
-    func_001054A0(v_s4, 0x1);
+    func_00105480(v_s4, 0x200, 0xe0);
+    func_001054C0(v_s4, 0x1);
     ((struct func_00106748_v_s4 *)v_s4)->unk2C = 0;
     ((struct func_00106748_arg0 *)arg0)->unk2C = v_s2;
 }

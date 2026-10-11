@@ -1,8 +1,8 @@
-extern "C" void * func_0015F3E0(void *);
-extern "C" void func_0015F388(void *, int);
-extern "C" void func_002FC8C8(void *, void *);
-extern "C" void func_002FC870(void *, int);
-extern "C" int func_002FE250(int);
+extern "C" void * func_0015F3E8(void *);
+extern "C" void func_0015F390(void *, int);
+extern "C" void func_002FCA20(void *, void *);
+extern "C" void func_002FC9C8(void *, int);
+extern "C" int func_002FE3A8(int);
 
 struct Sub {
     char pad0[0x48];
@@ -26,11 +26,11 @@ extern "C" void MGame__set_car_color(void *arg0, void *arg1, int count, void *na
     if (count > 0) {
         A a;
         B b;
-        func_0015F3E0(&a);
-        func_002FC8C8(&b, name);
+        func_0015F3E8(&a);
+        func_002FCA20(&b, name);
         Sub *t = (Sub *)(a.p->q + 0xD8);
-        t->value = func_002FE250(get(&b));
-        func_002FC870(&b, 2);
-        func_0015F388(&a, 2);
+        t->value = func_002FE3A8(get(&b));
+        func_002FC9C8(&b, 2);
+        func_0015F390(&a, 2);
     }
 }

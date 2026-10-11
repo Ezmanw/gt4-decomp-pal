@@ -18,20 +18,20 @@ struct Str {
 extern Rep D_00659FA8;
 extern char D_006923D8[];
 
-extern "C" void func_001978D0(s32 *arg0, void *arg1);
-extern "C" void func_00197878(s32 *arg0, int arg1);
-extern "C" void func_0022AD20(s32 *arg0, s32 arg1);
-extern "C" void func_0022ACC8(s32 *arg0, int arg1);
-extern "C" const char *func_0019A9A8(s32 arg0, s32 arg1);
+extern "C" void func_001978F8(s32 *arg0, void *arg1);
+extern "C" void func_001978A0(s32 *arg0, int arg1);
+extern "C" void func_0022AE78(s32 *arg0, s32 arg1);
+extern "C" void func_0022AE20(s32 *arg0, int arg1);
+extern "C" const char *func_0019A9D0(s32 arg0, s32 arg1);
 extern "C" char *func_005C2560(Rep *r);
 extern "C" s32 func_0057F260(const char *s);
 extern "C" void *func_005C2630(Str *s, s32 pos, s32 n, const char *src, s32 len);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
-extern "C" void func_00312318(void *arg0, int arg1);
-extern "C" void func_00314B20(void *arg0, void *arg1);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_00312470(void *arg0, int arg1);
+extern "C" void func_00314C78(void *arg0, void *arg1);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
 
 extern "C" void MPhotoRenderFace__nozzleCheck(s32 *arg0, void *arg1, s32 arg2, s32 arg3) {
     s32 *p1;
@@ -43,13 +43,13 @@ extern "C" void MPhotoRenderFace__nozzleCheck(s32 *arg0, void *arg1, s32 arg2, s
     s32 newVal;
     s32 oldVal;
 
-    func_001978D0(buf0, arg1);
+    func_001978F8(buf0, arg1);
     p1 = buf1;
     ps = (Str *)buf0[0];
-    func_0022AD20(p1, arg3);
-    src = func_0019A9A8((s32)ps, *p1);
-    func_0022ACC8(p1, 2);
-    func_00197878(buf0, 2);
+    func_0022AE78(p1, arg3);
+    src = func_0019A9D0((s32)ps, *p1);
+    func_0022AE20(p1, 2);
+    func_001978A0(buf0, 2);
     ps = &s;
     if (src == 0) {
         src = D_006923D8;
@@ -66,24 +66,24 @@ extern "C" void MPhotoRenderFace__nozzleCheck(s32 *arg0, void *arg1, s32 arg2, s
         ps->p = d;
     }
     func_005C2630(ps, 0, -1, src, func_0057F260(src));
-    func_00314B20(buf0, ps);
+    func_00314C78(buf0, ps);
     if (arg0 != buf0) {
         newVal = buf0[0];
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *arg0;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *arg0 = newVal;
     }
-    func_00312318(buf0, 2);
+    func_00312470(buf0, 2);
     {
         Rep *q = (Rep *)(ps->p - 0x10);
         if (--q->ref == 0) {
             s32 cap = q->cap + 0x10;
-            func_00326798(q, cap, 4, func_005C11A8()->name);
+            func_003268F0(q, cap, 4, func_005C11A8()->name);
         }
     }
 }

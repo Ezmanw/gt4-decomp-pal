@@ -1,8 +1,7 @@
-typedef unsigned int u32;
-typedef int s32;
+extern char D_00645440[];
+extern int func_004EEDE8(void *);
 
-extern s32 D_0064654C;
-
-extern "C" u32 func_001F1578(void) {
-    return (u32)(~D_0064654C) >> 0x1F;
+int func_001F1578(void)
+{
+    return func_004EEDE8(D_00645440);
 }

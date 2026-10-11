@@ -5,12 +5,12 @@ static inline float vcall_60(char *o) {
     VEntry_60 *e = (VEntry_60 *)((char *)((VObj_60 *)o)->vtbl + 0x60);
     return e->fn(o + e->delta);
 }
-extern "C" void func_0017FB28(void *);
-extern "C" void func_0017FAD0(void *, s32);
-extern "C" void func_002F9360(void *, float);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002F7B68(void *, s32);
+extern "C" void func_0017FB50(void *);
+extern "C" void func_0017FAF8(void *, s32);
+extern "C" void func_002F94B8(void *, float);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002F7CC0(void *, s32);
 
 struct Inner {
     char pad0[0x88];
@@ -29,27 +29,27 @@ extern "C" void MOption__get_replay_se_volume(s32 *arg0, void *arg1, s32 arg2, c
     A a;
     s32 b[4];
     if (arg2 > 0) {
-        func_0017FB28(&a);
+        func_0017FB50(&a);
         Mid *m = a.p;
         float f = vcall_60(*arg3);
         m->inner->value = (s32)(f * 128.0f);
-        func_0017FAD0(&a, 2);
+        func_0017FAF8(&a, 2);
     } else {
-        func_0017FB28(&a);
+        func_0017FB50(&a);
         s32 *pb = b;
-        func_002F9360(pb, (float)a.p->inner->value * 0.0078125f);
+        func_002F94B8(pb, (float)a.p->inner->value * 0.0078125f);
         if (arg0 != pb) {
             s32 newVal = pb[0];
             if (newVal != 0) {
-                func_003285A8(newVal);
+                func_00328700(newVal);
             }
             s32 oldVal = *arg0;
             if (oldVal != 0) {
-                func_003285F8(oldVal);
+                func_00328750(oldVal);
             }
             *arg0 = newVal;
         }
-        func_002F7B68(pb, 2);
-        func_0017FAD0(&a, 2);
+        func_002F7CC0(pb, 2);
+        func_0017FAF8(&a, 2);
     }
 }

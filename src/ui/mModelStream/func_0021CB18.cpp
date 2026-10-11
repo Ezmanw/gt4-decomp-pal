@@ -1,0 +1,17 @@
+typedef int s32;
+
+struct Obj {
+    char pad[0x28];
+    s32 unk28;
+};
+
+extern "C" void free(s32 arg0);
+
+extern "C" void func_0021CB18(Obj *arg0) {
+    s32 temp_v0 = arg0->unk28;
+
+    if (temp_v0 != 0) {
+        arg0->unk28 = 0;
+        free(temp_v0);
+    }
+}

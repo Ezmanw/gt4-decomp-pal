@@ -5,14 +5,14 @@ struct Buf {
     char pad[0xC];
 };
 
-extern "C" void func_0028BDA8(struct Buf *arg0);
-extern "C" void func_0032EE88(void *arg0);
-extern "C" void func_0028BD50(struct Buf *arg0, s32 arg1);
+extern "C" void func_0028BF00(struct Buf *arg0);
+extern "C" void func_0032EFE0(void *arg0);
+extern "C" void func_0028BEA8(struct Buf *arg0, s32 arg1);
 
 extern "C" void MDnas__Abort(void) {
     struct Buf buf;
 
-    func_0028BDA8(&buf);
-    func_0032EE88((char *)buf.ptr + 0x10);
-    func_0028BD50(&buf, 2);
+    func_0028BF00(&buf);
+    func_0032EFE0((char *)buf.ptr + 0x10);
+    func_0028BEA8(&buf, 2);
 }

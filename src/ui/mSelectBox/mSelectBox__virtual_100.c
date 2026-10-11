@@ -161,16 +161,16 @@ struct mSelectBox {
     f32 unkEC;
     s32 unkF0;
 };
-s32 func_00206880(struct mWidget *);
+s32 func_00206940(struct mWidget *);
 f32 mWidget__getWindowW(void *);
 f32 mWidget__getWindowH(void *);
 M2C_UNK mPhotoMapWindow__virtual_100(struct mSelectBox *, s32, s32, s32); /* extern */
 
 void mSelectBox__virtual_100(struct mSelectBox *arg0, s32 arg1, s32 arg2, s32 arg3) {
-    if (func_00206880((struct mWidget *) arg0) == 0) {
+    if (func_00206940((struct mWidget *) arg0) == 0) {
         arg0->unkE4 = mWidget__getWindowW((void *) arg2);
         arg0->unkE8 = mWidget__getWindowH((void *) arg2);
     }
     mPhotoMapWindow__virtual_100(arg0, arg1, arg2, arg3);
-    func_002DA5D0(arg0);
+    func_002DA728(arg0);
 }

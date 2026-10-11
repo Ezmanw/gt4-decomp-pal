@@ -1,5 +1,0 @@
-extern void func_0028B198(void);
-void func_0028D8D8(void)
-{
-    func_0028B198();
-}

@@ -11,6 +11,7 @@ at the twin then give the PAL address of every symbol the source references (jal
     palport.py symbols              US -> PAL address of referenced symbols -> build/palport/addrmap.json
     palport.py stats                coverage of the map
     palport.py apply                rewrite src/, include/ and config/ to PAL addresses (names, files)
+    palport.py judge [--jobs 4]     judge every source at its address -> build/palport/judge.jsonl
 """
 import argparse
 import re
@@ -229,16 +230,12 @@ def rewrite_text(text, guess, config=False):
     return text
 
 
-def rewrite_json(v, guess):
-    if isinstance(v, dict):
-        return {rewrite_json(k, guess) if isinstance(k, str) else k: rewrite_json(x, guess) for k, x in v.items()}
-    if isinstance(v, list):
-        return [rewrite_json(x, guess) for x in v]
-    if isinstance(v, int) and not isinstance(v, bool) and TEXT_LO <= v < TEXT_HI:
-        return guess(v) or v
-    if isinstance(v, str):
-        return rewrite_text(v, guess, config=True)
-    return v
+def rewrite_numbers(text, guess):
+    """JSON: integer addresses rewritten in place, so the file keeps its own formatting."""
+    def num(m):
+        a = int(m[1])
+        return str(guess(a) or a) if TEXT_LO <= a < TEXT_HI else m[1]
+    return rewrite_text(re.sub(r"(?<![\w.\"])(\d{7})(?![\w.\"])", num, text), guess, config=True)
 
 
 def cmd_apply():
@@ -249,11 +246,9 @@ def cmd_apply():
         for dirpath, _, files in os.walk(os.path.join(root, top)):
             for name in files:
                 p = os.path.join(dirpath, name)
-                old = open(p, encoding="utf-8", errors="surrogateescape").read()
+                old = open(p, encoding="utf-8", errors="surrogateescape", newline="").read()
                 if name.endswith(".json"):
-                    new = json.dumps(rewrite_json(json.loads(old), guess), indent=1) + "\n"
-                    if json.loads(new) == json.loads(old):
-                        new = old
+                    new = rewrite_numbers(old, guess)
                 else:
                     new = rewrite_text(old, guess, config=top == "config")
                 if new != old:
@@ -263,9 +258,10 @@ def cmd_apply():
     moves = []
     for dirpath, _, files in os.walk(os.path.join(root, "src")):
         for name in files:
-            m = re.fullmatch(r"func_([0-9A-Fa-f]{8})(\.\w+)", name)
-            if m and (n := guess(int(m[1], 16))) is not None and n != int(m[1], 16):
-                moves.append((os.path.join(dirpath, name), os.path.join(dirpath, f"func_{n:08X}{m[2]}")))
+            # func_ADDR.c, or Name_ADDR.c when two names differ only by case (tools/layout.py)
+            m = re.fullmatch(r"(.+)_([0-9A-Fa-f]{8})(\.\w+)", name)
+            if m and (n := guess(int(m[2], 16))) is not None and n != int(m[2], 16):
+                moves.append((os.path.join(dirpath, name), os.path.join(dirpath, f"{m[1]}_{n:08X}{m[3]}")))
     for a, b in moves:
         os.rename(a, a + ".palport")
     for a, b in moves:
@@ -274,9 +270,23 @@ def cmd_apply():
     print(f"{changed} files rewritten, {renamed} sources renamed")
 
 
+def cmd_judge(jobs):
+    pairs = sorted(project.sources(refresh=True).items())
+    out = open(os.path.join(OUT, "judge.jsonl"), "w")
+    tally = Counter()
+    for n, (addr, src, ok, report) in enumerate(match.judge_many(pairs, jobs=jobs), 1):
+        first = report.splitlines()[0] if report else ""
+        out.write(json.dumps({"addr": f"{addr:08x}", "src": os.path.relpath(src, match.ROOT), "ok": ok,
+                              "report": first}) + "\n")
+        tally["MATCH" if ok else "differs"] += 1
+        if n % 2000 == 0:
+            print(n, dict(tally), flush=True)
+    print(dict(tally))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("cmd", choices=["objects", "locate", "symbols", "stats", "apply"])
+    ap.add_argument("cmd", choices=["objects", "locate", "symbols", "stats", "apply", "judge"])
     ap.add_argument("--jobs", type=int, default=4)
     a = ap.parse_args()
     if a.cmd == "objects":
@@ -285,6 +295,8 @@ def main():
         cmd_locate()
     elif a.cmd == "symbols":
         cmd_symbols()
+    elif a.cmd == "judge":
+        cmd_judge(a.jobs)
     elif a.cmd == "apply":
         cmd_apply()
     else:

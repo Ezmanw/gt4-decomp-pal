@@ -1,0 +1,11 @@
+#include "types.h"
+void *memcpy(void *, const void *, unsigned int);
+
+struct func_003F6458_arg0 {
+    char pad0[0x4E];
+    u8 unk4E;
+};
+
+s32 func_003F6458(struct func_003F6458_arg0 *arg0) {
+    return arg0->unk4E != 0;
+}

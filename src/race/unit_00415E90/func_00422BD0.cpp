@@ -1,19 +1,21 @@
-typedef float f32;
+typedef unsigned int u128 __attribute__((mode(TI)));
+union Quat {
+    float v[4];
+    u128 q;
+};
 
-extern "C" f32 func_0057D6C0(f32 x, f32 y); /* powf */
-
-static inline f32 absf(f32 v) {
-    f32 r;
-    __asm__("abs.s %0, %1" : "=f"(r) : "f"(v));
-    return r;
+static inline Quat *rot(Quat *q, int k, float s, float c)
+{
+    Quat t;
+    t.v[0] = c * q->v[0] + s * q->v[2];
+    t.v[k] = s * q->v[3] + c * q->v[k];
+    t.v[2] = -s * q->v[0] + c * q->v[2];
+    t.v[3] = c * q->v[3] - s * q->v[k];
+    q->q = t.q;
+    return q;
 }
 
-extern "C" f32 func_00422BD0(f32 x) {
-    f32 r = func_0057D6C0(absf(x), 0x1.555554p-2f);
-    f32 s;
-    if (x > 0.0f)
-        s = 1.0f;
-    else
-        s = -1.0f;
-    return r * s;
+extern "C" Quat *func_00422BD0(Quat *q, float s, float c)
+{
+    return rot(q, 1, s, c);
 }

@@ -1,5 +1,5 @@
-extern "C" void func_00227180(void *);
-extern "C" void func_00227128(void *, int);
+extern "C" void func_002272D8(void *);
+extern "C" void func_00227280(void *, int);
 extern "C" void func_00576788(void *);
 extern "C" void func_005767C0(void *);
 
@@ -30,7 +30,7 @@ struct Handle {
 extern "C" void MPipe__clear(void)
 {
     Handle h;
-    func_00227180(&h);
+    func_002272D8(&h);
     {
         Pool *p = h.p;
         Range *r = &p->range;
@@ -39,5 +39,5 @@ extern "C" void MPipe__clear(void)
         r->last = 0;
         r->end = 0;
     }
-    func_00227128(&h, 2);
+    func_00227280(&h, 2);
 }

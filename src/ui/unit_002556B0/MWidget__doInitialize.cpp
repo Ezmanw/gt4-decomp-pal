@@ -22,21 +22,21 @@ struct T {
     int pad[3];
 };
 
-extern "C" void func_00255110(H *h, void *a);
-extern "C" void func_002550B8(H *h, int in_chrg);
-extern "C" void func_0022AD20(T *t, void *a);
-extern "C" void func_0022ACC8(T *t, int in_chrg);
+extern "C" void func_00255268(H *h, void *a);
+extern "C" void func_00255210(H *h, int in_chrg);
+extern "C" void func_0022AE78(T *t, void *a);
+extern "C" void func_0022AE20(T *t, int in_chrg);
 
 extern "C" void MWidget__doInitialize(void *self, void *a1, int count, void *arg) {
     if (count > 0) {
         H h;
-        func_00255110(&h, a1);
+        func_00255268(&h, a1);
         T t;
-        func_0022AD20(&t, arg);
+        func_0022AE78(&t, arg);
         Target *o = h.p;
         VEntry *e = (VEntry *)(o->vtbl + 0x2D0);
         e->fn((char *)o + e->delta, t.get());
-        func_0022ACC8(&t, 2);
-        func_002550B8(&h, 2);
+        func_0022AE20(&t, 2);
+        func_00255210(&h, 2);
     }
 }

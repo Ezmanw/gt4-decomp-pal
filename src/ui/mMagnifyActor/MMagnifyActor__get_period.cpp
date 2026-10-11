@@ -1,13 +1,13 @@
 typedef int s32;
 typedef float f32;
 
-extern "C" void func_002B97D8(void *arg0, s32 arg1);
-extern "C" void func_002B9830(void *arg0);
-extern "C" f32 func_002BA220(s32 arg0);
-extern "C" void func_002F7B68(s32 *arg0, s32 arg1);
-extern "C" void func_002F9360(s32 *arg0, f32 arg1);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
+extern "C" void func_002B9930(void *arg0, s32 arg1);
+extern "C" void func_002B9988(void *arg0);
+extern "C" f32 func_002BA378(s32 arg0);
+extern "C" void func_002F7CC0(s32 *arg0, s32 arg1);
+extern "C" void func_002F94B8(s32 *arg0, f32 arg1);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
 
 extern "C" void MMagnifyActor__get_period(s32 *arg0) {
     s32 sp[4];
@@ -16,23 +16,23 @@ extern "C" void MMagnifyActor__get_period(s32 *arg0) {
     s32 temp_a0;
     s32 temp_s0;
 
-    func_002B9830(sp);
+    func_002B9988(sp);
     {
-        f32 t = func_002BA220(sp[0]);
+        f32 t = func_002BA378(sp[0]);
         p1 = sp10;
-        func_002F9360(p1, t);
+        func_002F94B8(p1, t);
     }
     if (arg0 != p1) {
         temp_s0 = *p1;
         if (temp_s0 != 0) {
-            func_003285A8(temp_s0);
+            func_00328700(temp_s0);
         }
         temp_a0 = *arg0;
         if (temp_a0 != 0) {
-            func_003285F8(temp_a0);
+            func_00328750(temp_a0);
         }
         *arg0 = temp_s0;
     }
-    func_002F7B68(p1, 2);
-    func_002B97D8(sp, 2);
+    func_002F7CC0(p1, 2);
+    func_002B9930(sp, 2);
 }

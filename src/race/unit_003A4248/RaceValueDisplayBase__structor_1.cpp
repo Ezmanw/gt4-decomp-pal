@@ -5,9 +5,9 @@ struct RaceDisplayObjectBase {
 };
 
 /* Named after its constructor so that the call resolves. */
-struct func_003A9758 {
+struct func_003A9A50 {
     char data[0x1C];
-    func_003A9758();
+    func_003A9A50();
     void fadein(float t) __asm__("AutomaticFader__fadein");
 };
 
@@ -16,12 +16,12 @@ struct RaceValueDisplayBase : RaceDisplayObjectBase {
     unsigned int color1;
     int m20;
     int m24;
-    func_003A9758 fader;
+    func_003A9A50 fader;
     unsigned char m44;
     unsigned char m45;
     RaceValueDisplayBase();
     virtual ~RaceValueDisplayBase();
-    void setName(const char *name) __asm__("func_003A4308");
+    void setName(const char *name) __asm__("func_003A4600");
 };
 
 extern const char D_006A1458[];

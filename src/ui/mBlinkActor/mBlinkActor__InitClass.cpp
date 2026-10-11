@@ -34,12 +34,12 @@ extern "C" char *func_005C2560(Rep *r);
 extern "C" s32 func_0057F260(const char *s);
 extern "C" void *func_005C2630(Str *s, s32 pos, s32 n, const char *src, s32 len);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
-extern "C" void func_002F3A30(Obj *arg0, s32 arg1);
-extern "C" int func_001FF0F8(void);
-extern "C" void func_002F36E0(Obj *arg0, void *arg1, void (*arg2)(void));
-extern "C" void func_002F3860(Obj *arg0, Str *arg1, void (*arg2)(void), void (*arg3)(void));
-extern "C" void func_00306780(Obj *arg0, void *arg1, void (*arg2)(void));
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_002F3B88(Obj *arg0, s32 arg1);
+extern "C" int func_001FF138(void);
+extern "C" void func_002F3838(Obj *arg0, void *arg1, void (*arg2)(void));
+extern "C" void func_002F39B8(Obj *arg0, Str *arg1, void (*arg2)(void), void (*arg3)(void));
+extern "C" void func_003068D8(Obj *arg0, void *arg1, void (*arg2)(void));
 extern char D_0069A6B0[];
 extern char D_0069A6C0[];
 extern char D_0069A6C8[];
@@ -90,13 +90,13 @@ extern "C" void mBlinkActor__InitClass(Obj *arg0) {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
-    func_002F3A30(arg0, func_001FF0F8());
-    func_00306780(arg0, D_008328A0, MBlinkActor__global_008328A0);
-    func_002F36E0(arg0, D_00832898, MBlinkActor__global_00832898);
+    func_002F3B88(arg0, func_001FF138());
+    func_003068D8(arg0, D_008328A0, MBlinkActor__global_008328A0);
+    func_002F3838(arg0, D_00832898, MBlinkActor__global_00832898);
     {
         Str *ps = &s;
         const char *src = D_0069A6C0;
@@ -110,12 +110,12 @@ extern "C" void mBlinkActor__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MBlinkActor__get_repeat, MBlinkActor__set_repeat);
+        func_002F39B8(arg0, &s, MBlinkActor__get_repeat, MBlinkActor__set_repeat);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -132,12 +132,12 @@ extern "C" void mBlinkActor__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MBlinkActor__get_reverse_phase, MBlinkActor__set_reverse_phase);
+        func_002F39B8(arg0, &s, MBlinkActor__get_reverse_phase, MBlinkActor__set_reverse_phase);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -154,12 +154,12 @@ extern "C" void mBlinkActor__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MBlinkActor__get_wave_form, MBlinkActor__set_wave_form);
+        func_002F39B8(arg0, &s, MBlinkActor__get_wave_form, MBlinkActor__set_wave_form);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -176,12 +176,12 @@ extern "C" void mBlinkActor__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MBlinkActor__get_period, MBlinkActor__set_period);
+        func_002F39B8(arg0, &s, MBlinkActor__get_period, MBlinkActor__set_period);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -198,12 +198,12 @@ extern "C" void mBlinkActor__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MBlinkActor__get_destination, MBlinkActor__set_destination);
+        func_002F39B8(arg0, &s, MBlinkActor__get_destination, MBlinkActor__set_destination);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -220,12 +220,12 @@ extern "C" void mBlinkActor__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MBlinkActor__get_source, MBlinkActor__set_source);
+        func_002F39B8(arg0, &s, MBlinkActor__get_source, MBlinkActor__set_source);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -242,12 +242,12 @@ extern "C" void mBlinkActor__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MBlinkActor__get_flick, MBlinkActor__set_flick);
+        func_002F39B8(arg0, &s, MBlinkActor__get_flick, MBlinkActor__set_flick);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }

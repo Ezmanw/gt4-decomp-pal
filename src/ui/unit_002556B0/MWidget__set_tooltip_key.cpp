@@ -26,11 +26,11 @@ struct Obj {
     char *vtbl;
 };
 
-extern "C" void func_002550B8(void *arg0, int arg1);
-extern "C" void func_00255110(void *arg0, void *arg1);
-extern "C" void func_00267DE8(s32 arg0, Str *arg1);
+extern "C" void func_00255210(void *arg0, int arg1);
+extern "C" void func_00255268(void *arg0, void *arg1);
+extern "C" void func_00267F40(s32 arg0, Str *arg1);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
 
 extern "C" void MWidget__set_tooltip_key(void *arg0, void *arg1, void *arg2, Obj **arg3) {
     Str s;
@@ -41,14 +41,14 @@ extern "C" void MWidget__set_tooltip_key(void *arg0, void *arg1, void *arg2, Obj
         e->fn(&s, (char *)o + e->delta);
     }
     s32 *pb = buf;
-    func_00255110(pb, arg1);
-    func_00267DE8(*pb, &s);
-    func_002550B8(pb, 2);
+    func_00255268(pb, arg1);
+    func_00267F40(*pb, &s);
+    func_00255210(pb, 2);
     {
         Rep *q = (Rep *)(s.p - 0x10);
         if (--q->ref == 0) {
             s32 cap = q->cap + 0x10;
-            func_00326798(q, cap, 4, func_005C11A8()->name);
+            func_003268F0(q, cap, 4, func_005C11A8()->name);
         }
     }
 }

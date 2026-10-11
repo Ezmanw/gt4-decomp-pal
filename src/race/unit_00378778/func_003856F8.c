@@ -1,0 +1,19 @@
+#include "types.h"
+#define NULL 0
+void *memcpy(void *, const void *, unsigned int);
+
+s32 func_00386948(void *, s32);                 /* extern */
+s32 func_00386980(void *, s32, s32, s32, s32);  /* extern */
+s32 func_004464F0(s32, s32 *, s32 *, s32 *, s32 *); /* extern */
+
+void func_003856F8(s32 arg0, s32 arg1) {
+    s8 sp[0x10];
+    s32 sp10;
+    s32 sp14;
+    s32 sp18;
+    s32 sp1C;
+
+    func_00386948(sp, arg1 + 0x6E0);
+    func_004464F0(arg0, &sp10, &sp14, &sp18, &sp1C);
+    func_00386980(sp, sp10, sp14, sp18, sp1C);
+}

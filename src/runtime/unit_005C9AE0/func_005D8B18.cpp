@@ -28,8 +28,8 @@ struct Node {
     Val v;
 };
 
-extern "C" void func_002550B8(void *arg0, int arg1);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_00255210(void *arg0, int arg1);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
 extern "C" struct S00659988 *func_005C11A8(void);
 extern "C" struct S00659988 *func_005D9F58(void);
 
@@ -37,12 +37,12 @@ static inline void str_release(Str *s) {
     Rep *q = (Rep *)(s->p - 0x10);
     if (--q->ref == 0) {
         s32 cap = q->cap + 0x10;
-        func_00326798(q, cap, 4, func_005C11A8()->name);
+        func_003268F0(q, cap, 4, func_005C11A8()->name);
     }
 }
 
 static inline void destroy(Val *v) {
-    func_002550B8(v->second, 2);
+    func_00255210(v->second, 2);
     str_release(&v->first);
 }
 
@@ -52,7 +52,7 @@ extern "C" void func_005D8B18(void *self, Node *x) {
         func_005D8B18(self, x->right);
         y = x->left;
         destroy(&x->v);
-        func_00326798(x, 0x18, 4, func_005D9F58()->name);
+        func_003268F0(x, 0x18, 4, func_005D9F58()->name);
         x = y;
     }
 }

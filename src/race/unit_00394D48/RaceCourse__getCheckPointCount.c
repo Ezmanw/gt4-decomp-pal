@@ -6,14 +6,14 @@ void *CourseData__getRunway(s32);                           /* extern */
 s32 GT4Course__RunwayData__Section__checkPointCount(void *, s32);                 /* extern */
 s32 GT4Course__RunwayData__checkPointCount(s32, s32);                    /* extern */
 
-struct func_00395420_arg0 {
+struct func_00395718_arg0 {
     char pad0[0x4];
     s32 unk4;
     char pad8[0xA8];
     s32 unkB0;
 };
 
-void RaceCourse__getCheckPointCount(struct func_00395420_arg0 *arg0, s32 arg1) {
+void RaceCourse__getCheckPointCount(struct func_00395718_arg0 *arg0, s32 arg1) {
     if (arg0->unkB0 < 0) {
         GT4Course__RunwayData__Section__checkPointCount(CourseData__getRunway(arg0->unk4), arg1);
         return;

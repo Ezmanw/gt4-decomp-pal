@@ -5,7 +5,7 @@ void *memcpy(void *, const void *, unsigned int);
 s32 BillboardSet__DMAsafe(s32);                         /* extern */
 s32 ModelSet2__DMAsafe(s32);                         /* extern */
 
-struct func_003976D0_arg0 {
+struct func_003979C8_arg0 {
     char pad0[0x4];
     s32 unk4;
     char pad8[0xC];
@@ -19,7 +19,7 @@ struct func_003976D0_arg0 {
     s32 unk78;
 };
 
-s32 CourseData__DMAsafe(struct func_003976D0_arg0 *arg0) {
+s32 CourseData__DMAsafe(struct func_003979C8_arg0 *arg0) {
     s32 temp_a0;
     s32 temp_a0_2;
     s32 temp_a0_3;

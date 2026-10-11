@@ -4,7 +4,7 @@
 void *memcpy(void *, const void *, unsigned int);
 
 s32 RaceBasic__structor_0();                            /* extern */
-s32 func_0038BB50(void *, s32);                 /* extern */
+s32 func_0038BE48(void *, s32);                 /* extern */
 s32 RaceDisplay__structor_0(s32);                         /* extern */
 
 extern char RaceBasicWithRaceDisplay__vtable[];
@@ -15,5 +15,5 @@ void RaceBasicWithRaceDisplay__structor_0(void *arg0) {
     RaceBasic__structor_0();
     ((struct RaceBasicWithRaceDisplay *)arg0)->unk64 = (s32)RaceBasicWithRaceDisplay__vtable;
     RaceDisplay__structor_0(temp_s1);
-    func_0038BB50(arg0, temp_s1);
+    func_0038BE48(arg0, temp_s1);
 }

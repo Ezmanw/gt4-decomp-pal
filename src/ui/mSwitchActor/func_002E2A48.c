@@ -1,0 +1,12 @@
+#include "types.h"
+#define NULL 0
+void *memcpy(void *, const void *, unsigned int);
+
+struct func_002E2A48_arg0 {
+    char pad0[0x40];
+    f32 unk40;
+};
+
+void func_002E2A48(struct func_002E2A48_arg0 *arg0) {
+    arg0->unk40 = -0x1.9999980000000p-4f;
+}

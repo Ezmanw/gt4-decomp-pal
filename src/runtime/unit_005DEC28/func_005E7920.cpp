@@ -9,8 +9,8 @@ struct Obj {
     Vec4 unk154;
 };
 
-extern "C" void func_002030E8(Vec4 *arg0);
+extern "C" void func_002031A8(Vec4 *arg0);
 
 extern "C" void func_005E7920(struct Obj *arg0) {
-    func_002030E8(&arg0->unk154);
+    func_002031A8(&arg0->unk154);
 }

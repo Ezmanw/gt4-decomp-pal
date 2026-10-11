@@ -1,0 +1,13 @@
+#include "types.h"
+void *memcpy(void *, const void *, unsigned int);
+
+s32 MintReader__structor_6(s32);                             /* extern */
+
+struct func_00262BD0_arg0 {
+    char pad0[0x98];
+    s32 unk98;
+};
+
+void func_00262BD0(struct func_00262BD0_arg0 *arg0, s32 arg1) {
+    arg0->unk98 = (s32) ((arg0->unk98 & ~0xF00) | ((MintReader__structor_6(arg1) & 0xF) << 8));
+}

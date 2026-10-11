@@ -1,7 +1,12 @@
-typedef int s32;
+struct Vec3 { float x, y, z; };
+struct Mat3;
 
-extern "C" void func_0048D530(s32 arg0, s32 arg1, s32 arg2);
+extern "C" void func_0048D470(Vec3 *out, const Mat3 *m, const Vec3 *v);
 
-extern "C" void func_0048D510(s32 arg0, s32 arg1) {
-    func_0048D530(arg0, arg1, arg0);
+extern "C" void func_0048D510(Vec3 *v, const Mat3 *m) {
+    Vec3 t;
+    func_0048D470(&t, m, v);
+    v->x = t.x;
+    v->y = t.y;
+    v->z = t.z;
 }

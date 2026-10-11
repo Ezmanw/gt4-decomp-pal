@@ -1,27 +1,25 @@
-#include "types.h"
-#define NULL 0
-void *memcpy(void *, const void *, unsigned int);
-
-s32 func_0048F4E0(s32);                         /* extern */
-s32 func_0048F548(s32, s32);                    /* extern */
-
-struct func_0048F5B0_arg0 {
-    s32 unk0;
-    s32 unk4;
+struct Entry {
+    int key;
+    void *data;
+    int size;
+    int padC;
 };
 
-void func_0048F5B0(void *arg0, s32 arg1) {
-    s32 temp_v0;
-    s32 temp_v0_2;
+struct Table {
+    char pad0[0xC];
+    unsigned int count;
+    Entry entries[1];
+};
 
-    if (arg1 != 0) {
-        temp_v0 = ((struct func_0048F5B0_arg0 *)arg0)->unk0;
-        if (temp_v0 != 0) {
-            func_0048F4E0(temp_v0);
-        }
-        temp_v0_2 = ((struct func_0048F5B0_arg0 *)arg0)->unk4;
-        if (temp_v0_2 != 0) {
-            func_0048F548(temp_v0_2, arg1);
-        }
-    }
+extern "C" void *func_005A3008(const void *key, const void *base, unsigned int n, unsigned int size,
+                               int (*compar)(const void *, const void *)); /* bsearch */
+extern "C" int func_0048F598(const void *a, const void *b);
+
+extern "C" void *func_0048F5B0(Table *t, const void *key, int *size) {
+    Entry *e = (Entry *)func_005A3008(key, t->entries, t->count, sizeof(Entry), func_0048F598);
+    if (!e)
+        return 0;
+    if (size)
+        *size = e->size;
+    return e->data;
 }

@@ -1,16 +1,16 @@
 /* Named after their constructors so that the constructor calls resolve. */
-struct func_003B08C8 {
+struct func_003B0BC0 {
     char data[0x6A0];
-    func_003B08C8();
+    func_003B0BC0();
 };
 
-struct func_003B05A8 {
+struct func_003B08A0 {
     char data[0x60];
-    func_003B05A8();
+    func_003B08A0();
 };
 
-struct Slot : func_003B08C8 {
-    func_003B05A8 sub;
+struct Slot : func_003B0BC0 {
+    func_003B08A0 sub;
 };
 
 /* No known name: named after its vtable (0x006792C0). */

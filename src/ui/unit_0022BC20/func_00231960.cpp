@@ -1,7 +1,9 @@
-struct S { char pad[0x10]; int unk10; };
-extern void func_00250BF8(int);
+#include "types.h"
+struct func_00231960_a0 {
+    char pad0[0x28];
+    s32 unk28;
+};
 
-void func_00231960(S *arg0)
-{
-    func_00250BF8(arg0->unk10);
+extern "C" s32 func_00231960(struct func_00231960_a0 *a0) {
+    return a0->unk28;
 }

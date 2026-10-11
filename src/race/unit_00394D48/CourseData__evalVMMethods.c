@@ -4,7 +4,7 @@ void *memcpy(void *, const void *, unsigned int);
 
 s32 ModelSet2__evalHostMethod(void *, s32, s32);        /* extern */
 
-struct func_00397638_arg0 {
+struct func_00397930_arg0 {
     char pad0[0x4];
     void *unk4;
     char pad8[0xC];
@@ -15,33 +15,33 @@ struct func_00397638_arg0 {
     void *unk54;
     void *unk58;
 };
-struct func_00397638_temp_a0 {
+struct func_00397930_temp_a0 {
     char pad0[0x7C];
     s32 unk7C;
 };
-struct func_00397638_temp_a0_2 {
+struct func_00397930_temp_a0_2 {
     char pad0[0x7C];
     s32 unk7C;
 };
-struct func_00397638_temp_a0_3 {
+struct func_00397930_temp_a0_3 {
     char pad0[0x7C];
     s32 unk7C;
 };
-struct func_00397638_temp_a0_4 {
+struct func_00397930_temp_a0_4 {
     char pad0[0x7C];
     s32 unk7C;
 };
-struct func_00397638_temp_a0_5 {
+struct func_00397930_temp_a0_5 {
     char pad0[0x7C];
     s32 unk7C;
 };
 
-s32 CourseData__evalVMMethods(struct func_00397638_arg0 *arg0) {
-    struct func_00397638_temp_a0 *temp_a0;
-    struct func_00397638_temp_a0_2 *temp_a0_2;
-    struct func_00397638_temp_a0_3 *temp_a0_3;
-    struct func_00397638_temp_a0_4 *temp_a0_4;
-    struct func_00397638_temp_a0_5 *temp_a0_5;
+s32 CourseData__evalVMMethods(struct func_00397930_arg0 *arg0) {
+    struct func_00397930_temp_a0 *temp_a0;
+    struct func_00397930_temp_a0_2 *temp_a0_2;
+    struct func_00397930_temp_a0_3 *temp_a0_3;
+    struct func_00397930_temp_a0_4 *temp_a0_4;
+    struct func_00397930_temp_a0_5 *temp_a0_5;
 
     temp_a0 = arg0->unk4;
     if (temp_a0 != NULL) {

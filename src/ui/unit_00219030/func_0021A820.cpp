@@ -1,5 +1,5 @@
-typedef unsigned char u8;
+typedef long long s64;
 
-extern "C" u8 *func_0021A820(u8 *arg0) {
-    return arg0 + 0x30;
+extern "C" s64 func_0021A820(s64 arg0) {
+    return arg0;
 }

@@ -30,10 +30,10 @@ struct Obj {
 extern char D_0069C550[];
 
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
-extern "C" void func_002C2878(void *arg0, int arg1);
-extern "C" void *func_002C28D0(void *arg0);
-extern "C" void func_002C3CA8(s32 a0, const char *a1);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_002C29D0(void *arg0, int arg1);
+extern "C" void *func_002C2A28(void *arg0);
+extern "C" void func_002C3E00(s32 a0, const char *a1);
 
 static inline const char *c_str(Str *s) {
     s32 len = ((Rep *)s->p)[-1].len;
@@ -51,7 +51,7 @@ extern "C" void MMusic__play(void *arg0, void *arg1, s32 n, Obj **args) {
         Str *ps;
         s32 h;
         const char *name;
-        func_002C28D0(tmp);
+        func_002C2A28(tmp);
         {
             Obj *o = *args;
             VEntry *e;
@@ -65,10 +65,10 @@ extern "C" void MMusic__play(void *arg0, void *arg1, s32 n, Obj **args) {
             Rep *q = (Rep *)(*(s32 *)&ps->p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
-        func_002C3CA8(h, name);
-        func_002C2878(tmp, 2);
+        func_002C3E00(h, name);
+        func_002C29D0(tmp, 2);
     }
 }

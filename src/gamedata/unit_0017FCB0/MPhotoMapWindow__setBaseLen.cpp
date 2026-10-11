@@ -17,9 +17,9 @@ struct Arg3 {
     ObjA *obj;
 };
 
-extern "C" void func_00192A58(s32 *buf);
-extern "C" void func_00194190(s32 arg0, f32 arg1);
-extern "C" void func_00192A00(s32 *buf, s32 arg1);
+extern "C" void func_00192A80(s32 *buf);
+extern "C" void func_001941B8(s32 arg0, f32 arg1);
+extern "C" void func_00192A28(s32 *buf, s32 arg1);
 
 extern "C" void MPhotoMapWindow__setBaseLen(s32 arg0, s32 arg1, s32 arg2, Arg3 *arg3) {
     s32 buf[4];
@@ -29,12 +29,12 @@ extern "C" void MPhotoMapWindow__setBaseLen(s32 arg0, s32 arg1, s32 arg2, Arg3 *
     f32 result;
 
     if (arg2 == 1) {
-        func_00192A58(buf);
+        func_00192A80(buf);
         s0 = buf[0];
         obj = arg3->obj;
         entry = obj->vtbl + 12;
         result = entry->fn((char *)obj + entry->delta);
-        func_00194190(s0, result);
-        func_00192A00(buf, 2);
+        func_001941B8(s0, result);
+        func_00192A28(buf, 2);
     }
 }

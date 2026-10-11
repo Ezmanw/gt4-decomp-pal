@@ -1,26 +1,21 @@
-typedef short s16;
-
-struct VEntry {
-    s16 delta;
-    s16 index;
-    void (*fn)(void *, int, int);
-};
-
-struct Sub {
-    char pad0[0x64];
-    VEntry *vtbl;
-};
+typedef int s32;
 
 struct Obj {
-    char pad0[0x84];
-    Sub *unk84;
+    char pad[0x74];
+    s32 unk74;
 };
 
-extern "C" void func_003C0F08(struct Obj *arg0, int arg1, int arg2) {
-    Sub *a3 = arg0->unk84;
+struct Container {
+    char pad[0x84];
+    Obj *unk84;
+};
 
-    if (a3 != 0) {
-        VEntry *e = (VEntry *)((char *)a3->vtbl + 0x2A8);
-        e->fn((char *)a3 + e->delta, arg1, arg2);
+extern char D_00621340[];
+
+extern "C" s32 func_003C0F08(Container *arg0) {
+    Obj *temp_v0 = arg0->unk84;
+    if (temp_v0 == 0) {
+        return (s32)D_00621340;
     }
+    return temp_v0->unk74;
 }

@@ -1,7 +1,24 @@
-struct Table { char pad[0xCBF8]; float value; };
-struct A { int x0; Table *table; };
-extern int func_003447F8(float);
-int func_00344748(A *a)
-{
-    return func_003447F8(a->table->value);
+typedef short s16;
+typedef int s32;
+
+struct VEntry {
+    s16 delta;
+    s16 index;
+    s32 (*fn)(void *, void *);
+};
+
+struct Owner {
+    char pad0[0x10140];
+    VEntry *vtbl;
+};
+
+struct Obj {
+    s32 unk0;
+    Owner *owner;
+};
+
+extern "C" s32 func_00344748(Obj *self) {
+    Owner *o = self->owner;
+    VEntry *e = o->vtbl + 34;
+    return e->fn((char *)o + e->delta, self);
 }

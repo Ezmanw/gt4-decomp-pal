@@ -32,18 +32,18 @@ struct Handle {
     int pad[3];
 };
 
-extern "C" void func_00312370(Handle *h, void *arg);
-extern "C" void func_00312318(Handle *h, int in_chrg);
-extern "C" String *func_00314920(void *p);
-extern "C" void func_001FD4A8(const char *fmt, ...);
+extern "C" void func_003124C8(Handle *h, void *arg);
+extern "C" void func_00312470(Handle *h, int in_chrg);
+extern "C" String *func_00314A78(void *p);
+extern "C" void func_001FD4E8(const char *fmt, ...);
 extern const char D_00618E40[];
 
 extern "C" void MMovieFace__preload(void *self, int count, void *arg)
 {
     if (count > 0) {
         Handle h;
-        func_00312370(&h, arg);
-        func_001FD4A8(D_00618E40, func_00314920(h.p)->c_str());
-        func_00312318(&h, 2);
+        func_003124C8(&h, arg);
+        func_001FD4E8(D_00618E40, func_00314A78(h.p)->c_str());
+        func_00312470(&h, 2);
     }
 }

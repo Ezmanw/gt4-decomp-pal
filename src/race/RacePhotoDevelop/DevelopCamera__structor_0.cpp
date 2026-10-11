@@ -1,9 +1,9 @@
 extern "C" void *RaceSinglePlayer__structor_0(void *);
 extern "C" void DynamicsConductorSinglePlayer__structor_1(void *);
-extern "C" void *func_003721D8(void *);
+extern "C" void *func_003724A8(void *);
 extern "C" void *CameraBase__structor_0(void *);
-extern "C" void func_003B08C8(void *);
-extern "C" void func_003B05A8(void *);
+extern "C" void func_003B0BC0(void *);
+extern "C" void func_003B08A0(void *);
 extern "C" char RacePhotoDevelop__vtable[];
 extern "C" char DevelopCamera__vtable[];
 extern "C" char D_006792D8[];
@@ -50,7 +50,7 @@ struct LensSets {
 };
 
 struct Part {
-    Part() { func_003B08C8(this); func_003B05A8(pad + 0x6A0); }
+    Part() { func_003B0BC0(this); func_003B08A0(pad + 0x6A0); }
     char pad[0x700];
 };
 
@@ -79,7 +79,7 @@ extern "C" void DevelopCamera__structor_0(char *self)
     RaceSinglePlayer__structor_0(self);
     P(self, 0x64) = RacePhotoDevelop__vtable;
     DynamicsConductorSinglePlayer__structor_1(self + 0x125C0);
-    func_003721D8(cam);
+    func_003724A8(cam);
     P(cam, 0) = DevelopCamera__vtable;
     W(cam, 0xC40) = 0;
     P(cam, 0xC44) = base;

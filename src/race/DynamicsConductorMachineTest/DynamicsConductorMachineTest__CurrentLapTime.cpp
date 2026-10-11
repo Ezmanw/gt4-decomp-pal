@@ -7,11 +7,11 @@ struct Obj_003F69C8 {
 };
 
 extern "C" s32 DynamicsConductor__CurrentLapTime_Normal(void *arg0, struct Obj_003F69C8 *arg1);
-extern "C" s32 func_0035E3F0(struct Obj_003F69C8 *arg0);
+extern "C" s32 func_0035E560(struct Obj_003F69C8 *arg0);
 
 extern "C" s32 DynamicsConductorMachineTest__CurrentLapTime(void *arg0, struct Obj_003F69C8 *arg1) {
     if (arg1->unk5B6 != 0) {
-        return func_0035E3F0(arg1);
+        return func_0035E560(arg1);
     }
     return DynamicsConductor__CurrentLapTime_Normal(arg0, arg1);
 }

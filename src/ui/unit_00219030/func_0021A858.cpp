@@ -1,14 +1,7 @@
-typedef float f32;
+typedef int s32;
 
-struct Vec3 {
-    f32 x;
-    f32 y;
-    f32 z;
-};
+struct S { char pad[0x10]; s32 unk10; };
 
-extern "C" void func_0021A858(char *arg0, Vec3 *arg1) {
-    Vec3 *dst = (Vec3 *)(arg0 + 0x3C);
-    dst->x = arg1->x;
-    dst->y = arg1->y;
-    dst->z = arg1->z;
+extern "C" s32 func_0021A858(S *arg0) {
+    return arg0->unk10;
 }

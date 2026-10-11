@@ -22,7 +22,7 @@ extern char hString__vtable[];
 extern char D_0069E1A0[];
 
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
 extern "C" void hObject__structor_2(void *p, s32 flags);
 
 extern "C" void hString__structor_1(struct HString *self, s32 flags) {
@@ -31,11 +31,11 @@ extern "C" void hString__structor_1(struct HString *self, s32 flags) {
         Rep *q = (Rep *)(self->p - 0x10);
         if (--q->ref == 0) {
             s32 size = q->cap + 0x10;
-            func_00326798(q, size, 4, func_005C11A8()->name);
+            func_003268F0(q, size, 4, func_005C11A8()->name);
         }
     }
     hObject__structor_2(self, 0);
     if (flags & 1) {
-        return func_00326798(self, 0x14, 4, D_0069E1A0);
+        return func_003268F0(self, 0x14, 4, D_0069E1A0);
     }
 }

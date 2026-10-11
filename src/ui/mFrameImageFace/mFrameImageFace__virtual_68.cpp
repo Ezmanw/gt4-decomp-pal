@@ -10,19 +10,19 @@ struct Obj {
 };
 
 extern "C" void mImageFace__virtual_68(void);
-extern "C" void func_002106E0(Handle *, s32 *);
-extern "C" void func_00210710(Handle *, s32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
+extern "C" void func_002107A0(Handle *, s32 *);
+extern "C" void func_002107D0(Handle *, s32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
 
 static inline void assign(Handle *dst, Handle *src) {
     if (dst != src) {
         s32 v = src->p;
         if (v != 0) {
-            func_003285A8(v);
+            func_00328700(v);
         }
         if (dst->p != 0) {
-            func_003285F8(dst->p);
+            func_00328750(dst->p);
         }
         dst->p = v;
     }
@@ -32,9 +32,9 @@ static inline void assign(Handle *dst, Handle *src) {
     {                                   \
         Handle *d = &self->h[i];        \
         z = 0;                          \
-        func_002106E0(&tmp[0], &z);        \
+        func_002107A0(&tmp[0], &z);        \
         assign(d, &tmp[0]);                \
-        func_00210710(&tmp[0], 2);         \
+        func_002107D0(&tmp[0], 2);         \
     }
 
 extern "C" void mFrameImageFace__virtual_68(Obj *self) {

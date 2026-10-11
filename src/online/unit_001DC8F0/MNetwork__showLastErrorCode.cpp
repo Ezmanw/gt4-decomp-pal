@@ -36,21 +36,21 @@ extern char D_006959D8[];
 extern char D_006959E8[];
 
 extern "C" void MNetwork__getLastErrorCode(void *arg0);
-extern "C" void func_0023B478(void *arg0);
-extern "C" void func_0023CA78(void *arg0, const char *arg1, const char *arg2);
-extern "C" void func_0023B1D8(void *arg0, int arg1);
-extern "C" void func_002FC870(void *arg0, int arg1);
-extern "C" void func_002FE278(void *arg0, int arg1);
-extern "C" void func_003285A8(void *p);
-extern "C" void func_003285F8(void *p);
+extern "C" void func_0023B5D0(void *arg0);
+extern "C" void func_0023CBD0(void *arg0, const char *arg1, const char *arg2);
+extern "C" void func_0023B330(void *arg0, int arg1);
+extern "C" void func_002FC9C8(void *arg0, int arg1);
+extern "C" void func_002FE3D0(void *arg0, int arg1);
+extern "C" void func_00328700(void *p);
+extern "C" void func_00328750(void *p);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
 
 static inline void str_release(Str *s) {
     Rep *q = (Rep *)(s->p - 0x10);
     if (--q->ref == 0) {
         s32 size = q->cap + 0x10;
-        func_00326798(q, size, 4, func_005C11A8()->name);
+        func_003268F0(q, size, 4, func_005C11A8()->name);
     }
 }
 
@@ -66,7 +66,7 @@ extern "C" void MNetwork__showLastErrorCode(void **arg0) {
     Str s;
     Str *ps;
     MNetwork__getLastErrorCode(arg0);
-    func_0023B478(&h);
+    func_0023B5D0(&h);
     {
         Obj *o = *(Obj **)arg0;
         void *hp;
@@ -75,20 +75,20 @@ extern "C" void MNetwork__showLastErrorCode(void **arg0) {
         hp = h.p;
         e = (VEntry *)(o->vtbl + 0x18);
         e->fn(ps, (char *)o + e->delta);
-        func_0023CA78(hp, c_str(ps), D_006959E8);
+        func_0023CBD0(hp, c_str(ps), D_006959E8);
     }
     str_release(ps);
-    func_0023B1D8(&h, 2);
-    func_002FE278(&h, 1);
+    func_0023B330(&h, 2);
+    func_002FE3D0(&h, 1);
     if ((void *)arg0 != (void *)&h) {
         void *p = h.p;
         if (p != 0) {
-            func_003285A8(p);
+            func_00328700(p);
         }
         if (*arg0 != 0) {
-            func_003285F8(*arg0);
+            func_00328750(*arg0);
         }
         *arg0 = p;
     }
-    func_002FC870(&h, 2);
+    func_002FC9C8(&h, 2);
 }

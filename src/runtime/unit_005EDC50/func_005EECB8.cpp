@@ -3,8 +3,8 @@
    _Rb_tree<HSymID, pair<const HSymID, Val_00323B48>, _Select1st, less<HSymID>, GameAlloc>::operator= */
 #include <stl_tree.h>
 
-extern "C" void *func_00326750(int size, int align, const char *name);
-extern "C" void func_00326798(void *p, int size, int align, const char *name);
+extern "C" void *func_003268A8(int size, int align, const char *name);
+extern "C" void func_003268F0(void *p, int size, int align, const char *name);
 extern "C" void *func_005EFEA0(void);
 
 struct HSymID {
@@ -12,13 +12,13 @@ struct HSymID {
     bool operator<(const HSymID &o) const { return w[0] < o.w[0]; }
 };
 
-extern "C" void func_00323B48(void *self, const void *other);
-extern "C" void func_00323B60(void *self, int in_charge);
+extern "C" void func_00323CA0(void *self, const void *other);
+extern "C" void func_00323CB8(void *self, int in_charge);
 
 struct Val_00323B48 {
     int w[1];
-    Val_00323B48(const Val_00323B48 &o) { func_00323B48(this, &o); }
-    ~Val_00323B48() { func_00323B60(this, 2); }
+    Val_00323B48(const Val_00323B48 &o) { func_00323CA0(this, &o); }
+    ~Val_00323B48() { func_00323CB8(this, 2); }
 };
 
 /* gcc 2.96's type_info: the name first, the vtable pointer after it */
@@ -46,10 +46,10 @@ public:
     template <class U> GameAlloc(const GameAlloc<U> &) throw() {}
     ~GameAlloc() throw() {}
     T *allocate(size_type n, const void * = 0) {
-        return (T *)func_00326750(n * sizeof(T), 4, ((TypeInfo *)TypeTag<T>::tf())->name);
+        return (T *)func_003268A8(n * sizeof(T), 4, ((TypeInfo *)TypeTag<T>::tf())->name);
     }
     void deallocate(T *p, size_type n) {
-        func_00326798(p, n * sizeof(T), 4, ((TypeInfo *)TypeTag<T>::tf())->name);
+        func_003268F0(p, n * sizeof(T), 4, ((TypeInfo *)TypeTag<T>::tf())->name);
     }
     size_type max_size() const throw() { return size_t(-1) / sizeof(T); }
     void construct(T *p, const T &v) { new (p) T(v); }

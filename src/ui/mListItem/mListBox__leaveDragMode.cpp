@@ -26,7 +26,7 @@ extern "C" void mListBox__setDragIcon(void *, void *, s32);
 extern "C" s32 mListBox__getItemActive(void *, s32);
 extern "C" void mListBox__setItemActive(void *, s32, s32);
 
-struct func_002B5270_arg0 {
+struct func_002B53C8_arg0 {
     char pad0[0x108];
     s32 unk108;
     char pad10C[0x18];
@@ -39,16 +39,16 @@ struct func_002B5270_arg0 {
 
 extern "C" void mListBox__leaveDragMode(s32 *arg0, void *arg1) {
     mListBox__setDragIcon(arg0, arg1, 0);
-    if (((struct func_002B5270_arg0 *)arg0)->unk12C >= 0) {
-        if (((struct func_002B5270_arg0 *)arg0)->unk124 != ((struct func_002B5270_arg0 *)arg0)->unk12C) {
-            if (mListBox__getItemActive(arg0, ((struct func_002B5270_arg0 *)arg0)->unk12C) != 0) {
-                mListBox__setItemActive(arg0, ((struct func_002B5270_arg0 *)arg0)->unk12C, 0);
+    if (((struct func_002B53C8_arg0 *)arg0)->unk12C >= 0) {
+        if (((struct func_002B53C8_arg0 *)arg0)->unk124 != ((struct func_002B53C8_arg0 *)arg0)->unk12C) {
+            if (mListBox__getItemActive(arg0, ((struct func_002B53C8_arg0 *)arg0)->unk12C) != 0) {
+                mListBox__setItemActive(arg0, ((struct func_002B53C8_arg0 *)arg0)->unk12C, 0);
             }
-            if (((struct func_002B5270_arg0 *)arg0)->unk124 >= 0) {
-                mListBox__setItemActive(arg0, ((struct func_002B5270_arg0 *)arg0)->unk124, ((struct func_002B5270_arg0 *)arg0)->unk108);
+            if (((struct func_002B53C8_arg0 *)arg0)->unk124 >= 0) {
+                mListBox__setItemActive(arg0, ((struct func_002B53C8_arg0 *)arg0)->unk124, ((struct func_002B53C8_arg0 *)arg0)->unk108);
             }
-            ((struct func_002B5270_arg0 *)arg0)->unk14C = 0x1;
+            ((struct func_002B53C8_arg0 *)arg0)->unk14C = 0x1;
         }
     }
-    ((struct func_002B5270_arg0 *)arg0)->unk12C = -0x1;
+    ((struct func_002B53C8_arg0 *)arg0)->unk12C = -0x1;
 }

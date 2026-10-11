@@ -22,7 +22,7 @@ struct Self {
 
 extern "C" char *func_005C2560(Rep *r);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
 
 extern "C" void func_005D8020(Self *self, Str *src) {
     Str *dst = &self->s;
@@ -31,7 +31,7 @@ extern "C" void func_005D8020(Self *self, Str *src) {
             Rep *q = (Rep *)(*(s32 *)&dst->p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
         {

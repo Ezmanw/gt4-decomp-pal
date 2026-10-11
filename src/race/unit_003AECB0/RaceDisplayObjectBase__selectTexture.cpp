@@ -5,9 +5,9 @@ struct Obj {
     s32 unk10;
 };
 
-extern "C" s32 func_003A1E10(s32 arg0);
+extern "C" s32 func_003A2108(s32 arg0);
 
 extern "C" void RaceDisplayObjectBase__selectTexture(Obj *arg0, s32 arg1) {
-    s32 result = func_003A1E10(arg1);
+    s32 result = func_003A2108(arg1);
     arg0->unk10 = result;
 }

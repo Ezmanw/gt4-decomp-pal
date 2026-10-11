@@ -1,7 +1,7 @@
 #include "types.h"
 void *memcpy(void *, const void *, unsigned int);
 
-struct func_00387CF0_arg0 {
+struct func_00387FD8_arg0 {
     char pad0[0xCC0];
     u32 unkCC0;
     u32 unkCC4;
@@ -9,7 +9,7 @@ struct func_00387CF0_arg0 {
     s32 unkCCC;
 };
 
-void RaceBase__setRunMode(struct func_00387CF0_arg0 *arg0, u32 arg1) {
+void RaceBase__setRunMode(struct func_00387FD8_arg0 *arg0, u32 arg1) {
     s32 var_v1;
 
     arg0->unkCC0 = arg1;

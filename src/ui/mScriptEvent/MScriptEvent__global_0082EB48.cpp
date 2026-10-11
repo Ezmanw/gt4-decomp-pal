@@ -28,20 +28,20 @@ extern char D_00698C00[];
 extern "C" char * func_005C2560(Rep *);
 extern "C" s32 func_0057F260(void *);
 extern "C" void func_005C2630(void *, s32, s32, void *, s32);
-extern "C" void func_002EFBF0(void *);
-extern "C" void func_0023A538(void *, s32, s32, void *, void *);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_00239F08(void *, s32);
-extern "C" void func_002ED5C0(void *, s32);
+extern "C" void func_002EFD48(void *);
+extern "C" void func_0023A690(void *, s32, s32, void *, void *);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_0023A060(void *, s32);
+extern "C" void func_002ED718(void *, s32);
 extern "C" struct S00659988 * func_005C11A8(void);
-extern "C" void func_00326798(void *, s32, s32, const char *);
+extern "C" void func_003268F0(void *, s32, s32, const char *);
 
 static inline void str_release(Str *s) {
     Rep *q = (Rep *)(s->p - 0x10);
     if (--q->ref == 0) {
         s32 size = q->cap + 0x10;
-        func_00326798(q, size, 4, func_005C11A8()->name);
+        func_003268F0(q, size, 4, func_005C11A8()->name);
     }
 }
 
@@ -71,20 +71,20 @@ extern "C" void MScriptEvent__global_0082EB48(s32 *arg0) {
     }
     func_005C2630(p_s3, 0, -0x1, v_s0, func_0057F260(v_s0));
     p_s2 = buf4;
-    func_002EFBF0(p_s2);
-    func_0023A538(buf0, 0, 0, p_s3, p_s2);
+    func_002EFD48(p_s2);
+    func_0023A690(buf0, 0, 0, p_s3, p_s2);
     if (arg0 != buf0) {
         newVal = buf0[0];
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *arg0;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *arg0 = newVal;
     }
-    func_00239F08(buf0, 0x2);
-    func_002ED5C0(p_s2, 0x2);
+    func_0023A060(buf0, 0x2);
+    func_002ED718(p_s2, 0x2);
     str_release(p_s3);
 }

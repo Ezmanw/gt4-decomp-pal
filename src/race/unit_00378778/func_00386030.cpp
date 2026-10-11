@@ -1,21 +1,5 @@
-/* compiler: ee-gcc2.96-no-strict-aliasing */
-typedef unsigned char u8;
+typedef int s32;
 
-struct Regs {
-    unsigned int w[16];
-};
-
-struct Obj {
-    Regs *regs;
-};
-
-extern "C" void func_00386030(Obj *o, int which, int v) {
-    int i = 12;
-    if (which == 0) {
-        o->regs->w[i] &= ~0xFF;
-        o->regs->w[i] |= (u8)v;
-    } else {
-        o->regs->w[i] &= ~0xFF00;
-        o->regs->w[i] |= (u8)v << 8;
-    }
+extern "C" s32 func_00386030(s32 *arg0) {
+    return *arg0 + 0x9C;
 }

@@ -4,8 +4,8 @@ typedef int s32;
 extern void *hModule__vtable;
 extern "C" void func_005EEAF0(void *, void *);
 extern "C" void *func_005EFEA0(void);
-extern "C" void func_00326798(void *, s32, s32, const void *);
-extern "C" void func_003286B8(void *);
+extern "C" void func_003268F0(void *, s32, s32, const void *);
+extern "C" void func_00328810(void *);
 extern "C" void hObject__structor_2(void *, s32);
 static inline void member_0(char *m) {
     if (*(void **)(m + 0x8) != 0) {
@@ -17,17 +17,17 @@ static inline void member_0(char *m) {
     }
     void *p0 = *(void **)(m + 0x4);
     void *r1 = func_005EFEA0();
-    func_00326798(p0, 0x18, 0x4, *(void **)(r1));
+    func_003268F0(p0, 0x18, 0x4, *(void **)(r1));
 }
 
 extern "C" void hModule__structor_2(void *arg0, s32 arg1) {
     ((struct hModule *)arg0)->unk4 = &hModule__vtable;
     member_0((char *)arg0 + 0x18);
     if (((struct hModule *)arg0)->unk14 != 0) {
-        func_003286B8(((struct hModule *)arg0)->unk14);
+        func_00328810(((struct hModule *)arg0)->unk14);
     }
     hObject__structor_2(arg0, 0x0);
     if ((arg1 & 0x1) != 0) {
-        return func_00326798(arg0, 0x2c, 0x4, "RefCounter");
+        return func_003268F0(arg0, 0x2c, 0x4, "RefCounter");
     }
 }

@@ -22,10 +22,10 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void func_002FC8C8(void *, s32);
-extern "C" s32 func_002FE250(s32);
-extern "C" void func_00427630(s32, s32);
-extern "C" void func_002FC870(void *, s32);
+extern "C" void func_002FCA20(void *, s32);
+extern "C" s32 func_002FE3A8(s32);
+extern "C" void func_004279A8(s32, s32);
+extern "C" void func_002FC9C8(void *, s32);
 
 extern "C" void MRunViewer__setRaceDebugFlag(s32 *arg0, void *arg1, s32 arg2) {
     s32 buf0[4];
@@ -33,12 +33,12 @@ extern "C" void MRunViewer__setRaceDebugFlag(s32 *arg0, void *arg1, s32 arg2) {
     s32 *p_s0;
     s32 v_s1;
     if (!(((s32)arg1 < 0x2))) {
-        func_002FC8C8(buf0, arg2);
+        func_002FCA20(buf0, arg2);
         p_s0 = buf1;
-        func_002FC8C8(p_s0, arg2 + 0x4);
-        v_s1 = func_002FE250(buf0[0]);
-        func_00427630(v_s1, func_002FE250(*p_s0) != 0);
-        func_002FC870(p_s0, 0x2);
-        func_002FC870(buf0, 0x2);
+        func_002FCA20(p_s0, arg2 + 0x4);
+        v_s1 = func_002FE3A8(buf0[0]);
+        func_004279A8(v_s1, func_002FE3A8(*p_s0) != 0);
+        func_002FC9C8(p_s0, 0x2);
+        func_002FC9C8(buf0, 0x2);
     }
 }

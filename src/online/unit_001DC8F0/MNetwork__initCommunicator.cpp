@@ -5,14 +5,14 @@ struct Buf00109C40 {
     char pad4[0xC];
 };
 
-extern "C" void func_001DC650(struct Buf00109C40 *arg0);
-extern "C" void func_001F66B8(s32 arg0);
-extern "C" void func_001DC5F8(struct Buf00109C40 *arg0, s32 arg1);
+extern "C" void func_001DC690(struct Buf00109C40 *arg0);
+extern "C" void func_001F66F8(s32 arg0);
+extern "C" void func_001DC638(struct Buf00109C40 *arg0, s32 arg1);
 
 extern "C" void MNetwork__initCommunicator(void) {
     struct Buf00109C40 buf;
 
-    func_001DC650(&buf);
-    func_001F66B8(buf.unk0);
-    func_001DC5F8(&buf, 2);
+    func_001DC690(&buf);
+    func_001F66F8(buf.unk0);
+    func_001DC638(&buf, 2);
 }

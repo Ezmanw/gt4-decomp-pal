@@ -1,9 +1,0 @@
-extern "C" void PitmenTiny__clear();
-extern "C" void func_005C1628(void *arg0);
-
-extern "C" void func_003D5448(void *arg0, int arg1) {
-    PitmenTiny__clear();
-    if (arg1 & 1) {
-        return func_005C1628(arg0);
-    }
-}

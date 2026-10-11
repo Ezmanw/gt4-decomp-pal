@@ -6,11 +6,11 @@ struct RaceFreePractice { char pad[0x6C]; Race *race; };
 
 extern "C" void RaceSinglePlayer__updatePlay(RaceFreePractice *self);
 extern "C" int GetPitStopStatus(int id);
-extern "C" void func_003B76F0(void *hud, int a, int b, int c);
+extern "C" void func_003B79E8(void *hud, int a, int b, int c);
 
 extern "C" void RaceFreePractice__updatePlay(RaceFreePractice *self)
 {
     RaceSinglePlayer__updatePlay(self);
     if (GetPitStopStatus(self->race->grid->entry->car->id) == 1)
-        func_003B76F0(self->race->hud, 1, 0, 0);
+        func_003B79E8(self->race->hud, 1, 0, 0);
 }

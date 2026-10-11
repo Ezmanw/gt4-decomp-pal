@@ -1,16 +1,19 @@
 typedef int s32;
 
 struct Obj {
-    char pad[0x10];
-    s32 unk10;
-    s32 unk14;
-    s32 unk18;
-    s32 unk1C;
+    char pad0[0x28];
+    s32 unk28;
+    char pad1[0x38 - 0x28 - 4];
+    s32 unk38;
 };
 
-extern "C" void func_001054C0(Obj *arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4) {
-    arg0->unk10 = arg1;
-    arg0->unk14 = arg2;
-    arg0->unk18 = arg3;
-    arg0->unk1C = arg4;
+extern "C" void func_001054C0(Obj *arg0, s32 arg1) {
+    s32 var_v1;
+
+    arg0->unk28 = arg1;
+    var_v1 = 0;
+    if (arg1 != 0) {
+        var_v1 = arg1 != 9;
+    }
+    arg0->unk38 = var_v1;
 }

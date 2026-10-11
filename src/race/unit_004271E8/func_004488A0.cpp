@@ -1,7 +1,8 @@
-typedef short s16;
+typedef int s32;
 
-struct Obj { char pad[0xC]; s16 unkC; };
+extern "C" s32 func_00448798(s32 arg0);
 
-extern "C" s16 func_004488A0(Obj *arg0) {
-    return arg0->unkC;
+extern "C" s32 func_004488A0(void) {
+    s32 a = 0;
+    return func_00448798(a);
 }

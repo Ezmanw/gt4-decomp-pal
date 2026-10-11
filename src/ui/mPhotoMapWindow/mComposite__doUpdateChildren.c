@@ -62,20 +62,20 @@ struct mComposite {
     s32 unkA8;
     s32 unkAC;
 };
-int func_00206868(struct mWidget *);
-s32 func_0025C300(void *);
-s32 func_00207208(struct mComposite *, s32, s32); /* extern */
+int func_00206928(struct mWidget *);
+s32 func_0025C458(void *);
+s32 func_002072C8(struct mComposite *, s32, s32); /* extern */
 
 void mComposite__doUpdateChildren(struct mComposite *arg0, s32 arg1) {
     s32 var_a2;
     s32 var_s0;
 
-    var_s0 = func_00206868((struct mWidget *) arg0);
+    var_s0 = func_00206928((struct mWidget *) arg0);
     if (var_s0 != 0) {
         var_a2 = var_s0;
         do {
-            func_00207208(arg0, arg1, var_a2);
-            var_s0 = func_0025C300((void *) var_s0);
+            func_002072C8(arg0, arg1, var_a2);
+            var_s0 = func_0025C458((void *) var_s0);
             var_a2 = var_s0;
         } while (var_s0 != 0);
     }

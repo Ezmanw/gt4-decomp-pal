@@ -1,19 +1,20 @@
-typedef int s32;
-typedef float f32;
-
-struct Sub {
-    char pad0[0xF84];
-    f32 angle;
+struct Image {
+    int unk0;
+    int unk4;
+    int width;
 };
 
-struct Obj {
-    char pad0[0x1E648];
-    f32 level;
-    char pad1E64C[0x34];
-    Sub sub;
+struct Screen {
+    char pad[0x1E660];
+    float scaleX;
+    float scaleY;
 };
 
-extern "C" void func_003C7D60(Obj *self, s32 on) {
-    Sub *p = &self->sub;
-    p->angle = (on && self->level < 1.0f) ? 90.0f : 0.0f;
+extern "C" int func_00105838(Image *img);
+extern "C" void func_003C7DF0(Screen *s, Image *img, int w, int h);
+
+extern "C" void func_003C7D60(Screen *s, Image *img) {
+    int w = (int)(s->scaleX * (float)img->width);
+    int h = (int)(s->scaleY * (float)func_00105838(img));
+    func_003C7DF0(s, img, w, h);
 }

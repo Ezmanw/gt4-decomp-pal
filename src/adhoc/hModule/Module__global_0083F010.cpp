@@ -2,9 +2,9 @@ typedef int s32;
 extern "C" char D_0083F0B0[];
 
 extern "C" void HModule__dynamicAssign(s32 *buf, void *src);
-extern "C" void func_003285A8(s32 obj);
-extern "C" void func_003285F8(s32 obj);
-extern "C" void func_003041B8(s32 *buf, s32 flags);
+extern "C" void func_00328700(s32 obj);
+extern "C" void func_00328750(s32 obj);
+extern "C" void func_00304310(s32 *buf, s32 flags);
 
 extern "C" void Module__global_0083F010(s32 *ret)
 {
@@ -14,11 +14,11 @@ extern "C" void Module__global_0083F010(s32 *ret)
     if (ret != buf) {
         s32 obj = buf[0];
         if (obj != 0)
-            func_003285A8(obj);
+            func_00328700(obj);
         s32 old = *ret;
         if (old != 0)
-            func_003285F8(old);
+            func_00328750(old);
         *ret = obj;
     }
-    func_003041B8(buf, 2);
+    func_00304310(buf, 2);
 }

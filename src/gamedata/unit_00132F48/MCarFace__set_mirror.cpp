@@ -1,8 +1,8 @@
-extern "C" void func_00137DB8(void *);
-extern "C" void func_00137D60(void *, int);
-extern "C" void func_002FC8C8(void *, void *);
-extern "C" void func_002FC870(void *, int);
-extern "C" int func_002FE250(int);
+extern "C" void func_00137DC0(void *);
+extern "C" void func_00137D68(void *, int);
+extern "C" void func_002FCA20(void *, void *);
+extern "C" void func_002FC9C8(void *, int);
+extern "C" int func_002FE3A8(int);
 
 struct Target {
     char pad0[0x29C];
@@ -24,10 +24,10 @@ extern "C" void MCarFace__set_mirror(void *arg0, void *arg1, int count, void *na
 {
     A a;
     B b;
-    func_00137DB8(&a);
-    func_002FC8C8(&b, name);
+    func_00137DC0(&a);
+    func_002FCA20(&b, name);
     Target *t = a.p;
-    t->value = func_002FE250(get(&b)) != 0;
-    func_002FC870(&b, 2);
-    func_00137D60(&a, 2);
+    t->value = func_002FE3A8(get(&b)) != 0;
+    func_002FC9C8(&b, 2);
+    func_00137D68(&a, 2);
 }

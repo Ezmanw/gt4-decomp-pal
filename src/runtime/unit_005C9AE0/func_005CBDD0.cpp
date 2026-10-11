@@ -1,7 +1,7 @@
 struct S { char pad[0x10]; int unk10; };
-extern void func_00437380(int);
+extern void func_004376F8(int);
 
 void func_005CBDD0(S *arg0)
 {
-    func_00437380(arg0->unk10);
+    func_004376F8(arg0->unk10);
 }

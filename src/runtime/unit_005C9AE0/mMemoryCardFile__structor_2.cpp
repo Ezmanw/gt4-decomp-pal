@@ -3,7 +3,7 @@ typedef int s32;
 
 extern void *mMemoryCardFile__vtable;
 extern "C" void hObject__structor_2(void *, s32);
-extern "C" void func_00326798(void *, s32, s32, const char *);
+extern "C" void func_003268F0(void *, s32, s32, const char *);
 struct VEntry_vcall_0 { short delta; short index; void (*fn)(void *, s32); };
 static inline void vcall_0(char *o, s32 a0) {
     VEntry_vcall_0 *e = (VEntry_vcall_0 *)(*(char **)(o + 0x4c) + 0x8);
@@ -19,6 +19,6 @@ extern "C" void mMemoryCardFile__structor_2(void *arg0, s32 arg1) {
     }
     hObject__structor_2(arg0, 0x0);
     if ((arg1 & 0x1) != 0) {
-        return func_00326798(arg0, 0x18, 0x4, "RefCounter");
+        return func_003268F0(arg0, 0x18, 0x4, "RefCounter");
     }
 }

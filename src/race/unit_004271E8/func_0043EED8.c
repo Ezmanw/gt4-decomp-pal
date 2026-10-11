@@ -7,6 +7,6 @@ struct func_0043EED8_arg0 {
     s32 unk490;
 };
 
-u8 func_0043EED8(void *arg0) {
-    return M2C_FIELD(((((struct func_0043EED8_arg0 *)arg0)->unk490 * 0x178) + arg0), u8 *, 0x155);
+u16 func_0043EED8(void *arg0, s32 arg1) {
+    return M2C_FIELD(((((((struct func_0043EED8_arg0 *)arg0)->unk490 * 0xBC) + arg1) * 2) + arg0), u16 *, 0x118);
 }

@@ -1,6 +1,6 @@
-extern void func_002CDAC0(void);
+extern void func_002CDC18(void);
 
 void mRotateActor__rewind(void)
 {
-    func_002CDAC0();
+    func_002CDC18();
 }

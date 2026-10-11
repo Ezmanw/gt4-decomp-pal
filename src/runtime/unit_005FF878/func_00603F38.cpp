@@ -5,8 +5,8 @@ struct Obj00603F38 {
     u16 unk8;
 };
 
-extern "C" struct Obj00603F38 *func_00450040(void);
+extern "C" struct Obj00603F38 *func_00450418(void);
 
 extern "C" u16 func_00603F38(void) {
-    return func_00450040()->unk8;
+    return func_00450418()->unk8;
 }

@@ -3,12 +3,12 @@ void *memcpy(void *, const void *, unsigned int);
 
 s32 LicenseConcourse__isCameraPeriod();                                /* extern */
 
-struct func_00409778_arg0 {
+struct func_00409AF8_arg0 {
     char pad0[0x7C];
     s32 unk7C;
 };
 
-s32 LicenseConcourse__isAvailableFov(struct func_00409778_arg0 *arg0) {
+s32 LicenseConcourse__isAvailableFov(struct func_00409AF8_arg0 *arg0) {
     s32 var_v0;
 
     var_v0 = 0;

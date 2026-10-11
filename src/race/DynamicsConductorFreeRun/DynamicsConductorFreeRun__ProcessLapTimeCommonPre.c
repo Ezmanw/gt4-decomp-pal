@@ -17,16 +17,16 @@ struct DynamicsConductorFreeRun {
     char unk_4[0x90];
     f32 unk94;
 };
-s32 func_0034C190(s32, s32);
-s32 func_0035DF80(struct RaceDisplayTimeDiffEvent *, s32, s32, s32); /* extern */
+s32 func_0034C2F0(s32, s32);
+s32 func_0035E0F0(struct RaceDisplayTimeDiffEvent *, s32, s32, s32); /* extern */
 s32 Automobile__CountDownRollingStartTimer(s32);                             /* extern */
 
 void DynamicsConductorFreeRun__ProcessLapTimeCommonPre(struct DynamicsConductorFreeRun *arg0) {
     s32 temp_v0;
 
-    temp_v0 = func_0034C190((s32) arg0, 0);
+    temp_v0 = func_0034C2F0((s32) arg0, 0);
     if (Automobile__CountDownRollingStartTimer(temp_v0) != 0) {
-        func_00345228((void *) temp_v0);
-        func_0035DF80(arg0->unk0, 4, 0, 0);
+        func_00345380((void *) temp_v0);
+        func_0035E0F0(arg0->unk0, 4, 0, 0);
     }
 }

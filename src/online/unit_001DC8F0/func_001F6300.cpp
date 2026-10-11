@@ -1,22 +1,7 @@
 extern char D_00645570[];
-extern char D_006959D8[];
-extern int func_004FFDF0(void *, const char *, int, int);
-extern void mUpdateContext__Sync(int);
-extern void func_001F1368(void *);
+extern int func_004FFDB0(void *);
 
-/* Strings carry their length 16 bytes before the text. */
-static inline const char *terminate(char **str)
+int func_001F6300(void)
 {
-    char *s = *str;
-    int len = ((int *)s)[-4];
-    if (len == 0) return D_006959D8;
-    s[len] = 0;
-    return *str;
-}
-
-void func_001F6300(void *ctx, char **str, int a, int b)
-{
-    while (!func_004FFDF0(D_00645570, terminate(str), a, b))
-        mUpdateContext__Sync(1);
-    func_001F1368(ctx);
+    return func_004FFDB0(D_00645570);
 }

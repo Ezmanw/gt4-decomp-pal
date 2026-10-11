@@ -22,12 +22,12 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void func_00137DB8(void *);
-extern "C" void func_0013BD50(void *, s32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_0013BD68(void *, s32);
-extern "C" void func_00137D60(void *, s32);
+extern "C" void func_00137DC0(void *);
+extern "C" void func_0013BD58(void *, s32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_0013BD70(void *, s32);
+extern "C" void func_00137D68(void *, s32);
 
 extern "C" void MCarFace__get_car_data(s32 *arg0) {
     s32 buf0[4];
@@ -36,19 +36,19 @@ extern "C" void MCarFace__get_car_data(s32 *arg0) {
     s32 newVal;
     s32 oldVal;
     p_s2 = buf1;
-    func_00137DB8(p_s2);
-    func_0013BD50(buf0, *p_s2 + 0x2a8);
+    func_00137DC0(p_s2);
+    func_0013BD58(buf0, *p_s2 + 0x2a8);
     if (arg0 != buf0) {
         newVal = buf0[0];
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *arg0;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *arg0 = newVal;
     }
-    func_0013BD68(buf0, 0x2);
-    func_00137D60(p_s2, 0x2);
+    func_0013BD70(buf0, 0x2);
+    func_00137D68(p_s2, 0x2);
 }

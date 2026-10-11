@@ -2,9 +2,9 @@ struct Val { int w[4]; };
 struct Ctx { void *vm; };
 struct Obj { char pad[0xC]; char *h; };
 extern "C" void HCodeFrame__structor_0(void *, char **);
-extern "C" void func_0030BB18(Val *);
+extern "C" void func_0030BC70(Val *);
 extern "C" void hThread__setArguments(void *, char *, int, int, Val *);
-extern "C" void func_00309378(Val *, int);
+extern "C" void func_003094D0(Val *, int);
 
 extern "C" void hScriptFunction__call_const_2(Obj *self, Ctx *c, int a, int b)
 {
@@ -12,7 +12,7 @@ extern "C" void hScriptFunction__call_const_2(Obj *self, Ctx *c, int a, int b)
     void *vm = c->vm;
     char *code = self->h + 0x10;
     Val v;
-    func_0030BB18(&v);
+    func_0030BC70(&v);
     hThread__setArguments(vm, code, a, b, &v);
-    func_00309378(&v, 2);
+    func_003094D0(&v, 2);
 }

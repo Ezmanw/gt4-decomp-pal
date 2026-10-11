@@ -1,7 +1,7 @@
-extern "C" void *func_0023B230(void *h);
-extern "C" void func_0023B1D8(void *h, int in_chrg);
-extern "C" void func_003285A8(void *obj);
-extern "C" void func_003285F8(void *obj);
+extern "C" void *func_0023B388(void *h);
+extern "C" void func_0023B330(void *h, int in_chrg);
+extern "C" void func_00328700(void *obj);
+extern "C" void func_00328750(void *obj);
 
 /* Reference-counted pointer with the inline assignment of 002F8B00. */
 struct Ref {
@@ -11,9 +11,9 @@ struct Ref {
         if (this != &o) {
             void *np = o.p;
             if (np)
-                func_003285A8(np);
+                func_00328700(np);
             if (p)
-                func_003285F8(p);
+                func_00328750(p);
             p = np;
         }
     }
@@ -32,7 +32,7 @@ struct Handle {
 extern "C" void MShell__get_pipe(Ref *out)
 {
     Handle h;
-    func_0023B230(&h);
+    func_0023B388(&h);
     out->assign(h.p->ref);
-    func_0023B1D8(&h, 2);
+    func_0023B330(&h, 2);
 }

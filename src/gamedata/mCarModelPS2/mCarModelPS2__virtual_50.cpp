@@ -20,8 +20,8 @@ struct String {
         return dat; }
 };
 
-extern "C" void func_001561F0(void *self, const char *s);
+extern "C" void func_001561F8(void *self, const char *s);
 
 extern "C" void mCarModelPS2__virtual_50(void *self, const String *s) {
-    func_001561F0(self, s->c_str());
+    func_001561F8(self, s->c_str());
 }

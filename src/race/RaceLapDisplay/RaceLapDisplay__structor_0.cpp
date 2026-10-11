@@ -8,7 +8,7 @@ struct RaceRichCountDisplay {
     virtual ~RaceRichCountDisplay();
 };
 
-extern "C" void func_003A4308(RaceRichCountDisplay *self, char *text);
+extern "C" void func_003A4600(RaceRichCountDisplay *self, char *text);
 
 struct RaceLapDisplay : public RaceRichCountDisplay {
     RaceLapDisplay() __asm__("RaceLapDisplay__structor_0");
@@ -18,7 +18,7 @@ struct RaceLapDisplay : public RaceRichCountDisplay {
 };
 
 RaceLapDisplay::RaceLapDisplay() {
-    func_003A4308(this, D_006A1458);
+    func_003A4600(this, D_006A1458);
     color0 = 0x80C8C8C8;
     color1 = 0x80B3B3B3;
 }

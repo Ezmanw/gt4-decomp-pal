@@ -22,8 +22,8 @@ struct func_003C0208_Obj {
 };
 
 extern "C" {
-void func_003B76F0(void *fx, int a, int b, int c);
-void func_003973D0(void *p, float v);
+void func_003B79E8(void *fx, int a, int b, int c);
+void func_003976C8(void *p, float v);
 }
 
 extern "C" void RaceOrganization__racePreUpdate(func_003C0208_Obj *self) {
@@ -32,14 +32,14 @@ extern "C" void RaceOrganization__racePreUpdate(func_003C0208_Obj *self) {
         switch (self->request) {
         case 1:
             self->count = 8;
-            func_003B76F0(self->fx, 0x18, 0x13, 0);
+            func_003B79E8(self->fx, 0x18, 0x13, 0);
             break;
         case 2:
             self->count = 10;
-            func_003B76F0(self->fx, 0x18, 10, 0);
+            func_003B79E8(self->fx, 0x18, 10, 0);
             break;
         case -1:
-            func_003B76F0(self->fx, 0x18, 12, 0);
+            func_003B79E8(self->fx, 0x18, 12, 0);
         case 3:
             self->count = 0;
             break;
@@ -47,10 +47,10 @@ extern "C" void RaceOrganization__racePreUpdate(func_003C0208_Obj *self) {
             break;
         }
         self->timer = self->count * 60;
-        func_003973D0(self->x84->x6c->x80->p, (float)self->count);
+        func_003976C8(self->x84->x6c->x80->p, (float)self->count);
     }
     if (self->timer != 0) {
         if (--self->timer == 0)
-            func_003B76F0(self->fx, 4, -1, 0);
+            func_003B79E8(self->fx, 4, -1, 0);
     }
 }

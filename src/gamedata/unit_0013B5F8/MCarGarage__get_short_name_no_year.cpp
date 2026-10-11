@@ -28,19 +28,19 @@ struct Handle {
 
 extern Rep D_00659FA8;
 
-extern "C" void func_0013BDC0(Obj *);
-extern "C" void func_0013BD68(Obj *, s32);
-extern "C" void *func_00147D80(void *);
-extern "C" void *func_00441248(void *);
-extern "C" const char *func_00445450(void *);
+extern "C" void func_0013BDC8(Obj *);
+extern "C" void func_0013BD70(Obj *, s32);
+extern "C" void *func_00147D88(void *);
+extern "C" void *func_004415C0(void *);
+extern "C" const char *func_004457C8(void *);
 extern "C" const char *func_005A6CF8(const char *, s32);
-extern "C" s32 func_0013FBE8(s32) throw();
+extern "C" s32 func_0013FBF0(s32) throw();
 extern "C" void func_005C5028(Str *, char *, char *, const char *, const char *);
-extern "C" void func_00312318(void *arg0, int arg1);
-extern "C" void func_00314B20(void *arg0, void *arg1);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
+extern "C" void func_00312470(void *arg0, int arg1);
+extern "C" void func_00314C78(void *arg0, void *arg1);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
 extern "C" s32 func_0057F260(const char *s);
 extern "C" struct S00659988 *func_005C11A8(void);
 extern "C" char *func_005C2560(Rep *r);
@@ -64,7 +64,7 @@ static inline void release(Str *ps)
     Rep *q = (Rep *)(ps->p - 0x10);
     if (--q->ref == 0) {
         s32 cap = q->cap + 0x10;
-        func_00326798(q, cap, 4, func_005C11A8()->name);
+        func_003268F0(q, cap, 4, func_005C11A8()->name);
     }
 }
 
@@ -74,10 +74,10 @@ static inline void assign(s32 *dst, Handle *h)
         s32 newVal = h->v;
         s32 oldVal;
         if (newVal != 0)
-            func_003285A8(newVal);
+            func_00328700(newVal);
         oldVal = *dst;
         if (oldVal != 0)
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         *dst = newVal;
     }
 }
@@ -91,10 +91,10 @@ extern "C" void MCarGarage__get_short_name_no_year(s32 *out)
     const char *name;
     const char *sep;
 
-    func_0013BDC0(&obj);
-    name = func_00445450(func_00441248(func_00147D80(obj.p)));
+    func_0013BDC8(&obj);
+    name = func_004457C8(func_004415C0(func_00147D88(obj.p)));
     sep = func_005A6CF8(name, '`');
-    if (sep != 0 && func_0013FBE8(sep[1]) && func_0013FBE8(sep[2])) {
+    if (sep != 0 && func_0013FBF0(sep[1]) && func_0013FBF0(sep[2])) {
         Str *ps;
         char *d;
         {
@@ -110,14 +110,14 @@ extern "C" void MCarGarage__get_short_name_no_year(s32 *out)
         }
         func_005C5028(ps, d, d + ((Rep *)d)[-1].len, name, sep);
         Handle *ph = &tmp;
-        func_00314B20(ph, ps);
+        func_00314C78(ph, ps);
         assign(out, ph);
-        func_00312318(ph, 2);
+        func_00312470(ph, 2);
         release(ps);
     } else {
         const char *src;
         Str *ps = &s2;
-        src = func_00445450(func_00441248(func_00147D80(obj.p)));
+        src = func_004457C8(func_004415C0(func_00147D88(obj.p)));
         {
             Rep *r = &D_00659FA8;
             char *d;
@@ -131,10 +131,10 @@ extern "C" void MCarGarage__get_short_name_no_year(s32 *out)
         }
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
         Handle *ph = &tmp;
-        func_00314B20(ph, ps);
+        func_00314C78(ph, ps);
         assign(out, ph);
-        func_00312318(ph, 2);
+        func_00312470(ph, 2);
         release(ps);
     }
-    func_0013BD68(&obj, 2);
+    func_0013BD70(&obj, 2);
 }

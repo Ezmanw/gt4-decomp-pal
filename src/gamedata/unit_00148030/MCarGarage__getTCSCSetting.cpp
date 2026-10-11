@@ -16,14 +16,14 @@ struct Obj {
     char *vtbl;
 };
 
-extern "C" void func_0013BD68(void *arg0, int arg1);
-extern "C" void func_0013BDC0(void *arg0, void *arg1);
-extern "C" void *func_00147D80(void *arg0);
-extern "C" s32 func_0043F180(void *arg0);
-extern "C" void func_002FC870(void *arg0, int arg1);
-extern "C" void func_002FE278(void *arg0, int arg1);
-extern "C" void func_003285A8(void *p);
-extern "C" void func_003285F8(void *p);
+extern "C" void func_0013BD70(void *arg0, int arg1);
+extern "C" void func_0013BDC8(void *arg0, void *arg1);
+extern "C" void *func_00147D88(void *arg0);
+extern "C" s32 func_0043F4F8(void *arg0);
+extern "C" void func_002FC9C8(void *arg0, int arg1);
+extern "C" void func_002FE3D0(void *arg0, int arg1);
+extern "C" void func_00328700(void *p);
+extern "C" void func_00328750(void *p);
 
 static inline s32 vcall(Obj *o) {
     VEntry *e = (VEntry *)(o->vtbl + 0x58);
@@ -33,19 +33,19 @@ static inline s32 vcall(Obj *o) {
 extern "C" void MCarGarage__getTCSCSetting(void **arg0, void *arg1, s32 n, Obj **args) {
     Handle h;
     void *o;
-    func_0013BDC0(&h, arg1);
-    o = func_00147D80(h.p);
-    func_0013BD68(&h, 2);
-    func_002FE278(&h, vcall(*args) != 0 ? -1 : func_0043F180(o));
+    func_0013BDC8(&h, arg1);
+    o = func_00147D88(h.p);
+    func_0013BD70(&h, 2);
+    func_002FE3D0(&h, vcall(*args) != 0 ? -1 : func_0043F4F8(o));
     if ((void *)arg0 != (void *)&h) {
         void *p = h.p;
         if (p != 0) {
-            func_003285A8(p);
+            func_00328700(p);
         }
         if (*arg0 != 0) {
-            func_003285F8(*arg0);
+            func_00328750(*arg0);
         }
         *arg0 = p;
     }
-    func_002FC870(&h, 2);
+    func_002FC9C8(&h, 2);
 }

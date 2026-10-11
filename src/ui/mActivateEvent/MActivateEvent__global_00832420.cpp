@@ -1,23 +1,23 @@
 typedef int s32;
 
-extern "C" void func_00277850(s32 *buf, s32 a, s32 b);
-extern "C" void func_003285A8(s32 obj);
-extern "C" void func_003285F8(s32 obj);
-extern "C" void func_00277438(s32 *buf, s32 flags);
+extern "C" void func_002779A8(s32 *buf, s32 a, s32 b);
+extern "C" void func_00328700(s32 obj);
+extern "C" void func_00328750(s32 obj);
+extern "C" void func_00277590(s32 *buf, s32 flags);
 
 extern "C" void MActivateEvent__global_00832420(s32 *ret)
 {
     s32 buf[4];
 
-    func_00277850(buf, 0, 0);
+    func_002779A8(buf, 0, 0);
     if (ret != buf) {
         s32 obj = buf[0];
         if (obj != 0)
-            func_003285A8(obj);
+            func_00328700(obj);
         s32 old = *ret;
         if (old != 0)
-            func_003285F8(old);
+            func_00328750(old);
         *ret = obj;
     }
-    func_00277438(buf, 2);
+    func_00277590(buf, 2);
 }

@@ -5,14 +5,14 @@ struct Buf00109C40 {
     char pad4[0xC];
 };
 
-extern "C" void func_002CC920(struct Buf00109C40 *arg0);
-extern "C" void func_002CDAA0(s32 arg0);
-extern "C" void func_002CC8C8(struct Buf00109C40 *arg0, s32 arg1);
+extern "C" void func_002CCA78(struct Buf00109C40 *arg0);
+extern "C" void func_002CDBF8(s32 arg0);
+extern "C" void func_002CCA20(struct Buf00109C40 *arg0, s32 arg1);
 
 extern "C" void MRotateActor__doFlip(void) {
     struct Buf00109C40 buf;
 
-    func_002CC920(&buf);
-    func_002CDAA0(buf.unk0);
-    func_002CC8C8(&buf, 2);
+    func_002CCA78(&buf);
+    func_002CDBF8(buf.unk0);
+    func_002CCA20(&buf, 2);
 }

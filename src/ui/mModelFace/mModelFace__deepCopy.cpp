@@ -53,26 +53,26 @@ extern char hObject__tf[];
 
 extern "C" void mWidget__deepCopy(mModelFace *, hObject *);
 extern "C" mModelFace *GT4MC__FileGT4GameData__loadInstance(s32, void *, s32, void *, void *, void *);
-extern "C" void *func_002BE7F8(mModelFace *);
-extern "C" void func_002BE800(mModelFace *, void *);
-extern "C" void func_002BE988(Str *, mModelFace *);
-extern "C" void func_002BE9E8(mModelFace *, Str *);
+extern "C" void *func_002BE950(mModelFace *);
+extern "C" void func_002BE958(mModelFace *, void *);
+extern "C" void func_002BEAE0(Str *, mModelFace *);
+extern "C" void func_002BEB40(mModelFace *, Str *);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *, s32, s32, const char *);
-extern "C" void *func_002BEB60(mModelFace *);
-extern "C" void func_002BEB68(mModelFace *, void *);
-extern "C" void *func_0021A818(void *);
-extern "C" void func_0021A828(void *, void *);
-extern "C" void *func_0021A848(void *);
-extern "C" void func_0021A858(void *, void *);
-extern "C" void func_002024F0(void *, void *);
-extern "C" void func_00211208(void *, void *);
+extern "C" void func_003268F0(void *, s32, s32, const char *);
+extern "C" void *func_002BECB8(mModelFace *);
+extern "C" void func_002BECC0(mModelFace *, void *);
+extern "C" void *func_0021A8D8(void *);
+extern "C" void func_0021A8E8(void *, void *);
+extern "C" void *func_0021A908(void *);
+extern "C" void func_0021A918(void *, void *);
+extern "C" void func_002025B0(void *, void *);
+extern "C" void func_002112C8(void *, void *);
 
 static inline void str_release(Str *s) {
     Rep *q = (Rep *)(s->p - 0x10);
     if (--q->ref == 0) {
         s32 size = q->cap + 0x10;
-        func_00326798(q, size, 4, func_005C11A8()->name);
+        func_003268F0(q, size, 4, func_005C11A8()->name);
     }
 }
 
@@ -87,27 +87,27 @@ extern "C" void mModelFace__deepCopy(mModelFace *self, hObject *src) {
         o = GT4MC__FileGT4GameData__loadInstance(t->type, mModelFace__tf, 0, (char *)src + t->offset, hObject__tf, src);
     }
     if (o != 0) {
-        func_002BE800(self, func_002BE7F8(o));
+        func_002BE958(self, func_002BE950(o));
         self->b2 = o->b2;
         self->b3 = o->b3;
         self->b4 = o->b4;
-        func_002BE988(&tmp, o);
-        func_002BE9E8(self, &tmp);
+        func_002BEAE0(&tmp, o);
+        func_002BEB40(self, &tmp);
         str_release(&tmp);
         self->b6 = o->b6;
         self->b7 = o->b7;
         self->b8 = o->b8;
-        func_002BEB68(self, func_002BEB60(o));
+        func_002BECC0(self, func_002BECB8(o));
         self->unk2E0 = o->unk2E0;
-        func_0021A828(self->unkA0, func_0021A818(o->unkA0));
-        func_0021A858(self->unkA0, func_0021A848(o->unkA0));
+        func_0021A8E8(self->unkA0, func_0021A8D8(o->unkA0));
+        func_0021A918(self->unkA0, func_0021A908(o->unkA0));
         {
             f32 *d = self->unk2FC;
             d[0] = o->unk2FC[0];
             d[1] = o->unk2FC[1];
             d[2] = o->unk2FC[2];
         }
-        func_002024F0(self->unkEC, o->unkEC);
-        func_00211208(self->unk154, o->unk154);
+        func_002025B0(self->unkEC, o->unkEC);
+        func_002112C8(self->unk154, o->unk154);
     }
 }

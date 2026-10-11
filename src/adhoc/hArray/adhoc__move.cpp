@@ -28,9 +28,9 @@ static inline s32 vcall_58(char *o) {
     VEntry_58 *e = (VEntry_58 *)((char *)((VObj_58 *)o)->vtbl + 0x58);
     return e->fn(o + e->delta);
 }
-extern "C" void func_002ED618(void *);
-extern "C" void func_002F0138(s32, s32, s32);
-extern "C" void func_002ED5C0(void *, s32);
+extern "C" void func_002ED770(void *);
+extern "C" void func_002F0290(s32, s32, s32);
+extern "C" void func_002ED718(void *, s32);
 
 struct adhoc__move_arg3 {
     u8 pad0[0x4];
@@ -42,10 +42,10 @@ extern "C" void adhoc__move(s32 *arg0, void *arg1, s32 arg2, char **arg3) {
     s32 v_s1;
     s32 v_s0;
     if (arg2 == 0x2) {
-        func_002ED618(buf0);
+        func_002ED770(buf0);
         v_s1 = buf0[0];
         v_s0 = vcall_58((char *)(*(s32 *)(char *)arg3));
-        func_002F0138(v_s1, v_s0, vcall_58((char *)(((struct adhoc__move_arg3 *)arg3)->unk4)));
-        func_002ED5C0(buf0, 0x2);
+        func_002F0290(v_s1, v_s0, vcall_58((char *)(((struct adhoc__move_arg3 *)arg3)->unk4)));
+        func_002ED718(buf0, 0x2);
     }
 }

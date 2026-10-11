@@ -1,17 +1,22 @@
-typedef int s32;
+#include "types.h"
+#define NULL 0
+void *memcpy(void *, const void *, unsigned int);
 
-struct Obj001FD5E8 {
-    char pad[0xD8];
-    s32 unkD8;
+s32 func_001FD628(void *);                      /* extern */
+s32 free(s32);                         /* extern */
+
+struct func_001FD5E8_arg0 {
+    char pad0[0xD4];
+    s32 unkD4;
 };
 
-extern "C" void free(s32 arg0);
+void func_001FD5E8(void *arg0) {
+    s32 temp_v0;
 
-extern "C" void func_001FD5E8(struct Obj001FD5E8 *arg0) {
-    s32 temp_v0 = arg0->unkD8;
-
+    temp_v0 = ((struct func_001FD5E8_arg0 *)arg0)->unkD4;
     if (temp_v0 != 0) {
-        arg0->unkD8 = 0;
+        ((struct func_001FD5E8_arg0 *)arg0)->unkD4 = 0;
         free(temp_v0);
     }
+    func_001FD628(arg0);
 }

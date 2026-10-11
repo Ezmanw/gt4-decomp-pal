@@ -3,16 +3,16 @@ typedef int s32;
 
 extern void *RaceInput__vtable;
 extern "C" void *func_0055F620(void *);
-extern "C" void *func_00346758(void *);
-extern "C" void *func_0043A0C0(void *, void *);
-extern "C" void *func_0043A078(void *);
+extern "C" void *func_003468B0(void *);
+extern "C" void *func_0043A438(void *, void *);
+extern "C" void *func_0043A3F0(void *);
 
 extern "C" void RaceInput__structor_0(void *arg0) {
     func_0055F620(arg0);
     ((struct RaceInput *)arg0)->unkD0 = &RaceInput__vtable;
-    func_00346758((char *)arg0 + 0xd4);
-    func_0043A0C0((char *)arg0 + 0x170, (char *)arg0 + 0x150);
-    func_0043A078((char *)arg0 + 0x1a0);
+    func_003468B0((char *)arg0 + 0xd4);
+    func_0043A438((char *)arg0 + 0x170, (char *)arg0 + 0x150);
+    func_0043A3F0((char *)arg0 + 0x1a0);
     ((struct RaceInput *)arg0)->unk1C4 = 0x0;
     ((struct RaceInput *)arg0)->unk1CC = (void *)(0x1);
     ((struct RaceInput *)arg0)->unk1C8 = 0x0;

@@ -7,8 +7,8 @@ struct RaceDisplayObjectBase__structor_0 {
 };
 
 /* A member object, named after its constructor. */
-struct func_003A9608 {
-    func_003A9608();
+struct func_003A9900 {
+    func_003A9900();
     int m0;
 };
 
@@ -19,7 +19,7 @@ struct RaceMiniMap__vtable : RaceDisplayObjectBase__structor_0 {
     char pad[0xC];
     int m40;
     int m44;
-    func_003A9608 m48;
+    func_003A9900 m48;
     RaceMiniMap__vtable();
     virtual ~RaceMiniMap__vtable();
 };

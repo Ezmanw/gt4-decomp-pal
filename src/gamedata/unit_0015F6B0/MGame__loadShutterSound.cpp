@@ -32,19 +32,19 @@ struct Handle {
     int pad[3];
 };
 
-extern "C" void func_00312370(Handle *h, void *arg);
-extern "C" void func_00312318(Handle *h, int in_chrg);
-extern "C" String *func_00314920(void *p);
-extern "C" void func_004635E0(const char *s);
+extern "C" void func_003124C8(Handle *h, void *arg);
+extern "C" void func_00312470(Handle *h, int in_chrg);
+extern "C" String *func_00314A78(void *p);
+extern "C" void func_004639B8(const char *s);
 
 extern "C" void MGame__loadShutterSound(void *self, void *a1, int count, void *arg)
 {
     if (count > 0) {
         Handle h;
-        func_00312370(&h, arg);
-        func_004635E0(func_00314920(h.p)->c_str());
-        func_00312318(&h, 2);
+        func_003124C8(&h, arg);
+        func_004639B8(func_00314A78(h.p)->c_str());
+        func_00312470(&h, 2);
     } else {
-        func_004635E0(0);
+        func_004639B8(0);
     }
 }

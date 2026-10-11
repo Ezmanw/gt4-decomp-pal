@@ -26,13 +26,13 @@ extern "C" char *func_005C2560(Rep *r);
 extern "C" s32 func_0057F260(const char *s);
 extern "C" void *func_005C2630(Str *s, s32 pos, s32 n, const char *src, s32 len);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
-extern "C" void func_00312318(void *arg0, int arg1);
-extern "C" void func_00314B20(void *arg0, void *arg1);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
-extern "C" void func_0015F388(void *arg0, int arg1);
-extern "C" void *func_0015F3E0(void *arg0);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_00312470(void *arg0, int arg1);
+extern "C" void func_00314C78(void *arg0, void *arg1);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
+extern "C" void func_0015F390(void *arg0, int arg1);
+extern "C" void *func_0015F3E8(void *arg0);
 
 extern "C" void MGame__get_next_menu_project(s32 *arg0) {
     Obj *tmp[4];
@@ -43,7 +43,7 @@ extern "C" void MGame__get_next_menu_project(s32 *arg0) {
     s32 oldVal;
     const char *src;
     s32 *pb;
-    func_0015F3E0(tmp);
+    func_0015F3E8(tmp);
     src = tmp[0]->p10 + 0x3A3BC;
     ps = &s;
     {
@@ -59,25 +59,25 @@ extern "C" void MGame__get_next_menu_project(s32 *arg0) {
     }
     func_005C2630(ps, 0, -1, src, func_0057F260(src));
     pb = buf0;
-    func_00314B20(pb, ps);
+    func_00314C78(pb, ps);
     if (arg0 != pb) {
         newVal = *pb;
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *arg0;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *arg0 = newVal;
     }
-    func_00312318(pb, 2);
+    func_00312470(pb, 2);
     {
         Rep *q = (Rep *)(ps->p - 0x10);
         if (--q->ref == 0) {
             s32 cap = q->cap + 0x10;
-            func_00326798(q, cap, 4, func_005C11A8()->name);
+            func_003268F0(q, cap, 4, func_005C11A8()->name);
         }
     }
-    func_0015F388(tmp, 2);
+    func_0015F390(tmp, 2);
 }

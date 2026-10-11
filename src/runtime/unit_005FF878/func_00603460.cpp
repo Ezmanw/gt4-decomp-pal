@@ -6,8 +6,8 @@ struct Obj {
     s32 unk1E8;
 };
 
-extern "C" s64 func_0044A5A8(s32 arg0);
+extern "C" s64 func_0044A920(s32 arg0);
 
 extern "C" s64 func_00603460(Obj *arg0) {
-    return func_0044A5A8(arg0->unk1E8);
+    return func_0044A920(arg0->unk1E8);
 }

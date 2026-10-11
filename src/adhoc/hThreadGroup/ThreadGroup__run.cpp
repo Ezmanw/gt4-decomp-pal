@@ -1,11 +1,11 @@
 typedef int s32;
 
-extern "C" void func_00322888(void *arg0, s32 arg1);
-extern "C" void func_003228E0(void *arg0);
-extern "C" void func_00323110(s32 *arg0, s32 arg1);
-extern "C" void func_00309378(s32 *arg0, s32 arg1);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
+extern "C" void func_003229E0(void *arg0, s32 arg1);
+extern "C" void func_00322A38(void *arg0);
+extern "C" void func_00323268(s32 *arg0, s32 arg1);
+extern "C" void func_003094D0(s32 *arg0, s32 arg1);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
 
 extern "C" void ThreadGroup__run(s32 *arg0) {
     s32 sp[4];
@@ -14,20 +14,20 @@ extern "C" void ThreadGroup__run(s32 *arg0) {
     s32 temp_a0;
     s32 temp_s0;
 
-    func_003228E0(sp);
+    func_00322A38(sp);
     p1 = sp10;
-    func_00323110(p1, sp[0]);
+    func_00323268(p1, sp[0]);
     if (arg0 != p1) {
         temp_s0 = *p1;
         if (temp_s0 != 0) {
-            func_003285A8(temp_s0);
+            func_00328700(temp_s0);
         }
         temp_a0 = *arg0;
         if (temp_a0 != 0) {
-            func_003285F8(temp_a0);
+            func_00328750(temp_a0);
         }
         *arg0 = temp_s0;
     }
-    func_00309378(p1, 2);
-    func_00322888(sp, 2);
+    func_003094D0(p1, 2);
+    func_003229E0(sp, 2);
 }

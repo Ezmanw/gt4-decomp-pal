@@ -34,9 +34,9 @@ extern "C" char *func_005C2560(Rep *r);
 extern "C" s32 func_0057F260(const char *s);
 extern "C" void *func_005C2630(Str *s, s32 pos, s32 n, const char *src, s32 len);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
-extern "C" void func_002F3A30(Obj *arg0, s32 arg1);
-extern "C" void func_003068A8(Obj *arg0, Str *arg1, void (*arg2)(void));
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_002F3B88(Obj *arg0, s32 arg1);
+extern "C" void func_00306A00(Obj *arg0, Str *arg1, void (*arg2)(void));
 extern "C" void MSystem__GetVersionString(void);
 extern "C" void MSystem__GetVersionBranch(void);
 extern "C" void MSystem__SetDrawPerfMeter(void);
@@ -82,11 +82,11 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
-    func_002F3A30(arg0, hObject__GetClassID());
+    func_002F3B88(arg0, hObject__GetClassID());
     {
         Str *ps = &s;
         const char *src = "GetVersionString";
@@ -100,12 +100,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__GetVersionString);
+        func_00306A00(arg0, &s, MSystem__GetVersionString);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -122,12 +122,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__GetVersionBranch);
+        func_00306A00(arg0, &s, MSystem__GetVersionBranch);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -144,12 +144,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__SetDrawPerfMeter);
+        func_00306A00(arg0, &s, MSystem__SetDrawPerfMeter);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -166,12 +166,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__IsDrawPerfMeter);
+        func_00306A00(arg0, &s, MSystem__IsDrawPerfMeter);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -188,12 +188,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__SetLoadingMode);
+        func_00306A00(arg0, &s, MSystem__SetLoadingMode);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -210,12 +210,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__DumpMemoryBlock);
+        func_00306A00(arg0, &s, MSystem__DumpMemoryBlock);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -232,12 +232,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__GetMaxMemorySize);
+        func_00306A00(arg0, &s, MSystem__GetMaxMemorySize);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -254,12 +254,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__GetRegionCode);
+        func_00306A00(arg0, &s, MSystem__GetRegionCode);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -276,12 +276,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__GetLanguage);
+        func_00306A00(arg0, &s, MSystem__GetLanguage);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -298,12 +298,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__SetLanguage);
+        func_00306A00(arg0, &s, MSystem__SetLanguage);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -320,12 +320,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__SyncUnitWithLanguage);
+        func_00306A00(arg0, &s, MSystem__SyncUnitWithLanguage);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -342,12 +342,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__GetVideoSystem);
+        func_00306A00(arg0, &s, MSystem__GetVideoSystem);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -364,12 +364,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__GetGMTDateTimeString);
+        func_00306A00(arg0, &s, MSystem__GetGMTDateTimeString);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -386,12 +386,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__GetCurrentDateTimeString);
+        func_00306A00(arg0, &s, MSystem__GetCurrentDateTimeString);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -408,12 +408,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__GetCurrentDateTime);
+        func_00306A00(arg0, &s, MSystem__GetCurrentDateTime);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -430,12 +430,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__GetBuildNumber);
+        func_00306A00(arg0, &s, MSystem__GetBuildNumber);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -452,12 +452,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__GetStaticWideMode);
+        func_00306A00(arg0, &s, MSystem__GetStaticWideMode);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -474,12 +474,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__GetStaticLanguage);
+        func_00306A00(arg0, &s, MSystem__GetStaticLanguage);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -496,12 +496,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__GetDnasCode);
+        func_00306A00(arg0, &s, MSystem__GetDnasCode);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -518,12 +518,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__Reboot);
+        func_00306A00(arg0, &s, MSystem__Reboot);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -540,12 +540,12 @@ extern "C" void mSystem__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MSystem__IsOEM);
+        func_00306A00(arg0, &s, MSystem__IsOEM);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }

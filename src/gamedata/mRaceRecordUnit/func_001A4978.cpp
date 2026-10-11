@@ -1,9 +1,8 @@
 typedef int s32;
 
+extern "C" s32 func_003250F0(void);
 extern s32 mRaceRecordUnit__ClassID_;
 
-extern "C" void mRaceRecordUnit__InitClass(s32 arg0);
-
 extern "C" void func_001A4978(void) {
-    mRaceRecordUnit__InitClass(mRaceRecordUnit__ClassID_);
+    mRaceRecordUnit__ClassID_ = func_003250F0();
 }

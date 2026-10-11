@@ -1,5 +1,13 @@
-extern "C" void func_00574EB0(int arg0);
+typedef int s32;
 
-extern "C" void func_00103310(int arg0) {
-    func_00574EB0(arg0 + 0x38);
+struct S001032F0 {
+    char pad0[0x68];
+    s32 unk68;
+};
+
+extern "C" void func_00574EE8(void *arg0);
+
+extern "C" void func_00103310(S001032F0 *arg0, s32 arg1) {
+    arg0->unk68 = arg1;
+    func_00574EE8((char *)arg0 + 0x8);
 }

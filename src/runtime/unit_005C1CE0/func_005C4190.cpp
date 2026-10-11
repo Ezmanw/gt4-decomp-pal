@@ -11,17 +11,17 @@ struct Handle {
     char pad[0xC];
 };
 
-extern "C" void func_001240D8(void *arg0, int arg1);
-extern "C" void func_00124130(void *arg0, void *arg1);
-extern "C" void func_002FC870(void *arg0, int arg1);
-extern "C" void func_002FC8C8(void *arg0, void *arg1);
-extern "C" int func_002FE250(void *arg0);
+extern "C" void func_001240E0(void *arg0, int arg1);
+extern "C" void func_00124138(void *arg0, void *arg1);
+extern "C" void func_002FC9C8(void *arg0, int arg1);
+extern "C" void func_002FCA20(void *arg0, void *arg1);
+extern "C" int func_002FE3A8(void *arg0);
 
 static inline Obj *hget(Handle *h) { return h->p; }
 
 static inline int chk(Handle *ph, void *a3) {
-    func_002FC8C8(ph, a3);
-    return func_002FE250(ph->p);
+    func_002FCA20(ph, a3);
+    return func_002FE3A8(ph->p);
 }
 
 extern "C" void func_005C4190(void *arg0, void *arg1, s32 arg2, void *arg3, PM pmf) {
@@ -30,10 +30,10 @@ extern "C" void func_005C4190(void *arg0, void *arg1, s32 arg2, void *arg3, PM p
         Handle h;
         Handle *po = &o;
         Handle *ph;
-        func_00124130(po, arg1);
+        func_00124138(po, arg1);
         ph = &h;
         (hget(po)->*pmf)(chk(ph, arg3));
-        func_002FC870(ph, 2);
-        func_001240D8(po, 2);
+        func_002FC9C8(ph, 2);
+        func_001240E0(po, 2);
     }
 }

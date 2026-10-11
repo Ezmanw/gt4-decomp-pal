@@ -1,0 +1,9 @@
+#include "types.h"
+struct func_003796E8_a0 {
+    char pad0[0x150];
+    s32 unk150;
+};
+
+extern "C" s32 func_003796E8(struct func_003796E8_a0 *a0) {
+    return a0->unk150;
+}

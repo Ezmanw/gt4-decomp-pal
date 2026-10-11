@@ -7,9 +7,9 @@ struct Obj {
     Node *unk4;
 };
 
-extern "C" void func_00326798(void *, int, int, int);
+extern "C" void func_003268F0(void *, int, int, int);
 extern "C" int *func_005DD7F0(void);
-extern "C" void func_0028E378(void *, int);
+extern "C" void func_0028E4D0(void *, int);
 
 extern "C" void func_005DD168(Obj *arg0) {
     Node *v0 = arg0->unk4;
@@ -18,8 +18,8 @@ extern "C" void func_005DD168(Obj *arg0) {
         do {
             Node *s0 = s1;
             s1 = s1->unk0;
-            func_0028E378((char *)s0 + 8, 2);
-            func_00326798(s0, 0xC, 4, *func_005DD7F0());
+            func_0028E4D0((char *)s0 + 8, 2);
+            func_003268F0(s0, 0xC, 4, *func_005DD7F0());
             v0 = arg0->unk4;
             s0 = s1;
         } while (s1 != v0);

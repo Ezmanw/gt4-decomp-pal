@@ -8,8 +8,8 @@ struct Obj {
 
 extern char PDISTD__UNIT_MANAGER;
 
-extern "C" s32 func_00472A78(void *arg0, f32 arg1);
+extern "C" s32 func_00472E50(void *arg0, f32 arg1);
 
 extern "C" s32 Automobile_GetGasConsumption(Obj *arg0) {
-    return func_00472A78(&PDISTD__UNIT_MANAGER, arg0->unk5C4);
+    return func_00472E50(&PDISTD__UNIT_MANAGER, arg0->unk5C4);
 }

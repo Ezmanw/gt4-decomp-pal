@@ -1,17 +1,17 @@
 /* compiler: ee-gcc2.96-no-strict-aliasing */
 struct RefCounter;
 
-extern "C" void func_00328660(RefCounter *p); /* retain */
-extern "C" void func_003286B8(RefCounter *p); /* release */
+extern "C" void func_003287B8(RefCounter *p); /* retain */
+extern "C" void func_00328810(RefCounter *p); /* release */
 
 struct Ref {
     RefCounter *p;
     Ref() : p(0) {}
     Ref &operator=(RefCounter *q) {
         if (q)
-            func_00328660(q);
+            func_003287B8(q);
         if (p)
-            func_003286B8(p);
+            func_00328810(p);
         p = q;
         return *this;
     }

@@ -87,8 +87,8 @@ typedef s64 M2C_UNK64;
 
 #endif
 
-M2C_UNK func_002030E8(s32, void *);                 /* extern */
-M2C_UNK func_00248398(s32, void *);                 /* extern */
+M2C_UNK func_002031A8(s32, void *);                 /* extern */
+M2C_UNK func_002484F0(s32, void *);                 /* extern */
 M2C_UNK mWidget__deepCopy();                            /* extern */
 void *GT4MC__FileGT4GameData__loadInstance(s32, M2C_UNK, M2C_UNK, void *, M2C_UNK, void *); /* extern */
 
@@ -105,13 +105,13 @@ void mInputTextFace__deepCopy(void *arg0, void *arg1) {
         var_s2 = GT4MC__FileGT4GameData__loadInstance(M2C_FIELD(temp_v0, s32 *, 4), (s32)mInputTextFace__tf, 0, arg1 + M2C_FIELD(temp_v0, s16 *, 0), (s32)hObject__tf, arg1);
     }
     if (var_s2 != NULL) {
-        func_00248398(arg0 + 0xA0, var_s2 + 0xA0);
-        func_002030E8(arg0 + 0x104, var_s2 + 0x104);
-        func_002030E8(arg0 + 0x114, var_s2 + 0x114);
-        func_002030E8(arg0 + 0x124, var_s2 + 0x124);
-        func_002030E8(arg0 + 0x134, var_s2 + 0x134);
-        func_002030E8(arg0 + 0x144, var_s2 + 0x144);
-        func_002030E8(arg0 + 0x154, var_s2 + 0x154);
+        func_002484F0(arg0 + 0xA0, var_s2 + 0xA0);
+        func_002031A8(arg0 + 0x104, var_s2 + 0x104);
+        func_002031A8(arg0 + 0x114, var_s2 + 0x114);
+        func_002031A8(arg0 + 0x124, var_s2 + 0x124);
+        func_002031A8(arg0 + 0x134, var_s2 + 0x134);
+        func_002031A8(arg0 + 0x144, var_s2 + 0x144);
+        func_002031A8(arg0 + 0x154, var_s2 + 0x154);
         M2C_FIELD(arg0, s32 *, 0x164) = (s32) M2C_FIELD(var_s2, s32 *, 0x164);
         M2C_FIELD(arg0, s32 *, 0x168) = (s32) M2C_FIELD(var_s2, s32 *, 0x168);
     }

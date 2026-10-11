@@ -23,11 +23,11 @@ struct S00659988 {
 };
 
 extern char D_0069D858[];
-extern "C" s32 func_00326750(s32, s32, void *);
+extern "C" s32 func_003268A8(s32, s32, void *);
 extern "C" void hFloat__structor_1(s32, void *);
-extern "C" void func_002F7B38(void *, void *);
-extern "C" void func_00309360(void *, void *);
-extern "C" void func_002F7B68(void *, s32);
+extern "C" void func_002F7C90(void *, void *);
+extern "C" void func_003094B8(void *, void *);
+extern "C" void func_002F7CC0(void *, s32);
 
 extern "C" void * hFloat__copyPrimitive(s32 *arg0, void *arg1) {
     s32 buf0[4];
@@ -35,11 +35,11 @@ extern "C" void * hFloat__copyPrimitive(s32 *arg0, void *arg1) {
     s32 *p_s1;
     s32 v_s0;
     p_s1 = buf1;
-    v_s0 = func_00326750(0x14, 0x4, &D_0069D858);
+    v_s0 = func_003268A8(0x14, 0x4, &D_0069D858);
     hFloat__structor_1(v_s0, arg1);
     buf1[0] = v_s0;
-    func_002F7B38(buf0, p_s1);
-    func_00309360(arg0, buf0);
-    func_002F7B68(buf0, 0x2);
+    func_002F7C90(buf0, p_s1);
+    func_003094B8(arg0, buf0);
+    func_002F7CC0(buf0, 0x2);
     return arg0;
 }

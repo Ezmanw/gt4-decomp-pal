@@ -37,11 +37,11 @@ void mPop__execute(struct mPop *arg0, void *arg1) {
     if ((arg1 + 0x30) != temp_a0) {
         temp_s0 = *temp_a0;
         if (temp_s0 != 0) {
-            func_003285A8(temp_s0);
+            func_00328700(temp_s0);
         }
         temp_v0_2 = ((struct mPop__virtual_08_arg1 *)arg1)->unk30;
         if (temp_v0_2 != 0) {
-            func_003285F8(temp_v0_2);
+            func_00328750(temp_v0_2);
         }
         ((struct mPop__virtual_08_arg1 *)arg1)->unk30 = temp_s0;
     }

@@ -5,12 +5,12 @@ void *memcpy(void *, const void *, unsigned int);
 
 s32 ScrollBarUnit__onPinchMotion(void *);                          /* extern */
 
-struct func_002D2DE0_temp_s1 {
+struct func_002D2F38_temp_s1 {
     char pad0[0x14];
     f32 unk14;
 };
 
-struct func_002D2DE0_arg0 {
+struct func_002D2F38_arg0 {
     char pad0[0xC0];
     s32 unkC0;
 };
@@ -18,11 +18,11 @@ struct func_002D2DE0_arg0 {
 s32 mScrollWindow__onHPinchMotion(void *arg0) {
     s32 temp_s2;
     s32 temp_v0;
-    struct func_002D2DE0_temp_s1 *temp_s1;
+    struct func_002D2F38_temp_s1 *temp_s1;
 
     temp_s1 = arg0 + 0xC4;
     temp_s2 = ScrollBarUnit__onPinchMotion(temp_s1);
-    temp_v0 = ((struct func_002D2DE0_arg0 *)arg0)->unkC0;
+    temp_v0 = ((struct func_002D2F38_arg0 *)arg0)->unkC0;
     if (temp_v0 != 0) {
         mWidget__setWindowX(temp_v0, -temp_s1->unk14);
     }

@@ -1,21 +1,9 @@
-#include "types.h"
-void *memcpy(void *, const void *, unsigned int);
-
-f32 func_00490860();                                /* extern */
-
-struct func_004908C0_arg0 {
-    char pad0[0x30];
-    f32 unk30;
-    f32 unk34;
-    char pad38[0x14];
-    s32 unk4C;
-};
-
-void func_004908C0(struct func_004908C0_arg0 *arg0, f32 fparg0, f32 fparg1) {
-    f32 temp_f0;
-
-    arg0->unk30 = fparg0;
-    temp_f0 = func_00490860();
-    arg0->unk4C = 0;
-    arg0->unk34 = (f32) (fparg1 + temp_f0);
+typedef unsigned u32;
+void func_004908C0(char *arg0, u32 arg1, u32 arg2, u32 arg3, u32 arg4) {
+    u32 a = arg1 & 0xFF;
+    u32 b = arg2 & 0xFF;
+    u32 c = arg3 & 0xFF;
+    u32 x = (arg4 << 24) | a;
+    u32 y = (b << 8) | (c << 16);
+    *(u32 *)(arg0 + 0x44) = x | y;
 }

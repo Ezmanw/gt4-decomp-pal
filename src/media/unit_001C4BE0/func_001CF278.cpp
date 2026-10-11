@@ -1,21 +1,17 @@
-typedef int s32;
 typedef unsigned short u16;
 
-struct Obj {
+struct Struct_001CF2B8 {
     char pad0[0x48];
-    u16 flags;
-    char pad4A[0x2E];
-    char name[0x40];
+    u16 unk48;
+    char pad48[0x78 - 0x4A];
 };
 
-extern "C" char *func_005A6AB0(char *dst, const char *src, s32 n);
+extern char D_00694DC0[];
 
-extern "C" s32 func_001CF278(Obj *self, const char *name) {
-    char *d = self->name;
-    if ((u16)(self->flags & 1) == 0) {
-        return 0;
+extern "C" void *func_001CF278(struct Struct_001CF2B8 *arg0) {
+    u16 flag = arg0->unk48 & 1;
+    if ((flag & 0xFFFF) != 0) {
+        return (char *)arg0 + 0x78;
     }
-    d[0x3F] = 0;
-    func_005A6AB0(d, name, 0x3F);
-    return 1;
+    return D_00694DC0;
 }

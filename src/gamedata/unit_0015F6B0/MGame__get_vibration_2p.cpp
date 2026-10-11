@@ -12,13 +12,13 @@ struct H {
     Inner *p10;
 };
 
-extern "C" void func_0015F388(void *arg0, int arg1);
-extern "C" void *func_0015F3E0(void *arg0);
-extern "C" void func_002FC870(void *arg0, int arg1);
-extern "C" void func_002FE278(void *arg0, s32 arg1);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
-extern "C" s32 func_004308C8(S00430830 *arg0);
+extern "C" void func_0015F390(void *arg0, int arg1);
+extern "C" void *func_0015F3E8(void *arg0);
+extern "C" void func_002FC9C8(void *arg0, int arg1);
+extern "C" void func_002FE3D0(void *arg0, s32 arg1);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
+extern "C" s32 func_00430C40(S00430830 *arg0);
 
 static inline H *get(H **p) {
     return *p;
@@ -31,21 +31,21 @@ extern "C" void MGame__get_vibration_2p(s32 *arg0) {
     s32 v;
     s32 newVal;
     s32 oldVal;
-    func_0015F3E0(tmp);
-    v = func_004308C8((S00430830 *)get(tmp)->p10->mD8);
+    func_0015F3E8(tmp);
+    v = func_00430C40((S00430830 *)get(tmp)->p10->mD8);
     pb = buf0;
-    func_002FE278(pb, v);
+    func_002FE3D0(pb, v);
     if (arg0 != pb) {
         newVal = *pb;
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *arg0;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *arg0 = newVal;
     }
-    func_002FC870(pb, 2);
-    func_0015F388(tmp, 2);
+    func_002FC9C8(pb, 2);
+    func_0015F390(tmp, 2);
 }

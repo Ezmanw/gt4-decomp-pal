@@ -48,15 +48,15 @@ struct Cam {
     int unkE8;
 };
 
-extern "C" f32 func_0036FD98(Cam *);
-extern "C" f32 func_003701B8(Input *, f32, f32);
-extern "C" f32 func_0036EAD8(f32);
-extern "C" f32 func_0036FF38(Cam *, f32);
-extern "C" f32 func_0036FF78(Cam *, f32);
-extern "C" f32 func_0036F6A0(void *, int, f32);
-extern "C" void func_003704D0(Cam *, f32, f32);
+extern "C" f32 func_00370048(Cam *);
+extern "C" f32 func_00370468(Input *, f32, f32);
+extern "C" f32 func_0036ED88(f32);
+extern "C" f32 func_003701E8(Cam *, f32);
+extern "C" f32 func_00370228(Cam *, f32);
+extern "C" f32 func_0036F950(void *, int, f32);
+extern "C" void func_00370780(Cam *, f32, f32);
 extern "C" void func_005F5040(void *, void *);
-extern "C" int func_003FF0B8(f32 *, Owner *, int, f32);
+extern "C" int func_003FF438(f32 *, Owner *, int, f32);
 
 extern "C" void func_00370960(Cam *self, Input *in)
 {
@@ -74,12 +74,12 @@ extern "C" void func_00370960(Cam *self, Input *in)
     f32 tmp[4];
     int r;
 
-    self->unk1C = func_003701B8(in, self->unk1C, func_0036FD98(self));
-    self->angle = func_0036EAD8(self->angle + (in->turn + in->turn));
+    self->unk1C = func_00370468(in, self->unk1C, func_00370048(self));
+    self->angle = func_0036ED88(self->angle + (in->turn + in->turn));
     my = in->move_y;
     mx = in->move_x;
-    gx = func_0036FF38(self, speed);
-    gy = func_0036FF78(self, speed);
+    gx = func_003701E8(self, speed);
+    gy = func_00370228(self, speed);
     min_x = lim->min_x;
     max_x = lim->max_x;
     min_y = lim->min_y;
@@ -102,7 +102,7 @@ extern "C" void func_00370960(Cam *self, Input *in)
         int moving = 0;
         if (my != 0.0f || mx != 0.0f)
             moving = 1;
-        s = func_0036F6A0(self->unk44, moving, 1.0f);
+        s = func_0036F950(self->unk44, moving, 1.0f);
     }
     {
         f32 *px = &self->x;
@@ -120,11 +120,11 @@ extern "C" void func_00370960(Cam *self, Input *in)
             *py = min_y;
         if (max_y <= *py)
             *py = max_y;
-        func_003704D0(self, *px, *py);
+        func_00370780(self, *px, *py);
         func_005F5040(px, self->unk28);
         func_005F5040(px, tmp);
     }
-    r = func_003FF0B8(tmp, self->owner, self->unk80, func_0036FF78(self, 24.0f));
+    r = func_003FF438(tmp, self->owner, self->unk80, func_00370228(self, 24.0f));
     if (r >= 0)
         func_005F5040(tmp, self->unk28);
     self->unkE8 = r;

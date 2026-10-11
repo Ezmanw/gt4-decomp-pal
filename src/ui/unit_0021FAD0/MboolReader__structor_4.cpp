@@ -1,5 +1,5 @@
 /* compiler: ee-gcc2.96-no-strict-aliasing */
-/* Looks up 9 settings by name in the table a1 (func_0020FD38(a1, &name, &cb)), each with a callback
+/* Looks up 9 settings by name in the table a1 (func_0020FDF8(a1, &name, &cb)), each with a callback
    object (vtable + target pointer: a field of a0, or a local copied to a0 + 0x20 on success; its
    destructor resets the vtable and calls the base dtor MReaderBase__structor_0(&cb, 0)); returns 1 at the
    first success, else 0. A default-constructed string lives across the whole function. Each block's
@@ -15,7 +15,7 @@ extern Rep D_00659FA8;
 extern "C" char *func_005C2560(Rep *r);
 extern "C" u32 func_0057F260(const char *s);
 extern "C" Heap *func_005C11A8(void);
-extern "C" void func_00326798(void *p, u32 n, u32 align, const char *name);
+extern "C" void func_003268F0(void *p, u32 n, u32 align, const char *name);
 extern "C" Str *func_005C2630(Str *self, u32 pos, u32 n1, const char *s, u32 n2);
 
 static inline char *grab(Rep *r) {
@@ -29,13 +29,13 @@ static inline Str &assign(Str *str, const char *s) { return assign(str, s, func_
 static inline void construct(Str *str, const char *s) { str->dat = grab(&D_00659FA8); assign(str, s); }
 static inline void construct(Str *str) { str->dat = grab(&D_00659FA8); }
 static inline Rep *rep(const Str *str) { return (Rep *)str->dat - 1; }
-static inline void deallocate(void *p, u32 n) { func_00326798(p, n, 4, func_005C11A8()->name); }
+static inline void deallocate(void *p, u32 n) { func_003268F0(p, n, 4, func_005C11A8()->name); }
 static inline void rep_delete(void *ptr) { deallocate(ptr, sizeof(Rep) + ((Rep *)ptr)->res); }
 static inline void release(Rep *r) { if (--r->ref == 0) rep_delete(r); }
 static inline void destroy(Str *str) { release(rep(str)); }
 
 struct Cb { void **vtbl; void *p; };
-extern "C" s32 func_0020FD38(void *a, Str *s, void *cb);
+extern "C" s32 func_0020FDF8(void *a, Str *s, void *cb);
 extern "C" void MReaderBase__structor_0(Cb *cb, s32 flags);
 struct L0 { Str t; s32 pad0[3]; Cb cb; };
 struct L1 { Str t; s32 pad0[7]; Cb cb; };
@@ -71,7 +71,7 @@ extern "C" s32 MboolReader__structor_4(char *a0, void *a1)
         Cb *pcb = &u.l0.cb;
         pcb->vtbl = MstringReader__vtable;
         ((struct MboolReader__structor_4_pcb *)pcb)->unk4 = p;
-        s32 r = func_0020FD38(a1, &u.l0.t, pcb);
+        s32 r = func_0020FDF8(a1, &u.l0.t, pcb);
         pcb->vtbl = MstringReader__vtable;
         MReaderBase__structor_0(pcb, 0);
         destroy(&u.l0.t);
@@ -86,7 +86,7 @@ extern "C" s32 MboolReader__structor_4(char *a0, void *a1)
         Cb *pcb = &u.l1.cb;
         pcb->vtbl = MintReader__vtable;
         ((struct MboolReader__structor_4_pcb *)pcb)->unk4 = p;
-        s32 r = func_0020FD38(a1, &u.l1.t, pcb);
+        s32 r = func_0020FDF8(a1, &u.l1.t, pcb);
         pcb->vtbl = MintReader__vtable;
         MReaderBase__structor_0(pcb, 0);
         destroy(&u.l1.t);
@@ -101,7 +101,7 @@ extern "C" s32 MboolReader__structor_4(char *a0, void *a1)
         Cb *pcb = &u.l2.cb;
         pcb->vtbl = MintReader__vtable;
         ((struct MboolReader__structor_4_pcb *)pcb)->unk4 = p;
-        s32 r = func_0020FD38(a1, &u.l2.t, pcb);
+        s32 r = func_0020FDF8(a1, &u.l2.t, pcb);
         pcb->vtbl = MintReader__vtable;
         MReaderBase__structor_0(pcb, 0);
         destroy(&u.l2.t);
@@ -116,7 +116,7 @@ extern "C" s32 MboolReader__structor_4(char *a0, void *a1)
         Cb *pcb = &u.l3.cb;
         pcb->vtbl = MboolReader__vtable;
         ((struct MboolReader__structor_4_pcb *)pcb)->unk4 = p;
-        s32 r = func_0020FD38(a1, &u.l3.t, pcb);
+        s32 r = func_0020FDF8(a1, &u.l3.t, pcb);
         pcb->vtbl = MboolReader__vtable;
         MReaderBase__structor_0(pcb, 0);
         destroy(&u.l3.t);
@@ -131,7 +131,7 @@ extern "C" s32 MboolReader__structor_4(char *a0, void *a1)
         Cb *pcb = &u.l0.cb;
         pcb->vtbl = MboolReader__vtable;
         ((struct MboolReader__structor_4_pcb *)pcb)->unk4 = p;
-        s32 r = func_0020FD38(a1, &u.l0.t, pcb);
+        s32 r = func_0020FDF8(a1, &u.l0.t, pcb);
         pcb->vtbl = MboolReader__vtable;
         MReaderBase__structor_0(pcb, 0);
         destroy(&u.l0.t);
@@ -146,7 +146,7 @@ extern "C" s32 MboolReader__structor_4(char *a0, void *a1)
         Cb *pcb = &u.l0.cb;
         pcb->vtbl = MboolReader__vtable;
         ((struct MboolReader__structor_4_pcb *)pcb)->unk4 = p;
-        s32 r = func_0020FD38(a1, &u.l0.t, pcb);
+        s32 r = func_0020FDF8(a1, &u.l0.t, pcb);
         pcb->vtbl = MboolReader__vtable;
         MReaderBase__structor_0(pcb, 0);
         destroy(&u.l0.t);
@@ -161,7 +161,7 @@ extern "C" s32 MboolReader__structor_4(char *a0, void *a1)
         Cb *pcb = &u.l4.cb;
         pcb->vtbl = MintReader__vtable;
         ((struct MboolReader__structor_4_pcb *)pcb)->unk4 = p;
-        s32 r = func_0020FD38(a1, &u.l4.t, pcb);
+        s32 r = func_0020FDF8(a1, &u.l4.t, pcb);
         pcb->vtbl = MintReader__vtable;
         MReaderBase__structor_0(pcb, 0);
         destroy(&u.l4.t);
@@ -177,7 +177,7 @@ extern "C" s32 MboolReader__structor_4(char *a0, void *a1)
         Cb *pcb = &u.l0.cb;
         pcb->vtbl = MboolReader__vtable;
         ((struct MboolReader__structor_4_pcb *)pcb)->unk4 = p;
-        s32 r = func_0020FD38(a1, &u.l0.t, pcb);
+        s32 r = func_0020FDF8(a1, &u.l0.t, pcb);
         pcb->vtbl = MboolReader__vtable;
         MReaderBase__structor_0(pcb, 0);
         destroy(&u.l0.t);
@@ -192,7 +192,7 @@ extern "C" s32 MboolReader__structor_4(char *a0, void *a1)
         Cb *pcb = &u.l0.cb;
         pcb->vtbl = MintReader__vtable;
         ((struct MboolReader__structor_4_pcb *)pcb)->unk4 = p;
-        s32 r = func_0020FD38(a1, &u.l0.t, pcb);
+        s32 r = func_0020FDF8(a1, &u.l0.t, pcb);
         pcb->vtbl = MintReader__vtable;
         MReaderBase__structor_0(pcb, 0);
         destroy(&u.l0.t);

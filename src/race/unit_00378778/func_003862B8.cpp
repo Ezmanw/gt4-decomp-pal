@@ -1,3 +1,5 @@
-extern "C" int func_003862B8(int *arg0) {
-    return *arg0 + 0x40;
+typedef int s32;
+
+extern "C" void func_003862B8(s32 **arg0, s32 arg1) {
+    **arg0 = arg1;
 }

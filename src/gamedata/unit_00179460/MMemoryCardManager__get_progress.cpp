@@ -1,7 +1,7 @@
-extern "C" void *func_001792D8(void *h);
-extern "C" void func_00179280(void *h, int in_chrg);
-extern "C" void func_003285A8(void *obj);
-extern "C" void func_003285F8(void *obj);
+extern "C" void *func_00179300(void *h);
+extern "C" void func_001792A8(void *h, int in_chrg);
+extern "C" void func_00328700(void *obj);
+extern "C" void func_00328750(void *obj);
 
 /* Reference-counted pointer with the inline assignment of 002F8B00. */
 struct Ref {
@@ -11,9 +11,9 @@ struct Ref {
         if (this != &o) {
             void *np = o.p;
             if (np)
-                func_003285A8(np);
+                func_00328700(np);
             if (p)
-                func_003285F8(p);
+                func_00328750(p);
             p = np;
         }
     }
@@ -32,7 +32,7 @@ struct Handle {
 extern "C" void MMemoryCardManager__get_progress(Ref *out)
 {
     Handle h;
-    func_001792D8(&h);
+    func_00179300(&h);
     out->assign(h.p->ref);
-    func_00179280(&h, 2);
+    func_001792A8(&h, 2);
 }

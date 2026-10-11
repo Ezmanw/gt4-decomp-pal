@@ -21,15 +21,15 @@ struct Handle {
     char pad[0xC];
 };
 
-extern "C" void func_001DC5F8(void *arg0, int arg1);
-extern "C" void func_001DC650(void *arg0, void *arg1);
-extern "C" void func_001F5EC8(Str *arg0, void *arg1);
-extern "C" void func_00312318(void *arg0, int arg1);
-extern "C" void func_00314B20(void *arg0, void *arg1);
+extern "C" void func_001DC638(void *arg0, int arg1);
+extern "C" void func_001DC690(void *arg0, void *arg1);
+extern "C" void func_001F5F08(Str *arg0, void *arg1);
+extern "C" void func_00312470(void *arg0, int arg1);
+extern "C" void func_00314C78(void *arg0, void *arg1);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
-extern "C" void func_003285A8(void *p);
-extern "C" void func_003285F8(void *p);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_00328700(void *p);
+extern "C" void func_00328750(void *p);
 
 extern "C" void MNetwork__accountGetStats(void **arg0, void *arg1) {
     Handle r[2];
@@ -39,26 +39,26 @@ extern "C" void MNetwork__accountGetStats(void **arg0, void *arg1) {
 
     Handle *ph = &h;
     Str *ps = &s;
-    func_001DC650(ph, arg1);
-    func_001F5EC8(ps, ph->p);
-    func_00314B20(r, ps);
+    func_001DC690(ph, arg1);
+    func_001F5F08(ps, ph->p);
+    func_00314C78(r, ps);
     if ((void *)arg0 != (void *)r) {
         void *p = r[0].p;
         if (p != 0) {
-            func_003285A8(p);
+            func_00328700(p);
         }
         if (*arg0 != 0) {
-            func_003285F8(*arg0);
+            func_00328750(*arg0);
         }
         *arg0 = p;
     }
-    func_00312318(r, 2);
+    func_00312470(r, 2);
     {
         Rep *q = (Rep *)(ps->p - 0x10);
         if (--q->ref == 0) {
             s32 cap = q->cap + 0x10;
-            func_00326798(q, cap, 4, func_005C11A8()->name);
+            func_003268F0(q, cap, 4, func_005C11A8()->name);
         }
     }
-    func_001DC5F8(ph, 2);
+    func_001DC638(ph, 2);
 }

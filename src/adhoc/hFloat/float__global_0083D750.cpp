@@ -1,7 +1,7 @@
-extern "C" void func_002F9360(void *v, float f);
-extern "C" void func_002F7B68(void *v, int in_chrg);
-extern "C" void func_003285A8(void *obj);
-extern "C" void func_003285F8(void *obj);
+extern "C" void func_002F94B8(void *v, float f);
+extern "C" void func_002F7CC0(void *v, int in_chrg);
+extern "C" void func_00328700(void *obj);
+extern "C" void func_00328750(void *obj);
 
 /* Reference-counted script float value handle. */
 struct Handle {
@@ -12,9 +12,9 @@ struct Handle {
         if (this != &o) {
             void *np = o.p;
             if (np)
-                func_003285A8(np);
+                func_00328700(np);
             if (p)
-                func_003285F8(p);
+                func_00328750(p);
             p = np;
         }
     }
@@ -23,7 +23,7 @@ struct Handle {
 extern "C" void float__global_0083D750(Handle *h)
 {
     Handle tmp;
-    func_002F9360(&tmp, 0.0f);
+    func_002F94B8(&tmp, 0.0f);
     h->assign(tmp);
-    func_002F7B68(&tmp, 2);
+    func_002F7CC0(&tmp, 2);
 }

@@ -32,9 +32,9 @@ extern "C" char *func_005C2560(Rep *r);
 extern "C" s32 func_0057F260(const char *s);
 extern "C" void *func_005C2630(Str *s, s32 pos, s32 n, const char *src, s32 len);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
 extern "C" int mComposite__GetClassID(void);
-extern "C" void func_002F3A30(Obj *arg0, s32 arg1);
+extern "C" void func_002F3B88(Obj *arg0, s32 arg1);
 
 extern char D_0069CAE8[];
 extern char D_0069CAF8[];
@@ -43,8 +43,8 @@ extern char D_0083A530[];
 extern "C" void MScrollWindow__global_0083A530(void);
 extern "C" void MScrollWindow__updateGeometry(void);
 extern "C" void MScrollWindow__warp(void);
-extern "C" void func_00306780(Obj *arg0, void *arg1, void (*arg2)(void));
-extern "C" void func_002F3818(Obj *arg0, Str *arg1, void (*arg2)(void));
+extern "C" void func_003068D8(Obj *arg0, void *arg1, void (*arg2)(void));
+extern "C" void func_002F3970(Obj *arg0, Str *arg1, void (*arg2)(void));
 
 extern "C" void mScrollWindow__InitClass(Obj *arg0) {
     Str s;
@@ -69,12 +69,12 @@ extern "C" void mScrollWindow__InitClass(Obj *arg0) {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
-    func_002F3A30(arg0, mComposite__GetClassID());
-    func_00306780(arg0, D_0083A530, MScrollWindow__global_0083A530);
+    func_002F3B88(arg0, mComposite__GetClassID());
+    func_003068D8(arg0, D_0083A530, MScrollWindow__global_0083A530);
     {
         Str *ps = &s;
         const char *src = D_0069CAF8;
@@ -88,12 +88,12 @@ extern "C" void mScrollWindow__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3818(arg0, &s, MScrollWindow__updateGeometry);
+        func_002F3970(arg0, &s, MScrollWindow__updateGeometry);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -110,12 +110,12 @@ extern "C" void mScrollWindow__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3818(arg0, &s, MScrollWindow__warp);
+        func_002F3970(arg0, &s, MScrollWindow__warp);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }

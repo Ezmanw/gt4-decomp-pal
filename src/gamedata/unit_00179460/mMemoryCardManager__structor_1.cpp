@@ -5,10 +5,10 @@ struct hObject {
 };
 
 /* Named after its constructor so that the call resolves. */
-struct func_002286C0 {
+struct func_00228818 {
     int a;
     int b;
-    func_002286C0();
+    func_00228818();
 };
 
 struct Range {
@@ -20,7 +20,7 @@ struct Range {
 struct mMemoryCardManager : hObject {
     int m8;
     int mC;
-    func_002286C0 m10;
+    func_00228818 m10;
     int m18;
     int m1C;
     int m20;
@@ -29,7 +29,7 @@ struct mMemoryCardManager : hObject {
     Range m2C;
     mMemoryCardManager(int a, int b);
     virtual ~mMemoryCardManager();
-    void init(int a, int b) __asm__("func_0017C348");
+    void init(int a, int b) __asm__("func_0017C370");
 };
 
 mMemoryCardManager::mMemoryCardManager(int a, int b) : m18(0), m1C(0), m20(0), m24(0) {

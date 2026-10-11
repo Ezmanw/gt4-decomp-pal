@@ -1,5 +1,9 @@
-extern int mLoggerFace__ClassID_;
+typedef int s32;
 
-void func_001BBB20(void) {
-    mLoggerFace__ClassID_ = 0;
+extern s32 mLoggerFace__ClassID_;
+
+extern "C" void mLoggerFace__InitClass(s32 arg0);
+
+extern "C" void func_001BBB20(void) {
+    mLoggerFace__InitClass(mLoggerFace__ClassID_);
 }

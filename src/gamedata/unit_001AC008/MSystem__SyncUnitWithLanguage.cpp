@@ -1,6 +1,6 @@
-extern void func_004361D0(void);
+extern void func_00436548(void);
 
 void MSystem__SyncUnitWithLanguage(void)
 {
-    func_004361D0();
+    func_00436548();
 }

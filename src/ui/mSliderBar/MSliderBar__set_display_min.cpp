@@ -1,8 +1,8 @@
-extern "C" void func_002DD698(void *);
-extern "C" void func_002DD640(void *, int);
-extern "C" void func_002FC8C8(void *, void *);
-extern "C" void func_002FC870(void *, int);
-extern "C" int func_002FE250(int);
+extern "C" void func_002DD7F0(void *);
+extern "C" void func_002DD798(void *, int);
+extern "C" void func_002FCA20(void *, void *);
+extern "C" void func_002FC9C8(void *, int);
+extern "C" int func_002FE3A8(int);
 
 struct Target {
     char pad0[0xE0];
@@ -24,10 +24,10 @@ extern "C" void MSliderBar__set_display_min(void *arg0, void *arg1, int count, v
 {
     A a;
     B b;
-    func_002DD698(&a);
+    func_002DD7F0(&a);
     Target *t = a.p;
-    func_002FC8C8(&b, name);
-    t->value = func_002FE250(get(&b));
-    func_002FC870(&b, 2);
-    func_002DD640(&a, 2);
+    func_002FCA20(&b, name);
+    t->value = func_002FE3A8(get(&b));
+    func_002FC9C8(&b, 2);
+    func_002DD798(&a, 2);
 }

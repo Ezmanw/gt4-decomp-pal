@@ -4,7 +4,7 @@
 typedef signed char s8; typedef unsigned char u8; typedef int s32; typedef float f32;
 #define M2C_FIELD(expr, type_ptr, offset) (*(type_ptr)((s8 *)(expr) + (offset)))
 
-extern "C" void func_001056A0(s32) throw();
+extern "C" void func_001056C0(s32) throw();
 extern "C" void RaceDigitalSpeedmeter__render_main(void *) throw();
 extern "C" void RaceTexturePanel__render_main(void *) throw();
 extern "C" void RaceABMonitor__render_main(void *) throw();
@@ -113,7 +113,7 @@ extern "C" void RaceSimplePanel__render_main(char *arg0, s32 arg1) {
         RaceSimplePanel__init_texset();
     }
     temp_s0 = arg0 + 0x48;
-    func_001056A0(arg1);
+    func_001056C0(arg1);
     temp_s3 = arg0 + 0x80;
     temp_s4 = arg0 + 0xD0;
     ((struct RaceSimplePanel__virtual_05_temp_s2 *)temp_s2)->unkC = (f32) ((struct RaceSimplePanel__virtual_05_arg0 *)arg0)->unkC;

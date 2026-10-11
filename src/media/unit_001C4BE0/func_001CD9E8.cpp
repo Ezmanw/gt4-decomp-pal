@@ -1,5 +1,5 @@
-typedef int s32;
+extern char D_00694DC0;
 
-extern "C" s32 func_001CD9E8(void) {
-    return 0;
+void *func_001CD9E8(void) {
+    return &D_00694DC0;
 }

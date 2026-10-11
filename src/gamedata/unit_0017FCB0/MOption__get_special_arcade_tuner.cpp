@@ -45,32 +45,32 @@ static inline Inner *get(Handle *h) {
     return h->p;
 }
 
-extern "C" void func_0017FAD0(void *arg0, int arg1);
-extern "C" void *func_0017FB28(void *arg0, void *arg1);
-extern "C" void func_00312318(void *arg0, int arg1);
-extern "C" void func_00314B20(void *arg0, void *arg1);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
-extern "C" const char *func_00436BE0(s32 arg0);
-extern "C" void func_00436C18(s32 arg0, const char *arg1);
+extern "C" void func_0017FAF8(void *arg0, int arg1);
+extern "C" void *func_0017FB50(void *arg0, void *arg1);
+extern "C" void func_00312470(void *arg0, int arg1);
+extern "C" void func_00314C78(void *arg0, void *arg1);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
+extern "C" const char *func_00436F58(s32 arg0);
+extern "C" void func_00436F90(s32 arg0, const char *arg1);
 extern "C" char *func_005C2560(Rep *r);
 extern "C" s32 func_0057F260(const char *s);
 extern "C" void *func_005C2630(Str *s, s32 pos, s32 n, const char *src, s32 len);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
 
 static inline void str_release(Str *s) {
     Rep *q = (Rep *)(s->p - 0x10);
     if (--q->ref == 0) {
         s32 size = q->cap + 0x10;
-        func_00326798(q, size, 4, func_005C11A8()->name);
+        func_003268F0(q, size, 4, func_005C11A8()->name);
     }
 }
 
 extern "C" void MOption__get_special_arcade_tuner(s32 *arg0, void *arg1, s32 arg2, VObj **arg3) {
     Handle buf;
     if (arg2 > 0) {
-        func_0017FB28(&buf, arg1);
+        func_0017FB50(&buf, arg1);
         {
             Inner *op = buf.p;
             VObj *o = *arg3;
@@ -86,10 +86,10 @@ extern "C" void MOption__get_special_arcade_tuner(s32 *arg0, void *arg1, s32 arg
                 pt->p[len] = 0;
                 c = pt->p;
             }
-            func_00436C18(op->p10, c);
+            func_00436F90(op->p10, c);
             str_release(pt);
         }
-        func_0017FAD0(&buf, 2);
+        func_0017FAF8(&buf, 2);
     } else {
         Handle h;
         Str s;
@@ -97,9 +97,9 @@ extern "C" void MOption__get_special_arcade_tuner(s32 *arg0, void *arg1, s32 arg
         s32 newVal;
         s32 oldVal;
         const char *src;
-        func_0017FB28(&buf, arg1);
+        func_0017FB50(&buf, arg1);
         ps = &s;
-        src = func_00436BE0(get(&buf)->p10);
+        src = func_00436F58(get(&buf)->p10);
         {
             Rep *r = &D_00659FA8;
             char *d;
@@ -114,21 +114,21 @@ extern "C" void MOption__get_special_arcade_tuner(s32 *arg0, void *arg1, s32 arg
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
         {
             Handle *ph = &h;
-            func_00314B20(ph, ps);
+            func_00314C78(ph, ps);
             if ((void *)arg0 != (void *)ph) {
                 newVal = (s32)ph->p;
                 if (newVal != 0) {
-                    func_003285A8(newVal);
+                    func_00328700(newVal);
                 }
                 oldVal = *arg0;
                 if (oldVal != 0) {
-                    func_003285F8(oldVal);
+                    func_00328750(oldVal);
                 }
                 *arg0 = newVal;
             }
-            func_00312318(ph, 2);
+            func_00312470(ph, 2);
         }
         str_release(ps);
-        func_0017FAD0(&buf, 2);
+        func_0017FAF8(&buf, 2);
     }
 }

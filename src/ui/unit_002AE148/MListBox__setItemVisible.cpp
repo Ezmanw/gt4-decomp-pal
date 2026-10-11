@@ -11,14 +11,14 @@ struct VObj {
     char *vtbl;
 };
 
-extern "C" void func_002AE968(void *arg0, int arg1);
-extern "C" void func_002AE9C0(void *arg0, void *arg1);
-extern "C" void func_002B5358(char *arg0, s32 arg1, s32 arg2);
+extern "C" void func_002AEAC0(void *arg0, int arg1);
+extern "C" void func_002AEB18(void *arg0, void *arg1);
+extern "C" void func_002B54B0(char *arg0, s32 arg1, s32 arg2);
 
 extern "C" void MListBox__setItemVisible(s32 *arg0, void *arg1, s32 arg2, VObj **arg3) {
     char *h[4];
     if (arg2 == 2) {
-        func_002AE9C0(h, arg1);
+        func_002AEB18(h, arg1);
         {
             char *hv = h[0];
             VObj *o = arg3[0];
@@ -26,8 +26,8 @@ extern "C" void MListBox__setItemVisible(s32 *arg0, void *arg1, s32 arg2, VObj *
             s32 a = e->fn((char *)o + e->delta);
             VObj *o2 = arg3[1];
             VEntry *e2 = (VEntry *)(o2->vtbl + 0x58);
-            func_002B5358(hv, a, e2->fn((char *)o2 + e2->delta) != 0);
+            func_002B54B0(hv, a, e2->fn((char *)o2 + e2->delta) != 0);
         }
-        func_002AE968(h, 2);
+        func_002AEAC0(h, 2);
     }
 }

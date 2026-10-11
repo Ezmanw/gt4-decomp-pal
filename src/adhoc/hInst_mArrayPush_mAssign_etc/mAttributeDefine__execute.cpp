@@ -23,12 +23,12 @@ struct S00659988 {
 };
 
 extern "C" s32 HValue__isValid(void *);
-extern "C" s32 func_00322060(void *);
-extern "C" void func_0032BD38(void *, void *);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_0032BA00(void *, s32);
-extern "C" void func_003065F0(s32, void *);
+extern "C" s32 func_003221B8(void *);
+extern "C" void func_0032BE90(void *, void *);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_0032BB58(void *, s32);
+extern "C" void func_00306748(s32, void *);
 
 extern "C" void mAttributeDefine__execute(s32 *arg0, void *arg1) {
     s32 buf0[4];
@@ -37,19 +37,19 @@ extern "C" void mAttributeDefine__execute(s32 *arg0, void *arg1) {
     s32 v_s0;
     v_s1 = (char *)arg0 + 0xc;
     if (HValue__isValid(v_s1) == 0) {
-        v_s3 = func_00322060(arg1);
-        func_0032BD38(buf0, (char *)arg0 + 0x8);
+        v_s3 = func_003221B8(arg1);
+        func_0032BE90(buf0, (char *)arg0 + 0x8);
         v_s0 = buf0[0];
         if ((char *)v_s1 != (char *)buf0) {
             if (v_s0 != 0) {
-                func_003285A8(v_s0);
+                func_00328700(v_s0);
             }
             if (*(s32 *)(char *)v_s1 != 0) {
-                func_003285F8(*(s32 *)(char *)v_s1);
+                func_00328750(*(s32 *)(char *)v_s1);
             }
             *(s32 *)(char *)v_s1 = v_s0;
         }
-        func_0032BA00(buf0, 0x2);
-        func_003065F0(v_s3, v_s1);
+        func_0032BB58(buf0, 0x2);
+        func_00306748(v_s3, v_s1);
     }
 }

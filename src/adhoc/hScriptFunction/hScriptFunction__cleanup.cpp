@@ -5,11 +5,11 @@ struct Obj {
     s32 h;
 };
 
-extern "C" void func_002F41E0(void *arg0, s32 *arg1);
-extern "C" void func_002F4210(void *arg0, int arg1);
+extern "C" void func_002F4338(void *arg0, s32 *arg1);
+extern "C" void func_002F4368(void *arg0, int arg1);
 extern "C" void RefCounter__cleanup(Obj *self);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
 
 extern "C" void hScriptFunction__cleanup(Obj *self) {
     s32 buf[4];
@@ -19,18 +19,18 @@ extern "C" void hScriptFunction__cleanup(Obj *self) {
     s32 oldVal;
     RefCounter__cleanup(self);
     zero = 0;
-    func_002F41E0(buf, &zero);
+    func_002F4338(buf, &zero);
     dst = &self->h;
     if (dst != buf) {
         newVal = buf[0];
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *dst;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *dst = newVal;
     }
-    func_002F4210(buf, 2);
+    func_002F4368(buf, 2);
 }

@@ -26,20 +26,20 @@ struct VEntryVal {
     f32 (*fn)(void *);
 };
 
-extern "C" void func_002550B8(void *arg0, int arg1);
-extern "C" void func_00255110(void *arg0, void *arg1);
-extern "C" struct Dst *func_00268228(struct Dst *arg0, struct Src *arg1);
-extern "C" void func_00268308(struct Src *arg0, struct Dst *arg1);
-extern "C" void func_002ED5C0(void *arg0, int arg1);
-extern "C" void func_002ED618(void *arg0, void *arg1);
-extern "C" void func_002EFC48(void *arg0, s32 arg1);
+extern "C" void func_00255210(void *arg0, int arg1);
+extern "C" void func_00255268(void *arg0, void *arg1);
+extern "C" struct Dst *func_00268380(struct Dst *arg0, struct Src *arg1);
+extern "C" void func_00268460(struct Src *arg0, struct Dst *arg1);
+extern "C" void func_002ED718(void *arg0, int arg1);
+extern "C" void func_002ED770(void *arg0, void *arg1);
+extern "C" void func_002EFDA0(void *arg0, s32 arg1);
 extern "C" s32 *HArray__operator_index(void *arg0, s32 arg1);
-extern "C" void func_002F7B68(void *arg0, int arg1);
-extern "C" void func_002F9360(void *arg0, float fparg0);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
+extern "C" void func_002F7CC0(void *arg0, int arg1);
+extern "C" void func_002F94B8(void *arg0, float fparg0);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
 
-#define ASSIGN(dst, src)     if ((dst) != (src)) {         newVal = (src)[0];         if (newVal != 0) {             func_003285A8(newVal);         }         oldVal = *(dst);         if (oldVal != 0) {             func_003285F8(oldVal);         }         *(dst) = newVal;     }
+#define ASSIGN(dst, src)     if ((dst) != (src)) {         newVal = (src)[0];         if (newVal != 0) {             func_00328700(newVal);         }         oldVal = *(dst);         if (oldVal != 0) {             func_00328750(oldVal);         }         *(dst) = newVal;     }
 
 static inline void init4(struct Dst *v, f32 x, f32 y, f32 z, f32 w) {
     v->x = x;
@@ -59,7 +59,7 @@ extern "C" void MWidget__get_navigate_target(s32 *arg0, void *arg1, s32 arg2, vo
         struct Dst v;
         s32 arr1[4];
     } u;
-    func_00255110(h, arg1);
+    func_00255268(h, arg1);
     if (arg2 == 0) {
         s32 arr[4];
         s32 buf[4];
@@ -68,42 +68,42 @@ extern "C" void MWidget__get_navigate_target(s32 *arg0, void *arg1, s32 arg2, vo
         s32 *e;
         s32 newVal;
         s32 oldVal;
-        func_00268228(&u.v, h[0]);
+        func_00268380(&u.v, h[0]);
         arr0 = arr;
-        func_002EFC48(arr0, 4);
+        func_002EFDA0(arr0, 4);
         e = HArray__operator_index(arr0, 0);
         buf0 = buf;
-        func_002F9360(buf0, u.v.x);
+        func_002F94B8(buf0, u.v.x);
         ASSIGN(e, buf0);
-        func_002F7B68(buf0, 2);
+        func_002F7CC0(buf0, 2);
         e = HArray__operator_index(arr0, 1);
-        func_002F9360(buf0, u.v.y);
+        func_002F94B8(buf0, u.v.y);
         ASSIGN(e, buf0);
-        func_002F7B68(buf0, 2);
+        func_002F7CC0(buf0, 2);
         e = HArray__operator_index(arr0, 2);
-        func_002F9360(buf0, u.v.z);
+        func_002F94B8(buf0, u.v.z);
         ASSIGN(e, buf0);
-        func_002F7B68(buf0, 2);
+        func_002F7CC0(buf0, 2);
         e = HArray__operator_index(arr0, 3);
-        func_002F9360(buf0, u.v.w);
+        func_002F94B8(buf0, u.v.w);
         ASSIGN(e, buf0);
-        func_002F7B68(buf0, 2);
+        func_002F7CC0(buf0, 2);
         ASSIGN(arg0, arr0);
-        func_002ED5C0(arr0, 2);
+        func_002ED718(arr0, 2);
     } else if (arg2 == 1) {
         struct Dst vec;
         struct Dst *pvec;
         s32 *arr0;
         arr0 = u.arr1;
-        func_002ED618(arr0, arg3);
+        func_002ED770(arr0, arg3);
         pvec = &vec;
         init4(pvec, 0.0f, 0.0f, 0.0f, 0.0f);
         vec.x = vcall(*(struct VObj **)HArray__operator_index(arr0, 0));
         vec.y = vcall(*(struct VObj **)HArray__operator_index(arr0, 1));
         vec.z = vcall(*(struct VObj **)HArray__operator_index(arr0, 2));
         vec.w = vcall(*(struct VObj **)HArray__operator_index(arr0, 3));
-        func_00268308(h[0], pvec);
-        func_002ED5C0(arr0, 2);
+        func_00268460(h[0], pvec);
+        func_002ED718(arr0, 2);
     }
-    func_002550B8(h, 2);
+    func_00255210(h, 2);
 }

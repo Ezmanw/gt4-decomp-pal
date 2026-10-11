@@ -3,9 +3,9 @@
 #define NULL 0
 void *memcpy(void *, const void *, unsigned int);
 
-s32 func_0033CF48();                                /* extern */
+s32 func_0033D0A0();                                /* extern */
 s32 RacePause__structor_0(void *);                      /* extern */
-s32 func_003C31C8(void *, void *);              /* extern */
+s32 func_003C34D0(void *, void *);              /* extern */
 s32 RaceSinglePlayer__structor_0();                            /* extern */
 s32 RaceTrainingBase__setGuideMode(void *, s32);             /* extern */
 
@@ -22,9 +22,9 @@ void RaceTrainingBase__structor_0(void *arg0) {
     temp_s0 = arg0 + 0x125C0;
     ((struct RaceTrainingBase *)arg0)->unk64 = (s32)RaceTrainingBase__vtable;
     RacePause__structor_0(temp_s0);
-    if (func_0033CF48() == 0) {
+    if (func_0033D0A0() == 0) {
         temp_s0->unk28 = 1;
-        func_003C31C8(temp_s0, arg0 + 0xE350);
+        func_003C34D0(temp_s0, arg0 + 0xE350);
     }
     RaceTrainingBase__setGuideMode(arg0, 0);
     ((struct RaceTrainingBase *)arg0)->unkD68 = 3;

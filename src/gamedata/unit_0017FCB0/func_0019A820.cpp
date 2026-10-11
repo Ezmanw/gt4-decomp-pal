@@ -1,15 +1,16 @@
 typedef int s32;
 
-struct Inner {
-    char pad[0x70];
-    s32 unk70;
-};
-
-struct Obj {
+struct Struct_0019A7F8 {
     char pad[0xA0];
-    Inner *unkA0;
+    s32 unkA0;
 };
 
-extern "C" s32 func_0019A820(Obj *arg0) {
-    return arg0->unkA0->unk70;
+extern "C" void func_0019A6C0(struct Struct_0019A7F8 *arg0);
+extern "C" s32 func_001CA8A0(s32 arg0);
+
+extern "C" s32 func_0019A820(struct Struct_0019A7F8 *arg0)
+{
+    struct Struct_0019A7F8 *s0 = arg0;
+    func_0019A6C0(arg0);
+    return func_001CA8A0(s0->unkA0);
 }

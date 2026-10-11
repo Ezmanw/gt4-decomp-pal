@@ -22,12 +22,12 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void * func_0015F3E0(void *);
-extern "C" void * func_00132F48(void *, s32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_00132D60(void *, s32);
-extern "C" void func_0015F388(void *, s32);
+extern "C" void * func_0015F3E8(void *);
+extern "C" void * func_00132F50(void *, s32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_00132D68(void *, s32);
+extern "C" void func_0015F390(void *, s32);
 
 extern "C" void MGame__get_calendar(s32 *arg0) {
     s32 buf0[4];
@@ -36,19 +36,19 @@ extern "C" void MGame__get_calendar(s32 *arg0) {
     s32 newVal;
     s32 oldVal;
     p_s2 = buf1;
-    func_0015F3E0(p_s2);
-    func_00132F48(buf0, *(s32 *)((char *)*p_s2 + 0x10) + 0x568);
+    func_0015F3E8(p_s2);
+    func_00132F50(buf0, *(s32 *)((char *)*p_s2 + 0x10) + 0x568);
     if (arg0 != buf0) {
         newVal = buf0[0];
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *arg0;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *arg0 = newVal;
     }
-    func_00132D60(buf0, 0x2);
-    func_0015F388(p_s2, 0x2);
+    func_00132D68(buf0, 0x2);
+    func_0015F390(p_s2, 0x2);
 }

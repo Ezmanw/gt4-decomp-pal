@@ -1,8 +1,8 @@
-extern "C" void func_0020B398(void *);
-extern "C" void func_0020B340(void *, int);
-extern "C" void func_002F7BC0(void *, void *);
-extern "C" void func_002F7B68(void *, int);
-extern "C" float func_002F9158(int);
+extern "C" void func_0020B458(void *);
+extern "C" void func_0020B400(void *, int);
+extern "C" void func_002F7D18(void *, void *);
+extern "C" void func_002F7CC0(void *, int);
+extern "C" float func_002F92B0(int);
 
 struct Target {
     char pad0[0x2C];
@@ -25,11 +25,11 @@ extern "C" void MFadeActor__set_src_over(void *arg0, void *arg1, int count, void
     if (count > 0) {
         A a;
         B b;
-        func_0020B398(&a);
-        func_002F7BC0(&b, name);
+        func_0020B458(&a);
+        func_002F7D18(&b, name);
         Target *t = a.p;
-        t->value = func_002F9158(get(&b));
-        func_002F7B68(&b, 2);
-        func_0020B340(&a, 2);
+        t->value = func_002F92B0(get(&b));
+        func_002F7CC0(&b, 2);
+        func_0020B400(&a, 2);
     }
 }

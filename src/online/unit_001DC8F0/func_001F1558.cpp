@@ -1,7 +1,7 @@
-extern void func_004F0F50(void *str);
-extern char D_00645570[];
+extern char D_00645440[];
+extern int func_004EED60(void *);
 
-void func_001F1558(void)
+int func_001F1558(void)
 {
-    func_004F0F50(D_00645570);
+    return func_004EED60(D_00645440);
 }

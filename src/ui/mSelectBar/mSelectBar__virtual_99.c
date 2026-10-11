@@ -192,14 +192,14 @@ struct mComposite {
     s32 unkA8;
     s32 unkAC;
 };
-s32 func_00206880(struct mWidget *);
+s32 func_00206940(struct mWidget *);
 f32 mWidget__getWindowW(void *);
 f32 mWidget__getWindowH(void *);
 void mSelectBar__virtual_99(struct mSelectBar *arg0, s32 arg1, s32 arg2) {
-    if (func_00206880((struct mWidget *) arg0) == 0) {
+    if (func_00206940((struct mWidget *) arg0) == 0) {
         arg0->unkE4 = mWidget__getWindowW((void *) arg2);
         arg0->unkE8 = mWidget__getWindowH((void *) arg2);
     }
     mPhotoMapWindow__virtual_99((struct mComposite *) arg0, arg1, arg2);
-    func_002D6770(arg0);
+    func_002D68C8(arg0);
 }

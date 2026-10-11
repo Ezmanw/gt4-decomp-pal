@@ -22,15 +22,15 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void func_002FC8C8(void *, void *);
-extern "C" void func_0020A538(void *, void *);
-extern "C" s32 func_002FE250(s32);
-extern "C" void func_0020A8D0(void *, s32, s32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_00208F18(void *, s32);
-extern "C" void func_0020A4E0(void *, s32);
-extern "C" void func_002FC870(void *, s32);
+extern "C" void func_002FCA20(void *, void *);
+extern "C" void func_0020A5F8(void *, void *);
+extern "C" s32 func_002FE3A8(s32);
+extern "C" void func_0020A990(void *, s32, s32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_00208FD8(void *, s32);
+extern "C" void func_0020A5A0(void *, s32);
+extern "C" void func_002FC9C8(void *, s32);
 
 extern "C" void MDomNodeList__global_0082AB18(s32 *arg0, void *arg1, s32 arg2, char **arg3) {
     s32 buf0[4];
@@ -41,26 +41,26 @@ extern "C" void MDomNodeList__global_0082AB18(s32 *arg0, void *arg1, s32 arg2, c
     s32 v_s0;
     s32 newVal;
     s32 oldVal;
-    func_002FC8C8(buf0, arg3);
+    func_002FCA20(buf0, arg3);
     p_s3 = buf2;
     p_s2 = buf1;
     if (buf0[0] != 0) {
-        func_0020A538(p_s3, arg1);
+        func_0020A5F8(p_s3, arg1);
         v_s0 = *p_s3;
-        func_0020A8D0(p_s2, v_s0, func_002FE250(buf0[0]));
+        func_0020A990(p_s2, v_s0, func_002FE3A8(buf0[0]));
         if (arg0 != p_s2) {
             newVal = *p_s2;
             if (newVal != 0) {
-                func_003285A8(newVal);
+                func_00328700(newVal);
             }
             oldVal = *arg0;
             if (oldVal != 0) {
-                func_003285F8(oldVal);
+                func_00328750(oldVal);
             }
             *arg0 = newVal;
         }
-        func_00208F18(p_s2, 0x2);
-        func_0020A4E0(p_s3, 0x2);
+        func_00208FD8(p_s2, 0x2);
+        func_0020A5A0(p_s3, 0x2);
     }
-    func_002FC870(buf0, 0x2);
+    func_002FC9C8(buf0, 0x2);
 }

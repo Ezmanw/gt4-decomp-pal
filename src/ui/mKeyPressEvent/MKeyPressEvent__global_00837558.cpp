@@ -29,8 +29,8 @@ static inline s32 vcall_58(char *o) {
     return e->fn(o + e->delta);
 }
 extern "C" void MKeyEvent__global_00837318(void *, void *, s32);
-extern "C" void func_002AA808(void *, void *);
-extern "C" void func_002AA7B0(void *, s32);
+extern "C" void func_002AA960(void *, void *);
+extern "C" void func_002AA908(void *, s32);
 
 struct MKeyPressEvent__global_00837558_v_s0 {
     char pad0[0x30];
@@ -46,9 +46,9 @@ extern "C" void MKeyPressEvent__global_00837558(s32 *arg0, void *arg1, s32 arg2,
     s32 v_s0;
     if (arg2 == 0x7) {
         MKeyEvent__global_00837318(arg0, arg1, 0x6);
-        func_002AA808(buf0, arg1);
+        func_002AA960(buf0, arg1);
         v_s0 = buf0[0];
         ((struct MKeyPressEvent__global_00837558_v_s0 *)v_s0)->unk30 = vcall_58((char *)(((struct MKeyPressEvent__global_00837558_arg3 *)arg3)->unk18)) != 0;
-        func_002AA7B0(buf0, 0x2);
+        func_002AA908(buf0, 0x2);
     }
 }

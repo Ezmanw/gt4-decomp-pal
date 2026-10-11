@@ -2,7 +2,7 @@
 typedef int s32;
 
 extern "C" void mData__structor_1(void *arg0, s32 arg1);
-extern "C" void func_00326798(void *arg0, s32 arg1, s32 arg2, const char *arg3);
+extern "C" void func_003268F0(void *arg0, s32 arg1, s32 arg2, const char *arg3);
 
 extern void *mModelSet__vtable;
 
@@ -10,6 +10,6 @@ extern "C" void mModelSet__structor_1(struct mModelSet *arg0, s32 arg1) {
     arg0->unk4 = &mModelSet__vtable;
     mData__structor_1(arg0, 0);
     if (arg1 & 1) {
-        return func_00326798(arg0, 8, 4, "RefCounter");
+        return func_003268F0(arg0, 8, 4, "RefCounter");
     }
 }

@@ -1,8 +1,8 @@
-extern "C" void func_00203678(void *);
-extern "C" void func_00203620(void *, int);
-extern "C" void func_002F7BC0(void *, void *);
-extern "C" void func_002F7B68(void *, int);
-extern "C" float func_002F9158(int);
+extern "C" void func_00203738(void *);
+extern "C" void func_002036E0(void *, int);
+extern "C" void func_002F7D18(void *, void *);
+extern "C" void func_002F7CC0(void *, int);
+extern "C" float func_002F92B0(int);
 
 struct Target {
     char pad0[0x1C];
@@ -24,10 +24,10 @@ extern "C" void MColorObject__set_a(void *arg0, void *arg1, int count, void *nam
 {
     A a;
     B b;
-    func_00203678(&a);
-    func_002F7BC0(&b, name);
+    func_00203738(&a);
+    func_002F7D18(&b, name);
     Target *t = a.p;
-    t->value = func_002F9158(get(&b));
-    func_002F7B68(&b, 2);
-    func_00203620(&a, 2);
+    t->value = func_002F92B0(get(&b));
+    func_002F7CC0(&b, 2);
+    func_002036E0(&a, 2);
 }

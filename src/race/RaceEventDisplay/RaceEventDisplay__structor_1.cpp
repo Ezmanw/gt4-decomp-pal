@@ -16,7 +16,7 @@ struct RaceMessageDisplay__structor_1 {
 extern char D_006A1460[];
 
 struct RaceEventDisplay;
-extern "C" void func_003A5268(RaceEventDisplay *self, const char *text, int flags);
+extern "C" void func_003A5560(RaceEventDisplay *self, const char *text, int flags);
 
 struct RaceEventDisplay : RaceDisplayObjectBase__structor_0 {
     char pad18[0x8];
@@ -31,5 +31,5 @@ struct RaceEventDisplay : RaceDisplayObjectBase__structor_0 {
 RaceEventDisplay::RaceEventDisplay() {
     clear(0.0f);
     color = 0x80C8C8C8;
-    func_003A5268(this, D_006A1460, 0);
+    func_003A5560(this, D_006A1460, 0);
 }

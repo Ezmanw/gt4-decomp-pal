@@ -2,10 +2,10 @@ struct Obj {
     int f0;
     int f4;
     int pad[14];
-    Obj() __asm__("func_00105250");
-    ~Obj() __asm__("func_00105280");
-    void setA(int a) __asm__("func_001053F8");
-    void setSize(int w, int h) __asm__("func_00105460");
+    Obj() __asm__("func_00105270");
+    ~Obj() __asm__("func_001052A0");
+    void setA(int a) __asm__("func_00105418");
+    void setSize(int w, int h) __asm__("func_00105480");
 };
 
 extern "C" void func_001009C8(Obj *o);

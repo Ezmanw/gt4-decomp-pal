@@ -3,7 +3,7 @@
 #define NULL 0
 void *memcpy(void *, const void *, unsigned int);
 
-s32 func_003AC8C8(void *);                      /* extern */
+s32 func_003ACBC0(void *);                      /* extern */
 s32 RaceDisplayObjectBase__structor_0();                            /* extern */
 
 extern char RaceMTRGravityMeter__vtable[];
@@ -14,5 +14,5 @@ void RaceMTRGravityMeter__structor_0(struct RaceMTRGravityMeter *arg0) {
     arg0->unk14 = (s32)RaceMTRGravityMeter__vtable;
     arg0->unk20 = 0;
     arg0->unk24 = 0;
-    func_003AC8C8(arg0);
+    func_003ACBC0(arg0);
 }

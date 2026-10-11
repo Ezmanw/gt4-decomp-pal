@@ -79,14 +79,14 @@ struct Vec4 {
     f32 v[4];
 };
 
-extern "C" s32 func_003446B8(Car *);
-extern "C" s32 func_004515B0(Sub18 *);
+extern "C" s32 func_00344810(Car *);
+extern "C" s32 func_00451988(Sub18 *);
 extern "C" s32 Automobile__getDrawMode(Car *);
 extern "C" void func_004A53F8(void);
 extern "C" void func_004A5400(void);
-extern "C" Vec4 *func_003917D8(void);
-extern "C" f32 func_003916E0(Vec4 *, f32, f32);
-extern "C" void func_003B8530(void *, Elem *, f32, s32);
+extern "C" Vec4 *func_00391AD0(void);
+extern "C" f32 func_003919D8(Vec4 *, f32, f32);
+extern "C" void func_003B8828(void *, Elem *, f32, s32);
 
 extern "C" void RaceCarModel__virtual_35(RaceCarModel *self, void *drawer, s32 arg2, f32 arg3) {
     Car *car;
@@ -103,13 +103,13 @@ extern "C" void RaceCarModel__virtual_35(RaceCarModel *self, void *drawer, s32 a
     }
     car = self->car;
     sub = &self->unk18;
-    hasX = func_003446B8(car) != 0;
+    hasX = func_00344810(car) != 0;
     {
         VEntry *e = (VEntry *)(self->vtbl + 0x50);
         g = e->fn((char *)self + e->delta);
     }
     params = car->holder->info->params;
-    notY = func_004515B0(sub) ^ 1;
+    notY = func_00451988(sub) ^ 1;
     if (Automobile__getDrawMode(car) < 2) {
         return;
     }
@@ -124,11 +124,11 @@ extern "C" void RaceCarModel__virtual_35(RaceCarModel *self, void *drawer, s32 a
             Elem *el = &g->elems0[i];
             u16 idx = el->index;
             if (idx != 0) {
-                Vec4 *t = func_003917D8();
-                f32 s = func_003916E0(&t[idx - 1], ((Base8 *)((char *)self + 8))->arr[idx - 1], el->scale);
-                func_003B8530(drawer, el, s, 1);
+                Vec4 *t = func_00391AD0();
+                f32 s = func_003919D8(&t[idx - 1], ((Base8 *)((char *)self + 8))->arr[idx - 1], el->scale);
+                func_003B8828(drawer, el, s, 1);
             } else {
-                func_003B8530(drawer, el, params->unk1794, 1);
+                func_003B8828(drawer, el, params->unk1794, 1);
             }
         }
     }
@@ -143,9 +143,9 @@ extern "C" void RaceCarModel__virtual_35(RaceCarModel *self, void *drawer, s32 a
                     continue;
                 }
                 if (el->flags & 1) {
-                    func_003B8530(drawer, el, k * s, 1);
+                    func_003B8828(drawer, el, k * s, 1);
                 } else if (hasX) {
-                    func_003B8530(drawer, el, s, 1);
+                    func_003B8828(drawer, el, s, 1);
                 }
             }
         }
@@ -155,7 +155,7 @@ extern "C" void RaceCarModel__virtual_35(RaceCarModel *self, void *drawer, s32 a
             if (notY && (el->flags & 2)) {
                 continue;
             }
-            func_003B8530(drawer, el, params->unk179C, 0);
+            func_003B8828(drawer, el, params->unk179C, 0);
         }
     }
     func_004A5400();

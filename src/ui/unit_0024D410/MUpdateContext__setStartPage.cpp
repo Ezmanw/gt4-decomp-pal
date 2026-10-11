@@ -28,11 +28,11 @@ static inline s32 vcall_58(char *o) {
     VEntry_58 *e = (VEntry_58 *)((char *)((VObj_58 *)o)->vtbl + 0x58);
     return e->fn(o + e->delta);
 }
-extern "C" void func_0024E3D0(void *);
-extern "C" void func_00232C78(void *, void *);
-extern "C" void func_00251BF8(s32, s32, s32);
-extern "C" void func_00232C20(void *, s32);
-extern "C" void func_0024E378(void *, s32);
+extern "C" void func_0024E528(void *);
+extern "C" void func_00232DD0(void *, void *);
+extern "C" void func_00251D50(s32, s32, s32);
+extern "C" void func_00232D78(void *, s32);
+extern "C" void func_0024E4D0(void *, s32);
 
 extern "C" void MUpdateContext__setStartPage(s32 *arg0, void *arg1, s32 arg2, char **arg3) {
     s32 buf0[4];
@@ -40,12 +40,12 @@ extern "C" void MUpdateContext__setStartPage(s32 *arg0, void *arg1, s32 arg2, ch
     s32 *p_s0;
     s32 v_s1;
     if (arg2 == 0x2) {
-        func_0024E3D0(buf0);
+        func_0024E528(buf0);
         p_s0 = buf1;
-        func_00232C78(p_s0, (char *)arg3 + 0x4);
+        func_00232DD0(p_s0, (char *)arg3 + 0x4);
         v_s1 = buf0[0];
-        func_00251BF8(v_s1, vcall_58((char *)(*(s32 *)(char *)arg3)), *p_s0);
-        func_00232C20(p_s0, 0x2);
-        func_0024E378(buf0, 0x2);
+        func_00251D50(v_s1, vcall_58((char *)(*(s32 *)(char *)arg3)), *p_s0);
+        func_00232D78(p_s0, 0x2);
+        func_0024E4D0(buf0, 0x2);
     }
 }

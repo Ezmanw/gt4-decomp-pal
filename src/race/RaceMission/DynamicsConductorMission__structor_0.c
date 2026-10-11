@@ -2,10 +2,10 @@
 #define NULL 0
 void *memcpy(void *, const void *, unsigned int);
 
-s32 func_0033CF48();                                /* extern */
-s32 func_00393700(s32);                         /* extern */
+s32 func_0033D0A0();                                /* extern */
+s32 func_003939F8(s32);                         /* extern */
 s32 ResultArcade__structor_0(void *);                      /* extern */
-s32 func_003DF898(void *, void *);              /* extern */
+s32 func_003DFBA8(void *, void *);              /* extern */
 s32 RaceTrainingBase__structor_0();                            /* extern */
 s32 DynamicsConductorLicense__structor_3(void *);                      /* extern */
 
@@ -43,13 +43,13 @@ s32 DynamicsConductorMission__structor_0(void *arg0) {
         temp_a0 = var_s1;
         var_s1 += 8;
         var_s3 -= 1;
-        func_00393700(temp_a0);
+        func_003939F8(temp_a0);
     } while (var_s3 != -1);
     temp_s0_2 = arg0 + 0x22778;
     ResultArcade__structor_0(temp_s0_2);
     ((struct DynamicsConductorMission__structor_0_arg0 *)arg0)->unk70 = (void *) (arg0 + 0x12600);
-    if (func_0033CF48() == 0) {
-        func_003DF898(temp_s0_2, arg0 + 0xE350);
+    if (func_0033D0A0() == 0) {
+        func_003DFBA8(temp_s0_2, arg0 + 0xE350);
     }
     ((struct DynamicsConductorMission__structor_0_arg0 *)arg0)->unkD68 = 0xA;
 }

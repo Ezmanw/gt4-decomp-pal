@@ -13,8 +13,8 @@ struct Vec {
 
 extern "C" void *memmove(void *dst, const void *src, s32 n);
 extern "C" Name *func_005DB330(void);
-extern "C" void *func_00326750(s32 size, s32 align, const char *name);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
+extern "C" void *func_003268A8(s32 size, s32 align, const char *name);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
 
 static inline T *value_type(T *const *) { return 0; }
 
@@ -42,7 +42,7 @@ static inline void construct(T *p, const T &v) {
 
 static inline void deallocate(T *p, s32 n) {
     if (p != 0) {
-        func_00326798(p, n * sizeof(T), 4, func_005DB330()->name);
+        func_003268F0(p, n * sizeof(T), 4, func_005DB330()->name);
     }
 }
 
@@ -62,7 +62,7 @@ extern "C" void func_005DAE00(Vec *v, T *pos, const T *x) {
     } else {
         s32 old_size = v->finish - v->start;
         s32 len = old_size != 0 ? 2 * old_size : 1;
-        T *new_start = (T *)func_00326750(len * sizeof(T), 4, func_005DB330()->name);
+        T *new_start = (T *)func_003268A8(len * sizeof(T), 4, func_005DB330()->name);
         T *new_finish = ucopy(v->start, pos, new_start);
         construct(new_finish, *x);
         ++new_finish;

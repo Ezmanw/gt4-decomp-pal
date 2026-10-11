@@ -1,7 +1,7 @@
 typedef int s32;
 
-extern "C" s32 func_0033B438(s32 arg0, s32 arg1);
-
-extern "C" s32 func_0033B4B0(s32 arg0) {
-    return func_0033B438(arg0, 1);
+extern "C" void func_0033B4B0(float *out, s32 n, const float *a, const float *b, float t) {
+    float u = 1.0f - t;
+    for (s32 i = 0; i < n; i++)
+        out[i] = a[i] * t + b[i] * u;
 }

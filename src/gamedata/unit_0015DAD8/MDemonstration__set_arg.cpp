@@ -22,12 +22,12 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void func_0015D898(void *);
-extern "C" void func_00312370(void *, void *);
-extern "C" s32 func_00314AD8(s32);
-extern "C" void func_00434748(s32, s32);
-extern "C" void func_00312318(void *, s32);
-extern "C" void func_0015D840(void *, s32);
+extern "C" void func_0015D8A0(void *);
+extern "C" void func_003124C8(void *, void *);
+extern "C" s32 func_00314C30(s32);
+extern "C" void func_00434AC0(s32, s32);
+extern "C" void func_00312470(void *, s32);
+extern "C" void func_0015D848(void *, s32);
 
 extern "C" void MDemonstration__set_arg(s32 *arg0, void *arg1, s32 arg2, char **arg3) {
     s32 buf0[4];
@@ -35,12 +35,12 @@ extern "C" void MDemonstration__set_arg(s32 *arg0, void *arg1, s32 arg2, char **
     s32 *p_s0;
     s32 v_s1;
     if (arg2 > 0) {
-        func_0015D898(buf0);
+        func_0015D8A0(buf0);
         p_s0 = buf1;
-        func_00312370(p_s0, arg3);
+        func_003124C8(p_s0, arg3);
         v_s1 = *(s32 *)((char *)buf0[0] + 0x10);
-        func_00434748(v_s1, func_00314AD8(*p_s0));
-        func_00312318(p_s0, 0x2);
-        func_0015D840(buf0, 0x2);
+        func_00434AC0(v_s1, func_00314C30(*p_s0));
+        func_00312470(p_s0, 0x2);
+        func_0015D848(buf0, 0x2);
     }
 }

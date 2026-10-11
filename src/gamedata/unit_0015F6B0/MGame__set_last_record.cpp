@@ -22,13 +22,13 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void func_0015F3E0(void *);
-extern "C" void func_002FC8C8(void *, void *);
-extern "C" s32 func_002FE250(s32);
-extern "C" void func_002FC870(void *, s32);
-extern "C" void func_0015F388(void *, s32);
+extern "C" void func_0015F3E8(void *);
+extern "C" void func_002FCA20(void *, void *);
+extern "C" s32 func_002FE3A8(s32);
+extern "C" void func_002FC9C8(void *, s32);
+extern "C" void func_0015F390(void *, s32);
 
-struct func_00165E68_v_s0 {
+struct func_00165E70_v_s0 {
     char pad0[0xD4];
     s32 unkD4;
 };
@@ -39,13 +39,13 @@ extern "C" void MGame__set_last_record(s32 *arg0, void *arg1, s32 arg2, char **a
     s32 *p_s1;
     s32 v_s0;
     s32 t1;
-    func_0015F3E0(buf0);
+    func_0015F3E8(buf0);
     p_s1 = buf1;
     v_s0 = *(s32 *)((char *)buf0[0] + 0x10);
-    func_002FC8C8(p_s1, arg3);
+    func_002FCA20(p_s1, arg3);
     v_s0 = (0x3a368 + v_s0);
-    t1 = func_002FE250(*p_s1);
-    ((struct func_00165E68_v_s0 *)v_s0)->unkD4 = t1;
-    func_002FC870(p_s1, 0x2);
-    func_0015F388(buf0, 0x2);
+    t1 = func_002FE3A8(*p_s1);
+    ((struct func_00165E70_v_s0 *)v_s0)->unkD4 = t1;
+    func_002FC9C8(p_s1, 0x2);
+    func_0015F390(buf0, 0x2);
 }

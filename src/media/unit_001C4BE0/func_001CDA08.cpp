@@ -1,4 +1,6 @@
-#include "types.h"
-extern "C" s32 func_001CDA08(void) {
-    return -1;
+typedef signed char s8;
+typedef int s32;
+
+extern "C" void func_001CDA08(s32 arg0, s8 *arg1) {
+    *arg1 = 0;
 }

@@ -1,10 +1,10 @@
-typedef unsigned char u8;
+typedef int s32;
 
-struct C { char pad[0xC]; u8 unkC; };
-struct B { char pad[0x14]; C *unk14; };
+extern "C" void func_0044E408(s32 arg0, char *arg1);
 
-extern B *PDISTD__global_font_manager;
-
-extern "C" u8 func_0044E3E0(void) {
-    return PDISTD__global_font_manager->unk14->unkC;
+extern "C" void func_0044E3E0(s32 arg0, char arg1) {
+    char buf[2];
+    buf[0] = arg1;
+    buf[1] = 0;
+    func_0044E408(arg0, buf);
 }

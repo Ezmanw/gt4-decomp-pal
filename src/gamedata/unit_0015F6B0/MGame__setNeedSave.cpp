@@ -10,16 +10,16 @@ struct Buf00109C40 {
     char pad4[0xC];
 };
 
-extern "C" s32 func_0015F3E0(struct Buf00109C40 *arg0);
-extern "C" void func_0043ACA8(s32 arg0);
-extern "C" void func_0015F388(struct Buf00109C40 *arg0, s32 arg1);
+extern "C" s32 func_0015F3E8(struct Buf00109C40 *arg0);
+extern "C" void func_0043B020(s32 arg0);
+extern "C" void func_0015F390(struct Buf00109C40 *arg0, s32 arg1);
 
 extern "C" void MGame__setNeedSave(void) {
     struct Buf00109C40 buf;
     struct Inner *p;
 
-    func_0015F3E0(&buf);
+    func_0015F3E8(&buf);
     p = buf.ptr;
-    func_0043ACA8(p->unk10);
-    func_0015F388(&buf, 2);
+    func_0043B020(p->unk10);
+    func_0015F390(&buf, 2);
 }

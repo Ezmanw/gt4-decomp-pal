@@ -22,17 +22,17 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" s32 func_00305548(void);
-extern "C" void func_0025ADF8(void *, void *, void *);
-extern "C" void func_00305550(void *, void *);
-extern "C" s32 func_0025C2A0(void *);
-extern "C" void func_003285A8(void *);
-extern "C" void func_00306130(s32, void *);
-extern "C" void func_00304188(void *, void *);
-extern "C" void func_00306638(void *, s32, void *);
-extern "C" void func_00323B60(void *, s32);
-extern "C" void func_003041B8(void *, s32);
-extern "C" void func_003285F8(void *);
+extern "C" s32 func_003056A0(void);
+extern "C" void func_0025AF50(void *, void *, void *);
+extern "C" void func_003056A8(void *, void *);
+extern "C" s32 func_0025C3F8(void *);
+extern "C" void func_00328700(void *);
+extern "C" void func_00306288(s32, void *);
+extern "C" void func_003042E0(void *, void *);
+extern "C" void func_00306790(void *, s32, void *);
+extern "C" void func_00323CB8(void *, s32);
+extern "C" void func_00304310(void *, s32);
+extern "C" void func_00328750(void *);
 
 extern "C" void mSceneViewFace__virtual_49(s32 *arg0, void *arg1) {
     s32 buf0[4];
@@ -43,21 +43,21 @@ extern "C" void mSceneViewFace__virtual_49(s32 *arg0, void *arg1) {
     s32 t1;
     s32 v_s1;
     s32 *p_s0;
-    t1 = func_00305548();
+    t1 = func_003056A0();
     p_s3 = buf1;
     buf0[0] = *(s32 *)(char *)t1;
-    func_0025ADF8(p_s3, arg0, arg1);
-    func_00305550(arg0, p_s3);
-    v_s1 = func_0025C2A0(arg0);
+    func_0025AF50(p_s3, arg0, arg1);
+    func_003056A8(arg0, p_s3);
+    v_s1 = func_0025C3F8(arg0);
     if (v_s1 != 0) {
-        func_003285A8(arg0);
-        func_00306130(v_s1, buf0);
+        func_00328700(arg0);
+        func_00306288(v_s1, buf0);
         p_s0 = buf2;
         buf3[0] = (s32)arg0;
-        func_00304188(p_s0, buf3);
-        func_00306638(p_s3, v_s1, p_s0);
-        func_00323B60(p_s3, 0x2);
-        func_003041B8(p_s0, 0x2);
-        func_003285F8(arg0);
+        func_003042E0(p_s0, buf3);
+        func_00306790(p_s3, v_s1, p_s0);
+        func_00323CB8(p_s3, 0x2);
+        func_00304310(p_s0, 0x2);
+        func_00328750(arg0);
     }
 }

@@ -1,8 +1,8 @@
-extern "C" void func_0015D898(void *);
-extern "C" void func_0015D840(void *, int);
-extern "C" void func_002FC8C8(void *, void *);
-extern "C" void func_002FC870(void *, int);
-extern "C" int func_002FE250(int);
+extern "C" void func_0015D8A0(void *);
+extern "C" void func_0015D848(void *, int);
+extern "C" void func_002FCA20(void *, void *);
+extern "C" void func_002FC9C8(void *, int);
+extern "C" int func_002FE3A8(int);
 
 struct Target {
     char pad0[0x58];
@@ -29,10 +29,10 @@ extern "C" void MDemonstration__set_skip_time(void *arg0, void *arg1, void *arg2
 {
     A a;
     B b;
-    func_0015D898(&a);
+    func_0015D8A0(&a);
     Target *t = a.p->target;
-    func_002FC8C8(&b, name);
-    t->value = func_002FE250(get(&b));
-    func_002FC870(&b, 2);
-    func_0015D840(&a, 2);
+    func_002FCA20(&b, name);
+    t->value = func_002FE3A8(get(&b));
+    func_002FC9C8(&b, 2);
+    func_0015D848(&a, 2);
 }

@@ -1,10 +1,5 @@
 typedef int s32;
 
-struct UnkStruct {
-    char pad[0xC];
-    s32 unkC;
-};
-
-extern "C" s32 func_00385F40(UnkStruct **arg0) {
-    return (*arg0)->unkC;
+extern "C" s32 func_00385F40(s32 *arg0) {
+    return *arg0 + 0x58;
 }

@@ -1,11 +1,13 @@
 typedef int s32;
+typedef float f32;
 
-struct S00480F78;
+struct Obj {
+    char pad0[4];
+    s32 unk4;
+};
 
-extern "C" void func_00480FA0(struct S00480F78 *arg0, s32 arg1);
+extern "C" s32 func_00351098(s32 arg0);
 
-extern "C" s32 *func_003D78D8(s32 *arg0, s32 arg1, s32 arg2, s32 arg3, struct S00480F78 *arg4) {
-    func_00480FA0(arg4, arg3);
-    *arg0 = 1;
-    return arg0;
+extern "C" f32 func_003D78D8(Obj *arg0) {
+    return (f32)func_00351098(arg0->unk4);
 }

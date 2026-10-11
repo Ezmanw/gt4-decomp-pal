@@ -5,8 +5,8 @@ extern void *D_00620000;
 extern void *RaceSolitaire__vtable;
 extern "C" void GranTurismo4__GameObjectBase__delControl(void *, void *);
 extern "C" void free(void *);
-extern "C" void func_003BDA40(void *, s32);
-extern "C" void func_003467A0(void *, s32);
+extern "C" void func_003BDD38(void *, s32);
+extern "C" void func_003468F8(void *, s32);
 extern "C" void SPEC_DATABASE__CarEquipments__setVariationOrder(void *, s32);
 extern "C" void RaceInput__structor_2(void *, s32);
 extern "C" void func_0055FA30(void *, s32);
@@ -30,9 +30,9 @@ extern "C" void RaceSolitaire__structor_1(void *arg0, s32 arg1) {
     if (((struct RaceSolitaire *)arg0)->unkF100 != 0) {
         vcall_0((char *)*(void **)((char *)arg0 + 0xf100), 0x3);
     }
-    func_003BDA40((char *)arg0 + 0xf058, 0x2);
-    func_003467A0((char *)arg0 + 0xefe0, 0x2);
-    func_003467A0((char *)arg0 + 0xef70, 0x2);
+    func_003BDD38((char *)arg0 + 0xf058, 0x2);
+    func_003468F8((char *)arg0 + 0xefe0, 0x2);
+    func_003468F8((char *)arg0 + 0xef70, 0x2);
     SPEC_DATABASE__CarEquipments__setVariationOrder((char *)arg0 + 0xedc0, 0x2);
     SPEC_DATABASE__CarEquipments__setVariationOrder((char *)arg0 + 0xec10, 0x2);
     RaceInput__structor_2((char *)arg0 + 0xea2c, 0x2);

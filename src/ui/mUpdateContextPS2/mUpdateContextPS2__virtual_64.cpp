@@ -32,17 +32,17 @@ struct Color {
 extern Viewport D_006184D0;
 extern Ring D_00618588;
 
-extern "C" s32 func_00251BD0(void *);
-extern "C" char *func_00251BD8(void *, s32);
-extern "C" void func_00105378(void *, void *);
-extern "C" void func_00105528(void *);
-extern "C" void func_001054A0(void *, s32);
-extern "C" void func_001056A0(void *);
+extern "C" s32 func_00251D28(void *);
+extern "C" char *func_00251D30(void *, s32);
+extern "C" void func_00105398(void *, void *);
+extern "C" void func_00105548(void *);
+extern "C" void func_001054C0(void *, s32);
+extern "C" void func_001056C0(void *);
 extern "C" void func_004A29A8(s32);
 extern "C" void func_004A2930(s32, s32, s32, s32);
-extern "C" void func_002030C0(Color *, void *);
-extern "C" u32 func_00202EA8(Color *, float);
-extern "C" void func_00203118(Color *, s32);
+extern "C" void func_00203180(Color *, void *);
+extern "C" u32 func_00202F68(Color *, float);
+extern "C" void func_002031D8(Color *, s32);
 extern "C" void func_004A3078(u32);
 extern "C" void func_004A3230(s32);
 extern "C" void func_004AB040(s32);
@@ -53,8 +53,8 @@ extern "C" void func_004A7454(void);
 extern "C" void func_004A5A90(float, float, float, float, float, float);
 extern "C" void pglFrontFace(s32);
 extern "C" void mEnterEvent__structor_0(void *);
-extern "C" void func_00105C48(void *, void *, s32, s32, float, float, float, float);
-extern "C" void func_001055C0(void *);
+extern "C" void func_00105C68(void *, void *, s32, s32, float, float, float, float);
+extern "C" void func_001055E0(void *);
 
 extern "C" void mUpdateContextPS2__virtual_64(char *self)
 {
@@ -64,10 +64,10 @@ extern "C" void mUpdateContextPS2__virtual_64(char *self)
     if (*(s32 *)(self + 0xE4) != 0)
         return;
     i = 0;
-    n = func_00251BD0(self);
+    n = func_00251D28(self);
     if (n > 0) {
         do {
-            char *o = func_00251BD8(self, i++);
+            char *o = func_00251D30(self, i++);
             if (*(s32 *)(o + 0x6E4) != 0) {
                 VEntry *e = (VEntry *)(*(char **)(o + 4) + 0x190);
                 e->fn(o + e->delta);
@@ -76,22 +76,22 @@ extern "C" void mUpdateContextPS2__virtual_64(char *self)
     }
     if (*(s32 *)(self + 0x420) != 0) {
         char *rt = self + 0x3E4;
-        func_00105378(rt, D_00618588.current());
+        func_00105398(rt, D_00618588.current());
         *(s32 *)(rt + 4) = 0;
-        func_00105528(rt);
-        func_001054A0(rt, 9);
-        func_001056A0(rt);
+        func_00105548(rt);
+        func_001054C0(rt, 9);
+        func_001056C0(rt);
     } else {
-        func_001056A0(D_006184D0.ring.current());
+        func_001056C0(D_006184D0.ring.current());
     }
     func_004A29A8(0);
     if (*(s32 *)(self + 0x128) != 0) {
         Color c;
         u32 rgb;
         func_004A2930(1, 1, 1, 1);
-        func_002030C0(&c, self + 0x118);
-        rgb = func_00202EA8(&c, 1.0f);
-        func_00203118(&c, 2);
+        func_00203180(&c, self + 0x118);
+        rgb = func_00202F68(&c, 1.0f);
+        func_002031D8(&c, 2);
         func_004A3078((rgb & 0xFFFFFF) | 0x80000000);
         func_004A3230(1);
     } else {
@@ -114,7 +114,7 @@ extern "C" void mUpdateContextPS2__virtual_64(char *self)
     func_004A2930(1, 1, 1, 0);
     if (n > 0) {
         do {
-            char *o = func_00251BD8(self, i);
+            char *o = func_00251D30(self, i);
             i++;
             if (*(s32 *)(o + 0x6E4) != 0)
                 mEnterEvent__structor_0(o);
@@ -124,8 +124,8 @@ extern "C" void mUpdateContextPS2__virtual_64(char *self)
         View *v = D_006184D0.ring.current();
         char *rt = self + 0x3E4;
         func_004AB040(5);
-        func_00105C48(v, rt, D_006184D0.i1C, 0, D_006184D0.f18, 1.0f, 1.0f, 1.0f);
-        func_001055C0(rt);
-        func_001056A0(v);
+        func_00105C68(v, rt, D_006184D0.i1C, 0, D_006184D0.f18, 1.0f, 1.0f, 1.0f);
+        func_001055E0(rt);
+        func_001056C0(v);
     }
 }

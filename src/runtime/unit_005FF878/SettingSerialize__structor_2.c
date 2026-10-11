@@ -13,10 +13,10 @@ struct SettingSerialize {
     /* 0x6C */ s32 unk6C;
 };                                                  /* size = 0x70 */
 
-s32 func_00444190(s32 *);                   /* extern */
+s32 func_00444508(s32 *);                   /* extern */
 
 void SettingSerialize__structor_2(struct SettingSerialize *arg0) {
-    func_0044CF80(arg0);
+    func_0044D2F8(arg0);
     arg0->unk0 = (void *)(s32)SettingSerialize__vtable;
-    func_00444190(&arg0->unk8);
+    func_00444508(&arg0->unk8);
 }

@@ -1,9 +1,8 @@
 typedef int s32;
+typedef unsigned int u32;
 
-extern "C" void func_004EF278(void *arg0, s32 arg1);
-
-extern "C" char D_00645440;
+extern "C" void func_00104FA0(s32 arg0, u32 arg1);
 
 extern "C" void func_001051D8(void) {
-    func_004EF278(&D_00645440, 0);
+    func_00104FA0(0, 0xFFFF);
 }

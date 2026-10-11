@@ -28,19 +28,19 @@ static inline void vcall_18_ret(void *ret, char *o) {
     VEntry_18 *e = (VEntry_18 *)((char *)((VObj_18 *)o)->vtbl + 0x18);
     e->fn(ret, o + e->delta);
 }
-extern "C" s32 func_0030D8E0(void *);
-extern "C" void func_002FE278(void *, s32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002FC870(void *, s32);
+extern "C" s32 func_0030DA38(void *);
+extern "C" void func_002FE3D0(void *, s32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002FC9C8(void *, s32);
 extern "C" struct S00659988 * func_005C11A8(void);
-extern "C" void func_00326798(void *, s32, s32, const char *);
+extern "C" void func_003268F0(void *, s32, s32, const char *);
 
 static inline void str_release(Str *s) {
     Rep *q = (Rep *)(s->p - 0x10);
     if (--q->ref == 0) {
         s32 size = q->cap + 0x10;
-        func_00326798(q, size, 4, func_005C11A8()->name);
+        func_003268F0(q, size, 4, func_005C11A8()->name);
     }
 }
 
@@ -53,19 +53,19 @@ extern "C" void adhoc__IsAbsolute(s32 *arg0, void *arg1, s32 arg2) {
     if ((char *)arg1 == (char *)0x1) {
         p_s2 = &s1;
         vcall_18_ret((char *)p_s2, (char *)(*(s32 *)(char *)arg2));
-        func_002FE278(buf0, func_0030D8E0(p_s2) != 0);
+        func_002FE3D0(buf0, func_0030DA38(p_s2) != 0);
         if (arg0 != buf0) {
             newVal = buf0[0];
             if (newVal != 0) {
-                func_003285A8(newVal);
+                func_00328700(newVal);
             }
             oldVal = *arg0;
             if (oldVal != 0) {
-                func_003285F8(oldVal);
+                func_00328750(oldVal);
             }
             *arg0 = newVal;
         }
-        func_002FC870(buf0, 0x2);
+        func_002FC9C8(buf0, 0x2);
         str_release(p_s2);
     }
 }

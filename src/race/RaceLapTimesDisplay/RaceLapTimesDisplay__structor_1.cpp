@@ -8,7 +8,7 @@ struct RaceDisplayObjectBase__structor_0 {
 };
 
 struct RaceLapTimesDisplay__vtable;
-extern "C" void func_003A4650(RaceLapTimesDisplay__vtable *);
+extern "C" void func_003A4948(RaceLapTimesDisplay__vtable *);
 
 /* Named after its vtable so the compiler-made vptr store _vt$10D_0067F8A8 resolves. */
 struct RaceLapTimesDisplay__vtable : RaceDisplayObjectBase__structor_0 {
@@ -21,7 +21,7 @@ struct RaceLapTimesDisplay__vtable : RaceDisplayObjectBase__structor_0 {
 };
 
 RaceLapTimesDisplay__vtable::RaceLapTimesDisplay__vtable() {
-    func_003A4650(this);
+    func_003A4948(this);
     m20 = 3;
     m44 = 0.9f;
 }

@@ -5,7 +5,7 @@ struct S {
     s32 unk4;
 };
 
-extern "C" void func_004574A0(S *arg0, s32 arg1);
+extern "C" void func_00457878(S *arg0, s32 arg1);
 
 extern S D_00845680;
 extern char PitmanCallback__vtable;
@@ -18,7 +18,7 @@ extern "C" void PitmanCallback__structor_0(s32 arg0, s32 arg1) {
         }
         if (arg0 == 0) {
             D_00845680.unk0 = &PitmanCallback__vtable;
-            func_004574A0(&D_00845680, 0);
+            func_00457878(&D_00845680, 0);
         }
     }
 }

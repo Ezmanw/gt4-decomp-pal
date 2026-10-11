@@ -7,10 +7,10 @@ struct Concourse__structor_0 {
     virtual ~Concourse__structor_0();
 };
 
-/* A member object; its constructor is func_00408A28. */
-struct func_00408A28 {
+/* A member object; its constructor is func_00408DA8. */
+struct func_00408DA8 {
     char data[0x3C];
-    func_00408A28();
+    func_00408DA8();
 };
 
 struct LicenseConcourse : Concourse__structor_0 {
@@ -22,7 +22,7 @@ struct LicenseConcourse : Concourse__structor_0 {
     s32 m28;
     char pad2C[0xC];
     s32 m38;
-    func_00408A28 m3C;
+    func_00408DA8 m3C;
     s32 m78;
     s32 m7C;
     s32 m80;

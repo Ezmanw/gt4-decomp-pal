@@ -5,14 +5,14 @@ struct Buf00109C40 {
     char pad4[0xC];
 };
 
-extern "C" void func_00151888(struct Buf00109C40 *arg0);
-extern "C" void func_00153EA8(s32 arg0);
-extern "C" void func_00151830(struct Buf00109C40 *arg0, s32 arg1);
+extern "C" void func_00151890(struct Buf00109C40 *arg0);
+extern "C" void func_00153EB0(s32 arg0);
+extern "C" void func_00151838(struct Buf00109C40 *arg0, s32 arg1);
 
 extern "C" void MCarModel__stopModelMotion(void) {
     struct Buf00109C40 buf;
 
-    func_00151888(&buf);
-    func_00153EA8(buf.unk0);
-    func_00151830(&buf, 2);
+    func_00151890(&buf);
+    func_00153EB0(buf.unk0);
+    func_00151838(&buf, 2);
 }

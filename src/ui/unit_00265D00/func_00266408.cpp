@@ -1,14 +1,14 @@
 typedef int s32;
 
-struct S00266408 {
-    char pad0[0x9C];
-    s32 unk9C;
+struct Obj {
+    char pad[0x98];
+    s32 unk98;
 };
 
-extern "C" void func_00266408(struct S00266408 *arg0, s32 arg1) {
+extern "C" void func_00266408(Obj *arg0, s32 arg1) {
     s32 temp = (s32)(arg1 != 0);
-    s32 v = arg0->unk9C;
-    v = v & ~0x40;
-    v = v | (temp << 6);
-    arg0->unk9C = v;
+    s32 v = arg0->unk98;
+    v = v & 0x7FFFFFFF;
+    v = v | (temp << 31);
+    arg0->unk98 = v;
 }

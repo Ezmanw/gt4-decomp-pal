@@ -47,12 +47,12 @@ struct Str2 {
     bool operator<(const Str2 &o) const { return func_00608D98(this, &o, 0, (unsigned int)-1) < 0; }
 };
 
-extern "C" void func_00476768(void *self, const void *other);
+extern "C" void func_00476B40(void *self, const void *other);
 extern "C" void stl_unknown_dtor(void *self, int in_charge);
 
 struct Val_00476768 {
     int w[2];
-    Val_00476768(const Val_00476768 &o) { func_00476768(this, &o); }
+    Val_00476768(const Val_00476768 &o) { func_00476B40(this, &o); }
     ~Val_00476768() { stl_unknown_dtor(this, 2); }
 };
 

@@ -28,18 +28,18 @@ static inline s32 vcall_58(char *o) {
     VEntry_58 *e = (VEntry_58 *)((char *)((VObj_58 *)o)->vtbl + 0x58);
     return e->fn(o + e->delta);
 }
-extern "C" void func_002F67A0(void *);
-extern "C" void func_00312370(void *, void *);
-extern "C" void func_00309360(void *, void *);
-extern "C" s32 func_00314920(s32);
-extern "C" s32 func_002F70A0(s32, s32, s32);
-extern "C" void func_002FE278(void *, s32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002FC870(void *, s32);
-extern "C" void func_00309378(void *, s32);
-extern "C" void func_00312318(void *, s32);
-extern "C" void func_002F6748(void *, s32);
+extern "C" void func_002F68F8(void *);
+extern "C" void func_003124C8(void *, void *);
+extern "C" void func_003094B8(void *, void *);
+extern "C" s32 func_00314A78(s32);
+extern "C" s32 func_002F71F8(s32, s32, s32);
+extern "C" void func_002FE3D0(void *, s32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002FC9C8(void *, s32);
+extern "C" void func_003094D0(void *, s32);
+extern "C" void func_00312470(void *, s32);
+extern "C" void func_002F68A0(void *, s32);
 
 extern "C" void FileIO__open(s32 *arg0, void *arg1, s32 arg2, char **arg3) {
     s32 buf0[4];
@@ -55,44 +55,44 @@ extern "C" void FileIO__open(s32 *arg0, void *arg1, s32 arg2, char **arg3) {
     s32 newVal;
     s32 oldVal;
     if (arg2 == 0x2) {
-        func_002F67A0(buf0);
+        func_002F68F8(buf0);
         p_s4 = buf1;
-        func_00312370(p_s4, arg3);
+        func_003124C8(p_s4, arg3);
         p_s3 = buf2;
-        func_00309360(p_s3, (char *)arg3 + 0x4);
+        func_003094B8(p_s3, (char *)arg3 + 0x4);
         v_s1 = buf0[0];
-        v_s0 = func_00314920(*p_s4);
-        t1 = func_002F70A0(v_s1, v_s0, vcall_58((char *)(*p_s3)));
+        v_s0 = func_00314A78(*p_s4);
+        t1 = func_002F71F8(v_s1, v_s0, vcall_58((char *)(*p_s3)));
         p_s1 = buf3;
-        func_002FE278(p_s1, t1 != 0);
+        func_002FE3D0(p_s1, t1 != 0);
         if (arg0 != p_s1) {
             newVal = *p_s1;
             if (newVal != 0) {
-                func_003285A8(newVal);
+                func_00328700(newVal);
             }
             oldVal = *arg0;
             if (oldVal != 0) {
-                func_003285F8(oldVal);
+                func_00328750(oldVal);
             }
             *arg0 = newVal;
         }
-        func_002FC870(p_s1, 0x2);
-        func_00309378(p_s3, 0x2);
-        func_00312318(p_s4, 0x2);
-        func_002F6748(buf0, 0x2);
+        func_002FC9C8(p_s1, 0x2);
+        func_003094D0(p_s3, 0x2);
+        func_00312470(p_s4, 0x2);
+        func_002F68A0(buf0, 0x2);
     } else {
-        func_002FE278(buf0, 0);
+        func_002FE3D0(buf0, 0);
         if (arg0 != buf0) {
             newVal = buf0[0];
             if (newVal != 0) {
-                func_003285A8(newVal);
+                func_00328700(newVal);
             }
             oldVal = *arg0;
             if (oldVal != 0) {
-                func_003285F8(oldVal);
+                func_00328750(oldVal);
             }
             *arg0 = newVal;
         }
-        func_002FC870(buf0, 0x2);
+        func_002FC9C8(buf0, 0x2);
     }
 }

@@ -1,5 +1,9 @@
-extern int D_00618C00;
+typedef int s32;
 
-void func_001B0AD0(void) {
-    D_00618C00 = 0;
+extern s32 D_00618C00;
+
+extern "C" void func_001B1240(s32 arg0);
+
+extern "C" void func_001B0AD0(void) {
+    func_001B1240(D_00618C00);
 }

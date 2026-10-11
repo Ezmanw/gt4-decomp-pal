@@ -1,7 +1,7 @@
 /* compiler: ee-gcc2.96-no-strict-aliasing */
 struct D_00661688 {
     int f0;
-    D_00661688() __asm__("func_0030A678");
+    D_00661688() __asm__("func_0030A7D0");
     virtual ~D_00661688();
 };
 
@@ -22,7 +22,7 @@ struct hArray__vtable : D_00661688 {
     int pad8[2];
     Vector items;
     int f60;
-    hArray__vtable() __asm__("func_002EF6A0");
+    hArray__vtable() __asm__("func_002EF7F8");
     virtual ~hArray__vtable();
 };
 

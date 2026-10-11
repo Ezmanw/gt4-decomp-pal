@@ -1,0 +1,18 @@
+typedef int s32;
+
+struct Obj {
+    char pad[0x80];
+    s32 unk80;
+};
+
+extern "C" void func_00394E78(void);
+extern "C" void RaceCourse__clearData(s32 arg0);
+
+extern "C" void func_003C0300(struct Obj *arg0) {
+    s32 temp_v0 = arg0->unk80;
+
+    if (temp_v0 != 0) {
+        RaceCourse__clearData(temp_v0);
+    }
+    func_00394E78();
+}

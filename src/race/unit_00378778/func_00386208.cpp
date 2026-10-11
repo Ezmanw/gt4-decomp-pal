@@ -1,3 +1,10 @@
-int func_00386208(int *arg0) {
-    return *arg0 + 0x14;
+typedef int s32;
+
+struct UnkStruct385F20 {
+    char pad[0x28];
+    s32 unk28;
+};
+
+extern "C" s32 func_00386208(UnkStruct385F20 **arg0) {
+    return (*arg0)->unk28;
 }

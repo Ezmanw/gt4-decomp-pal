@@ -22,21 +22,21 @@ struct T {
     int pad[3];
 };
 
-extern "C" void func_00204D88(H *h, void *a);
-extern "C" void func_00204D30(H *h, int in_chrg);
-extern "C" void func_0022AD20(T *t, void *a);
-extern "C" void func_0022ACC8(T *t, int in_chrg);
+extern "C" void func_00204E48(H *h, void *a);
+extern "C" void func_00204DF0(H *h, int in_chrg);
+extern "C" void func_0022AE78(T *t, void *a);
+extern "C" void func_0022AE20(T *t, int in_chrg);
 
 extern "C" void MComposite__clearChildren(void *self, void *a1, int count, void *arg) {
     if (count > 0) {
         H h;
-        func_00204D88(&h, a1);
+        func_00204E48(&h, a1);
         T t;
-        func_0022AD20(&t, arg);
+        func_0022AE78(&t, arg);
         Target *o = h.p;
         VEntry *e = (VEntry *)(o->vtbl + 0x318);
         e->fn((char *)o + e->delta, t.get());
-        func_0022ACC8(&t, 2);
-        func_00204D30(&h, 2);
+        func_0022AE20(&t, 2);
+        func_00204DF0(&h, 2);
     }
 }

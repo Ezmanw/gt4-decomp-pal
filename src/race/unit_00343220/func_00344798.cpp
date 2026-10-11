@@ -1,16 +1,7 @@
-typedef float f32;
-typedef unsigned char u8;
+typedef int s32;
 
-struct Obj {
-    u8 pad0[0x554];
-    f32 unk554;
-    u8 pad1[0x888 - 0x554 - 4];
-    f32 unk888;
-    u8 pad2[0x8A4 - 0x888 - 4];
-    f32 unk8A4;
-};
+extern "C" s32 func_00343908(s32 arg0);
 
-extern "C" f32 func_00344798(Obj *arg0, f32 fparg0) {
-    f32 temp_f12 = fparg0 + arg0->unk554;
-    return (arg0->unk8A4 * temp_f12) + (arg0->unk888 * (1.0f - temp_f12));
+extern "C" s32 func_00344798(s32 arg0) {
+    return func_00343908(arg0 + 0x6DC);
 }

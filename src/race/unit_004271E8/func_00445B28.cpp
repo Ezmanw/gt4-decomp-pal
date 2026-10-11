@@ -1,16 +1,20 @@
-typedef int s32;
+typedef unsigned int u32;
+typedef long long s64;
+typedef unsigned long long u64;
 
-struct Quad { s32 a, b, c, d; };
-struct Info { char pad[0x24]; Quad q; char pad34[0xC]; };
-extern "C" s32 func_004458D0(void *, s32, Info *);
+struct Rec {
+    s64 value;
+    s64 pad;
+};
 
-extern "C" s32 func_00445B28(void *self, s32 key, Quad *out) {
-    Info info;
-    if (!func_004458D0(self, key, &info))
-        return 0;
-    out->a = info.q.a;
-    out->b = info.q.b;
-    out->c = info.q.c;
-    out->d = info.q.d;
-    return 1;
+extern char D_006235A8[];
+extern "C" u64 func_00445838(void *arg);
+extern "C" bool SPEC_DATABASE__DatabaseStorage__getRow_2(void *db, int key, int type, Rec *out);
+
+extern "C" s64 func_00445B28(void *arg) {
+    u64 id = func_00445838(arg) & 0xFFFFFFFF;
+    Rec rec;
+    if (SPEC_DATABASE__DatabaseStorage__getRow_2(D_006235A8, id, 0x29, &rec))
+        return rec.value;
+    return -1;
 }

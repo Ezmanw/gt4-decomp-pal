@@ -21,21 +21,21 @@ struct Handle {
     char pad[0xC];
 };
 
-extern "C" void func_0021D978(void *arg0, int arg1);
-extern "C" void func_0021D9D0(void *arg0, void *arg1);
-extern "C" void func_0021FB30(Str *ret, void *arg1);
-extern "C" void func_00312318(void *arg0, int arg1);
-extern "C" void func_00314B20(void *arg0, void *arg1);
-extern "C" void func_003285A8(void *p);
-extern "C" void func_003285F8(void *p);
+extern "C" void func_0021DAD0(void *arg0, int arg1);
+extern "C" void func_0021DB28(void *arg0, void *arg1);
+extern "C" void func_0021FC88(Str *ret, void *arg1);
+extern "C" void func_00312470(void *arg0, int arg1);
+extern "C" void func_00314C78(void *arg0, void *arg1);
+extern "C" void func_00328700(void *p);
+extern "C" void func_00328750(void *p);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
 
 static inline void str_release(Str *s) {
     Rep *q = (Rep *)(s->p - 0x10);
     if (--q->ref == 0) {
         s32 size = q->cap + 0x10;
-        func_00326798(q, size, 4, func_005C11A8()->name);
+        func_003268F0(q, size, 4, func_005C11A8()->name);
     }
 }
 
@@ -46,22 +46,22 @@ extern "C" void MMovieFace__get_movie_name(void **arg0, void *arg1) {
     Str *ps;
     Handle *ph;
 
-    func_0021D9D0(&o, arg1);
+    func_0021DB28(&o, arg1);
     ps = &s;
-    func_0021FB30(ps, o.p);
+    func_0021FC88(ps, o.p);
     ph = &h;
-    func_00314B20(ph, ps);
+    func_00314C78(ph, ps);
     if ((void *)arg0 != (void *)ph) {
         void *p = ph->p;
         if (p != 0) {
-            func_003285A8(p);
+            func_00328700(p);
         }
         if (*arg0 != 0) {
-            func_003285F8(*arg0);
+            func_00328750(*arg0);
         }
         *arg0 = p;
     }
-    func_00312318(ph, 2);
+    func_00312470(ph, 2);
     str_release(ps);
-    func_0021D978(&o, 2);
+    func_0021DAD0(&o, 2);
 }

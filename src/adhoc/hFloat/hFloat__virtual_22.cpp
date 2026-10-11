@@ -28,12 +28,12 @@ static inline f32 vcall_60(char *o) {
     VEntry_60 *e = (VEntry_60 *)((char *)((VObj_60 *)o)->vtbl + 0x60);
     return e->fn(o + e->delta);
 }
-extern "C" void func_002F9360(void *, f32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002F7B68(void *, s32);
+extern "C" void func_002F94B8(void *, f32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002F7CC0(void *, s32);
 
-struct func_002F7DE0_arg0 {
+struct func_002F7F38_arg0 {
     char pad0[0x10];
     f32 unk10;
 };
@@ -42,17 +42,17 @@ extern "C" void hFloat__virtual_22(s32 *arg0, void *arg1, s32 arg2, char **arg3,
     s32 buf0[4];
     s32 newVal;
     s32 oldVal;
-    func_002F9360(buf0, (((struct func_002F7DE0_arg0 *)arg0)->unk10 - vcall_60((char *)(*(s32 *)(char *)arg4))));
+    func_002F94B8(buf0, (((struct func_002F7F38_arg0 *)arg0)->unk10 - vcall_60((char *)(*(s32 *)(char *)arg4))));
     if (arg1 != buf0) {
         newVal = buf0[0];
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *(s32 *)arg1;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *(s32 *)arg1 = newVal;
     }
-    func_002F7B68(buf0, 0x2);
+    func_002F7CC0(buf0, 0x2);
 }

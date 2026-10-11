@@ -1,5 +1,5 @@
-extern void func_00156660(void);
+extern void func_00156668(void);
 void mCarModelPS2__virtual_18(void)
 {
-    func_00156660();
+    func_00156668();
 }

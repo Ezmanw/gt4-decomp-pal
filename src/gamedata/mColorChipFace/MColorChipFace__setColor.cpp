@@ -1,11 +1,11 @@
-extern "C" void func_00157D68(void *);
-extern "C" void func_00157D10(void *, int);
-extern "C" void func_002ED618(void *, void *);
-extern "C" void func_002ED5C0(void *, int);
+extern "C" void func_00157D70(void *);
+extern "C" void func_00157D18(void *, int);
+extern "C" void func_002ED770(void *, void *);
+extern "C" void func_002ED718(void *, int);
 
 struct Target;
 
-extern "C" void func_001588C8(Target *t, void *b);
+extern "C" void func_001588D0(Target *t, void *b);
 
 struct A {
     Target *p;
@@ -21,11 +21,11 @@ extern "C" void MColorChipFace__setColor(void *arg0, void *arg1, int count, void
     if (count > 0) {
         A a;
         B b;
-        func_00157D68(&a);
+        func_00157D70(&a);
         Target *t = a.p;
-        func_002ED618(&b, name);
-        func_001588C8(t, &b);
-        func_002ED5C0(&b, 2);
-        func_00157D10(&a, 2);
+        func_002ED770(&b, name);
+        func_001588D0(t, &b);
+        func_002ED718(&b, 2);
+        func_00157D18(&a, 2);
     }
 }

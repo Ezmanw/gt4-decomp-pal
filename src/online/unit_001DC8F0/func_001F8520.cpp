@@ -1,7 +1,7 @@
-extern void func_004F7268(void *str);
-extern char D_00645570[];
+typedef int s32;
 
-void func_001F8520(void)
-{
-    func_004F7268(D_00645570);
+extern "C" void func_005A6AB0(void *arg0, void *arg1, s32 arg2);
+
+extern "C" void func_001F8520(void *arg0, void *arg1) {
+    func_005A6AB0((char *)arg0 + 0x1D0, arg1, 0x21);
 }

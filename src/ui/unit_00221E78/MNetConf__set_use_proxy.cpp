@@ -1,8 +1,8 @@
-extern "C" void func_00221B28(void *);
-extern "C" void func_00221AD0(void *, int);
-extern "C" void func_002FC8C8(void *, void *);
-extern "C" void func_002FC870(void *, int);
-extern "C" int func_002FE250(int);
+extern "C" void func_00221C80(void *);
+extern "C" void func_00221C28(void *, int);
+extern "C" void func_002FCA20(void *, void *);
+extern "C" void func_002FC9C8(void *, int);
+extern "C" int func_002FE3A8(int);
 
 struct VEntry { short delta; short index; void (*fn)(void *, int); };
 struct VObj { char pad0[4]; char *vtbl; };
@@ -21,14 +21,14 @@ extern "C" void MNetConf__set_use_proxy(void *arg0, void *arg1, int count, void 
     if (count > 0) {
         A a;
         B b;
-        func_00221B28(&a);
-        func_002FC8C8(&b, name);
+        func_00221C80(&a);
+        func_002FCA20(&b, name);
         VObj *o = a.p;
         VEntry *e = (VEntry *)(o->vtbl + 0x1B8);
         char *self = (char *)o + e->delta;
-        int arg = func_002FE250(get(&b)) != 0;
+        int arg = func_002FE3A8(get(&b)) != 0;
         e->fn(self, arg);
-        func_002FC870(&b, 2);
-        func_00221AD0(&a, 2);
+        func_002FC9C8(&b, 2);
+        func_00221C28(&a, 2);
     }
 }

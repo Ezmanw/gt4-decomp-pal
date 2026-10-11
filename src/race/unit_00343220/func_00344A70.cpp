@@ -1,21 +1,16 @@
-typedef int s32;
 typedef float f32;
+typedef unsigned char u8;
 
-struct Obj {
-    char pad0[4];
-    s32 unk4;
-    char pad1[0x6E8 - 4 - 4];
-    f32 unk6E8;
+struct Obj00344918 {
+    u8 pad0[0x554];
+    f32 unk554;
+    u8 pad1[0x898 - 0x554 - 4];
+    f32 unk898;
+    u8 pad2[0x8B4 - 0x898 - 4];
+    f32 unk8B4;
 };
 
-extern "C" s32 func_0034C9D0(s32 arg0);
-
-extern "C" f32 func_00344A70(struct Obj *arg0) {
-    s32 r = func_0034C9D0(arg0->unk4);
-    f32 v0 = 0.0f;
-
-    if (r == 0) {
-        v0 = arg0->unk6E8;
-    }
-    return v0;
+extern "C" f32 func_00344A70(struct Obj00344918 *arg0, f32 fparg0) {
+    f32 temp_f12 = fparg0 + arg0->unk554;
+    return (arg0->unk8B4 * temp_f12) + (arg0->unk898 * (1.0f - temp_f12));
 }

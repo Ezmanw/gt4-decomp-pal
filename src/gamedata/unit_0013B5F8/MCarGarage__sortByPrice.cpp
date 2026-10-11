@@ -18,8 +18,8 @@ struct Arg2 {
     ObjA *obj;
 };
 
-extern "C" void func_002ED618(void *buf, Arg2 *arg2);
-extern "C" void func_001474F8(void *buf, s32 flag);
+extern "C" void func_002ED770(void *buf, Arg2 *arg2);
+extern "C" void func_00147500(void *buf, s32 flag);
 
 extern "C" void MCarGarage__sortByPrice(void *arg0, s32 count, Arg2 *arg2) {
     char buf[0x10];
@@ -28,7 +28,7 @@ extern "C" void MCarGarage__sortByPrice(void *arg0, s32 count, Arg2 *arg2) {
     if (count <= 0) {
         return;
     }
-    func_002ED618(buf, arg2);
+    func_002ED770(buf, arg2);
     flag = 1;
     if (count >= 2) {
         ObjA *obj = arg2->obj;
@@ -36,5 +36,5 @@ extern "C" void MCarGarage__sortByPrice(void *arg0, s32 count, Arg2 *arg2) {
         s32 result = entry->fn((char *)obj + entry->delta);
         flag = (result != 0);
     }
-    func_001474F8(buf, flag);
+    func_00147500(buf, flag);
 }

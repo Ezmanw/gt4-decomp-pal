@@ -17,9 +17,9 @@ struct Arg3 {
     ObjA *obj;
 };
 
-extern "C" void func_0024B2A0(s32 *buf);
-extern "C" void func_0024BEF8(s32 arg0, f32 arg1);
-extern "C" void func_0024B248(s32 *buf, s32 arg1);
+extern "C" void func_0024B3F8(s32 *buf);
+extern "C" void func_0024C050(s32 arg0, f32 arg1);
+extern "C" void func_0024B3A0(s32 *buf, s32 arg1);
 
 extern "C" void MTransform__rotate(s32 arg0, s32 arg1, s32 arg2, Arg3 *arg3) {
     s32 buf[4];
@@ -29,12 +29,12 @@ extern "C" void MTransform__rotate(s32 arg0, s32 arg1, s32 arg2, Arg3 *arg3) {
     f32 result;
 
     if (arg2 == 1) {
-        func_0024B2A0(buf);
+        func_0024B3F8(buf);
         s0 = buf[0];
         obj = arg3->obj;
         entry = obj->vtbl + 12;
         result = entry->fn((char *)obj + entry->delta);
-        func_0024BEF8(s0, result);
-        func_0024B248(buf, 2);
+        func_0024C050(s0, result);
+        func_0024B3A0(buf, 2);
     }
 }

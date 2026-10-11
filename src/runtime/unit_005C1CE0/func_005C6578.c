@@ -2,7 +2,7 @@
 #define NULL 0
 void *memcpy(void *, const void *, unsigned int);
 
-s32 func_0013BD50(void *, void *);              /* extern */
+s32 func_0013BD58(void *, void *);              /* extern */
 
 struct func_005C6578_arg2 {
     char pad0[0x4];
@@ -23,7 +23,7 @@ void *func_005C6578(void *arg0, s32 arg1, struct func_005C6578_arg2 *arg2) {
     if (var_s1 != 0) {
         do {
             if (var_s0 != NULL) {
-                func_0013BD50(var_s0, arg2);
+                func_0013BD58(var_s0, arg2);
                 ((struct func_005C6578_var_s0 *)var_s0)->unk4 = (f32) arg2->unk4;
             }
             var_s1 -= 1;

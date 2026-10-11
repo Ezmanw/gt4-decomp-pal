@@ -1,8 +1,15 @@
-extern "C" int func_00447C78(int arg0);
-extern "C" void func_00394ED8(int arg0, int arg1);
+typedef int s32;
 
-extern "C" void func_00395040(int arg0, int arg1) {
-    int s0 = arg0;
-    int v0 = func_00447C78(arg1);
-    func_00394ED8(s0, v0);
+struct Obj00394D48 {
+    char pad[4];
+    s32 unk4;
+};
+
+extern "C" void func_00396BB0(s32 arg0);
+extern "C" void func_00396B00(s32 arg0, void *arg1);
+
+extern "C" void func_00395040(struct Obj00394D48 *arg0) {
+    struct Obj00394D48 *s0 = arg0;
+    func_00396BB0(s0->unk4);
+    func_00396B00(s0->unk4, (char *)s0 + 0x94);
 }

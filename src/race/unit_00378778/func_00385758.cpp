@@ -1,5 +1,5 @@
-typedef float f32;
+typedef int s32;
 
-f32 func_00385758(void *arg0) {
-    return *(f32 *)((char *)*(void **)arg0 + 0x30);
+extern "C" void func_00385758(s32 *arg0, s32 arg1) {
+    *arg0 = arg1;
 }

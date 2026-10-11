@@ -42,15 +42,15 @@ extern Rep D_00659FA8;
 extern char D_00693310[];
 extern char D_00693320[];
 
-extern "C" void func_002FC870(void *arg0, int arg1);
-extern "C" void func_002FC8C8(void *arg0, void *arg1);
-extern "C" int func_002FE250(void *arg0);
-extern "C" void func_00312318(void *arg0, int arg1);
-extern "C" void func_00314B20(void *arg0, void *arg1);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
-extern "C" u32 func_00448618(s32 arg0, char *buf, s32 size);
+extern "C" void func_002FC9C8(void *arg0, int arg1);
+extern "C" void func_002FCA20(void *arg0, void *arg1);
+extern "C" int func_002FE3A8(void *arg0);
+extern "C" void func_00312470(void *arg0, int arg1);
+extern "C" void func_00314C78(void *arg0, void *arg1);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
+extern "C" u32 func_00448990(s32 arg0, char *buf, s32 size);
 extern "C" s32 func_0057F260(const char *s);
 extern "C" struct S00659988 *func_005C11A8(void);
 extern "C" char *func_005C2560(Rep *r);
@@ -71,10 +71,10 @@ extern "C" void MDatabase__getRaceLabelByIndex(s32 *arg0, s32 arg1, void *arg2) 
         s32 id;
         const char *src;
         u32 ret;
-        func_002FC8C8(pu1, arg2);
-        id = func_002FE250(pu1->tmp.p);
-        func_002FC870(pu1, 2);
-        ret = func_00448618(id, u0.buf, 0x100);
+        func_002FCA20(pu1, arg2);
+        id = func_002FE3A8(pu1->tmp.p);
+        func_002FC9C8(pu1, 2);
+        ret = func_00448990(id, u0.buf, 0x100);
         src = u0.buf;
         if (ret >= 0x100) {
             src = D_00693310;
@@ -92,24 +92,24 @@ extern "C" void MDatabase__getRaceLabelByIndex(s32 *arg0, s32 arg1, void *arg2) 
             ps->p = d;
         }
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_00314B20(pu1, ps);
+        func_00314C78(pu1, ps);
         if (arg0 != pu1->arr1) {
             newVal = pu1->arr1[0];
             if (newVal != 0) {
-                func_003285A8(newVal);
+                func_00328700(newVal);
             }
             oldVal = *arg0;
             if (oldVal != 0) {
-                func_003285F8(oldVal);
+                func_00328750(oldVal);
             }
             *arg0 = newVal;
         }
-        func_00312318(pu1, 2);
+        func_00312470(pu1, 2);
         {
             Rep *q = (Rep *)(ps->p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     } else {
@@ -127,24 +127,24 @@ extern "C" void MDatabase__getRaceLabelByIndex(s32 *arg0, s32 arg1, void *arg2) 
             ps2->p = d;
         }
         func_005C2630(ps2, 0, -1, src, func_0057F260(src));
-        func_00314B20(u0.e.arr0, ps2);
+        func_00314C78(u0.e.arr0, ps2);
         if (arg0 != u0.e.arr0) {
             newVal = u0.e.arr0[0];
             if (newVal != 0) {
-                func_003285A8(newVal);
+                func_00328700(newVal);
             }
             oldVal = *arg0;
             if (oldVal != 0) {
-                func_003285F8(oldVal);
+                func_00328750(oldVal);
             }
             *arg0 = newVal;
         }
-        func_00312318(u0.e.arr0, 2);
+        func_00312470(u0.e.arr0, 2);
         {
             Rep *q = (Rep *)(ps2->p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }

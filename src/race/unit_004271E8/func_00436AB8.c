@@ -1,5 +1,9 @@
-extern char D_00846348[];
-extern int func_0057B1E8(char *, int, int);
-void func_00436AB8(char *a, int b) {
-    *(int *)(a + 0x10F4) = func_0057B1E8(D_00846348, b, -1);
+typedef int s32;
+extern char D_006184D0[];
+void func_001074D8(char *a, s32 b, s32 c, s32 d, s32 e);
+void func_004AB040(s32 a);
+s32 func_00436AB8(char *arg0) {
+    func_001074D8(D_006184D0, 1, 0, 0x280, 0x1C0);
+    func_004AB040(0x17);
+    return *(s32 *)(arg0 + 0x16B0) != 0;
 }

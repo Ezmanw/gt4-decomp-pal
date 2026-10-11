@@ -1,7 +1,5 @@
 typedef int s32;
 
-struct Obj { char pad[0xC]; s32 unkC; };
-
-extern "C" void func_00386000(Obj **arg0, s32 arg1) {
-    (*arg0)->unkC = arg1;
+extern "C" s32 func_00386000(s32 *arg0) {
+    return *arg0 + 0x88;
 }

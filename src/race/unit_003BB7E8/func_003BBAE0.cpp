@@ -1,0 +1,9 @@
+extern char RaceInformation__random;
+
+extern "C" void func_005792D8(void *a0);
+
+extern "C" void func_003BBAE0(int arg0, int arg1) {
+    if ((arg1 == 0xFFFF) && (arg0 == 1)) {
+        func_005792D8(&RaceInformation__random);
+    }
+}

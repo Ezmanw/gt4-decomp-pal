@@ -4,7 +4,7 @@ struct D_00661688 {
     char pad4[0x48 - 4];
     short f48;
     short f4A;
-    D_00661688() __asm__("func_001CBFE0");
+    D_00661688() __asm__("func_001CC008");
     virtual ~D_00661688();
 };
 

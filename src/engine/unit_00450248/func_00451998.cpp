@@ -1,7 +1,18 @@
-typedef int s32;
+struct Vec3 {
+    float x, y, z;
+};
 
-struct S { char pad[0x8C]; s32 unk8C; };
+struct Vec4 {
+    float x, y, z, w;
+};
 
-extern "C" void func_00451998(S *arg0, s32 arg1) {
-    arg0->unk8C = arg1;
+extern "C" void func_004A7AA8(void *, Vec4 *);
+
+extern "C" void func_00451998(void *self, Vec3 *p) {
+    Vec4 v;
+    v.x = p->x;
+    v.y = p->y;
+    v.z = p->z;
+    v.w = 1.0f;
+    func_004A7AA8(self, &v);
 }

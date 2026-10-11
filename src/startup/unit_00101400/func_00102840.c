@@ -3,7 +3,7 @@
 void *memcpy(void *, const void *, unsigned int);
 
 s32 func_001028F0(void *, s32);             /* extern */
-s32 func_0010AA50();                            /* extern */
+s32 func_0010AA58();                            /* extern */
 
 extern char D_00659BA0[];
 struct func_00102840_arg0 {
@@ -16,7 +16,7 @@ struct func_00102840_arg0 {
 };
 
 void func_00102840(struct func_00102840_arg0 *arg0) {
-    func_0010AA50();
+    func_0010AA58();
     arg0->unkA8 = 0;
     arg0->unkAC = 0;
     arg0->unk64 = (s32)D_00659BA0;

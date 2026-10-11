@@ -1,5 +1,7 @@
 typedef float f32;
 
-extern "C" f32 func_00385AC0(void *arg0) {
-    return *(f32 *)((char *)*(void **)arg0 + 0xE4);
+struct Obj { char pad[0x40]; f32 unk40; };
+
+extern "C" f32 func_00385AC0(Obj *arg0) {
+    return arg0->unk40;
 }

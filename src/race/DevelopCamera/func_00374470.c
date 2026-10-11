@@ -1,11 +1,22 @@
 #include "types.h"
-#define NULL 0
 void *memcpy(void *, const void *, unsigned int);
 
-typedef struct { u64 a : 32; u64 b : 8; u64 c : 8; u64 d : 8; u64 e : 8; } B;
-void func_00374470(s8 *p) {
-    B t = *(B *)(p + 0xC20);
-    t.b = 1;
-    t.c = 0;
-    *(B *)(p + 0xC20) = t;
+s32 func_00374470(f32 fparg0, f32 fparg1) {
+    s32 var_v0;
+
+    if (fparg0 < -1.0f) {
+        if (fparg1 < -1.0f) {
+            return 0;
+        }
+        goto block_5;
+    }
+    var_v0 = 1;
+    if (fparg0 >= 1.0f) {
+        var_v0 = 0;
+        if (!(fparg1 >= 1.0f)) {
+block_5:
+            var_v0 = 1;
+        }
+    }
+    return var_v0;
 }

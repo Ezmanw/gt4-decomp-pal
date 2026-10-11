@@ -10,8 +10,8 @@ struct StringRep { u32 len; u32 res; u32 ref; u32 selfish; };
 struct String { char *dat; };
 
 extern struct Heap *func_005C11A8(void);
-extern void *func_00326750(int size, int align, const char *name);
-extern void func_00326798(void *ptr, int size, int align, const char *name);
+extern void *func_003268A8(int size, int align, const char *name);
+extern void func_003268F0(void *ptr, int size, int align, const char *name);
 extern void *memcpy(void *dst, const void *src, u32 n);
 
 static inline char *rep_data(struct StringRep *r) { return (char *)(r + 1); }
@@ -25,11 +25,11 @@ static inline u32 frob_size(u32 s) {
 }
 
 static inline void *rep_new(u32 n) {
-    return func_00326750(n, 4, func_005C11A8()->name);
+    return func_003268A8(n, 4, func_005C11A8()->name);
 }
 
 static inline void rep_delete(struct StringRep *p, u32 n) {
-    func_00326798(p, n, 4, func_005C11A8()->name);
+    func_003268F0(p, n, 4, func_005C11A8()->name);
 }
 
 static inline struct StringRep *create(u32 extra) {

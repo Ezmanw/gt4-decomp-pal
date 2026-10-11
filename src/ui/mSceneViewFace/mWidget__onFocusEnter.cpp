@@ -40,36 +40,36 @@ struct Obj {
 
 extern Rep D_00659FA8;
 
-extern "C" Obj *func_0028EA18(s32 a);
-extern "C" void *func_002319C0(s32 a);
-extern "C" void func_00235CF8(void *p);
-extern "C" s32 func_00265D00(Obj *arg0);
-extern "C" void *func_002FA120(void *arg0);
-extern "C" void func_002F9B38(void *arg0, int arg1);
+extern "C" Obj *func_0028EB70(s32 a);
+extern "C" void *func_00231B18(s32 a);
+extern "C" void func_00235E50(void *p);
+extern "C" s32 func_00265E58(Obj *arg0);
+extern "C" void *func_002FA278(void *arg0);
+extern "C" void func_002F9C90(void *arg0, int arg1);
 extern "C" char *func_005C2560(Rep *r);
 extern "C" s32 func_0057F260(const char *s);
 extern "C" void *func_005C2630(Str *s, s32 pos, s32 n, const char *src, s32 len);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
 extern "C" s32 HSymID__GetID(Str *s);
-extern "C" void func_003069F8(Obj *obj, void *h, s32 *val);
-extern "C" void func_0030BB18(void *h);
-extern "C" void func_00309348(void *h, s32 *val);
-extern "C" void func_00309378(void *h, int flags);
-extern "C" void func_003285A8(s32 p);
-extern "C" void func_003285F8(s32 p);
+extern "C" void func_00306B50(Obj *obj, void *h, s32 *val);
+extern "C" void func_0030BC70(void *h);
+extern "C" void func_003094A0(void *h, s32 *val);
+extern "C" void func_003094D0(void *h, int flags);
+extern "C" void func_00328700(s32 p);
+extern "C" void func_00328750(s32 p);
 extern "C" void func_005DB110(const char *fmt, const char *file, s32 line);
 
 struct Value {
     s32 p;
-    Value() { func_0030BB18(this); }
+    Value() { func_0030BC70(this); }
 };
 
 struct MethodHandle {
     s32 p;
     s32 pad[3];
-    MethodHandle() { func_002FA120(this); }
-    ~MethodHandle() { func_002F9B38(this, 2); }
+    MethodHandle() { func_002FA278(this); }
+    ~MethodHandle() { func_002F9C90(this, 2); }
 };
 
 static inline s32 vcall10(VObj *o) {
@@ -98,7 +98,7 @@ static inline void vcall3D(VObj *o) {
         Value *q = args + 2;                    \
         while (args != q) {                     \
             --q;                                \
-            func_00309378(q, 2);                \
+            func_003094D0(q, 2);                \
         }                                       \
     }
 
@@ -106,14 +106,14 @@ extern "C" s32 mWidget__onFocusEnter(Obj *self, s32 arg1, s32 arg2) {
     s32 newVal;
     s32 oldVal;
 
-    if (func_0028EA18(arg2) == self) {
+    if (func_0028EB70(arg2) == self) {
         vcall3D((VObj *)self);
-        void *p = func_002319C0(arg1);
+        void *p = func_00231B18(arg1);
         if (p != 0) {
-            func_00235CF8(p);
+            func_00235E50(p);
         }
     }
-    if (func_00265D00(self) != 0 && (self->flags & 0x800)) {
+    if (func_00265E58(self) != 0 && (self->flags & 0x800)) {
         MethodHandle h;
         s32 ret[4];
         Str s;
@@ -133,18 +133,18 @@ extern "C" s32 mWidget__onFocusEnter(Obj *self, s32 arg1, s32 arg2) {
             ps->p = d;
             func_005C2630(ps, 0, -1, src, func_0057F260(src));
             *pv = HSymID__GetID(ps);
-            func_003069F8(self, &h, pv);
+            func_00306B50(self, &h, pv);
             {
                 Rep *q = (Rep *)(ps->p - 0x10);
                 if (--q->ref == 0) {
                     s32 cap = q->cap + 0x10;
-                    func_00326798(q, cap, 4, func_005C11A8()->name);
+                    func_003268F0(q, cap, 4, func_005C11A8()->name);
                 }
             }
         }
         if (h.p != 0) {
             s32 r;
-            func_0030BB18(pv);
+            func_0030BC70(pv);
             {
                 Value args[2];
                 s32 tmp[4];
@@ -156,46 +156,46 @@ extern "C" s32 mWidget__onFocusEnter(Obj *self, s32 arg1, s32 arg2) {
                 p0 = tmp;
                 dst = args;
                 v1 = arg1;
-                func_00309348(p0, &v1);
+                func_003094A0(p0, &v1);
                 if (dst != (Value *)p0) {
                     newVal = *p0;
                     if (newVal != 0) {
-                        func_003285A8(newVal);
+                        func_00328700(newVal);
                     }
                     oldVal = dst->p;
                     if (oldVal != 0) {
-                        func_003285F8(oldVal);
+                        func_00328750(oldVal);
                     }
                     dst->p = newVal;
                 }
-                func_00309378(p0, 2);
+                func_003094D0(p0, 2);
 
                 dst = &args[1];
                 v2 = arg2;
-                func_00309348(p0, &v2);
+                func_003094A0(p0, &v2);
                 if (dst != (Value *)p0) {
                     newVal = *p0;
                     if (newVal != 0) {
-                        func_003285A8(newVal);
+                        func_00328700(newVal);
                     }
                     oldVal = dst->p;
                     if (oldVal != 0) {
-                        func_003285F8(oldVal);
+                        func_00328750(oldVal);
                     }
                     dst->p = newVal;
                 }
-                func_00309378(p0, 2);
+                func_003094D0(p0, 2);
 
                 vcall20((VObj *)h.p, pv, 2, args);
                 if (*pv != 0) {
                     r = vcall10((VObj *)*pv);
                     DESTROY_ARGS();
-                    func_00309378(pv, 2);
+                    func_003094D0(pv, 2);
                     return r;
                 }
                 func_005DB110("!!!!!!!!!!!!!!!!! you should return EventResult (%s:%d)\n", "MWidget.cpp", 0xAE1);
                 DESTROY_ARGS();
-                func_00309378(pv, 2);
+                func_003094D0(pv, 2);
             }
         } else {
             self->flags &= ~0x800;

@@ -13,8 +13,8 @@ extern char D_006184D0[];
 extern func_00100A40_Vec D_00617A90;
 
 extern "C" {
-void func_00106710(void *p);
-void func_001063A8(void *p);
+void func_00106728(void *p);
+void func_001063C8(void *p);
 void func_00106DA8(void *p, int a, int b, int c, int d);
 void func_004A2980(int a);
 void func_004A3040(float x, float y, float z, float w);
@@ -26,10 +26,10 @@ extern "C" void func_00100A40(func_00100A40_Obj *self) {
     if (self->pending) {
         switch (self->mode) {
         case 1:
-            func_00106710(D_006184D0);
+            func_00106728(D_006184D0);
             break;
         case 2:
-            func_001063A8(D_006184D0);
+            func_001063C8(D_006184D0);
             break;
         case 3:
             func_00106DA8(D_006184D0, 1, 2, -1, -1);

@@ -1,8 +1,9 @@
-typedef int s32;
-typedef unsigned int u32;
+#include "types.h"
+#define NULL 0
+void *memcpy(void *, const void *, unsigned int);
 
-extern "C" void func_0046F378(s32 arg0, u32 arg1);
+s32 func_0046F750(s32, s32);                    /* extern */
 
-extern "C" void func_0046CBC8(char *arg0) {
-    func_0046F378((s32)(arg0 + 0x85C), 0xFFD8);
+void func_0046CBC8(s32 arg0, s32 arg1) {
+    func_0046F750(arg0 + 0x85C, (arg1 & 7) + 0xFFD0);
 }

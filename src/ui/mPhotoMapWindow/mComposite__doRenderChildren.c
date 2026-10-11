@@ -62,20 +62,20 @@ struct mComposite {
     s32 unkA8;
     s32 unkAC;
 };
-int func_00206868(struct mWidget *);
-s32 func_0025C300(void *);
-s32 func_00207378(struct mComposite *, s32, void *); /* extern */
-s32 func_00263C40(void *);                      /* extern */
+int func_00206928(struct mWidget *);
+s32 func_0025C458(void *);
+s32 func_00207438(struct mComposite *, s32, void *); /* extern */
+s32 func_00263D98(void *);                      /* extern */
 
 void mComposite__doRenderChildren(struct mComposite *arg0, s32 arg1) {
     s32 var_s0;
 
-    var_s0 = func_00206868((struct mWidget *) arg0);
+    var_s0 = func_00206928((struct mWidget *) arg0);
     if (var_s0 != 0) {
         do {
-            func_00263C40((void *) var_s0);
-            func_00207378(arg0, arg1, (void *) var_s0);
-            var_s0 = func_0025C300((void *) var_s0);
+            func_00263D98((void *) var_s0);
+            func_00207438(arg0, arg1, (void *) var_s0);
+            var_s0 = func_0025C458((void *) var_s0);
         } while (var_s0 != 0);
     }
 }

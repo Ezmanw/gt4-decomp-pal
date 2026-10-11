@@ -1,5 +1,5 @@
-extern void func_00265FE0(void);
+extern void func_00266138(void);
 void func_005E7070(void)
 {
-    func_00265FE0();
+    func_00266138();
 }

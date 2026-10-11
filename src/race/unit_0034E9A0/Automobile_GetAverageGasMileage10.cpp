@@ -13,9 +13,9 @@ struct Obj {
 };
 
 extern "C" char PDISTD__UNIT_MANAGER[];
-extern "C" s32 func_00472AE0(char *arg0, f32 arg1, f32 arg2);
+extern "C" s32 func_00472EB8(char *arg0, f32 arg1, f32 arg2);
 
 extern "C" s32 Automobile_GetAverageGasMileage10(Obj *arg0) {
     SubStruct_104 *v0 = &arg0->sub104;
-    return func_00472AE0(PDISTD__UNIT_MANAGER, v0->unk4C8, v0->unk4C4);
+    return func_00472EB8(PDISTD__UNIT_MANAGER, v0->unk4C8, v0->unk4C4);
 }

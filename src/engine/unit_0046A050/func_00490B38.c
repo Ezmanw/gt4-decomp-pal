@@ -1,0 +1,24 @@
+#include "types.h"
+void *memcpy(void *, const void *, unsigned int);
+
+s32 func_00490AA0(void *, f32);                 /* extern */
+f32 func_00490C08();                                /* extern */
+
+struct func_00490B38_arg0 {
+    char pad0[0x14];
+    s32 unk14;
+    char pad18[0x18];
+    s32 unk30;
+    char pad34[0x34];
+    s32 unk68;
+    char pad6C[0xC];
+    s32 unk78;
+};
+
+void func_00490B38(struct func_00490B38_arg0 *arg0) {
+    if ((arg0->unk14 != 0) && (arg0->unk68 != 0)) {
+        arg0->unk30 = 0;
+        func_00490AA0(arg0, func_00490C08());
+        arg0->unk78 = 0;
+    }
+}

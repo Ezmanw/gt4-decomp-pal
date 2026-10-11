@@ -2,13 +2,13 @@
 #define NULL 0
 void *memcpy(void *, const void *, unsigned int);
 
-struct func_003E4F98_arg0 {
+struct func_003E52A8_arg0 {
     char pad0[0x8];
     s32 unk8;
     s32 unkC;
 };
 
-s32 RigidBodyManager__remove(struct func_003E4F98_arg0 *arg0, s32 *arg1, s32 *arg2) {
+s32 RigidBodyManager__remove(struct func_003E52A8_arg0 *arg0, s32 *arg1, s32 *arg2) {
     s32 temp_v0;
     s32 temp_v0_2;
 

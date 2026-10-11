@@ -443,6 +443,14 @@ done
           "  /DISCARD/ : { *(.reginfo) *(.mdebug*) *(.comment) *(.pdr) *(.eh_frame) *(.gcc_except_table) *(*) }\n}\n")
     open(os.path.join(OUT, "link.ld"), "w", newline="\n").write(ld)
 
+    # A branch into code that now comes from a source (a tail shared with the next function) names a
+    # label that no longer exists: its raw word is still right, since everything sits at its address.
+    defined = {l.strip()[:-1] for l in asm if re.match(r"^\s*\.L[0-9A-F]{8}:$", l)}
+    for n, line in enumerate(asm):
+        m = re.match(r"^(\s*)/\* [0-9A-F]+ [0-9A-F]{8} ([0-9A-F]{8}) \*/.*?(\.L[0-9A-F]{8})\b", line)
+        if m and m.group(3) not in defined:
+            word = int.from_bytes(bytes.fromhex(m.group(2)), "little")
+            asm[n] = f"{m.group(1)}.word 0x{word:08X}  # {line.strip()}"
     # 4. Assemble the gaps. Instructions the modern assembler cannot parse in splat's syntax
     # (VU0 macro mode) are emitted as their raw words; they are still undecompiled assembly.
     print(f"linking {len(objects)} functions...", flush=True)

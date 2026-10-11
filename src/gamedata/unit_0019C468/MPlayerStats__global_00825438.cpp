@@ -28,10 +28,10 @@ struct Obj {
 };
 
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
-extern "C" void func_0019C180(void *arg0, int arg1);
-extern "C" void func_0019C1D8(void *arg0, void *arg1);
-extern "C" void func_0019DC00(s32 arg0, Str *arg1);
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_0019C1A8(void *arg0, int arg1);
+extern "C" void func_0019C200(void *arg0, void *arg1);
+extern "C" void func_0019DC28(s32 arg0, Str *arg1);
 
 extern "C" void MPlayerStats__global_00825438(void *arg0, void *arg1, s32 n, Obj **args) {
     if (n > 0) {
@@ -44,14 +44,14 @@ extern "C" void MPlayerStats__global_00825438(void *arg0, void *arg1, s32 n, Obj
             e->fn(&s, (char *)o + e->delta);
         }
         pt = tmp;
-        func_0019C1D8(pt, arg1);
-        func_0019DC00(*pt, &s);
-        func_0019C180(pt, 2);
+        func_0019C200(pt, arg1);
+        func_0019DC28(*pt, &s);
+        func_0019C1A8(pt, 2);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }

@@ -1,7 +1,7 @@
-typedef int s32;
+typedef float f32;
 
-struct S_00154310 { char pad[0x90]; s32 unk90; };
+struct Obj { char pad[0x8C]; f32 unk8C; };
 
-extern "C" void func_00154310(S_00154310 *arg0, s32 arg1) {
-    arg0->unk90 = arg1;
+extern "C" f32 func_00154310(Obj *arg0) {
+    return arg0->unk8C;
 }

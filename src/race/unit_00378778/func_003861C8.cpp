@@ -1,5 +1,9 @@
-typedef int s32;
+struct Obj {
+    char pad[0x30];
+    unsigned char unk30;
+};
 
-extern "C" s32 func_003861C8(s32 *arg0) {
-    return *arg0 + 4;
+extern "C" unsigned char func_003861C8(struct Obj *arg0)
+{
+    return arg0->unk30;
 }

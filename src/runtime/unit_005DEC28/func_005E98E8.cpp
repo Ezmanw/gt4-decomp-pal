@@ -4,24 +4,24 @@ struct Obj {
     char pad0[4];
 };
 
-extern "C" void func_002CA6F8(void *arg0, int arg1);
-extern "C" void *func_002CA750(void *arg0, void *arg1);
-extern "C" void func_00309378(void *arg0, int arg1);
-extern "C" void func_003285A8(void *p);
-extern "C" void func_003285F8(void *p);
+extern "C" void func_002CA850(void *arg0, int arg1);
+extern "C" void *func_002CA8A8(void *arg0, void *arg1);
+extern "C" void func_003094D0(void *arg0, int arg1);
+extern "C" void func_00328700(void *p);
+extern "C" void func_00328750(void *p);
 
 struct Handle {
     void *p;
     char pad[0xC];
-    ~Handle() { func_00309378(this, 2); }
+    ~Handle() { func_003094D0(this, 2); }
     Handle &operator=(const Handle &o) {
         if (this != &o) {
             void *q = o.p;
             if (q != 0) {
-                func_003285A8(q);
+                func_00328700(q);
             }
             if (p != 0) {
-                func_003285F8(p);
+                func_00328750(p);
             }
             p = q;
         }
@@ -32,8 +32,8 @@ struct Handle {
 struct Holder {
     Obj *p;
     char pad[0xC];
-    Holder(void *a) { func_002CA750(this, a); }
-    ~Holder() { func_002CA6F8(this, 2); }
+    Holder(void *a) { func_002CA8A8(this, a); }
+    ~Holder() { func_002CA850(this, 2); }
     Obj *get() { return p; }
 };
 

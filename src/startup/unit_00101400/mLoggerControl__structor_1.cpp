@@ -9,7 +9,7 @@ extern "C" void func_005C1628(void *);
 extern "C" void func_00574DA8(void *, s32);
 extern "C" void func_005760A8(void *, s32);
 extern "C" void hObject__structor_2(void *, s32);
-extern "C" void func_00326798(void *, s32, s32, const char *);
+extern "C" void func_003268F0(void *, s32, s32, const char *);
 
 extern "C" void mLoggerControl__structor_1(void *arg0, s32 arg1) {
     ((struct mLoggerControl *)arg0)->unk4 = &mLoggerControl__vtable;
@@ -23,6 +23,6 @@ extern "C" void mLoggerControl__structor_1(void *arg0, s32 arg1) {
     func_005760A8((char *)arg0 + 0x10, 0x2);
     hObject__structor_2(arg0, 0x0);
     if ((arg1 & 0x1) != 0) {
-        return func_00326798(arg0, 0x310, 0x4, "RefCounter");
+        return func_003268F0(arg0, 0x310, 0x4, "RefCounter");
     }
 }

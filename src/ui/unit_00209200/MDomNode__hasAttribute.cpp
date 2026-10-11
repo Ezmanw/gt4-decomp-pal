@@ -22,16 +22,16 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void func_00312370(void *, void *);
-extern "C" void func_00208F70(void *, void *);
-extern "C" s32 func_00314920(s32);
-extern "C" s32 func_00209BF8(s32, s32);
-extern "C" void func_002FE278(void *, s32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002FC870(void *, s32);
-extern "C" void func_00208F18(void *, s32);
-extern "C" void func_00312318(void *, s32);
+extern "C" void func_003124C8(void *, void *);
+extern "C" void func_00209030(void *, void *);
+extern "C" s32 func_00314A78(s32);
+extern "C" s32 func_00209CB8(s32, s32);
+extern "C" void func_002FE3D0(void *, s32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002FC9C8(void *, s32);
+extern "C" void func_00208FD8(void *, s32);
+extern "C" void func_00312470(void *, s32);
 
 extern "C" void MDomNode__hasAttribute(s32 *arg0, void *arg1, s32 arg2, char **arg3) {
     s32 buf0[4];
@@ -44,26 +44,26 @@ extern "C" void MDomNode__hasAttribute(s32 *arg0, void *arg1, s32 arg2, char **a
     s32 newVal;
     s32 oldVal;
     if (arg2 > 0) {
-        func_00312370(buf0, arg3);
+        func_003124C8(buf0, arg3);
         p_s3 = buf2;
-        func_00208F70(p_s3, arg1);
+        func_00209030(p_s3, arg1);
         v_s0 = *p_s3;
-        t1 = func_00209BF8(v_s0, func_00314920(buf0[0]));
+        t1 = func_00209CB8(v_s0, func_00314A78(buf0[0]));
         p_s1 = buf1;
-        func_002FE278(p_s1, t1 != 0);
+        func_002FE3D0(p_s1, t1 != 0);
         if (arg0 != p_s1) {
             newVal = *p_s1;
             if (newVal != 0) {
-                func_003285A8(newVal);
+                func_00328700(newVal);
             }
             oldVal = *arg0;
             if (oldVal != 0) {
-                func_003285F8(oldVal);
+                func_00328750(oldVal);
             }
             *arg0 = newVal;
         }
-        func_002FC870(p_s1, 0x2);
-        func_00208F18(p_s3, 0x2);
-        func_00312318(buf0, 0x2);
+        func_002FC9C8(p_s1, 0x2);
+        func_00208FD8(p_s3, 0x2);
+        func_00312470(buf0, 0x2);
     }
 }

@@ -1,3 +1,4 @@
+typedef short s16;
 typedef unsigned short u16;
 typedef int s32;
 
@@ -7,10 +8,9 @@ struct Obj {
 };
 
 extern "C" void func_001CC500(Obj *arg0, s32 arg1) {
-    u16 v = arg0->unk48;
     if (arg1 != 0) {
-        arg0->unk48 = v | 2;
+        arg0->unk48 = arg0->unk48 | 1;
         return;
     }
-    arg0->unk48 = v & 0xFFFD;
+    arg0->unk48 = arg0->unk48 & 0xFFFE;
 }

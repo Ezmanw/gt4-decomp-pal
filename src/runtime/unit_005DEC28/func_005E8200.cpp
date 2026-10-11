@@ -1,5 +1,5 @@
-extern "C" void func_003285A8(void *arg0);
-extern "C" void func_003285F8(void *arg0);
+extern "C" void func_00328700(void *arg0);
+extern "C" void func_00328750(void *arg0);
 
 extern "C" void func_005E8200(void **arg0, void **arg1, void **arg2) {
     void **it = arg0;
@@ -8,11 +8,11 @@ extern "C" void func_005E8200(void **arg0, void **arg1, void **arg2) {
             if (it != arg2) {
                 void *val = *arg2;
                 if (val != 0) {
-                    func_003285A8(val);
+                    func_00328700(val);
                 }
                 void *old = *it;
                 if (old != 0) {
-                    func_003285F8(old);
+                    func_00328750(old);
                 }
                 *it = val;
             }

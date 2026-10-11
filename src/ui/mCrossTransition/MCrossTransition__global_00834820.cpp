@@ -1,24 +1,24 @@
 typedef int s32;
 
-extern "C" void func_00289900(void *buf);
-extern "C" void func_003285A8(s32 arg0);
-extern "C" void func_003285F8(s32 arg0);
-extern "C" void func_002896A8(void *buf, s32 arg1);
+extern "C" void func_00289A58(void *buf);
+extern "C" void func_00328700(s32 arg0);
+extern "C" void func_00328750(s32 arg0);
+extern "C" void func_00289800(void *buf, s32 arg1);
 
 extern "C" void MCrossTransition__global_00834820(s32 *arg0) {
     s32 buf[4];
 
-    func_00289900(buf);
+    func_00289A58(buf);
     if (arg0 != buf) {
         s32 s0 = buf[0];
         if (s0 != 0) {
-            func_003285A8(s0);
+            func_00328700(s0);
         }
         s32 temp_v0 = *arg0;
         if (temp_v0 != 0) {
-            func_003285F8(temp_v0);
+            func_00328750(temp_v0);
         }
         *arg0 = s0;
     }
-    func_002896A8(buf, 2);
+    func_00289800(buf, 2);
 }

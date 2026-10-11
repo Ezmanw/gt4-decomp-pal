@@ -1,7 +1,7 @@
 #include "types.h"
 void *memcpy(void *, const void *, unsigned int);
 
-s32 func_00435958(s32, s32);                    /* extern */
+s32 func_00435CD0(s32, s32);                    /* extern */
 
 struct func_00601400_arg0 {
     s32 unk0;
@@ -9,7 +9,7 @@ struct func_00601400_arg0 {
 };
 
 void *func_00601400(struct func_00601400_arg0 *arg0, s32 arg1) {
-    arg0->unk4 = func_00435958(arg1, -1);
+    arg0->unk4 = func_00435CD0(arg1, -1);
     arg0->unk0 = arg1;
     return arg0;
 }

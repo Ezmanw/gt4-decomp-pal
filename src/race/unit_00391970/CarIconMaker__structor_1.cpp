@@ -5,9 +5,9 @@ struct D_00659AC0 {
 
 struct CarIconMaker : D_00659AC0 {
     char pad68[0x80 - 0x68];
-    CarIconMaker(int id, void *owner, void *src) __asm__("func_00393A48");
+    CarIconMaker(int id, void *owner, void *src) __asm__("func_00393D40");
     ~CarIconMaker() {}
-    void make() __asm__("func_00393AB0");
+    void make() __asm__("func_00393DA8");
 };
 
 struct Src {

@@ -10,16 +10,16 @@ struct Buf00109C40 {
     char pad4[0xC];
 };
 
-extern "C" s32 func_0019E508(struct Buf00109C40 *arg0);
-extern "C" void func_00437F58(s32 arg0);
-extern "C" void func_0019E4B0(struct Buf00109C40 *arg0, s32 arg1);
+extern "C" s32 func_0019E530(struct Buf00109C40 *arg0);
+extern "C" void func_004382D0(s32 arg0);
+extern "C" void func_0019E4D8(struct Buf00109C40 *arg0, s32 arg1);
 
 extern "C" void MPlayList__initShuffle(void) {
     struct Buf00109C40 buf;
     struct Inner *p;
 
-    func_0019E508(&buf);
+    func_0019E530(&buf);
     p = buf.ptr;
-    func_00437F58(p->unk10);
-    func_0019E4B0(&buf, 2);
+    func_004382D0(p->unk10);
+    func_0019E4D8(&buf, 2);
 }

@@ -1,9 +1,6 @@
-struct Obj {
-    char pad[0x10];
-    unsigned char unk10;
-};
+extern void func_004487D0(int, int, int, int);
 
-extern "C" unsigned char func_004488B8(struct Obj *arg0)
+void func_004488B8(int arg0, int arg1, int arg2)
 {
-    return arg0->unk10;
+    return func_004487D0(0, arg0, arg1, arg2);
 }

@@ -1,7 +1,14 @@
 typedef int s32;
 
-struct Obj { char pad[0x98]; s32 unk98; };
+struct Obj {
+    char pad[0x9C];
+    s32 unk9C;
+};
 
-extern "C" s32 func_00266590(Obj *arg0) {
-    return arg0->unk98 & 0xF;
+extern "C" void func_00266590(struct Obj *arg0, s32 arg1) {
+    s32 temp = (s32)(arg1 != 0);
+    s32 v = arg0->unk9C;
+    v = v & ~0x80;
+    v = v | (temp << 7);
+    arg0->unk9C = v;
 }

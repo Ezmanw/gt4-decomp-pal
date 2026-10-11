@@ -19,7 +19,7 @@ s32 func_005C1628(struct DirectivityMicrophone *); /* extern */
 
 void DirectivityMicrophone__structor_1(struct DirectivityMicrophone *arg0, s32 arg1) {
     arg0->unk1C = (void *)(s32)DirectivityMicrophone__vtable;
-    func_0039A4F8(arg0, 0);
+    func_0039A7F0(arg0, 0);
     if (arg1 & 1) {
         func_005C1628(arg0);
     }

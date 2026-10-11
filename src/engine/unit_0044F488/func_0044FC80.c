@@ -1,0 +1,11 @@
+#include "types.h"
+void *memcpy(void *, const void *, unsigned int);
+
+struct func_0044FC80_arg0 {
+    u8 pad0[0x14];
+    f32 unk14;
+};
+
+void func_0044FC80(struct func_0044FC80_arg0 *arg0, f32 fparg0) {
+    arg0->unk14 = fparg0;
+}

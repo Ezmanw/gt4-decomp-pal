@@ -28,13 +28,13 @@ static inline s32 vcall_58(char *o) {
     VEntry_58 *e = (VEntry_58 *)((char *)((VObj_58 *)o)->vtbl + 0x58);
     return e->fn(o + e->delta);
 }
-extern "C" void func_001DC650(void *);
-extern "C" s32 func_001F96F0(s32, s32, s32);
-extern "C" void func_002FE278(void *, s32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002FC870(void *, s32);
-extern "C" void func_001DC5F8(void *, s32);
+extern "C" void func_001DC690(void *);
+extern "C" s32 func_001F9730(s32, s32, s32);
+extern "C" void func_002FE3D0(void *, s32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002FC9C8(void *, s32);
+extern "C" void func_001DC638(void *, s32);
 
 struct MNetwork__billingFetchPurchaseList_arg3 {
     char pad0[0x4];
@@ -51,22 +51,22 @@ extern "C" void MNetwork__billingFetchPurchaseList(s32 *arg0, void *arg1, s32 ar
     s32 oldVal;
     if (arg2 >= 0x2) {
         p_s4 = buf1;
-        func_001DC650(p_s4);
+        func_001DC690(p_s4);
         v_s1 = *p_s4;
         v_s0 = vcall_58((char *)(*(s32 *)(char *)arg3));
-        func_002FE278(buf0, func_001F96F0(v_s1, v_s0, vcall_58((char *)(((struct MNetwork__billingFetchPurchaseList_arg3 *)arg3)->unk4))) != 0);
+        func_002FE3D0(buf0, func_001F9730(v_s1, v_s0, vcall_58((char *)(((struct MNetwork__billingFetchPurchaseList_arg3 *)arg3)->unk4))) != 0);
         if (arg0 != buf0) {
             newVal = buf0[0];
             if (newVal != 0) {
-                func_003285A8(newVal);
+                func_00328700(newVal);
             }
             oldVal = *arg0;
             if (oldVal != 0) {
-                func_003285F8(oldVal);
+                func_00328750(oldVal);
             }
             *arg0 = newVal;
         }
-        func_002FC870(buf0, 0x2);
-        func_001DC5F8(p_s4, 0x2);
+        func_002FC9C8(buf0, 0x2);
+        func_001DC638(p_s4, 0x2);
     }
 }

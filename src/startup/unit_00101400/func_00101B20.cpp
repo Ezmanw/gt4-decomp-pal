@@ -14,10 +14,10 @@ extern "C" void func_00101B20(int arg0, int arg1) {
     }
 }
 
-extern "C" void func_00330900(void) {
+extern "C" void func_00330A58(void) {
     func_00101B20(1, 0xFFFF);
 }
 
-extern "C" void func_00330910(void) {
+extern "C" void func_00330A68(void) {
     func_00101B20(0, 0xFFFF);
 }

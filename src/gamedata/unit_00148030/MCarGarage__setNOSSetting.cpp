@@ -23,10 +23,10 @@ struct Handle {
     char pad[0xC];
 };
 
-extern "C" void func_0013BD68(void *arg0, int arg1);
-extern "C" void func_0013BDC0(void *arg0, void *arg1);
-extern "C" int func_00147D80(S *arg0);
-extern "C" void func_0043EB38(s32 a, s32 b);
+extern "C" void func_0013BD70(void *arg0, int arg1);
+extern "C" void func_0013BDC8(void *arg0, void *arg1);
+extern "C" int func_00147D88(S *arg0);
+extern "C" void func_0043EEB0(s32 a, s32 b);
 
 static inline s32 vcall(VObj *o) {
     VEntry *e = (VEntry *)((char *)o->vtbl + 0x58);
@@ -38,11 +38,11 @@ extern "C" void MCarGarage__setNOSSetting(void *arg0, void *arg1, s32 arg2, Pair
     s32 a;
     s32 b;
 
-    func_0013BDC0(&h, arg1);
-    a = func_00147D80(h.p);
-    func_0013BD68(&h, 2);
+    func_0013BDC8(&h, arg1);
+    a = func_00147D88(h.p);
+    func_0013BD70(&h, 2);
     b = vcall(arg3->b);
     if (vcall(arg3->a) == 0) {
-        func_0043EB38(a, b);
+        func_0043EEB0(a, b);
     }
 }

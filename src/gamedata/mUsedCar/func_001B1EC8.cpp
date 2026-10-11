@@ -1,5 +1,9 @@
-extern int mUsedCar__ClassID_;
+typedef int s32;
 
-void func_001B1EC8(void) {
-    mUsedCar__ClassID_ = 0;
+extern s32 mUsedCar__ClassID_;
+
+extern "C" void func_001B21C8(s32 arg0);
+
+extern "C" void func_001B1EC8(void) {
+    func_001B21C8(mUsedCar__ClassID_);
 }

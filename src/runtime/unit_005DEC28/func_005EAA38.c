@@ -3,9 +3,9 @@
 #define NULL 0
 void *memcpy(void *, const void *, unsigned int);
 
-s32 func_00227128(s32 *, s32);              /* extern */
-s32 func_003285A8(s32);                         /* extern */
-s32 func_003285F8(s32);                         /* extern */
+s32 func_00227280(s32 *, s32);              /* extern */
+s32 func_00328700(s32);                         /* extern */
+s32 func_00328750(s32);                         /* extern */
 
 struct func_005EAA38_arg0 {
     char pad0[0xBC];
@@ -19,13 +19,13 @@ void func_005EAA38(void *arg0, s32 *arg1) {
     if ((arg0 + 0xBC) != arg1) {
         temp_s0 = *arg1;
         if (temp_s0 != 0) {
-            func_003285A8(temp_s0);
+            func_00328700(temp_s0);
         }
         temp_v0 = ((struct func_005EAA38_arg0 *)arg0)->unkBC;
         if (temp_v0 != 0) {
-            func_003285F8(temp_v0);
+            func_00328750(temp_v0);
         }
         ((struct func_005EAA38_arg0 *)arg0)->unkBC = temp_s0;
     }
-    func_00227128(arg1, 2);
+    func_00227280(arg1, 2);
 }

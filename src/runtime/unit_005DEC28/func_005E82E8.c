@@ -1,7 +1,7 @@
 #include "types.h"
 void *memcpy(void *, const void *, unsigned int);
 
-s32 func_002B5E58(s32, s32);                    /* extern */
+s32 func_002B5FB0(s32, s32);                    /* extern */
 
 s32 func_005E82E8(s32 arg0, s32 arg1, s32 arg2) {
     s32 var_s0;
@@ -12,7 +12,7 @@ s32 func_005E82E8(s32 arg0, s32 arg1, s32 arg2) {
     if (var_s1 != 0) {
         do {
             if (var_s0 != 0) {
-                func_002B5E58(var_s0, arg2);
+                func_002B5FB0(var_s0, arg2);
             }
             var_s1 -= 1;
             var_s0 += 4;

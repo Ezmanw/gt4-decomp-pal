@@ -1,5 +1,5 @@
-typedef unsigned char u8;
+extern int D_0064654C;
 
-extern "C" u8 *func_001F15D0(u8 *arg0) {
-    return arg0 + 0x34;
+int func_001F15D0(void) {
+    return D_0064654C;
 }

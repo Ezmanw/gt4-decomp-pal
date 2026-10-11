@@ -34,12 +34,12 @@ extern "C" char *func_005C2560(Rep *r);
 extern "C" s32 func_0057F260(const char *s);
 extern "C" void *func_005C2630(Str *s, s32 pos, s32 n, const char *src, s32 len);
 extern "C" struct S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *p, s32 size, s32 align, const char *name);
-extern "C" void func_002F3A30(Obj *arg0, s32 arg1);
-extern "C" void func_002F36E0(Obj *arg0, void *arg1, void (*arg2)(void));
-extern "C" void func_002F3860(Obj *arg0, Str *arg1, void (*arg2)(void), void (*arg3)(void));
-extern "C" void func_00306780(Obj *arg0, void *arg1, void (*arg2)(void));
-extern "C" void func_003068A8(Obj *arg0, Str *arg1, void (*arg2)(void));
+extern "C" void func_003268F0(void *p, s32 size, s32 align, const char *name);
+extern "C" void func_002F3B88(Obj *arg0, s32 arg1);
+extern "C" void func_002F3838(Obj *arg0, void *arg1, void (*arg2)(void));
+extern "C" void func_002F39B8(Obj *arg0, Str *arg1, void (*arg2)(void), void (*arg3)(void));
+extern "C" void func_003068D8(Obj *arg0, void *arg1, void (*arg2)(void));
+extern "C" void func_00306A00(Obj *arg0, Str *arg1, void (*arg2)(void));
 extern char D_006972E8[];
 extern char D_006972F8[];
 extern char D_00697308[];
@@ -83,13 +83,13 @@ extern "C" void mColorObject__InitClass(Obj *arg0) {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
-    func_002F3A30(arg0, hObject__GetClassID());
-    func_00306780(arg0, D_0082A698, MColorObject__global_0082A698);
-    func_002F36E0(arg0, D_0082A690, MColorObject__global_0082A690);
+    func_002F3B88(arg0, hObject__GetClassID());
+    func_003068D8(arg0, D_0082A698, MColorObject__global_0082A698);
+    func_002F3838(arg0, D_0082A690, MColorObject__global_0082A690);
     {
         Str *ps = &s;
         const char *src = D_006972F8;
@@ -103,12 +103,12 @@ extern "C" void mColorObject__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_003068A8(arg0, &s, MColorObject__interpolate);
+        func_00306A00(arg0, &s, MColorObject__interpolate);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -125,12 +125,12 @@ extern "C" void mColorObject__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MColorObject__get_r, MColorObject__set_r);
+        func_002F39B8(arg0, &s, MColorObject__get_r, MColorObject__set_r);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -147,12 +147,12 @@ extern "C" void mColorObject__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MColorObject__get_g, MColorObject__set_g);
+        func_002F39B8(arg0, &s, MColorObject__get_g, MColorObject__set_g);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -169,12 +169,12 @@ extern "C" void mColorObject__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MColorObject__get_b, MColorObject__set_b);
+        func_002F39B8(arg0, &s, MColorObject__get_b, MColorObject__set_b);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }
@@ -191,12 +191,12 @@ extern "C" void mColorObject__InitClass(Obj *arg0) {
         }
         ps->p = d;
         func_005C2630(ps, 0, -1, src, func_0057F260(src));
-        func_002F3860(arg0, &s, MColorObject__get_a, MColorObject__set_a);
+        func_002F39B8(arg0, &s, MColorObject__get_a, MColorObject__set_a);
         {
             Rep *q = (Rep *)(s.p - 0x10);
             if (--q->ref == 0) {
                 s32 cap = q->cap + 0x10;
-                func_00326798(q, cap, 4, func_005C11A8()->name);
+                func_003268F0(q, cap, 4, func_005C11A8()->name);
             }
         }
     }

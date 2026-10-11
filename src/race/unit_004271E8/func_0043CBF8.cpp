@@ -3,12 +3,13 @@ typedef int s32;
 typedef signed char s8;
 
 struct Obj {
-    char pad[0x26];
-    s8 unk26;
+    char pad[0x14];
+    s8 unk14;
 };
 
-extern "C" void func_0043CBF8(s32 arg0, u32 arg1, s32 arg2) {
-    if (arg1 < 3U) {
-        ((Obj *)(arg1 + arg0))->unk26 = arg2;
+extern "C" s32 func_0043CBF8(s32 arg0, u32 arg1) {
+    if (arg1 < 0x10U) {
+        return ((Obj *)(arg1 + arg0))->unk14;
     }
+    return -1;
 }

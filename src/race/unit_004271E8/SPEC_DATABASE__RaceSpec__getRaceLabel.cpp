@@ -8,8 +8,8 @@ struct Obj {
 
 extern char D_006235A8;
 
-extern "C" s32 func_00443E60(void *arg0, s64 arg1);
+extern "C" s32 func_004441D8(void *arg0, s64 arg1);
 
 extern "C" s32 SPEC_DATABASE__RaceSpec__getRaceLabel(Obj *arg0) {
-    return func_00443E60(&D_006235A8, arg0->unk98);
+    return func_004441D8(&D_006235A8, arg0->unk98);
 }

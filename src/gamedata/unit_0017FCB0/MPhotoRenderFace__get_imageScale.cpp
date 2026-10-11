@@ -28,12 +28,12 @@ static inline f32 vcall_60(char *o) {
     VEntry_60 *e = (VEntry_60 *)((char *)((VObj_60 *)o)->vtbl + 0x60);
     return e->fn(o + e->delta);
 }
-extern "C" void * func_001978D0(void *);
-extern "C" void func_00197878(void *, s32);
-extern "C" void * func_002F9360(void *, f32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002F7B68(void *, s32);
+extern "C" void * func_001978F8(void *);
+extern "C" void func_001978A0(void *, s32);
+extern "C" void * func_002F94B8(void *, f32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002F7CC0(void *, s32);
 
 struct MPhotoRenderFace__get_imageScale_v_s0 {
     char pad0[0xFC];
@@ -49,27 +49,27 @@ extern "C" void MPhotoRenderFace__get_imageScale(s32 *arg0, void *arg1, s32 arg2
     s32 newVal;
     s32 oldVal;
     if (arg2 > 0) {
-        func_001978D0(buf0);
+        func_001978F8(buf0);
         v_s0 = buf0[0];
         t1 = vcall_60((char *)*(s32 *)arg3);
         ((struct MPhotoRenderFace__get_imageScale_v_s0 *)v_s0)->unkFC = t1;
-        func_00197878(buf0, 0x2);
+        func_001978A0(buf0, 0x2);
     } else {
         p_s1 = buf1;
-        func_001978D0(p_s1);
-        func_002F9360(buf0, *(f32 *)((char *)*p_s1 + 0xfc));
+        func_001978F8(p_s1);
+        func_002F94B8(buf0, *(f32 *)((char *)*p_s1 + 0xfc));
         if (arg0 != buf0) {
             newVal = buf0[0];
             if (newVal != 0) {
-                func_003285A8(newVal);
+                func_00328700(newVal);
             }
             oldVal = *arg0;
             if (oldVal != 0) {
-                func_003285F8(oldVal);
+                func_00328750(oldVal);
             }
             *arg0 = newVal;
         }
-        func_002F7B68(buf0, 0x2);
-        func_00197878(p_s1, 0x2);
+        func_002F7CC0(buf0, 0x2);
+        func_001978A0(p_s1, 0x2);
     }
 }

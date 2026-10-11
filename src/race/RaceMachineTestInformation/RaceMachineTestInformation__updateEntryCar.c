@@ -1,7 +1,7 @@
 #include "types.h"
 void *memcpy(void *, const void *, unsigned int);
 
-s32 func_004452F8(void *, s32);                 /* extern */
+s32 func_00445670(void *, s32);                 /* extern */
 
 struct RaceMachineTestInformation__virtual_12_temp_s2 {
     char pad0[0x178];
@@ -21,7 +21,7 @@ void RaceMachineTestInformation__updateEntryCar(s32 arg0, void *arg1) {
 
     temp_s2 = arg1 + 0x20;
     temp_s0 = ((struct RaceMachineTestInformation__virtual_12_arg1 *)arg1)->unk14;
-    func_004452F8(temp_s2, arg0 + 0x130);
+    func_00445670(temp_s2, arg0 + 0x130);
     temp_s2->unk178 = (s32) (temp_s0 + 0x100);
     ((struct RaceMachineTestInformation__virtual_12_arg1 *)arg1)->unk3444 = 0;
 }

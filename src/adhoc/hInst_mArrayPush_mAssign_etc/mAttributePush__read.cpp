@@ -25,16 +25,16 @@ struct S00659988 {
 extern Rep D_00659FA8;
 extern s32 D_00659FB4;
 extern "C" char * func_005C2560(Rep *);
-extern "C" void func_002FFA40(void *, void *);
+extern "C" void func_002FFB98(void *, void *);
 extern "C" s32 HSymID__GetID(void *);
 extern "C" struct S00659988 * func_005C11A8(void);
-extern "C" void func_00326798(void *, s32, s32, const char *);
+extern "C" void func_003268F0(void *, s32, s32, const char *);
 
 static inline void str_release(Str *s) {
     Rep *q = (Rep *)(s->p - 0x10);
     if (--q->ref == 0) {
         s32 size = q->cap + 0x10;
-        func_00326798(q, size, 4, func_005C11A8()->name);
+        func_003268F0(q, size, 4, func_005C11A8()->name);
     }
 }
 
@@ -56,7 +56,7 @@ extern "C" void mAttributePush__read(s32 *arg0, void *arg1) {
         }
         s0.p = d;
     }
-    func_002FFA40(arg1, &s0);
+    func_002FFB98(arg1, &s0);
     p_s0 = buf1;
     t1 = HSymID__GetID(&s0);
     *p_s0 = t1;

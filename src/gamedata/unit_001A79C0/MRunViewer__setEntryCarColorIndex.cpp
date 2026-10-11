@@ -22,11 +22,11 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void func_001A7780(void *);
-extern "C" void func_002FC8C8(void *, void *);
-extern "C" s32 func_002FE250(s32);
-extern "C" void func_002FC870(void *, s32);
-extern "C" void func_001A7728(void *, s32);
+extern "C" void func_001A77A8(void *);
+extern "C" void func_002FCA20(void *, void *);
+extern "C" s32 func_002FE3A8(s32);
+extern "C" void func_002FC9C8(void *, s32);
+extern "C" void func_001A7750(void *, s32);
 
 extern "C" void MRunViewer__setEntryCarColorIndex(s32 *arg0, void *arg1, s32 arg2, char **arg3) {
     s32 buf0[4];
@@ -38,17 +38,17 @@ extern "C" void MRunViewer__setEntryCarColorIndex(s32 *arg0, void *arg1, s32 arg
     s32 v_s0;
     s32 t1;
     if (arg2 >= 0x2) {
-        func_001A7780(buf0);
+        func_001A77A8(buf0);
         p_s2 = buf1;
-        func_002FC8C8(p_s2, arg3);
+        func_002FCA20(p_s2, arg3);
         p_s1 = buf2;
-        func_002FC8C8(p_s1, (char *)arg3 + 0x4);
+        func_002FCA20(p_s1, (char *)arg3 + 0x4);
         v_s3 = *(s32 *)((char *)buf0[0] + 0x10);
-        v_s0 = func_002FE250(*p_s2);
-        t1 = func_002FE250(*p_s1);
+        v_s0 = func_002FE3A8(*p_s2);
+        t1 = func_002FE3A8(*p_s1);
         *(s32 *)((char *)(((((v_s0 << 4) + v_s0) << 2) + v_s3)) + 0x40) = t1;
-        func_002FC870(p_s1, 0x2);
-        func_002FC870(p_s2, 0x2);
-        func_001A7728(buf0, 0x2);
+        func_002FC9C8(p_s1, 0x2);
+        func_002FC9C8(p_s2, 0x2);
+        func_001A7750(buf0, 0x2);
     }
 }

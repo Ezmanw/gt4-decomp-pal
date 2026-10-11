@@ -1,8 +1,8 @@
-extern "C" void func_002CE540(void *);
-extern "C" void func_002CE4E8(void *, int);
-extern "C" void func_002FC8C8(void *, void *);
-extern "C" void func_002FC870(void *, int);
-extern "C" int func_002FE250(int);
+extern "C" void func_002CE698(void *);
+extern "C" void func_002CE640(void *, int);
+extern "C" void func_002FCA20(void *, void *);
+extern "C" void func_002FC9C8(void *, int);
+extern "C" int func_002FE3A8(int);
 
 struct Target {
     char pad0[0x24];
@@ -25,11 +25,11 @@ extern "C" void MScriptWatcher__set_count(void *arg0, void *arg1, int count, voi
     if (count > 0) {
         A a;
         B b;
-        func_002CE540(&a);
-        func_002FC8C8(&b, name);
+        func_002CE698(&a);
+        func_002FCA20(&b, name);
         Target *t = a.p;
-        t->value = func_002FE250(get(&b));
-        func_002FC870(&b, 2);
-        func_002CE4E8(&a, 2);
+        t->value = func_002FE3A8(get(&b));
+        func_002FC9C8(&b, 2);
+        func_002CE640(&a, 2);
     }
 }

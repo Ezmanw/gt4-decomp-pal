@@ -1,9 +1,8 @@
 typedef int s32;
 
+extern "C" s32 func_003250F0(void);
 extern s32 mDatabase__ClassID_;
 
-extern "C" void mDatabase__InitClass(s32 arg0);
-
 extern "C" void func_001B4220(void) {
-    mDatabase__InitClass(mDatabase__ClassID_);
+    mDatabase__ClassID_ = func_003250F0();
 }

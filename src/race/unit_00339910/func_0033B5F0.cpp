@@ -1,12 +1,6 @@
-typedef int s32;
-typedef float f32;
+extern int func_0033B590(int, int);
 
-struct Obj {
-    char pad[0x8C];
-    s32 unk8C;
-};
-
-extern "C" f32 func_0033B5F0(Obj *arg0) {
-    char *p = (char *)arg0 + arg0->unk8C * 0x44;
-    return *(f32 *)(p + 0x3C);
+int func_0033B5F0(int arg) {
+    int b = 0;
+    return func_0033B590(arg, b);
 }

@@ -16,9 +16,9 @@ struct Arg3 {
     ObjA *obj;
 };
 
-extern "C" void func_001DC5F8(void *arg0, int arg1);
-extern "C" void func_001DC650(void *arg0, void *arg1);
-extern "C" void func_001F7208(s32 arg0, s32 arg1);
+extern "C" void func_001DC638(void *arg0, int arg1);
+extern "C" void func_001DC690(void *arg0, void *arg1);
+extern "C" void func_001F7248(s32 arg0, s32 arg1);
 
 extern "C" void MNetwork__raceMenuNotifyClientCount(s32 arg0, void *arg1, s32 arg2, Arg3 *arg3) {
     s32 buf[4];
@@ -30,8 +30,8 @@ extern "C" void MNetwork__raceMenuNotifyClientCount(s32 arg0, void *arg1, s32 ar
         obj = arg3->obj;
         entry = obj->vtbl + 11;
         result = entry->fn((char *)obj + entry->delta);
-        func_001DC650(buf, arg1);
-        func_001F7208(buf[0], result);
-        func_001DC5F8(buf, 2);
+        func_001DC690(buf, arg1);
+        func_001F7248(buf[0], result);
+        func_001DC638(buf, 2);
     }
 }

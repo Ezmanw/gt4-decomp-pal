@@ -1,8 +1,11 @@
 #include "types.h"
 void *memcpy(void *, const void *, unsigned int);
 
-f32 func_0044FC00();                                /* extern */
+struct func_0044FDE0_arg0 {
+    char pad0[0x6C];
+    f32 unk6C;
+};
 
-f32 func_0044FDE0(void) {
-    return func_0044FC00() * 0.9f;
+void func_0044FDE0(struct func_0044FDE0_arg0 *arg0, f32 fparg0) {
+    arg0->unk6C = fparg0;
 }

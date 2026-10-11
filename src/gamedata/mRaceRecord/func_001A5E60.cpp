@@ -1,5 +1,9 @@
-extern int mRaceRecord__ClassID_;
+typedef int s32;
 
-void func_001A5E60(void) {
-    mRaceRecord__ClassID_ = 0;
+extern s32 mRaceRecord__ClassID_;
+
+extern "C" void mRaceRecord__InitClass(s32 arg0);
+
+extern "C" void func_001A5E60(void) {
+    mRaceRecord__InitClass(mRaceRecord__ClassID_);
 }

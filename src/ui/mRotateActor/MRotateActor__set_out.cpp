@@ -1,8 +1,8 @@
-extern "C" void func_002CC920(void *);
-extern "C" void func_002CC8C8(void *, int);
-extern "C" void func_002FC8C8(void *, void *);
-extern "C" void func_002FC870(void *, int);
-extern "C" int func_002FE250(int);
+extern "C" void func_002CCA78(void *);
+extern "C" void func_002CCA20(void *, int);
+extern "C" void func_002FCA20(void *, void *);
+extern "C" void func_002FC9C8(void *, int);
+extern "C" int func_002FE3A8(int);
 
 struct Target {
     char pad0[0x2C];
@@ -21,14 +21,14 @@ extern "C" void MRotateActor__set_out(void *arg0, void *arg1, int count, void *n
 {
     A a;
     B b;
-    func_002CC920(&a);
+    func_002CCA78(&a);
     int v = 1;
     if (count > 0) {
-        func_002FC8C8(&b, name);
-        v = func_002FE250(get(&b)) != 0;
-        func_002FC870(&b, 2);
+        func_002FCA20(&b, name);
+        v = func_002FE3A8(get(&b)) != 0;
+        func_002FC9C8(&b, 2);
     }
     Target *t = a.p;
     t->value = v;
-    func_002CC8C8(&a, 2);
+    func_002CCA20(&a, 2);
 }

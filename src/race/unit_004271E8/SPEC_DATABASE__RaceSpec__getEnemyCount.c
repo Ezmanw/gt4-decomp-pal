@@ -3,14 +3,14 @@
 void *memcpy(void *, const void *, unsigned int);
 
 s32 SPEC_DATABASE__RaceSpec__loadEnemyInfo(void *, s64);
-struct func_004473B0_arg0 {
+struct func_00447728_arg0 {
     char pad0[0x98];
     s64 unk98;
     char padA0[0x8];
     s32 *unkA8;
 };
 
-s32 SPEC_DATABASE__RaceSpec__getEnemyCount(struct func_004473B0_arg0 *arg0) {
+s32 SPEC_DATABASE__RaceSpec__getEnemyCount(struct func_00447728_arg0 *arg0) {
     if (arg0->unkA8 == NULL) {
         if (SPEC_DATABASE__RaceSpec__loadEnemyInfo(arg0, arg0->unk98) != 0) {
             goto block_6;

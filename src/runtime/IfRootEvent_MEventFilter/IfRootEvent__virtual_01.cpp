@@ -20,11 +20,11 @@ struct Matcher {
 };
 
 extern "C" s32 mWidget__getRootWindow(s32);
-extern "C" s32 func_0028EA18(Obj *);
+extern "C" s32 func_0028EB70(Obj *);
 
 extern "C" s32 IfRootEvent__virtual_01(Matcher *self, Obj **ref) {
     s32 ok = 0;
-    s32 t = func_0028EA18(*ref);
+    s32 t = func_0028EB70(*ref);
     if (t != 0) {
         Obj *o = *ref;
         VEntry *e = (VEntry *)((char *)o->vtbl + 0x50);

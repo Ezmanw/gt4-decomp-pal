@@ -21,9 +21,9 @@ struct Out {
     s32 unk10;
 };
 
-extern "C" void func_0015AA68(void *arg0, int arg1);
-extern "C" void func_0015AAC0(void *arg0, void *arg1);
-extern "C" void func_004336D0(s32 arg0, s32 arg1);
+extern "C" void func_0015AA70(void *arg0, int arg1);
+extern "C" void func_0015AAC8(void *arg0, void *arg1);
+extern "C" void func_00433A48(s32 arg0, s32 arg1);
 
 extern "C" void MCourseRecordUnit__updateBestScore(s32 arg0, void *arg1, s32 arg2, Arg3 *arg3) {
     s32 buf[4];
@@ -36,9 +36,9 @@ extern "C" void MCourseRecordUnit__updateBestScore(s32 arg0, void *arg1, s32 arg
         obj = arg3->obj;
         entry = obj->vtbl + 11;
         result = entry->fn((char *)obj + entry->delta);
-        func_0015AAC0(buf, arg1);
+        func_0015AAC8(buf, arg1);
         outp = (Out *)buf[0];
-        func_004336D0(outp->unk10, result);
-        func_0015AA68(buf, 2);
+        func_00433A48(outp->unk10, result);
+        func_0015AA70(buf, 2);
     }
 }

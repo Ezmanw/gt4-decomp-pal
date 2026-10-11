@@ -87,15 +87,15 @@ typedef s64 M2C_UNK64;
 
 #endif
 
-M2C_UNK func_002030A0(void *);                      /* extern */
+M2C_UNK func_00203160(void *);                      /* extern */
 M2C_UNK mWidget__structor_0();                            /* extern */
 
 extern char mRaceCourseMapFace__vtable[];
 M2C_UNK mRaceCourseMapFace__structor_0(void *arg0) {
     mWidget__structor_0();
     M2C_FIELD(arg0, s32 *, 4) = (s32)mRaceCourseMapFace__vtable;
-    func_002030A0(arg0 + 0xA0);
-    func_002030A0(arg0 + 0xB0);
+    func_00203160(arg0 + 0xA0);
+    func_00203160(arg0 + 0xB0);
     M2C_FIELD(arg0, s32 *, 0xC0) = 1;
     M2C_FIELD(arg0, s32 *, 0xC4) = 1;
 }

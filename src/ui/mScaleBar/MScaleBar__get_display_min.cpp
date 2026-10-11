@@ -28,14 +28,14 @@ static inline f32 vcall_60(char *o) {
     VEntry_60 *e = (VEntry_60 *)((char *)((VObj_60 *)o)->vtbl + 0x60);
     return e->fn(o + e->delta);
 }
-extern "C" void * func_002366D8(void *);
-extern "C" void * func_002F9360(void *, f32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002F7B68(void *, s32);
-extern "C" void func_00236680(void *, s32);
+extern "C" void * func_00236830(void *);
+extern "C" void * func_002F94B8(void *, f32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002F7CC0(void *, s32);
+extern "C" void func_002367D8(void *, s32);
 
-struct func_00237038_v_s0 {
+struct func_00237190_v_s0 {
     char pad0[0xD0];
     f32 unkD0;
 };
@@ -50,28 +50,28 @@ extern "C" void MScaleBar__get_display_min(s32 *arg0, void *arg1, s32 arg2, char
     f32 t1;
     if (arg2 == 0) {
         p_s2 = buf1;
-        func_002366D8(p_s2);
-        func_002F9360(buf0, *(f32 *)((char *)(*p_s2) + 0xd0));
+        func_00236830(p_s2);
+        func_002F94B8(buf0, *(f32 *)((char *)(*p_s2) + 0xd0));
         if (arg0 != buf0) {
             newVal = buf0[0];
             if (newVal != 0) {
-                func_003285A8(newVal);
+                func_00328700(newVal);
             }
             oldVal = *arg0;
             if (oldVal != 0) {
-                func_003285F8(oldVal);
+                func_00328750(oldVal);
             }
             *arg0 = newVal;
         }
-        func_002F7B68(buf0, 0x2);
-        func_00236680(p_s2, 0x2);
+        func_002F7CC0(buf0, 0x2);
+        func_002367D8(p_s2, 0x2);
     } else {
         if (arg2 == 1) {
-            func_002366D8(buf0);
+            func_00236830(buf0);
             v_s0 = buf0[0];
             t1 = vcall_60((char *)(*(s32 *)(char *)arg3));
-            ((struct func_00237038_v_s0 *)v_s0)->unkD0 = t1;
-            func_00236680(buf0, 0x2);
+            ((struct func_00237190_v_s0 *)v_s0)->unkD0 = t1;
+            func_002367D8(buf0, 0x2);
         }
     }
 }

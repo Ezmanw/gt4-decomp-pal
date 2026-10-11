@@ -22,12 +22,12 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void func_001978D0(void *);
-extern "C" void func_002FC8C8(void *, void *);
-extern "C" s32 func_002FE250(s32);
-extern "C" void func_0019A8A8(s32, s32);
-extern "C" void func_002FC870(void *, s32);
-extern "C" void func_00197878(void *, s32);
+extern "C" void func_001978F8(void *);
+extern "C" void func_002FCA20(void *, void *);
+extern "C" s32 func_002FE3A8(s32);
+extern "C" void func_0019A8D0(s32, s32);
+extern "C" void func_002FC9C8(void *, s32);
+extern "C" void func_001978A0(void *, s32);
 
 extern "C" void MPhotoRenderFace__setHighQuality(s32 *arg0, void *arg1, s32 arg2, char **arg3) {
     s32 buf0[4];
@@ -35,11 +35,11 @@ extern "C" void MPhotoRenderFace__setHighQuality(s32 *arg0, void *arg1, s32 arg2
     s32 buf2[4];
     s32 *p_s1;
     s32 v_s0;
-    func_001978D0(buf0);
+    func_001978F8(buf0);
     p_s1 = buf2;
     v_s0 = buf0[0];
-    func_002FC8C8(p_s1, arg3);
-    func_0019A8A8(v_s0, func_002FE250(*p_s1) != 0);
-    func_002FC870(p_s1, 0x2);
-    func_00197878(buf0, 0x2);
+    func_002FCA20(p_s1, arg3);
+    func_0019A8D0(v_s0, func_002FE3A8(*p_s1) != 0);
+    func_002FC9C8(p_s1, 0x2);
+    func_001978A0(buf0, 0x2);
 }

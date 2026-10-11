@@ -3,11 +3,11 @@ struct Obj {
     unsigned char flag;
 };
 
-extern "C" void func_00444440(Obj *o, long a);
-extern "C" void func_00445880(Obj *o, int b);
+extern "C" void func_004447B8(Obj *o, long a);
+extern "C" void func_00445BF8(Obj *o, int b);
 
 extern "C" void RacePlayerSpec__createEquipments(Obj *o, long a, int b, int flag) {
-    func_00444440(o, a);
-    func_00445880(o, b);
+    func_004447B8(o, a);
+    func_00445BF8(o, b);
     o->flag = flag;
 }

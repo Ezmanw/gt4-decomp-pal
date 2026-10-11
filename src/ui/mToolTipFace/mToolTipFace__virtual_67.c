@@ -2,7 +2,7 @@
 #include "gt4/mToolTipFace.h"
 void *memcpy(void *, const void *, unsigned int);
 
-s32 func_00249FB8(void *);                      /* extern */
+s32 func_0024A110(void *);                      /* extern */
 s32 mTextFace__virtual_67();                            /* extern */
 
 struct mToolTipFace__virtual_67_arg1_unk10 {
@@ -16,6 +16,6 @@ struct mToolTipFace__virtual_67_arg1 {
 
 void mToolTipFace__virtual_67(struct mToolTipFace *arg0, struct mToolTipFace__virtual_67_arg1 *arg1) {
     mTextFace__virtual_67();
-    func_00249FB8(arg0);
+    func_0024A110(arg0);
     arg0->unk110 = (s32) (arg1->unk10->unkA6 < 4);
 }

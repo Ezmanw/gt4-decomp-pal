@@ -22,12 +22,12 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void func_00255110(void *);
-extern "C" void func_00314B20(void *, s32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_00312318(void *, s32);
-extern "C" void func_002550B8(void *, s32);
+extern "C" void func_00255268(void *);
+extern "C" void func_00314C78(void *, s32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_00312470(void *, s32);
+extern "C" void func_00255210(void *, s32);
 
 extern "C" void MWidget__get_tooltip_key(s32 *arg0) {
     s32 buf0[4];
@@ -36,19 +36,19 @@ extern "C" void MWidget__get_tooltip_key(s32 *arg0) {
     s32 newVal;
     s32 oldVal;
     p_s2 = buf1;
-    func_00255110(p_s2);
-    func_00314B20(buf0, *p_s2 + 0x8c);
+    func_00255268(p_s2);
+    func_00314C78(buf0, *p_s2 + 0x8c);
     if (arg0 != buf0) {
         newVal = buf0[0];
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *arg0;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *arg0 = newVal;
     }
-    func_00312318(buf0, 0x2);
-    func_002550B8(p_s2, 0x2);
+    func_00312470(buf0, 0x2);
+    func_00255210(p_s2, 0x2);
 }

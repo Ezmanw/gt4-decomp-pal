@@ -4,14 +4,14 @@
 void *memcpy(void *, const void *, unsigned int);
 
 s32 mWidget__setRotate(s32, f32);                    /* extern */
-s32 func_002CDB30();                            /* extern */
-s32 func_002CDBE8();                            /* extern */
+s32 func_002CDC88();                            /* extern */
+s32 func_002CDD40();                            /* extern */
 
 void mRotateActor__update(void *arg0) {
     if (((struct mRotateActor *)arg0)->unk34 != 0) {
-        func_002CDB30();
+        func_002CDC88();
     } else {
-        func_002CDBE8();
+        func_002CDD40();
     }
     mWidget__setRotate(((struct mRotateActor *)arg0)->unk14, ((struct mRotateActor *)arg0)->unk20);
 }

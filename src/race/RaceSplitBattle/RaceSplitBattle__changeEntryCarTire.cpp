@@ -36,15 +36,15 @@ struct Buf {
     s32 w[8];
 };
 
-extern "C" s32 func_004454C0(Sub *arg0);
-extern "C" s32 func_004462E0(Sub *arg0);
-extern "C" s32 func_00446320(Sub *arg0);
-extern "C" void func_004468F8(Sub *arg0, s32 arg1);
+extern "C" s32 func_00445838(Sub *arg0);
+extern "C" s32 func_00446658(Sub *arg0);
+extern "C" s32 func_00446698(Sub *arg0);
+extern "C" void func_00446C70(Sub *arg0, s32 arg1);
 extern "C" s32 SPEC_DATABASE__RaceSpec__getCourseType(s32 arg0);
-extern "C" void func_00449D58(Buf *arg0);
-extern "C" void func_00449D78(Buf *arg0, int arg1);
-extern "C" s32 func_00449E10(Buf *arg0, s32 arg1);
-extern "C" s32 func_0044A048(Buf *arg0, s32 arg1, s32 arg2);
+extern "C" void func_0044A0D0(Buf *arg0);
+extern "C" void func_0044A0F0(Buf *arg0, int arg1);
+extern "C" s32 func_0044A188(Buf *arg0, s32 arg1);
+extern "C" s32 func_0044A3C0(Buf *arg0, s32 arg1, s32 arg2);
 
 extern "C" void RaceSplitBattle__changeEntryCarTire(Self *self) {
     Mgr *mgr = self->mgr;
@@ -62,7 +62,7 @@ extern "C" void RaceSplitBattle__changeEntryCarTire(Self *self) {
         break;
     }
     count = mgr->list->count;
-    func_00449D58(&buf);
+    func_0044A0D0(&buf);
     for (i = 0; i < count; i++) {
         Sub *sub = &mgr->list->items[i]->sub;
         s32 c1;
@@ -73,8 +73,8 @@ extern "C" void RaceSplitBattle__changeEntryCarTire(Self *self) {
             c1 = sub->c1;
             c2 = sub->c2;
         } else {
-            c1 = func_004462E0(sub);
-            c2 = func_00446320(sub);
+            c1 = func_00446658(sub);
+            c2 = func_00446698(sub);
         }
         if (mode == -1) {
             t1 = c1;
@@ -84,17 +84,17 @@ extern "C" void RaceSplitBattle__changeEntryCarTire(Self *self) {
         }
         if (c1 != t1 || c2 != t2 || sub->dirty) {
             sub->dirty = 0;
-            if (func_00449E10(&buf, func_004454C0(sub)) != 0) {
-                s32 r = func_0044A048(&buf, 0x19, t1);
+            if (func_0044A188(&buf, func_00445838(sub)) != 0) {
+                s32 r = func_0044A3C0(&buf, 0x19, t1);
                 if (r != -1) {
-                    func_004468F8(sub, r);
+                    func_00446C70(sub, r);
                 }
-                r = func_0044A048(&buf, 0x1A, t2);
+                r = func_0044A3C0(&buf, 0x1A, t2);
                 if (r != -1) {
-                    func_004468F8(sub, r);
+                    func_00446C70(sub, r);
                 }
             }
         }
     }
-    func_00449D78(&buf, 2);
+    func_0044A0F0(&buf, 2);
 }

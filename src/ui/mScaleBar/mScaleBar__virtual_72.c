@@ -3,10 +3,10 @@
 #define NULL 0
 void *memcpy(void *, const void *, unsigned int);
 
-s32 func_00238A10(void *, s32);                 /* extern */
-s32 func_00238A70(void *, s32);                             /* extern */
-s32 func_00238B28(void *, s32);                     /* extern */
-s32 func_00238FF0(void *, f32);                 /* extern */
+s32 func_00238B68(void *, s32);                 /* extern */
+s32 func_00238BC8(void *, s32);                             /* extern */
+s32 func_00238C80(void *, s32);                     /* extern */
+s32 func_00239148(void *, f32);                 /* extern */
 s32 mWidget__onKeyRelease(void *, s32, void *);         /* extern */
 
 struct mScaleBar__virtual_72_arg2 {
@@ -17,9 +17,9 @@ void mScaleBar__virtual_72(struct mScaleBar *arg0, s32 arg1, struct mScaleBar__v
     s32 temp_s0;
 
     temp_s0 = arg2->unk20;
-    if ((func_00238A70(arg0, temp_s0) != 0) || (func_00238B28(arg0, temp_s0) != 0)) {
-        func_00238FF0(arg0, arg0->unkC4);
-        func_00238A10(arg0, arg1);
+    if ((func_00238BC8(arg0, temp_s0) != 0) || (func_00238C80(arg0, temp_s0) != 0)) {
+        func_00239148(arg0, arg0->unkC4);
+        func_00238B68(arg0, arg1);
     }
     mWidget__onKeyRelease(arg0, arg1, arg2);
 }

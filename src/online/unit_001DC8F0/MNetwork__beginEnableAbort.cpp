@@ -10,15 +10,15 @@ struct Target001DD348 {
     s32 unk14;
 };
 
-extern "C" void func_001DC650(struct Buf001DD348 *arg0);
-extern "C" void func_001DC5F8(struct Buf001DD348 *arg0, int arg1);
+extern "C" void func_001DC690(struct Buf001DD348 *arg0);
+extern "C" void func_001DC638(struct Buf001DD348 *arg0, int arg1);
 
 extern "C" void MNetwork__beginEnableAbort(void) {
     struct Buf001DD348 buf;
     struct Target001DD348 *p;
 
-    func_001DC650(&buf);
+    func_001DC690(&buf);
     p = (struct Target001DD348 *)buf.unk0;
     p->unk14 = 1;
-    func_001DC5F8(&buf, 2);
+    func_001DC638(&buf, 2);
 }

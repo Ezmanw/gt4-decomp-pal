@@ -1,40 +1,40 @@
-typedef int s32;
-typedef unsigned int u32;
+typedef unsigned int size_t;
+inline void *operator new(size_t, void *p) throw() { return p; }
 
-struct Val { s32 type; s32 v; };
-extern "C" void func_004768C0(Val *);
-extern "C" void func_00476768(Val *, const Val *);
+struct Pair { int x; int y; };
+struct Elem { int value; Pair pos; };
 
-struct Entry { const char *name; s32 type; };
-extern "C" Entry *func_006061E0(const char *key, Entry *table, s32 count);
-extern Entry D_006244F0[];
-extern char D_006AD5A8[];
+struct Vec;
+extern "C" void func_00605BE0(Vec *v, Elem *pos, const Elem &x);
 
-struct String {
-    struct Rep { u32 len, res, ref, selfish; char *data() { return (char *)(this + 1); } };
-    char *dat;
-    Rep *rep() const { return (Rep *)dat - 1; }
-    u32 length() const { return rep()->len; }
-    const char *data() const { return dat; }
-    void terminate() const { rep()->data()[length()] = 0; }
-    const char *c_str() const { if (length() == 0) return D_006AD5A8; terminate(); return data(); }
+struct Vec {
+    Elem *start;
+    Elem *finish;
+    Elem *eos;
+    void push_back(const Elem &x) {
+        if (finish != eos) {
+            new (finish) Elem(x);
+            ++finish;
+        } else {
+            func_00605BE0(this, finish, x);
+        }
+    }
 };
 
-extern "C" Val *func_00476698(Val *ret, const String &name, char *base) {
-    Val tmp;
-    Entry *e;
-    tmp.type = 1;
-    e = func_006061E0(name.c_str(), D_006244F0, 16);
-    if (e) {
-        s32 type = e->type;
-        func_004768C0(&tmp);
-        tmp.type = type;
-        if (e->type == 9)
-            tmp.v = (s32)(base + 0x40);
-    } else {
-        func_004768C0(&tmp);
+struct Src { char pad0[0x64]; int base; };
+struct Obj {
+    Src *src;
+    char pad4[0x48];
+    Pair pos;
+    char pad54[0x12C];
+    Vec list;
+};
+
+extern "C" void func_00476698(Obj *o, int k) {
+    if (o->src == 0) {
+        Elem e;
+        e.value = o->src->base + k;
+        e.pos = o->pos;
+        o->list.push_back(e);
     }
-    func_00476768(ret, &tmp);
-    func_004768C0(&tmp);
-    return ret;
 }

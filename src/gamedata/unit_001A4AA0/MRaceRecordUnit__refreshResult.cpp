@@ -10,16 +10,16 @@ struct Buf00109C40 {
     char pad4[0xC];
 };
 
-extern "C" s32 func_001A4860(struct Buf00109C40 *arg0);
-extern "C" void func_00430A10(s32 arg0);
-extern "C" void func_001A4808(struct Buf00109C40 *arg0, s32 arg1);
+extern "C" s32 func_001A4888(struct Buf00109C40 *arg0);
+extern "C" void func_00430D88(s32 arg0);
+extern "C" void func_001A4830(struct Buf00109C40 *arg0, s32 arg1);
 
 extern "C" void MRaceRecordUnit__refreshResult(void) {
     struct Buf00109C40 buf;
     struct Inner *p;
 
-    func_001A4860(&buf);
+    func_001A4888(&buf);
     p = buf.ptr;
-    func_00430A10(p->unk10);
-    func_001A4808(&buf, 2);
+    func_00430D88(p->unk10);
+    func_001A4830(&buf, 2);
 }

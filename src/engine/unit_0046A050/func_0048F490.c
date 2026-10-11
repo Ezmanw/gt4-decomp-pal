@@ -1,25 +1,20 @@
 #include "types.h"
+#define NULL 0
 void *memcpy(void *, const void *, unsigned int);
 
-s32 func_0048F0B8(s32);                             /* extern */
-s32 func_0048F1D8(s32);                             /* extern */
-
+void *func_005A3008(s32, void *, s32, s32, void *);
+void func_0048F478();
 struct func_0048F490_arg0 {
-    s32 unk0;
+    char pad0[0xC];
+    s32 unkC;
+};
+struct func_0048F490_r {
+    char pad0[0x4];
     s32 unk4;
 };
 
-s32 func_0048F490(struct func_0048F490_arg0 *arg0) {
-    s32 temp_v0;
-    s32 temp_v0_2;
-
-    temp_v0_2 = arg0->unk0;
-    if (temp_v0_2 != 0) {
-        return func_0048F0B8(temp_v0_2);
-    }
-    temp_v0 = arg0->unk4;
-    if (temp_v0 != 0) {
-        return func_0048F1D8(temp_v0);
-    }
+s32 func_0048F490(void *arg0, s32 arg1) {
+    void *r = func_005A3008(arg1, (s8 *)arg0 + 0x10, ((struct func_0048F490_arg0 *)arg0)->unkC, 8, (void *)func_0048F478);
+    if (r != 0) return ((struct func_0048F490_r *)r)->unk4;
     return 0;
 }

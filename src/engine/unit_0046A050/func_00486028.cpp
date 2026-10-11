@@ -1,12 +1,9 @@
-struct Obj {
-    void *data;
-};
+extern "C" void func_004862C0();
+extern "C" void func_005C1628(void *arg0);
 
-extern "C" int func_00485F48(Obj *o, void *key);
-extern "C" int func_00485FF0(Obj *o, int index, void *value);
-
-extern "C" int func_00486028(Obj *o, void *key, void *value) {
-    if (o->data == 0)
-        return 0;
-    return func_00485FF0(o, func_00485F48(o, key), value);
+extern "C" void func_00486028(void *arg0, int arg1) {
+    func_004862C0();
+    if (arg1 & 1) {
+        return func_005C1628(arg0);
+    }
 }

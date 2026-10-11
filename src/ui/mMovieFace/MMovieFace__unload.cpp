@@ -5,14 +5,14 @@ struct Buf00109C40 {
     char pad4[0xC];
 };
 
-extern "C" void func_0021D9D0(struct Buf00109C40 *arg0);
-extern "C" void func_0021FE08(s32 arg0);
-extern "C" void func_0021D978(struct Buf00109C40 *arg0, s32 arg1);
+extern "C" void func_0021DB28(struct Buf00109C40 *arg0);
+extern "C" void func_0021FF60(s32 arg0);
+extern "C" void func_0021DAD0(struct Buf00109C40 *arg0, s32 arg1);
 
 extern "C" void MMovieFace__unload(void) {
     struct Buf00109C40 buf;
 
-    func_0021D9D0(&buf);
-    func_0021FE08(buf.unk0);
-    func_0021D978(&buf, 2);
+    func_0021DB28(&buf);
+    func_0021FF60(buf.unk0);
+    func_0021DAD0(&buf, 2);
 }

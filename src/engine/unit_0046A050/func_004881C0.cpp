@@ -1,10 +1,15 @@
-typedef int s32;
+struct Quat { float x, y, z, w; };
+extern "C" void func_0057D8A0(float a, float *s, float *c);
 
-extern "C" void func_004880E8(void *arg0);
-extern "C" void func_0048D510(void *arg0, void *arg1);
-
-extern "C" void func_004881C0(void *arg0) {
-    char buf[0x10];
-    func_004880E8(buf);
-    func_0048D510(arg0, buf);
+extern "C" void func_004881C0(Quat *q, float x, float y)
+{
+    float s1, c1, s2, c2;
+    float hx = x * 0.5f;
+    float hy = y * 0.5f;
+    func_0057D8A0(hx, &s1, &c1);
+    func_0057D8A0(hy, &s2, &c2);
+    q->x = -(s1 * s2);
+    q->y = s1 * c2;
+    q->z = c1 * s2;
+    q->w = c1 * c2;
 }

@@ -10,7 +10,7 @@ typedef unsigned int u32;
 struct Heap { const char *name; };
 
 extern "C" Heap *func_005C11A8(void);
-extern "C" void func_00326798(void *ptr, int size, int align, const char *name);
+extern "C" void func_003268F0(void *ptr, int size, int align, const char *name);
 extern "C" u32 func_0057F260(const char *s);
 
 struct Rep {
@@ -21,7 +21,7 @@ struct Rep {
     char *data() { return (char *)(this + 1); }
     char &operator[](u32 s) { return data()[s]; }
     inline char *grab();
-    static void operator delete(void *p, u32 n) { func_00326798(p, n, 4, func_005C11A8()->name); }
+    static void operator delete(void *p, u32 n) { func_003268F0(p, n, 4, func_005C11A8()->name); }
     void release() {
         if (--ref == 0)
             operator delete(this, sizeof(Rep) + res);

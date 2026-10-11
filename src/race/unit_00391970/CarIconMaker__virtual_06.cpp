@@ -5,7 +5,7 @@ struct Obj {
     s32 count;
 };
 
-extern "C" void func_00393B00(Obj *);
+extern "C" void func_00393DF8(Obj *);
 
 static inline s32 bump(s32 *p) {
     return (*p)++;
@@ -14,6 +14,6 @@ static inline s32 bump(s32 *p) {
 extern "C" void CarIconMaker__virtual_06(Obj *self) {
     if (self->count != 0) {
         if (bump(&self->count) >= 2)
-            func_00393B00(self);
+            func_00393DF8(self);
     }
 }

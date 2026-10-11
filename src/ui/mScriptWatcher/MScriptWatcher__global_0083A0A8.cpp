@@ -22,13 +22,13 @@ struct S00659988 {
     const char *name;
 };
 
-extern "C" void func_002CE540(void *);
-extern "C" void func_0022AD20(void *, void *);
-extern "C" void func_002F9B90(void *, void *);
-extern "C" void func_002CEB20(s32, void *);
-extern "C" void func_002F9B38(void *, s32);
-extern "C" void func_0022ACC8(void *, s32);
-extern "C" void func_002CE4E8(void *, s32);
+extern "C" void func_002CE698(void *);
+extern "C" void func_0022AE78(void *, void *);
+extern "C" void func_002F9CE8(void *, void *);
+extern "C" void func_002CEC78(s32, void *);
+extern "C" void func_002F9C90(void *, s32);
+extern "C" void func_0022AE20(void *, s32);
+extern "C" void func_002CE640(void *, s32);
 
 extern "C" void MScriptWatcher__global_0083A0A8(s32 *arg0, void *arg1, s32 arg2, char **arg3) {
     s32 buf0[4];
@@ -37,15 +37,15 @@ extern "C" void MScriptWatcher__global_0083A0A8(s32 *arg0, void *arg1, s32 arg2,
     s32 *p_s1;
     s32 *p_s0;
     if (arg2 >= 0x2) {
-        func_002CE540(buf0);
+        func_002CE698(buf0);
         p_s1 = buf1;
-        func_0022AD20(p_s1, arg3);
+        func_0022AE78(p_s1, arg3);
         p_s0 = buf2;
         *(s32 *)((char *)buf0[0] + 0x1c) = *p_s1;
-        func_002F9B90(p_s0, (char *)arg3 + 0x4);
-        func_002CEB20(buf0[0], p_s0);
-        func_002F9B38(p_s0, 0x2);
-        func_0022ACC8(p_s1, 0x2);
-        func_002CE4E8(buf0, 0x2);
+        func_002F9CE8(p_s0, (char *)arg3 + 0x4);
+        func_002CEC78(buf0[0], p_s0);
+        func_002F9C90(p_s0, 0x2);
+        func_0022AE20(p_s1, 0x2);
+        func_002CE640(buf0, 0x2);
     }
 }

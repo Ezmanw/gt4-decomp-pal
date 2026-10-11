@@ -16,9 +16,9 @@ struct Arg3 {
     ObjA *obj;
 };
 
-extern "C" void func_002ED618(s32 *buf);
-extern "C" void func_002EF9C8(s32 arg0, s32 arg1);
-extern "C" void func_002ED5C0(s32 *buf, s32 arg1);
+extern "C" void func_002ED770(s32 *buf);
+extern "C" void func_002EFB20(s32 arg0, s32 arg1);
+extern "C" void func_002ED718(s32 *buf, s32 arg1);
 
 extern "C" void adhoc__global_0083C788(s32 arg0, s32 arg1, s32 arg2, Arg3 *arg3) {
     s32 buf[4];
@@ -28,12 +28,12 @@ extern "C" void adhoc__global_0083C788(s32 arg0, s32 arg1, s32 arg2, Arg3 *arg3)
     s32 result;
 
     if (arg2 == 1) {
-        func_002ED618(buf);
+        func_002ED770(buf);
         s0 = buf[0];
         obj = arg3->obj;
         entry = obj->vtbl + 11;
         result = entry->fn((char *)obj + entry->delta);
-        func_002EF9C8(s0, result);
-        func_002ED5C0(buf, 2);
+        func_002EFB20(s0, result);
+        func_002ED718(buf, 2);
     }
 }

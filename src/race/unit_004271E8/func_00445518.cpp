@@ -1,31 +1,37 @@
 typedef int s32;
-typedef short s16;
 typedef long long s64;
 typedef signed char s8;
 typedef unsigned char u8;
-typedef unsigned short u16;
-typedef float f32;
-
-/* the record SPEC_DATABASE__DatabaseStorage__getRow fills for an id */
-struct Info {
-    char pad0[0x18];
-    u16 f18;
-    char pad1A[0x66];
-};
 
 struct Global;
-
-struct Obj {
-    char pad0[0x38];
-    s64 id;
-};
-
 extern Global D_006235A8;
 
-extern "C" void SPEC_DATABASE__DatabaseStorage__getRow(Global *g, s64 id, Info *info);
+struct Info {
+    char pad0[0x6];
+    u8 f6;
+    char pad7[0x2];
+    u8 f9;
+    char padA[0x6];
+};
+
+struct Obj {
+    char pad0[0xE8];
+    s64 id;
+    char padF0[0x66];
+    u8 f156;
+};
+
+extern "C" s32 SPEC_DATABASE__DatabaseStorage__IsExistID(Global *g, s64 id);
+extern "C" s32 SPEC_DATABASE__DatabaseStorage__getRow(Global *g, s64 id, Info *info);
+extern "C" u8 func_00445620(Obj *self, s32 a, s32 b, s32 c);
 
 extern "C" s32 func_00445518(Obj *self) {
+    s64 id = self->id;
+    if (SPEC_DATABASE__DatabaseStorage__IsExistID(&D_006235A8, id) == 0) {
+        return 0;
+    }
     Info info;
-    SPEC_DATABASE__DatabaseStorage__getRow(&D_006235A8, self->id, &info);
-    return info.f18;
+    SPEC_DATABASE__DatabaseStorage__getRow(&D_006235A8, id, &info);
+    self->f156 = func_00445620(self, 1, info.f9, info.f6);
+    return 1;
 }

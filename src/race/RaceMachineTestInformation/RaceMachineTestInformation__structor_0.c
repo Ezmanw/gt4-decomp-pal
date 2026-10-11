@@ -4,12 +4,12 @@
 void *memcpy(void *, const void *, unsigned int);
 
 s32 RaceInformation__structor_0();                            /* extern */
-s32 func_003D6268(s32);                         /* extern */
+s32 func_003D6578(s32);                         /* extern */
 
 extern char RaceMachineTestInformation__vtable[];
 s32 RaceMachineTestInformation__structor_0(void *arg0) {
     RaceInformation__structor_0();
     ((struct RaceMachineTestInformation *)arg0)->unk12C = (s32)RaceMachineTestInformation__vtable;
-    func_003D6268(arg0 + 0x130);
+    func_003D6578(arg0 + 0x130);
     ((struct RaceMachineTestInformation *)arg0)->unk118 = 2;
 }

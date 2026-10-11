@@ -1,11 +1,7 @@
 typedef int s32;
-typedef short s16;
-typedef float f32;
 
-struct Inner { char pad[0x1648]; s16 unk1648; };
+extern s32 func_003F8018(s32 a);
 
-struct Outer { Inner *ptr; };
-
-extern "C" f32 func_00364F90(Outer *arg0) {
-    return (f32)arg0->ptr->unk1648;
+s32 func_00364F90(s32 *arg0) {
+    return func_003F8018(*arg0 + 0x600);
 }

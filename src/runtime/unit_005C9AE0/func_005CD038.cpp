@@ -5,8 +5,8 @@ struct S005CD038 {
     s32 unk10;
 };
 
-extern "C" void func_00438CF8(s32 arg0);
+extern "C" void func_00439070(s32 arg0);
 
 extern "C" void func_005CD038(struct S005CD038 *arg0) {
-    func_00438CF8(arg0->unk10 + 0x1344);
+    func_00439070(arg0->unk10 + 0x1344);
 }

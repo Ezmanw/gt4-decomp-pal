@@ -1,8 +1,8 @@
-extern "C" void func_00248C48(void *);
-extern "C" void func_00248BF0(void *, int);
-extern "C" void func_002FC8C8(void *, void *);
-extern "C" void func_002FC870(void *, int);
-extern "C" int func_002FE250(int);
+extern "C" void func_00248DA0(void *);
+extern "C" void func_00248D48(void *, int);
+extern "C" void func_002FCA20(void *, void *);
+extern "C" void func_002FC9C8(void *, int);
+extern "C" int func_002FE3A8(int);
 
 struct Target {
     char pad0[0x108];
@@ -24,10 +24,10 @@ extern "C" void MToolTipFace__set_lock(void *arg0, void *arg1, int count, void *
 {
     A a;
     B b;
-    func_00248C48(&a);
+    func_00248DA0(&a);
     Target *t = a.p;
-    func_002FC8C8(&b, name);
-    t->value = func_002FE250(get(&b)) != 0;
-    func_002FC870(&b, 2);
-    func_00248BF0(&a, 2);
+    func_002FCA20(&b, name);
+    t->value = func_002FE3A8(get(&b)) != 0;
+    func_002FC9C8(&b, 2);
+    func_00248D48(&a, 2);
 }

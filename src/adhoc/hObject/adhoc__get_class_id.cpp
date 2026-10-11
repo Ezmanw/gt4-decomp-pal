@@ -28,10 +28,10 @@ static inline s32 vcall_50(char *o) {
     VEntry_50 *e = (VEntry_50 *)((char *)((VObj_50 *)o)->vtbl + 0x50);
     return e->fn(o + e->delta);
 }
-extern "C" void func_002F29D8(void *, void *);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002F2A08(void *, s32);
+extern "C" void func_002F2B30(void *, void *);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002F2B60(void *, s32);
 
 extern "C" void adhoc__get_class_id(s32 *arg0, void *arg1) {
     s32 buf0[4];
@@ -43,17 +43,17 @@ extern "C" void adhoc__get_class_id(s32 *arg0, void *arg1) {
     p_s0 = buf1;
     t1 = vcall_50((char *)(*(s32 *)(char *)arg1));
     buf1[0] = t1;
-    func_002F29D8(buf0, p_s0);
+    func_002F2B30(buf0, p_s0);
     if (arg0 != buf0) {
         newVal = buf0[0];
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         oldVal = *arg0;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *arg0 = newVal;
     }
-    func_002F2A08(buf0, 0x2);
+    func_002F2B60(buf0, 0x2);
 }

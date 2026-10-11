@@ -13,12 +13,12 @@ struct Obj002BA278 {
     f32 unk28;
 };
 
-extern "C" void func_0025B538(struct C *c, f32 fparg0, f32 fparg1, f32 fparg2, f32 fparg3);
+extern "C" void func_0025B690(struct C *c, f32 fparg0, f32 fparg1, f32 fparg2, f32 fparg3);
 
 extern "C" void mMagnifyActor__rewind(struct Obj002BA278 *arg0) {
     struct C *temp_v0 = arg0->unk14;
 
     if (temp_v0 != 0) {
-        func_0025B538(temp_v0, arg0->unk1C, arg0->unk20, arg0->unk24, arg0->unk28);
+        func_0025B690(temp_v0, arg0->unk1C, arg0->unk20, arg0->unk24, arg0->unk28);
     }
 }

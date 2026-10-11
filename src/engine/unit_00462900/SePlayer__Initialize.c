@@ -3,7 +3,7 @@ void *memcpy(void *, const void *, unsigned int);
 
 s32 SeParam__operator_assign();                            /* extern */
 
-struct func_004629E8_arg0 {
+struct func_00462DC0_arg0 {
     s32 unk0;
     s32 unk4;
     s32 unk8;
@@ -14,7 +14,7 @@ struct func_004629E8_arg0 {
     s32 unk1C;
 };
 
-void SePlayer__Initialize(struct func_004629E8_arg0 *arg0, s32 arg1, s32 arg2) {
+void SePlayer__Initialize(struct func_00462DC0_arg0 *arg0, s32 arg1, s32 arg2) {
     arg0->unk10 = arg2;
     arg0->unk18 = 0;
     arg0->unk14 = 0;

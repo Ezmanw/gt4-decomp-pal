@@ -1,0 +1,16 @@
+#include "types.h"
+#define NULL 0
+void *memcpy(void *, const void *, unsigned int);
+
+s32 func_001F1370();                                /* extern */
+s32 func_005A609C(s32, s32);                    /* extern */
+
+struct func_001DCA68_arg0 {
+    char pad0[0x30];
+    s32 unk30;
+};
+
+void func_001DCA68(void *arg0, s32 arg1, s32 arg2) {
+    func_005A609C(arg0 + 0x20, func_001F1370());
+    ((struct func_001DCA68_arg0 *)arg0)->unk30 = arg2;
+}

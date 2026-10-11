@@ -1,6 +1,7 @@
-extern float D_006207AC;
+typedef float f32;
 
-float func_0040D090(void)
-{
-    return D_006207AC;
+struct Obj_0040CD10 { char pad[0x56C]; f32 unk56C; };
+
+extern "C" f32 func_0040D090(Obj_0040CD10 *arg0) {
+    return arg0->unk56C;
 }

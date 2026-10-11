@@ -5,10 +5,10 @@ static inline float vcall_60(char *o) {
     VEntry_60 *e = (VEntry_60 *)((char *)((VObj_60 *)o)->vtbl + 0x60);
     return e->fn(o + e->delta);
 }
-extern "C" void func_002FE278(void *, s32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002FC870(void *, s32);
+extern "C" void func_002FE3D0(void *, s32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002FC9C8(void *, s32);
 
 struct HFloat {
     char pad0[0x10];
@@ -18,17 +18,17 @@ struct HFloat {
 extern "C" void hFloat__virtual_32(HFloat *self, s32 *result, s32 a2, s32 a3, char **other) {
     s32 buf[4];
     float f = vcall_60(*other);
-    func_002FE278(buf, self->value <= f);
+    func_002FE3D0(buf, self->value <= f);
     if (result != buf) {
         s32 newVal = buf[0];
         if (newVal != 0) {
-            func_003285A8(newVal);
+            func_00328700(newVal);
         }
         s32 oldVal = *result;
         if (oldVal != 0) {
-            func_003285F8(oldVal);
+            func_00328750(oldVal);
         }
         *result = newVal;
     }
-    func_002FC870(buf, 2);
+    func_002FC9C8(buf, 2);
 }

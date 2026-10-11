@@ -3,7 +3,7 @@
 #define NULL 0
 void *memcpy(void *, const void *, unsigned int);
 
-s32 func_003ACED0(void *);                      /* extern */
+s32 func_003AD1C8(void *);                      /* extern */
 s32 RaceDisplayObjectBase__structor_0();                            /* extern */
 
 extern char RaceMTRSpeedMeterPanel__vtable[];
@@ -16,5 +16,5 @@ void RaceMTRSpeedMeterPanel__structor_0(struct RaceMTRSpeedMeterPanel *arg0) {
     arg0->unk28 = 0;
     arg0->unk2C = 0;
     arg0->unk30 = 0;
-    func_003ACED0(arg0);
+    func_003AD1C8(arg0);
 }

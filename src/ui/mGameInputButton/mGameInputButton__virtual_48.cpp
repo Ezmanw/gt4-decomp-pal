@@ -29,28 +29,28 @@ static inline s32 vcall_58(char *o) {
     return e->fn(o + e->delta);
 }
 extern "C" s32 func_0055EFC8(void *, s32);
-extern "C" void func_002FE278(void *, s32);
-extern "C" void func_003285A8(s32);
-extern "C" void func_003285F8(s32);
-extern "C" void func_002FC870(void *, s32);
+extern "C" void func_002FE3D0(void *, s32);
+extern "C" void func_00328700(s32);
+extern "C" void func_00328750(s32);
+extern "C" void func_002FC9C8(void *, s32);
 
 extern "C" void mGameInputButton__virtual_48(s32 *arg0, void *arg1, s32 arg2, char **arg3, s32 *arg4) {
     s32 buf0[4];
     s32 newVal;
     s32 oldVal;
     if ((s32)arg3 > 0) {
-        func_002FE278(buf0, func_0055EFC8((char *)arg0 + 0x10, vcall_58((char *)(*(s32 *)(char *)arg4))));
+        func_002FE3D0(buf0, func_0055EFC8((char *)arg0 + 0x10, vcall_58((char *)(*(s32 *)(char *)arg4))));
         if (arg1 != buf0) {
             newVal = buf0[0];
             if (newVal != 0) {
-                func_003285A8(newVal);
+                func_00328700(newVal);
             }
             oldVal = *(s32 *)arg1;
             if (oldVal != 0) {
-                func_003285F8(oldVal);
+                func_00328750(oldVal);
             }
             *(s32 *)arg1 = newVal;
         }
-        func_002FC870(buf0, 0x2);
+        func_002FC9C8(buf0, 0x2);
     }
 }

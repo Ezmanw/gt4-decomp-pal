@@ -12,10 +12,10 @@ struct Obj {
     VEntry *vtbl;
 };
 
-extern "C" void func_001056A0(void *p);
+extern "C" void func_001056C0(void *p);
 
 extern "C" void RaceTooltipDisplay__render_main(Obj *self, void *p) {
-    func_001056A0(p);
+    func_001056C0(p);
     VEntry *e = self->vtbl + 5;
     e->fn((char *)self + e->delta);
 }

@@ -5,7 +5,7 @@ void *memcpy(void *, const void *, unsigned int);
 
 extern "C" {
 s32 RaceCarSound__playStop(s32, s32);                /* extern */
-s32 func_003B76F0(void *, s32, s32, s32); /* extern */
+s32 func_003B79E8(void *, s32, s32, s32); /* extern */
 
 struct RaceBase__virtual_89_arg0 {
     char pad0[0x6C];
@@ -30,7 +30,7 @@ void RaceBase__soundStop(char *arg0) {
             RaceCarSound__playStop(*(s32 *)(temp_v0 + M2C_FIELD(((struct RaceBase__virtual_89_temp_s1 *)temp_s1)->unk60, s32 *, 8)) + 0x2900, 1);
         } while (var_s0 < *((struct RaceBase__virtual_89_temp_s1 *)temp_s1)->unk60);
     }
-    func_003B76F0(temp_s1 + 0xF4, 0x18, -2, 0);
+    func_003B79E8(temp_s1 + 0xF4, 0x18, -2, 0);
 }
 
 }

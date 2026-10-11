@@ -1,7 +1,8 @@
-typedef float f32;
+extern "C" void *func_00400F38(void *arg0);
+extern "C" char D_0067B840[];
 
-extern "C" void func_00378F18(void *arg0, f32 fparg0, f32 fparg1, f32 fparg2);
-
-extern "C" void func_00384638(void *arg0) {
-    func_00378F18(arg0, 1.0f, 1.0f, 1.0f);
+extern "C" void func_00384638(void **arg0)
+{
+    func_00400F38(arg0);
+    *arg0 = D_0067B840;
 }

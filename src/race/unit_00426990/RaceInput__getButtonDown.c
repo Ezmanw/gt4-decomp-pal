@@ -1,7 +1,7 @@
 #include "types.h"
 void *memcpy(void *, const void *, unsigned int);
 
-struct func_00426A08_arg0 {
+struct func_00426D88_arg0 {
     char pad0[0x188];
     s32 unk188;
     char pad18C[0xC];
@@ -10,7 +10,7 @@ struct func_00426A08_arg0 {
     s32 unk1B8;
 };
 
-s32 RaceInput__getButtonDown(struct func_00426A08_arg0 *arg0) {
+s32 RaceInput__getButtonDown(struct func_00426D88_arg0 *arg0) {
     s32 temp_v1;
 
     if (arg0->unk198 & 1) {

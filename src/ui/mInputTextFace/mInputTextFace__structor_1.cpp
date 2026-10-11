@@ -7,37 +7,37 @@ struct S00659988 { const char *name; };
 
 extern void *mInputTextFace__vtable;
 extern "C" void func_004B4400(void *, s32);
-extern "C" void func_00203118(void *, s32);
+extern "C" void func_002031D8(void *, s32);
 extern "C" S00659988 *func_005C11A8(void);
-extern "C" void func_00326798(void *, s32, s32, const char *);
+extern "C" void func_003268F0(void *, s32, s32, const char *);
 extern "C" void mWidget__structor_1(void *, s32);
 
 static inline void str_release(Str *s) {
     Rep *q = (Rep *)(s->p - 0x10);
     if (--q->ref == 0) {
         s32 size = q->cap + 0x10;
-        func_00326798(q, size, 4, func_005C11A8()->name);
+        func_003268F0(q, size, 4, func_005C11A8()->name);
     }
 }
 
 
 static inline void member_dtor_0(char *m) {
     str_release((Str *)(m + 0x10));
-    func_00203118(m, 2);
+    func_002031D8(m, 2);
 }
 extern "C" void mInputTextFace__structor_1(void *arg0, s32 arg1) {
     ((struct mInputTextFace *)arg0)->unk4 = &mInputTextFace__vtable;
     func_004B4400((char *)arg0 + 0x578, 0x2);
-    func_00203118((char *)arg0 + 0x154, 0x2);
-    func_00203118((char *)arg0 + 0x144, 0x2);
-    func_00203118((char *)arg0 + 0x134, 0x2);
-    func_00203118((char *)arg0 + 0x124, 0x2);
-    func_00203118((char *)arg0 + 0x114, 0x2);
-    func_00203118((char *)arg0 + 0x104, 0x2);
-    func_00203118((char *)arg0 + 0xe0, 0x2);
+    func_002031D8((char *)arg0 + 0x154, 0x2);
+    func_002031D8((char *)arg0 + 0x144, 0x2);
+    func_002031D8((char *)arg0 + 0x134, 0x2);
+    func_002031D8((char *)arg0 + 0x124, 0x2);
+    func_002031D8((char *)arg0 + 0x114, 0x2);
+    func_002031D8((char *)arg0 + 0x104, 0x2);
+    func_002031D8((char *)arg0 + 0xe0, 0x2);
     member_dtor_0((char *)arg0 + 0xa0);
     mWidget__structor_1(arg0, 0x0);
     if ((arg1 & 0x1) != 0) {
-        return func_00326798(arg0, 0xdf0, 0x4, "RefCounter");
+        return func_003268F0(arg0, 0xdf0, 0x4, "RefCounter");
     }
 }

@@ -4,8 +4,8 @@ void *memcpy(void *, const void *, unsigned int);
 
 extern char mMovieFace__vtable[];
 s32 mImageFace__structor_0(void *);
-void func_00220730(void *);
-void *func_0021D7F8(void *, s32 *);
+void func_00220888(void *);
+void *func_0021D950(void *, s32 *);
 struct mMovieFace__structor_0_arg0 {
     char pad0[0x4];
     s32 unk4;
@@ -20,9 +20,9 @@ void mMovieFace__structor_0(s8 *arg0) {
     s32 sp[4];
     mImageFace__structor_0(arg0);
     ((struct mMovieFace__structor_0_arg0 *)arg0)->unk4 = (s32)mMovieFace__vtable;
-    func_00220730(arg0 + 0xF0);
+    func_00220888(arg0 + 0xF0);
     sp[0] = 0;
-    func_0021D7F8(arg0 + 0x114, sp);
+    func_0021D950(arg0 + 0x114, sp);
     ((struct mMovieFace__structor_0_arg0 *)arg0)->unk158 = -1;
     ((struct mMovieFace__structor_0_arg0 *)arg0)->unk15C = 0;
     ((struct mMovieFace__structor_0_arg0 *)arg0)->unk118 = 0;

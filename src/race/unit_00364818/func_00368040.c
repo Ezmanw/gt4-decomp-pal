@@ -1,27 +1,24 @@
 #include "types.h"
-#define NULL 0
 void *memcpy(void *, const void *, unsigned int);
 
-struct func_00368040_arg0_unk10 {
-    char pad0[0x247];
-    u8 unk247;
-};
 struct func_00368040_arg0 {
-    char pad0[0x10];
-    struct func_00368040_arg0_unk10 *unk10;
+    char pad0[0x13];
+    s8 unk13;
+    char pad14[0x1A];
+    u16 unk2E;
 };
 
-f32 func_00368040(struct func_00368040_arg0 *arg0) {
-    f32 var_f0;
-    u8 temp_a0;
+void func_00368040(struct func_00368040_arg0 *arg0) {
+    u16 temp_v0;
 
-    var_f0 = 0x1.05cca20000000p+9f;
-    temp_a0 = arg0->unk10->unk247;
-    if (temp_a0 != 3) {
-        var_f0 = 0x1.d73d240000000p+8f;
-        if (temp_a0 != 2) {
-            var_f0 = 0x1.a2e1040000000p+8f;
-        }
+    temp_v0 = arg0->unk2E;
+    if (temp_v0 >= 0x1388U) {
+        arg0->unk13 = 3;
+        return;
     }
-    return var_f0;
+    if (temp_v0 >= 0x1194U) {
+        arg0->unk13 = 2;
+        return;
+    }
+    arg0->unk13 = 1;
 }

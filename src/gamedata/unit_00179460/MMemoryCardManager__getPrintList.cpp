@@ -1,5 +1,5 @@
-extern "C" void func_003285A8(void *obj);
-extern "C" void func_003285F8(void *obj);
+extern "C" void func_00328700(void *obj);
+extern "C" void func_00328750(void *obj);
 
 struct Ref {
     void *p;
@@ -9,9 +9,9 @@ struct Ref {
         if (this != &o) {
             void *np = o.p;
             if (np)
-                func_003285A8(np);
+                func_00328700(np);
             if (p)
-                func_003285F8(p);
+                func_00328750(p);
             p = np;
         }
     }
@@ -22,14 +22,14 @@ struct Source {
     void *value;
 };
 
-extern "C" Source *func_001D3A60(void);
-extern "C" void func_0017E520(Ref *r, void *value);
-extern "C" void func_0017D268(Ref *r, int in_chrg);
+extern "C" Source *func_001D3A88(void);
+extern "C" void func_0017E548(Ref *r, void *value);
+extern "C" void func_0017D290(Ref *r, int in_chrg);
 
 extern "C" void MMemoryCardManager__getPrintList(Ref *out)
 {
     Ref tmp;
-    func_0017E520(&tmp, func_001D3A60()->value);
+    func_0017E548(&tmp, func_001D3A88()->value);
     out->assign(tmp);
-    func_0017D268(&tmp, 2);
+    func_0017D290(&tmp, 2);
 }

@@ -25,7 +25,7 @@ struct Geo {
     int m1C;
 };
 
-extern "C" void func_0038DC30(Geo *self, int a, int b, int c);
+extern "C" void func_0038DF28(Geo *self, int a, int b, int c);
 
 extern "C" void CarGeometry__structor_0(Geo *self, int a, int c) {
     self->vtbl = CarGeometry__vtable;
@@ -33,5 +33,5 @@ extern "C" void CarGeometry__structor_0(Geo *self, int a, int c) {
     self->vtblC = SpecialCarGeometry__vtable;
     self->b.init();
     self->m1C = 0;
-    return func_0038DC30(self, a, 0, c);
+    return func_0038DF28(self, a, 0, c);
 }
